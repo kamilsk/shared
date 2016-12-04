@@ -23,6 +23,6 @@ test-with-coverage-formatted:
 test-with-coverage-profile:
 	echo "mode: ${GO_TEST_COVERAGE_MODE}" > ${GO_TEST_COVERAGE_FILENAME}
 	for package in $$(go list ./...); do \
-		go test -covermode ${GO_TEST_COVERAGE_MODE} -coverprofile "coverage_$${package##*/}.out" -race "$${package}"; \
-		sed '1d' "coverage_$${package##*/}.out" >> ${GO_TEST_COVERAGE_FILENAME}; \
+	    go test -covermode ${GO_TEST_COVERAGE_MODE} -coverprofile "coverage_$${package##*/}.out" -race "$${package}"; \
+	    sed '1d' "coverage_$${package##*/}.out" >> ${GO_TEST_COVERAGE_FILENAME}; \
 	done
