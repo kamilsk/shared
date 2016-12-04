@@ -5,7 +5,7 @@
 #
 
 ifndef GO_PACKAGE
-$(error Please provide GO_PACKAGE (e.g. github.com/kamilsk/semaphore))
+$(error Please provide GO_PACKAGE (e.g. GO_PACKAGE:="github.com/kamilsk/semaphore"))
 endif
 
 #
