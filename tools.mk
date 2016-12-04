@@ -3,3 +3,9 @@
 #
 # Version: 1.0
 #
+
+clean:
+	go clean -i -x ./...
+
+vet:
+	go vet ./...
