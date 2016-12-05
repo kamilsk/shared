@@ -10,6 +10,9 @@ endif
 
 .PHONY: flow-dev
 flow-dev:
+	git config user.email "kamil@samigullin.info"
+	git config user.name "Kamil Samigullin"
+
 	git remote set-url origin $(GIT_ORIGIN)
 	git remote -v | grep mirror > /dev/null; if [ $$? != 0 ] ; then git remote add mirror $(GIT_MIRROR) ; fi
 
