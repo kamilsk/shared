@@ -4,4 +4,4 @@ MAINTAINER Kamil Samigullin
 
 ENV GOPATH /go
 
-RUN apk add --no-cache g++
+RUN apk add --no-cache gcc musl-dev
