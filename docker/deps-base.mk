@@ -22,8 +22,8 @@ docker-deps-1.7:
 	           golang:1.7 \
 	           go get -d -t ./...
 
-.PHONY: docker-deps
-docker-deps:
+.PHONY: docker-deps-latest
+docker-deps-latest:
 	docker run --rm \
 	           -v "${GOPATH}":/go \
 	           -w /go/src/${GO_PACKAGE} \

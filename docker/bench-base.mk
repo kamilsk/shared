@@ -22,8 +22,8 @@ docker-bench-1.7:
 	           golang:1.7 \
 	           go test ./... -bench . -benchmem
 
-.PHONY: docker-bench
-docker-bench:
+.PHONY: docker-bench-latest
+docker-bench-latest:
 	docker run --rm \
 	           -v "${GOPATH}":/go \
 	           -w /go/src/${GO_PACKAGE} \

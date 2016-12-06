@@ -22,8 +22,8 @@ docker-test-1.7:
 	           golang:1.7 \
 	           go test ./... -v
 
-.PHONY: docker-test
-docker-test:
+.PHONY: docker-test-latest
+docker-test-latest:
 	docker run --rm \
 	           -v "${GOPATH}":/go \
 	           -w /go/src/${GO_PACKAGE} \
