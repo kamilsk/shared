@@ -4,7 +4,7 @@ docker-test-1.5:
 	           -v "${GOPATH}":/go \
 	           -w /go/src/${GO_PACKAGE} \
 	           golang:1.5 \
-	           go test ./... -v
+	           go test ./... -race -v
 
 .PHONY: docker-test-1.6
 docker-test-1.6:
@@ -12,7 +12,7 @@ docker-test-1.6:
 	           -v "${GOPATH}":/go \
 	           -w /go/src/${GO_PACKAGE} \
 	           golang:1.6 \
-	           go test ./... -v
+	           go test ./... -race -v
 
 .PHONY: docker-test-1.7
 docker-test-1.7:
@@ -20,7 +20,7 @@ docker-test-1.7:
 	           -v "${GOPATH}":/go \
 	           -w /go/src/${GO_PACKAGE} \
 	           golang:1.7 \
-	           go test ./... -v
+	           go test ./... -race -v
 
 .PHONY: docker-test-latest
 docker-test-latest:
@@ -28,4 +28,4 @@ docker-test-latest:
 	           -v "${GOPATH}":/go \
 	           -w /go/src/${GO_PACKAGE} \
 	           golang:latest \
-	           go test ./... -v
+	           go test ./... -race -v

@@ -4,6 +4,10 @@
 # Version: 1.0
 #
 
+ifndef PWD
+$(error Please include env.mk before)
+endif
+
 ifndef GO_PACKAGE
 $(error Please provide GO_PACKAGE (e.g. GO_PACKAGE:="github.com/kamilsk/semaphore"))
 endif
