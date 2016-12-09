@@ -16,9 +16,15 @@ include $(PWD)docker/bench-alpine.mk
 include $(PWD)docker/bench-alpine-gcc.mk
 include $(PWD)docker/bench-base.mk
 
+include $(PWD)docker/clean.mk
+
 include $(PWD)docker/deps-alpine.mk
 include $(PWD)docker/deps-alpine-gcc.mk
 include $(PWD)docker/deps-base.mk
+
+include $(PWD)docker/pull-alpine.mk
+include $(PWD)docker/pull-alpine-gcc.mk
+include $(PWD)docker/pull-base.mk
 
 include $(PWD)docker/test-alpine.mk
 include $(PWD)docker/test-alpine-gcc.mk
