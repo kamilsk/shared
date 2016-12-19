@@ -1,3 +1,3 @@
 > # shared:docker-go-v1
 >
-> Custom docker images for Go environment.
+> My custom docker images for Go environment.
