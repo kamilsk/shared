@@ -4,17 +4,17 @@
 
 ## Docker
 
-- [docker-go-v1](../../tree/docker-go-v1)
+- [docker-go-v1](../../tree/docker-go-v1) - custom docker images for Go environment
 
 ## Makefile
 
-- [makefile-go-v1](../../tree/makefile-go-v1)
+- [makefile-go-v1](../../tree/makefile-go-v1) - snippets of GNU Make for Go environment
 
 ## Misc
 
-- [github-tpl-go-v1](../../tree/github-tpl-go-v1)
+- [github-tpl-go-v1](../../tree/github-tpl-go-v1) - templates for Go projects at GitHub
 
 ## Useful
 
-- [dotfiles](../../tree/dotfiles)
-- [macos](../../tree/macos)
+- [dotfiles](../../tree/dotfiles) - dotfiles to share through environments
+- [macos](../../tree/macos) - collection of useful tools for Mac OS
