@@ -4,17 +4,17 @@
 
 ## Docker
 
-- [docker-go-v1](/tree/docker-go-v1)
+- [docker-go-v1](../../tree/docker-go-v1)
 
 ## Makefile
 
-- [makefile-go-v1](/tree/makefile-go-v1)
+- [makefile-go-v1](../../tree/makefile-go-v1)
 
 ## Misc
 
-- [github-tpl-go-v1](/tree/github-tpl-go-v1)
+- [github-tpl-go-v1](../../tree/github-tpl-go-v1)
 
 ## Useful
 
-- [dotfiles](/tree/dotfiles)
-- [macos](/tree/macos)
+- [dotfiles](../../tree/dotfiles)
+- [macos](../../tree/macos)
