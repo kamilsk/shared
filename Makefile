@@ -12,3 +12,4 @@ docker-pull: docker-pull-1.5
 docker-pull: docker-pull-1.6
 docker-pull: docker-pull-1.7
 docker-pull: docker-pull-latest
+docker-pull: docker-clean

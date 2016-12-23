@@ -1,14 +1,20 @@
 .PHONY: docker-clean
 docker-clean:
-	$(eval bad_images = $(shell docker images --all \
-                                | grep "^golang\s\+" \
-                                | awk '{print $2 "\t" $3}' \
-                                | grep "^<none>\s\+" \
-                                | awk "{print $2}"))
-	@echo $(bad_images)
-	$(eval bad_images = $(shell docker images --all \
-                                | grep "^kamilsk\/golang\s\+" \
-                                | awk '{print $2 "\t" $3}' \
-                                | grep "^<none>\s\+" \
-                                | awk "{print $2}"))
-	@echo $(bad_images)
+	docker images --all \
+	| grep "^<none>\s\+" \
+	| awk '{print $3}' \
+	| xargs -n1 docker rmi -f $1
+
+	docker images --all \
+	| grep "^golang\s\+" \
+	| awk '{print $2 "\t" $3}' \
+	| grep "^<none>\s\+" \
+	| awk '{print $2}' \
+	| xargs -n1 docker rmi -f $1
+
+	docker images --all \
+	| grep "^kamilsk\/golang\s\+" \
+	| awk '{print $2 "\t" $3}' \
+	| grep "^<none>\s\+" \
+	| awk '{print $2}' \
+	| xargs -n1 docker rmi -f $1
