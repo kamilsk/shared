@@ -25,3 +25,5 @@ include $(PWD)docker/pull-base.mk
 include $(PWD)docker/test-alpine.mk
 include $(PWD)docker/test-alpine-gcc.mk
 include $(PWD)docker/test-base.mk
+
+include $(PWD)docker/tooling.mk
