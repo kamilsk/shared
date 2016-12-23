@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# common
+
 docker build -t kamilsk/golang:1.5-alpine \
              -f 1.5-alpine.Dockerfile \
              .
@@ -16,3 +18,10 @@ docker build -t kamilsk/golang:1.7-alpine \
              .
 docker push kamilsk/golang:1.7-alpine
 docker push kamilsk/golang:alpine
+
+# tooling
+
+docker build -t kamilsk/go-tools:alpine \
+             -f tools.Dockerfile \
+             .
+docker push kamilsk/go-tools:alpine
