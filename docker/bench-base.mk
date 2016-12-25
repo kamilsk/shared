@@ -4,7 +4,8 @@ docker-bench-1.5:
 	           -v "${GOPATH}/src/${GO_PACKAGE}":"/go/src/${GO_PACKAGE}" \
 	           -w "/go/src/${GO_PACKAGE}" \
 	           golang:1.5 \
-	           go get -d -t ./... && go test ./... -bench . -benchmem
+	           go get -d -t `go list ./... | grep -v /vendor/` && \
+	           go test `go list ./... | grep -v /vendor/` -bench . -benchmem
 
 .PHONY: docker-bench-1.6
 docker-bench-1.6:
@@ -12,7 +13,8 @@ docker-bench-1.6:
 	           -v "${GOPATH}/src/${GO_PACKAGE}":"/go/src/${GO_PACKAGE}" \
 	           -w "/go/src/${GO_PACKAGE}" \
 	           golang:1.6 \
-	           go get -d -t ./... && go test ./... -bench . -benchmem
+	           go get -d -t `go list ./... | grep -v /vendor/` && \
+	           go test `go list ./... | grep -v /vendor/` -bench . -benchmem
 
 .PHONY: docker-bench-1.7
 docker-bench-1.7:
@@ -20,7 +22,8 @@ docker-bench-1.7:
 	           -v "${GOPATH}/src/${GO_PACKAGE}":"/go/src/${GO_PACKAGE}" \
 	           -w "/go/src/${GO_PACKAGE}" \
 	           golang:1.7 \
-	           go get -d -t ./... && go test ./... -bench . -benchmem
+	           go get -d -t `go list ./... | grep -v /vendor/` && \
+	           go test `go list ./... | grep -v /vendor/` -bench . -benchmem
 
 .PHONY: docker-bench-latest
 docker-bench-latest:
@@ -28,4 +31,5 @@ docker-bench-latest:
 	           -v "${GOPATH}/src/${GO_PACKAGE}":"/go/src/${GO_PACKAGE}" \
 	           -w "/go/src/${GO_PACKAGE}" \
 	           golang:latest \
-	           go get -d -t ./... && go test ./... -bench . -benchmem
+	           go get -d -t `go list ./... | grep -v /vendor/` && \
+	           go test `go list ./... | grep -v /vendor/` -bench . -benchmem
