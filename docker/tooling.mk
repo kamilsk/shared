@@ -4,4 +4,4 @@ docker-tool-gometalinter:
 	           -v "${GOPATH}/src/${GO_PACKAGE}":"/go/src/${GO_PACKAGE}" \
 	           -w "/go/src/${GO_PACKAGE}" \
 	           kamilsk/go-tools:alpine \
-	           gometalinter.v1 ./...
+	           gometalinter.v1 `go list ./... | grep -v /vendor/`
