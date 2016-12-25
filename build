@@ -21,7 +21,7 @@ docker push kamilsk/golang:alpine
 
 # tooling
 
-docker build -t kamilsk/go-tools:alpine \
+docker build -t kamilsk/go-tools:latest \
              -f tools.Dockerfile \
              .
-docker push kamilsk/go-tools:alpine
+docker push kamilsk/go-tools:latest
