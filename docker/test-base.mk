@@ -6,8 +6,8 @@ docker-test-1.5:
 	           -v "${GOPATH}/src/${GO_PACKAGE}":"/go/src/${GO_PACKAGE}" \
 	           -w "/go/src/${GO_PACKAGE}" \
 	           golang:1.5 \
-	           /bin/sh -c "go get -d -t `go list ./... | grep -v /vendor/` && \
-	                       go test `go list ./... | grep -v /vendor/` -race -v"
+	           /bin/sh -c "go list ./... | grep -v /vendor/ | xargs -n1 go get -d -t "$1" && \
+	                       go list ./... | grep -v /vendor/ | xargs -n1 go test -race -v "$1""
 
 .PHONY: docker-test-1.6
 docker-test-1.6:
@@ -15,8 +15,8 @@ docker-test-1.6:
 	           -v "${GOPATH}/src/${GO_PACKAGE}":"/go/src/${GO_PACKAGE}" \
 	           -w "/go/src/${GO_PACKAGE}" \
 	           golang:1.6 \
-	           /bin/sh -c "go get -d -t `go list ./... | grep -v /vendor/` && \
-	                       go test `go list ./... | grep -v /vendor/` -race -v"
+	           /bin/sh -c "go list ./... | grep -v /vendor/ | xargs -n1 go get -d -t "$1" && \
+	                       go list ./... | grep -v /vendor/ | xargs -n1 go test -race -v "$1""
 
 .PHONY: docker-test-1.7
 docker-test-1.7:
@@ -24,8 +24,8 @@ docker-test-1.7:
 	           -v "${GOPATH}/src/${GO_PACKAGE}":"/go/src/${GO_PACKAGE}" \
 	           -w "/go/src/${GO_PACKAGE}" \
 	           golang:1.7 \
-	           /bin/sh -c "go get -d -t `go list ./... | grep -v /vendor/` && \
-	                       go test `go list ./... | grep -v /vendor/` -race -v"
+	           /bin/sh -c "go list ./... | grep -v /vendor/ | xargs -n1 go get -d -t "$1" && \
+	                       go list ./... | grep -v /vendor/ | xargs -n1 go test -race -v "$1""
 
 .PHONY: docker-test-latest
 docker-test-latest:
@@ -33,8 +33,8 @@ docker-test-latest:
 	           -v "${GOPATH}/src/${GO_PACKAGE}":"/go/src/${GO_PACKAGE}" \
 	           -w "/go/src/${GO_PACKAGE}" \
 	           golang:latest \
-	           /bin/sh -c "go get -d -t `go list ./... | grep -v /vendor/` && \
-	                       go test `go list ./... | grep -v /vendor/` -race -v"
+	           /bin/sh -c "go list ./... | grep -v /vendor/ | xargs -n1 go get -d -t "$1" && \
+	                       go list ./... | grep -v /vendor/ | xargs -n1 go test -race -v "$1""
 
 # with coverage
 
@@ -44,7 +44,7 @@ docker-test-1.5-with-coverage:
 	           -v "${GOPATH}/src/${GO_PACKAGE}":"/go/src/${GO_PACKAGE}" \
 	           -w "/go/src/${GO_PACKAGE}" \
 	           golang:1.5 \
-	           /bin/sh -c "go get -d -t `go list ./... | grep -v /vendor/` && \
+	           /bin/sh -c "go list ./... | grep -v /vendor/ | xargs -n1 go get -d -t "$1" && \
 	                       echo "mode: count" > "coverage-$@.out" && \
 	                       for package in $$(go list ./... | grep -v /vendor/); do \
 	                           go test -cover -covermode count -coverprofile "coverage-$@-$${package##*/}.out" "$${package}"; \
@@ -58,7 +58,7 @@ docker-test-1.6-with-coverage:
 	           -v "${GOPATH}/src/${GO_PACKAGE}":"/go/src/${GO_PACKAGE}" \
 	           -w "/go/src/${GO_PACKAGE}" \
 	           golang:1.6 \
-	           /bin/sh -c "go get -d -t `go list ./... | grep -v /vendor/` && \
+	           /bin/sh -c "go list ./... | grep -v /vendor/ | xargs -n1 go get -d -t "$1" && \
 	                       echo "mode: count" > "coverage-$@.out" && \
 	                       for package in $$(go list ./... | grep -v /vendor/); do \
 	                           go test -cover -covermode count -coverprofile "coverage-$@-$${package##*/}.out" "$${package}"; \
@@ -72,7 +72,7 @@ docker-test-1.7-with-coverage:
 	           -v "${GOPATH}/src/${GO_PACKAGE}":"/go/src/${GO_PACKAGE}" \
 	           -w "/go/src/${GO_PACKAGE}" \
 	           golang:1.7 \
-	           /bin/sh -c "go get -d -t `go list ./... | grep -v /vendor/` && \
+	           /bin/sh -c "go list ./... | grep -v /vendor/ | xargs -n1 go get -d -t "$1" && \
 	                       echo "mode: count" > "coverage-$@.out" && \
 	                       for package in $$(go list ./... | grep -v /vendor/); do \
 	                           go test -cover -covermode count -coverprofile "coverage-$@-$${package##*/}.out" "$${package}"; \
@@ -86,7 +86,7 @@ docker-test-latest-with-coverage:
 	           -v "${GOPATH}/src/${GO_PACKAGE}":"/go/src/${GO_PACKAGE}" \
 	           -w "/go/src/${GO_PACKAGE}" \
 	           golang:latest \
-	           /bin/sh -c "go get -d -t `go list ./... | grep -v /vendor/` && \
+	           /bin/sh -c "go list ./... | grep -v /vendor/ | xargs -n1 go get -d -t "$1" && \
 	                       echo "mode: count" > "coverage-$@.out" && \
 	                       for package in $$(go list ./... | grep -v /vendor/); do \
 	                           go test -cover -covermode count -coverprofile "coverage-$@-$${package##*/}.out" "$${package}"; \
