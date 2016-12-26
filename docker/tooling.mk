@@ -5,4 +5,5 @@ docker-tool-gometalinter:
 	           -v "${GOPATH}/src/${GO_PACKAGE}":"/go/src/${GO_PACKAGE}" \
 	           -w "/go/src/${GO_PACKAGE}" \
 	           kamilsk/go-tools:latest \
-	           gometalinter.v1 --vendor --deadline=$(DEADLINE) ./...
+	           /bin/sh -c "go test -i . && \
+	                       gometalinter.v1 --vendor --deadline=$(DEADLINE) ./..."
