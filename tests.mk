@@ -25,4 +25,5 @@ test-with-coverage-profile:
 	for package in $$(go list ./...); do \
 	    go test -covermode "${GO_TEST_COVERAGE_MODE}" -coverprofile "coverage_$${package##*/}.out" "$${package}"; \
 	    sed '1d' "coverage_$${package##*/}.out" >> "${GO_TEST_COVERAGE_FILENAME}"; \
+	    rm "coverage_$${package##*/}.out"; \
 	done
