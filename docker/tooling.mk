@@ -1,4 +1,4 @@
-DEADLINE=10s
+DEADLINE=60s
 .PHONY: docker-tool-gometalinter
 docker-tool-gometalinter:
 	docker run --rm \
