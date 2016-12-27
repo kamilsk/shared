@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+# tooling
+
+docker build -t kamilsk/php-tools:latest \
+             -f tools.Dockerfile \
+             .
+docker push kamilsk/php-tools:latest
