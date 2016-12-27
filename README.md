@@ -5,6 +5,7 @@
 ## Docker
 
 - [docker-go-v1](../../tree/docker-go-v1) - custom docker images for Go environment
+- [docker-php-v1](../../tree/docker-php-v1) - custom docker images for PHP environment
 
 ## Makefile
 
