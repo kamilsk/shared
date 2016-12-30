@@ -1,0 +1,30 @@
+packages:
+- package: etsy/phan
+  github: https://github.com/etsy/phan
+- package: ovr/phpsa
+  github: https://github.com/ovr/phpsa
+- package: wimg/php-compatibility
+  github: https://github.com/wimg/PHPCompatibility
+- package: friendsofphp/php-cs-fixer
+  github: https://github.com/friendsofphp/php-cs-fixer
+- package: phpmetrics/phpmetrics
+  github: https://github.com/phpmetrics/PhpMetrics
+- package: squizlabs/php_codesniffer
+  github: https://github.com/squizlabs/PHP_CodeSniffer
+- package: sstalle/php7cc
+  github: https://github.com/sstalle/php7cc
+- package: vimeo/psalm
+  github: https://github.com/vimeo/psalm
+- package: phpstan/phpstan
+  github: https://github.com/phpstan/phpstan
+- package:
+  github: https://github.com/exakat/exakat
+  related: https://github.com/exakat/php-static-analysis-tools
+
+question:
+- package: psecio/iniscan
+  github: https://github.com/psecio/iniscan
+- package: sami/sami
+  github: https://github.com/FriendsOfPHP/Sami
+- package: object-calisthenics/phpcs-calisthenics-rules
+  github: https://github.com/object-calisthenics/phpcs-calisthenics-rules

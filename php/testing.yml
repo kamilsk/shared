@@ -1,0 +1,19 @@
+packages:
+- package: phpunit/phpunit
+  github: https://github.com/sebastianbergmann/phpunit
+- package: fzaninotto/faker
+  github: https://github.com/fzaninotto/Faker
+- package: nelmio/alice
+  github: https://github.com/nelmio/alice
+- package: badoo/soft-mocks
+  github: https://github.com/badoo/soft-mocks
+- package: jwage/phpchunkit
+  github: https://github.com/jwage/phpchunkit
+- package: atoum/atoum
+  github: https://github.com/atoum/atoum
+- package: humbug/humbug
+  github: https://github.com/padraic/humbug
+- package: phpunit/phpcov
+  github: https://github.com/sebastianbergmann/phpcov
+- package: phpbench/phpbench
+  github: https://github.com/phpbench/phpbench

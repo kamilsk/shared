@@ -1,0 +1,13 @@
+packages:
+- package: Django
+  github: https://github.com/django/django
+  related:
+  - package: wagtail
+    github: https://github.com/torchbox/wagtail
+- package: Flask
+  github: https://github.com/pallets/flask
+- package: tornado
+  github: https://github.com/tornadoweb/tornado
+  related:
+  - package: thumbor
+    github: https://github.com/thumbor/thumbor

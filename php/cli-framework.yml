@@ -1,0 +1,5 @@
+packages:
+- package: mnapoli/silly
+  github: https://github.com/mnapoli/silly
+- package: cilex/cilex
+  github: https://github.com/Cilex/Cilex

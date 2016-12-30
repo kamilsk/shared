@@ -1,0 +1,6 @@
+packages:
+- package: php-ds/extension
+  github: https://github.com/php-ds/extension
+  helpful:
+  - package: php-ds/php-ds
+    github: https://github.com/php-ds/polyfill

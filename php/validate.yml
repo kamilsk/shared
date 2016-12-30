@@ -1,0 +1,11 @@
+packages:
+- package: egulias/email-validator
+  github: https://github.com/egulias/EmailValidator
+- package: vlucas/valitron
+  github: https://github.com/vlucas/valitron
+- package: respect/validation
+  github: https://github.com/Respect/Validation
+- package: ronanguilloux/isocodes
+  github: https://github.com/ronanguilloux/IsoCodes
+- package: hbattat/verifyemail
+  github: https://github.com/hbattat/verifyEmail

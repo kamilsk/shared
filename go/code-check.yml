@@ -1,0 +1,19 @@
+packages:
+- package: github.com/alecthomas/gometalinter
+  github: https://github.com/alecthomas/gometalinter
+- package: github.com/dominikh/go-simple
+  github: https://github.com/dominikh/go-simple
+- package: github.com/golang/lint/golint
+  github: https://github.com/golang/lint/golint
+- package: github.com/gordonklaus/ineffassign
+  github: https://github.com/gordonklaus/ineffassign
+- package: github.com/mibk/dupl
+  github: https://github.com/mibk/dupl
+- package: github.com/thraxil/cyclo
+  github: https://github.com/thraxil/cyclo
+- package: honnef.co/go/unused/cmd/unused
+  github: https://github.com/dominikh/go-unused
+- package: github.com/fortytw2/leaktest
+  github: https://github.com/fortytw2/leaktest
+- package: github.com/kisielk/errcheck
+  github: https://github.com/kisielk/errcheck

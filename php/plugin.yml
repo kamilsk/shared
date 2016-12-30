@@ -1,0 +1,7 @@
+packages:
+- package: hirak/prestissimo
+  github: https://github.com/hirak/prestissimo
+- package: sensiolabs/melody
+  github: https://github.com/sensiolabs/melody
+- package: davidrjonas/composer-lock-diff
+  github: https://github.com/davidrjonas/composer-lock-diff
