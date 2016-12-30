@@ -19,3 +19,4 @@
 
 - [dotfiles](../../tree/dotfiles) - dotfiles to share through environments
 - [macos](../../tree/macos) - collection of useful tools for Mac OS
+- [pmc-collection](../../tree/pmc-collection) - collections of Go, PHP and Python packages
