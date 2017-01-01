@@ -4,12 +4,19 @@
 # Version: 1.0
 #
 
+ARGS         =
+OPEN_BROWSER =
+
 ifndef PWD
 $(error Please include env.mk before)
 endif
 
+ifndef GOPATH
+$(error $GOPATH not set)
+endif
+
 ifndef GO_PACKAGE
-$(error Please provide GO_PACKAGE (e.g. GO_PACKAGE:=github.com/kamilsk/semaphore))
+$(error Please provide GO_PACKAGE (e.g. GO_PACKAGE = github.com/kamilsk/semaphore))
 endif
 
 include $(PWD)docker/bench-alpine.mk

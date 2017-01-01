@@ -6,8 +6,8 @@
 
 .PHONY: install-deps
 install-deps:
-	go get -d -t ./...
+	go list ./... | grep -v /vendor/ | xargs go get -d -t "$1"
 
 .PHONY: update-deps
 update-deps:
-	go get -d -t -u ./...
+	go list ./... | grep -v /vendor/ | xargs go get -d -t -u "$1"

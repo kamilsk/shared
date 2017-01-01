@@ -6,16 +6,16 @@
 
 .PHONY: build
 build:
-	go build -v ./...
+	go list ./... | grep -v /vendor/ | xargs go build -v "$1"
 
 .PHONY: clean
 clean:
-	go clean -i -x ./...
+	go list ./... | grep -v /vendor/ | xargs go clean -i -x "$1"
 
 .PHONY: install
 install:
-	go install ./...
+	go list ./... | grep -v /vendor/ | xargs go install "$1"
 
 .PHONY: vet
 vet:
-	go vet ./...
+	go list ./... | grep -v /vendor/ | xargs go vet "$1"

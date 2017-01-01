@@ -5,7 +5,7 @@
 #
 
 ifeq ($(or $(GIT_ORIGIN), $(GIT_MIRROR)),)
-$(error Please provide GIT_ORIGIN and GIT_MIRROR (e.g. GIT_ORIGIN:="git@github.com:kamilsk/semaphore.git"))
+$(error Please provide GIT_ORIGIN and GIT_MIRROR (e.g. GIT_ORIGIN = git@github.com:kamilsk/semaphore.git))
 endif
 
 .PHONY: flow-dev
