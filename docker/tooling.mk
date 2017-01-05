@@ -4,5 +4,5 @@ docker-tool-gometalinter:
 	           -v '${GOPATH}/src/${GO_PACKAGE}':'/go/src/${GO_PACKAGE}' \
 	           -w '/go/src/${GO_PACKAGE}' \
 	           kamilsk/go-tools:latest \
-	           /bin/sh -c 'go list ./... | grep -v /vendor/ | xargs go test -i "$$1" && \
+	           /bin/sh -c '$(PACKAGES) | xargs go test -i "$$1" && \
 	                       gometalinter.v1 --vendor $(strip $(ARGS)) ./...'

@@ -1,15 +1,10 @@
-.PHONY: docker-pull-1.5-alpine-gcc
-docker-pull-1.5-alpine-gcc:
-	docker pull kamilsk/golang:1.5-alpine
+define docker_pull_alpine_gcc_tpl
 
-.PHONY: docker-pull-1.6-alpine-gcc
-docker-pull-1.6-alpine-gcc:
-	docker pull kamilsk/golang:1.6-alpine
+.PHONY: docker-pull-$(1)-alpine-gcc
+docker-pull-$(1)-alpine-gcc:
+	docker pull kamilsk/golang:$(1)-alpine
 
-.PHONY: docker-pull-1.7-alpine-gcc
-docker-pull-1.7-alpine-gcc:
-	docker pull kamilsk/golang:1.7-alpine
+endef
 
-.PHONY: docker-pull-alpine-gcc
-docker-pull-alpine-gcc:
-	docker pull kamilsk/golang:alpine
+$(foreach v,$(SUPPORTED_VERSIONS),$(eval $(call docker_pull_alpine_gcc_tpl,$(v))))
+# TODO latest-alpine -> alpine

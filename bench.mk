@@ -4,6 +4,10 @@
 # Version: 1.0
 #
 
+ifndef PACKAGES
+$(error Please include env.mk before)
+endif
+
 .PHONY: bench
 bench:
-	go list ./... | grep -v /vendor/ | xargs go test -bench=. $(strip $(ARGS)) "$$1"
+	$(PACKAGES) | xargs go test -bench=. $(strip $(ARGS)) "$$1"

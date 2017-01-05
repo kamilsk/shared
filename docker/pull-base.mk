@@ -1,15 +1,9 @@
-.PHONY: docker-pull-1.5
-docker-pull-1.5:
-	docker pull golang:1.5
+define docker_pull_tpl
 
-.PHONY: docker-pull-1.6
-docker-pull-1.6:
-	docker pull golang:1.6
+.PHONY: docker-pull-$(1)
+docker-pull-$(1):
+	docker pull golang:$(1)
 
-.PHONY: docker-pull-1.7
-docker-pull-1.7:
-	docker pull golang:1.7
+endef
 
-.PHONY: docker-pull-latest
-docker-pull-latest:
-	docker pull golang:latest
+$(foreach v,$(SUPPORTED_VERSIONS),$(eval $(call docker_pull_tpl,$(v))))

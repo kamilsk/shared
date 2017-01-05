@@ -1,15 +1,10 @@
-.PHONY: docker-pull-1.5-alpine
-docker-pull-1.5-alpine:
-	docker pull golang:1.5-alpine
+define docker_pull_alpine_tpl
 
-.PHONY: docker-pull-1.6-alpine
-docker-pull-1.6-alpine:
-	docker pull golang:1.6-alpine
+.PHONY: docker-pull-$(1)-alpine
+docker-pull-$(1)-alpine:
+	docker pull golang:$(1)-alpine
 
-.PHONY: docker-pull-1.7-alpine
-docker-pull-1.7-alpine:
-	docker pull golang:1.7-alpine
+endef
 
-.PHONY: docker-pull-alpine
-docker-pull-alpine:
-	docker pull golang:alpine
+$(foreach v,$(SUPPORTED_VERSIONS),$(eval $(call docker_pull_alpine_tpl,$(v))))
+# TODO latest-alpine -> alpine

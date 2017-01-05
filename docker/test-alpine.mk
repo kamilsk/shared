@@ -1,31 +1,14 @@
-.PHONY: docker-test-1.5-alpine
-docker-test-1.5-alpine:
-	docker run --rm \
-	           -v '${GOPATH}/src/${GO_PACKAGE}':'/go/src/${GO_PACKAGE}' \
-	           -w '/go/src/${GO_PACKAGE}' \
-	           golang:1.5-alpine \
-	           /bin/sh -c 'go list ./... | grep -v /vendor/ | xargs go test $(strip $(ARGS)) "$$1"'
+define docker_test_alpine_tpl
 
-.PHONY: docker-test-1.6-alpine
-docker-test-1.6-alpine:
+.PHONY: docker-test-$(1)-alpine
+docker-test-$(1)-alpine:
 	docker run --rm \
-	           -v '${GOPATH}/src/${GO_PACKAGE}':'/go/src/${GO_PACKAGE}' \
-	           -w '/go/src/${GO_PACKAGE}' \
-	           golang:1.6-alpine \
-	           /bin/sh -c 'go list ./... | grep -v /vendor/ | xargs go test $(strip $(ARGS)) "$$1"'
+	           -v '$${GOPATH}/src/$${GO_PACKAGE}':'/go/src/$${GO_PACKAGE}' \
+	           -w '/go/src/$${GO_PACKAGE}' \
+	           golang:$(1)-alpine \
+	           /bin/sh -c '$$(PACKAGES) | xargs go test $$(strip $$(ARGS)) "$$$$1"'
 
-.PHONY: docker-test-1.7-alpine
-docker-test-1.7-alpine:
-	docker run --rm \
-	           -v '${GOPATH}/src/${GO_PACKAGE}':'/go/src/${GO_PACKAGE}' \
-	           -w '/go/src/${GO_PACKAGE}' \
-	           golang:1.7-alpine \
-	           /bin/sh -c 'go list ./... | grep -v /vendor/ | xargs go test $(strip $(ARGS)) "$$1"'
+endef
 
-.PHONY: docker-test-alpine
-docker-test-alpine:
-	docker run --rm \
-	           -v '${GOPATH}/src/${GO_PACKAGE}':'/go/src/${GO_PACKAGE}' \
-	           -w '/go/src/${GO_PACKAGE}' \
-	           golang:alpine \
-	           /bin/sh -c 'go list ./... | grep -v /vendor/ | xargs go test $(strip $(ARGS)) "$$1"'
+$(foreach v,$(SUPPORTED_VERSIONS),$(eval $(call docker_test_alpine_tpl,$(v))))
+# TODO latest-alpine -> alpine

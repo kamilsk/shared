@@ -4,18 +4,22 @@
 # Version: 1.0
 #
 
+ifndef PACKAGES
+$(error Please include env.mk before)
+endif
+
 .PHONY: build
 build:
-	go list ./... | grep -v /vendor/ | xargs go build -v "$$1"
+	$(PACKAGES) | xargs go build -v "$$1"
 
 .PHONY: clean
 clean:
-	go list ./... | grep -v /vendor/ | xargs go clean -i -x "$$1"
+	$(PACKAGES) | xargs go clean -i -x "$$1"
 
 .PHONY: install
 install:
-	go list ./... | grep -v /vendor/ | xargs go install "$$1"
+	$(PACKAGES) | xargs go install "$$1"
 
 .PHONY: vet
 vet:
-	go list ./... | grep -v /vendor/ | xargs go vet "$$1"
+	$(PACKAGES) | xargs go vet "$$1"

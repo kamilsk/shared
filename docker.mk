@@ -7,30 +7,24 @@
 ARGS         =
 OPEN_BROWSER =
 
+SUPPORTED_VERSIONS ?= 1.5 1.6 1.7 latest
+
 ifndef PWD
 $(error Please include env.mk before)
 endif
 
-ifndef GOPATH
-$(error $GOPATH not set)
-endif
+include $(PWD)/docker/bench-alpine.mk
+include $(PWD)/docker/bench-alpine-gcc.mk
+include $(PWD)/docker/bench-base.mk
 
-ifndef GO_PACKAGE
-$(error Please provide GO_PACKAGE (e.g. GO_PACKAGE = github.com/kamilsk/semaphore))
-endif
+include $(PWD)/docker/clean.mk
 
-include $(PWD)docker/bench-alpine.mk
-include $(PWD)docker/bench-alpine-gcc.mk
-include $(PWD)docker/bench-base.mk
+include $(PWD)/docker/pull-alpine.mk
+include $(PWD)/docker/pull-alpine-gcc.mk
+include $(PWD)/docker/pull-base.mk
 
-include $(PWD)docker/clean.mk
+include $(PWD)/docker/test-alpine.mk
+include $(PWD)/docker/test-alpine-gcc.mk
+include $(PWD)/docker/test-base.mk
 
-include $(PWD)docker/pull-alpine.mk
-include $(PWD)docker/pull-alpine-gcc.mk
-include $(PWD)docker/pull-base.mk
-
-include $(PWD)docker/test-alpine.mk
-include $(PWD)docker/test-alpine-gcc.mk
-include $(PWD)docker/test-base.mk
-
-include $(PWD)docker/tooling.mk
+include $(PWD)/docker/tooling.mk
