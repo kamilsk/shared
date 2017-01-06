@@ -17,6 +17,7 @@ build-alpine-gcc:
 	             $(PWD)/alpine-gcc
 
 .PHONY: build-tools
+build-tools: pull-latest
 build-tools:
 	docker build -t kamilsk/go-tools:latest \
 	             -f $(PWD)/tools/Dockerfile \
@@ -77,6 +78,10 @@ pull-alpine:
 	docker pull golang:1.6-alpine
 	docker pull golang:1.7-alpine
 	docker pull golang:alpine
+
+.PHONY: pull-latest
+pull-latest:
+	docker pull golang:latest
 
 
 

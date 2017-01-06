@@ -16,7 +16,8 @@
 
 #### What's inside
 
-[gometalinter.v1](https://github.com/alecthomas/gometalinter) with
+[glide](https://github.com/Masterminds/glide) v0.12.3
+[gometalinter](https://github.com/alecthomas/gometalinter) v1.0.3 with
 - [structcheck](https://github.com/opennota/check)
 - [deadcode](https://github.com/tsenart/deadcode)
 - [interfacer](https://github.com/mvdan/interfacer)
