@@ -4,15 +4,15 @@
 
 ## Common
 
-### [kamilsk/golang:1.5-alpine](1.5-alpine.Dockerfile)
+### [kamilsk/golang:1.5-alpine](alpine-gcc/1.5-alpine.Dockerfile)
 
-### [kamilsk/golang:1.6-alpine](1.6-alpine.Dockerfile)
+### [kamilsk/golang:1.6-alpine](alpine-gcc/1.6-alpine.Dockerfile)
 
-### [kamilsk/golang:1.7-alpine](1.7-alpine.Dockerfile)
+### [kamilsk/golang:1.7-alpine](alpine-gcc/1.7-alpine.Dockerfile)
 
-## Tooling
+## Tools
 
-### [kamilsk/go-tools:alpine](tools.Dockerfile)
+### [kamilsk/go-tools:alpine](tools/Dockerfile)
 
 #### What's inside
 

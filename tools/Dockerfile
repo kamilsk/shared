@@ -1,6 +1,6 @@
 FROM golang:latest
 
-MAINTAINER Kamil Samigullin
+MAINTAINER Kamil Samigullin <kamil@samigullin.info>
 
 ENV GOPATH /go
 

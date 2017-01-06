@@ -1,6 +1,6 @@
 FROM golang:1.7-alpine
 
-MAINTAINER Kamil Samigullin
+MAINTAINER Kamil Samigullin <kamil@samigullin.info>
 
 ENV GOPATH /go
 
