@@ -7,20 +7,20 @@ build-alpine-gcc: drop-alpine-gcc clean-alpine-gcc
 build-alpine-gcc:
 	docker build -t kamilsk/golang:1.5-alpine \
 	             -f $(PWD)/alpine-gcc/1.5-alpine.Dockerfile \
-	             .
+	             $(PWD)/alpine-gcc
 	docker build -t kamilsk/golang:1.6-alpine \
 	             -f $(PWD)/alpine-gcc/1.6-alpine.Dockerfile \
-	             .
+	             $(PWD)/alpine-gcc
 	docker build -t kamilsk/golang:1.7-alpine \
 	             -t kamilsk/golang:alpine \
 	             -f $(PWD)/alpine-gcc/1.7-alpine.Dockerfile \
-	             .
+	             $(PWD)/alpine-gcc
 
 .PHONY: build-tools
 build-tools:
 	docker build -t kamilsk/go-tools:latest \
 	             -f $(PWD)/tools/Dockerfile \
-	             .
+	             $(PWD)/tools
 
 
 
@@ -48,6 +48,8 @@ clean-invalid-golang:
 	| grep '^<none>\s\+' \
 	| awk '{print $$2}' \
 	| xargs docker rmi -f "$$1"
+
+
 
 .PHONY: drop-alpine
 drop-alpine:
