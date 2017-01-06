@@ -2,6 +2,6 @@
 >
 > My custom docker images for PHP environment.
 
-## Tooling
+## Tools
 
-### [kamilsk/php-tools:latest](tools.Dockerfile)
+### [kamilsk/php-tools:latest](tools/Dockerfile)
