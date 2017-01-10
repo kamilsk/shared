@@ -1,4 +1,17 @@
-define docker_test_tpl
+define docker_base_tpl
+
+.PHONY: docker-bench-$(1)
+docker-bench-$(1):
+	docker run --rm \
+	           -v '$${GOPATH}/src/$${GO_PACKAGE}':'/go/src/$${GO_PACKAGE}' \
+	           -w '/go/src/$${GO_PACKAGE}' \
+	           golang:$(1) \
+	           /bin/sh -c '$$(PACKAGES) | xargs go get -d -t "$$$$1" && \
+	                       $$(PACKAGES) | xargs go test -bench=. $$(strip $$(ARGS)) "$$$$1"'
+
+.PHONY: docker-pull-$(1)
+docker-pull-$(1):
+	docker pull golang:$(1)
 
 .PHONY: docker-test-$(1)
 docker-test-$(1):
@@ -27,5 +40,4 @@ docker-test-$(1)-with-coverage:
 	if [ '$$(OPEN_BROWSER)' != '' ]; then go tool cover -html='$$@.out'; fi
 
 endef
-
-$(foreach v,$(SUPPORTED_VERSIONS),$(eval $(call docker_test_tpl,$(v))))
+$(foreach v,$(SUPPORTED_VERSIONS),$(eval $(call docker_base_tpl,$(v))))

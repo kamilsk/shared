@@ -6,3 +6,7 @@ docker-tool-gometalinter:
 	           kamilsk/go-tools:latest \
 	           /bin/sh -c '$(PACKAGES) | xargs go test -i "$$1" && \
 	                       gometalinter.v1 --vendor $(strip $(ARGS)) ./...'
+
+.PHONY: docker-pull-tools
+docker-pull-tools:
+	docker pull kamilsk/go-tools:latest
