@@ -12,7 +12,7 @@
 
 ## Tools
 
-### [kamilsk/go-tools:alpine](tools/Dockerfile)
+### [kamilsk/go-tools:latest](tools/Dockerfile)
 
 #### What's inside
 
@@ -44,5 +44,5 @@
 Discovering
 
 ```bash
-$ docker run -it --rm kamilsk/go-tools:alpine /bin/sh
+$ docker run -it --rm kamilsk/go-tools:latest /bin/sh
 ```
