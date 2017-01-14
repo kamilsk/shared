@@ -6,8 +6,8 @@ docker-bench-$(1):
 	           -v '$${GOPATH}/src/$${GO_PACKAGE}':'/go/src/$${GO_PACKAGE}' \
 	           -w '/go/src/$${GO_PACKAGE}' \
 	           golang:$(1) \
-	           /bin/sh -c '$$(PACKAGES) | xargs go get -d -t "$$$$1" && \
-	                       $$(PACKAGES) | xargs go test -bench=. $$(strip $$(ARGS)) "$$$$1"'
+	           /bin/sh -c '$$(PACKAGES) | xargs go get -d -t && \
+	                       $$(PACKAGES) | xargs go test -bench=. $$(strip $$(ARGS))'
 
 .PHONY: docker-pull-$(1)
 docker-pull-$(1):
@@ -19,8 +19,8 @@ docker-test-$(1):
 	           -v '$${GOPATH}/src/$${GO_PACKAGE}':'/go/src/$${GO_PACKAGE}' \
 	           -w '/go/src/$${GO_PACKAGE}' \
 	           golang:$(1) \
-	           /bin/sh -c '$$(PACKAGES) | xargs go get -d -t "$$$$1" && \
-	                       $$(PACKAGES) | xargs go test -race $$(strip $$(ARGS)) "$$$$1"'
+	           /bin/sh -c '$$(PACKAGES) | xargs go get -d -t && \
+	                       $$(PACKAGES) | xargs go test -race $$(strip $$(ARGS))'
 
 .PHONY: docker-test-$(1)-with-coverage
 docker-test-$(1)-with-coverage:
@@ -28,7 +28,7 @@ docker-test-$(1)-with-coverage:
 	           -v '$${GOPATH}/src/$${GO_PACKAGE}':'/go/src/$${GO_PACKAGE}' \
 	           -w '/go/src/$${GO_PACKAGE}' \
 	           golang:$(1) \
-	           /bin/sh -c 'go list ./... | grep -v /vendor/ | xargs go get -d -t "$$$$1"; \
+	           /bin/sh -c 'go list ./... | grep -v /vendor/ | xargs go get -d -t; \
 	                       echo "mode: $${GO_TEST_COVERAGE_MODE}" > '$$@.out'; \
 	                       for package in $$$$($$(PACKAGES)); do \
 	                           go test -covermode '$${GO_TEST_COVERAGE_MODE}' \
