@@ -4,14 +4,13 @@
 # Version: 1.0
 #
 
-ARGS         =
-OPEN_BROWSER =
-
-SUPPORTED_VERSIONS ?= 1.5 1.6 1.7 latest
-
 ifndef PWD
 $(error Please include env.mk before)
 endif
+
+
+OPEN_BROWSER       ?= true
+SUPPORTED_VERSIONS ?= 1.5 1.6 1.7 latest
 
 include $(PWD)/docker/alpine.mk
 include $(PWD)/docker/alpine-gcc.mk
