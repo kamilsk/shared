@@ -23,6 +23,4 @@ docker-clean:
 	| awk '{print $$2}' \
 	| xargs docker rmi -f &>/dev/null || true
 
-	if [ '${PRUNE}' != '' ] && [ '${PRUNE_AVAILABLE}' == 'true' ]; then \
-	    docker system prune $(strip $(PRUNE))
-	fi
+	if [ '${PRUNE}' != '' ] && [ '${PRUNE_AVAILABLE}' == 'true' ]; then docker system prune $(strip $(PRUNE)); fi

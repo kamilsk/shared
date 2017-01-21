@@ -37,6 +37,10 @@ GO_TEST_COVERAGE_FILENAME ?= coverage.out
 test:
 	$(PACKAGES) | xargs go test -race $(strip $(ARGS))
 
+.PHONY: test-check
+test-check:
+	$(PACKAGES) | xargs go test -run=^hack $(strip $(ARGS))
+
 .PHONY: test-with-coverage
 test-with-coverage:
 	$(PACKAGES) | xargs go test -cover $(strip $(ARGS))

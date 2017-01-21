@@ -22,8 +22,17 @@ docker-test-$(1):
 	           /bin/sh -c '$$(PACKAGES) | xargs go get -d -t && \
 	                       $$(PACKAGES) | xargs go test -race $$(strip $$(ARGS))'
 
-.PHONY: docker-test-$(1)-with-coverage
-docker-test-$(1)-with-coverage:
+.PHONY: docker-test-check-$(1)
+docker-test-check-$(1):
+	docker run --rm \
+	           -v '$${GOPATH}/src/$${GO_PACKAGE}':'/go/src/$${GO_PACKAGE}' \
+	           -w '/go/src/$${GO_PACKAGE}' \
+	           golang:$(1) \
+	           /bin/sh -c '$$(PACKAGES) | xargs go get -d -t && \
+	                       $$(PACKAGES) | xargs go test -run=^hack $$(strip $$(ARGS))'
+
+.PHONY: docker-test-with-coverage-$(1)
+docker-test-with-coverage-$(1):
 	docker run --rm \
 	           -v '$${GOPATH}/src/$${GO_PACKAGE}':'/go/src/$${GO_PACKAGE}' \
 	           -w '/go/src/$${GO_PACKAGE}' \
@@ -40,4 +49,5 @@ docker-test-$(1)-with-coverage:
 	if [ '$$(OPEN_BROWSER)' != '' ]; then go tool cover -html='$$@.out'; fi
 
 endef
+
 $(foreach v,$(SUPPORTED_VERSIONS),$(eval $(call docker_base_tpl,$(v))))

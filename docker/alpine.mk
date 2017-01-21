@@ -20,6 +20,15 @@ docker-test-$(1)-alpine:
 	           golang:$(1)-alpine \
 	           /bin/sh -c '$$(PACKAGES) | xargs go test $$(strip $$(ARGS))'
 
+.PHONY: docker-test-check-$(1)-alpine
+docker-test-check-$(1)-alpine:
+	docker run --rm \
+	           -v '$${GOPATH}/src/$${GO_PACKAGE}':'/go/src/$${GO_PACKAGE}' \
+	           -w '/go/src/$${GO_PACKAGE}' \
+	           golang:$(1)-alpine \
+	           /bin/sh -c '$$(PACKAGES) | xargs go test -run=^hack $$(strip $$(ARGS))'
+
 endef
+
 $(foreach v,$(SUPPORTED_VERSIONS),$(eval $(call docker_alpine_tpl,$(v))))
 # TODO latest-alpine -> alpine
