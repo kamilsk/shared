@@ -1,9 +1,3 @@
-#
-# Go package's environment variables.
-#
-# Version: 1.0
-#
-
 ifndef GOPATH
 $(error $GOPATH not set)
 endif
@@ -11,8 +5,11 @@ endif
 
 MAKEPATH   := $(abspath $(lastword $(MAKEFILE_LIST)))
 PWD        := $(patsubst %/,%,$(dir $(MAKEPATH)))
-GO_PACKAGE := $(patsubst %/,%,$(subst $(GOPATH)/src/,,$(dir $(abspath $(firstword $(MAKEFILE_LIST))))))
+DATE       := $(shell date -u "+%Y-%m-%d %H:%M:%S")
+GO_VERSION := $(shell go version | awk '{print $$3}' | tr -d 'go')
 
+GIT_REV    := $(shell git rev-parse --short HEAD)
+GO_PACKAGE := $(patsubst %/,%,$(subst $(GOPATH)/src/,,$(dir $(abspath $(firstword $(MAKEFILE_LIST))))))
 
 ARGS     =
 PACKAGES = go list ./... | grep -v /vendor/

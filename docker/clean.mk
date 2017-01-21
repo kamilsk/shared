@@ -1,3 +1,7 @@
+PRUNE_AVAILABLE := $(shell echo "1.13.0\n$(DOCKER_VERSION)" | sort -ct. -k1,1n -k2,2n && echo true)
+
+PRUNE ?=
+
 .PHONY: docker-clean
 docker-clean:
 	docker images --all \
@@ -18,3 +22,7 @@ docker-clean:
 	| grep '^<none>\s\+' \
 	| awk '{print $$2}' \
 	| xargs docker rmi -f &>/dev/null || true
+
+	if [ '${PRUNE}' != '' ] && [ '${PRUNE_AVAILABLE}' == 'true' ]; then \
+	    docker system prune $(strip $(PRUNE))
+	fi

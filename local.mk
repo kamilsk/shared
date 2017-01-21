@@ -1,9 +1,3 @@
-#
-# Go package's targets for local development.
-#
-# Version: 1.0
-#
-
 ifndef PACKAGES
 $(error Please include env.mk before)
 endif
