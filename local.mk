@@ -61,6 +61,20 @@ test-with-coverage-profile:
 	done
 	if [ '$(OPEN_BROWSER)' != '' ]; then go tool cover -html='${GO_TEST_COVERAGE_FILENAME}'; fi
 
+.PHONY: test-example
+test-example: GO_TEST_COVERAGE_FILENAME = coverage_example.out
+test-example:
+	echo 'mode: ${GO_TEST_COVERAGE_MODE}' > '${GO_TEST_COVERAGE_FILENAME}'
+	for package in $$($(PACKAGES)); do \
+	    go test -v -run=Example \
+	            -covermode '${GO_TEST_COVERAGE_MODE}' \
+	            -coverprofile "coverage_example_$${package##*/}.out" \
+	            $(strip $(ARGS)) "$${package}"; \
+	    sed '1d' "coverage_example_$${package##*/}.out" >> '${GO_TEST_COVERAGE_FILENAME}'; \
+	    rm "coverage_example_$${package##*/}.out"; \
+	done
+	if [ '$(OPEN_BROWSER)' != '' ]; then go tool cover -html='${GO_TEST_COVERAGE_FILENAME}'; fi
+
 
 .PHONY: bench
 bench:
