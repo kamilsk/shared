@@ -17,9 +17,14 @@ packages:
   github: https://github.com/vimeo/psalm
 - package: phpstan/phpstan
   github: https://github.com/phpstan/phpstan
-- package:
+- package: ~
   github: https://github.com/exakat/exakat
-  related: https://github.com/exakat/php-static-analysis-tools
+- package: pdepend/pdepend
+  github: https://github.com/pdepend/pdepend
+- package: phpmd/phpmd
+  github: https://github.com/phpmd/phpmd
+- package: phploc/phploc
+  github: https://github.com/sebastianbergmann/phploc
 
 question:
 - package: psecio/iniscan
