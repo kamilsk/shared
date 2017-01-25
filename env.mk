@@ -3,8 +3,8 @@ $(error $GOPATH not set)
 endif
 
 
-MAKEPATH   := $(abspath $(lastword $(MAKEFILE_LIST)))
-PWD        := $(patsubst %/,%,$(dir $(MAKEPATH)))
+CWD        := $(patsubst %/,%,$(dir $(abspath $(firstword $(MAKEFILE_LIST)))))
+CID        := $(patsubst %/,%,$(dir $(abspath $(lastword $(MAKEFILE_LIST)))))
 DATE       := $(shell date -u "+%Y-%m-%d %H:%M:%S")
 GO_VERSION := $(shell go version | awk '{print $$3}' | tr -d 'go')
 
