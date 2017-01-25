@@ -1,5 +1,13 @@
 define docker_alpine_tpl
 
+.PHONY: docker-in-$(1)-alpine
+docker-in-$(1)-alpine:
+	docker run --rm -it \
+	           -v '$${GOPATH}/src/$${GO_PACKAGE}':'/go/src/$${GO_PACKAGE}' \
+	           -w '/go/src/$${GO_PACKAGE}' \
+	           golang:$(1)-alpine \
+	           /bin/sh
+
 .PHONY: docker-bench-$(1)-alpine
 docker-bench-$(1)-alpine:
 	docker run --rm \

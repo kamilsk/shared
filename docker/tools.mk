@@ -1,3 +1,11 @@
+.PHONY: docker-in-tool
+docker-in-tool:
+	docker run --rm -it \
+	           -v '${GOPATH}/src/${GO_PACKAGE}':'/go/src/${GO_PACKAGE}' \
+	           -w '/go/src/${GO_PACKAGE}' \
+	           kamilsk/go-tools:latest \
+	           /bin/sh
+
 .PHONY: docker-tool-gometalinter
 docker-tool-gometalinter:
 	docker run --rm \
