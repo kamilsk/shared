@@ -1,5 +1,5 @@
 MAKEPATH := $(abspath $(firstword $(MAKEFILE_LIST)))
-PWD      := $(patsubst %/,%,$(dir $(MAKEPATH)))
+CWD      := $(patsubst %/,%,$(dir $(MAKEPATH)))
 
 .PHONY: build
 build: build-alpine-gcc build-tools
@@ -9,26 +9,26 @@ build-alpine-gcc: pull-alpine
 build-alpine-gcc: drop-alpine-gcc clean-invalid-alpine-gcc
 build-alpine-gcc:
 	docker build -t kamilsk/golang:1.5-alpine \
-	             -f $(PWD)/alpine-gcc/1.5-alpine.Dockerfile \
-	             $(PWD)/alpine-gcc
+	             -f $(CWD)/alpine-gcc/1.5-alpine.Dockerfile \
+	             $(CWD)/alpine-gcc
 	docker build -t kamilsk/golang:1.6-alpine \
-	             -f $(PWD)/alpine-gcc/1.6-alpine.Dockerfile \
-	             $(PWD)/alpine-gcc
+	             -f $(CWD)/alpine-gcc/1.6-alpine.Dockerfile \
+	             $(CWD)/alpine-gcc
 	docker build -t kamilsk/golang:1.7-alpine \
-	             -f $(PWD)/alpine-gcc/1.7-alpine.Dockerfile \
-	             $(PWD)/alpine-gcc
+	             -f $(CWD)/alpine-gcc/1.7-alpine.Dockerfile \
+	             $(CWD)/alpine-gcc
 	docker build -t kamilsk/golang:1.8-alpine \
 	             -t kamilsk/golang:alpine \
-	             -f $(PWD)/alpine-gcc/1.8-alpine.Dockerfile \
-	             $(PWD)/alpine-gcc
+	             -f $(CWD)/alpine-gcc/1.8-alpine.Dockerfile \
+	             $(CWD)/alpine-gcc
 
 .PHONY: build-tools
 build-tools: pull-latest
 build-tools: drop-tools clean-invalid-tools
 build-tools:
 	docker build -t kamilsk/go-tools:latest \
-	             -f $(PWD)/tools/Dockerfile \
-	             $(PWD)/tools
+	             -f $(CWD)/tools/Dockerfile \
+	             $(CWD)/tools
 
 
 
