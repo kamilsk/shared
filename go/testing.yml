@@ -7,6 +7,8 @@ packages:
   src: https://github.com/jarcoal/httpmock
 - package: github.com/jmartin82/mmock
   src: https://github.com/jmartin82/mmock
+- package: github.com/kyoh86/richgo
+  src: https://github.com/kyoh86/richgo
 - package: github.com/mattn/goveralls
   src: https://github.com/mattn/goveralls
 - package: github.com/tebeka/go2xunit
