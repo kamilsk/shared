@@ -1,67 +1,67 @@
 packages:
 - package: symfony/symfony
-  github: https://github.com/symfony/symfony
+  src: https://github.com/symfony/symfony
   helpful:
   - package: symfony/symfony-installer
-    github: https://github.com/symfony/symfony-installer
+    src: https://github.com/symfony/symfony-installer
   - package: bamarni/symfony-console-autocomplete
-    github: https://github.com/bamarni/symfony-console-autocomplete
+    src: https://github.com/bamarni/symfony-console-autocomplete
   - package: stecman/symfony-console-completion
-    github: https://github.com/stecman/symfony-console-completion
+    src: https://github.com/stecman/symfony-console-completion
   bundle:
   - package:
-    github: https://github.com/FriendsOfSymfony/FOSRestBundle
+    src: https://github.com/FriendsOfSymfony/FOSRestBundle
   - package:
-    github: https://github.com/schmittjoh/JMSSerializerBundle
+    src: https://github.com/schmittjoh/JMSSerializerBundle
   - package:
-    github: https://github.com/hautelook/AliceBundle
+    src: https://github.com/hautelook/AliceBundle
   - package:
-    github: https://github.com/liip/LiipFunctionalTestBundle
+    src: https://github.com/liip/LiipFunctionalTestBundle
 - package: slim/slim
-  github: https://github.com/slimphp/Slim
+  src: https://github.com/slimphp/Slim
 - package: laravel/lumen
-  github: https://github.com/laravel/lumen
+  src: https://github.com/laravel/lumen
 - package: silex/silex
-  github: https://github.com/silexphp/Silex
+  src: https://github.com/silexphp/Silex
   related:
   - package: bolt/bolt
-    github: https://github.com/bolt/bolt
+    src: https://github.com/bolt/bolt
 - package: phalcon/cphalcon
-  github: https://github.com/phalcon/cphalcon
+  src: https://github.com/phalcon/cphalcon
   helpful:
   - package: phalcon/devtools
-    github: https://github.com/phalcon/phalcon-devtools
+    src: https://github.com/phalcon/phalcon-devtools
   related:
   - package: oleksandr-torosh/yona-cms
-    github: https://github.com/oleksandr-torosh/yona-cms
+    src: https://github.com/oleksandr-torosh/yona-cms
 - package: laravel/laravel
-  github: https://github.com/laravel/laravel
+  src: https://github.com/laravel/laravel
   bundle:
   - package: consoletvs/charts
-    github: https://github.com/ConsoleTVs/Charts
+    src: https://github.com/ConsoleTVs/Charts
   helpful:
   - package:
-    github: https://github.com/beckenrode/mysql-workbench-export-laravel-5-migrations
+    src: https://github.com/beckenrode/mysql-workbench-export-laravel-5-migrations
   - package:
-    github: https://github.com/cviebrock/sequel-pro-laravel-export
+    src: https://github.com/cviebrock/sequel-pro-laravel-export
   related:
   - package: asgardcms/platform
-    github: https://github.com/AsgardCms/Platform
+    src: https://github.com/AsgardCms/Platform
   - package: typicms/base
-    github: https://github.com/typicms/base
+    src: https://github.com/typicms/base
   - package: yab/quarx
-    github: https://github.com/YABhq/Quarx
+    src: https://github.com/YABhq/Quarx
   - package: web-feet/coastercms
-    github: https://github.com/web-feet/coastercms
+    src: https://github.com/web-feet/coastercms
   - package: pyrocms/pyrocms
-    github: https://github.com/pyrocms/pyrocms
+    src: https://github.com/pyrocms/pyrocms
   - package: october/october
-    github: https://github.com/octobercms/october
+    src: https://github.com/octobercms/october
   - package: tcg/voyager
-    github: https://github.com/the-control-group/voyager
+    src: https://github.com/the-control-group/voyager
   - package: bottelet/flarepoint
-    github: https://github.com/Bottelet/Flarepoint-crm/
+    src: https://github.com/Bottelet/Flarepoint-crm/
   - package: hillelcoren/invoice-ninja
-    github: https://github.com/invoiceninja/invoiceninja
+    src: https://github.com/invoiceninja/invoiceninja
   - package: renatomarinho/laravel-gitscrum
-    github: https://github.com/renatomarinho/laravel-gitscrum
+    src: https://github.com/renatomarinho/laravel-gitscrum

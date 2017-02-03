@@ -1,6 +1,6 @@
 packages:
 - package: click
-  github: https://github.com/pallets/click
+  src: https://github.com/pallets/click
   helpful:
   - package: tqdm
-    github: https://github.com/noamraph/tqdm
+    src: https://github.com/noamraph/tqdm

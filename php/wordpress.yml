@@ -1,5 +1,5 @@
 packages:
 - package: wordplate/wordplate
-  github: https://github.com/wordplate/wordplate
+  src: https://github.com/wordplate/wordplate
 - package: roots/bedrock
-  github: https://github.com/roots/bedrock
+  src: https://github.com/roots/bedrock
