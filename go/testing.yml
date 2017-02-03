@@ -1,13 +1,13 @@
 packages:
-- package: github.com/jarcoal/httpmock
-  github: https://github.com/jarcoal/httpmock
-- package: github.com/jmartin82/mmock
-  github: https://github.com/jmartin82/mmock
-- package: github.com/mattn/goveralls
-  github: https://github.com/mattn/goveralls
+- package: github.com/cweill/gotests
+  src: https://github.com/cweill/gotests
 - package: github.com/golang/mock
   githug: https://github.com/golang/mock
+- package: github.com/jarcoal/httpmock
+  src: https://github.com/jarcoal/httpmock
+- package: github.com/jmartin82/mmock
+  src: https://github.com/jmartin82/mmock
+- package: github.com/mattn/goveralls
+  src: https://github.com/mattn/goveralls
 - package: github.com/tebeka/go2xunit
-  github: https://github.com/tebeka/go2xunit
-- package: github.com/cweill/gotests
-  github: https://github.com/cweill/gotests
+  src: https://github.com/tebeka/go2xunit

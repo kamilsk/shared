@@ -1,13 +1,13 @@
 packages:
-- package: github.com/Sirupsen/logrus
-  github: https://github.com/Sirupsen/logrus
-- package: github.com/uber-go/zap
-  github: https://github.com/uber-go/zap
-- package: github.com/golang/glog
-  github: https://github.com/golang/glog
-- package: github.com/inconshreveable/log15
-  github: https://github.com/inconshreveable/log15
 - package: github.com/apex/log
-  github: https://github.com/apex/log
+  src: https://github.com/apex/log
+- package: github.com/golang/glog
+  src: https://github.com/golang/glog
+- package: github.com/inconshreveable/log15
+  src: https://github.com/inconshreveable/log15
 - package: github.com/opentracing/opentracing-go
-  github: https://github.com/opentracing/opentracing-go
+  src: https://github.com/opentracing/opentracing-go
+- package: github.com/Sirupsen/logrus
+  src: https://github.com/Sirupsen/logrus
+- package: github.com/uber-go/zap
+  src: https://github.com/uber-go/zap
