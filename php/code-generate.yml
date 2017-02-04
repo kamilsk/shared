@@ -1,7 +1,7 @@
 packages:
 - package: memio/memio
   src: https://github.com/memio/memio
-
-question:
-- package:
+- package: nikic/php-parser
   src: https://github.com/nikic/PHP-Parser
+- package: sami/sami
+  src: https://github.com/FriendsOfPHP/Sami
