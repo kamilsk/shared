@@ -10,6 +10,8 @@
 
 ### [kamilsk/golang:1.7-alpine](alpine-gcc/1.7-alpine.Dockerfile)
 
+### [kamilsk/golang:1.8-alpine](alpine-gcc/1.8-alpine.Dockerfile)
+
 ## Tools
 
 ### [kamilsk/go-tools:latest](tools/Dockerfile)
