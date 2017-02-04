@@ -6,7 +6,7 @@ PRUNE ?=
 docker-clean: docker-clean-invalid-common
 docker-clean: docker-clean-invalid-golang
 docker-clean: docker-clean-invalid-custom
-docker-clean: docker-clean-invalid-tool
+docker-clean: docker-clean-invalid-tools
 docker-clean:
 	if [ '${PRUNE}' != '' ] && [ '${PRUNE_AVAILABLE}' == 'true' ]; then docker system prune $(strip $(PRUNE)); fi
 
@@ -35,8 +35,8 @@ docker-clean-invalid-custom:
 	| awk '{print $$2}' \
 	| xargs docker rmi -f &>/dev/null || true
 
-.PHONY: docker-clean-invalid-tool
-docker-clean-invalid-tool:
+.PHONY: docker-clean-invalid-tools
+docker-clean-invalid-tools:
 	docker images --all \
 	| grep '^kamilsk\/go-tools\s\+' \
 	| awk '{print $$2 "\t" $$3}' \

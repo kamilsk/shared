@@ -1,7 +1,9 @@
 ifndef GOPATH
-$(error $GOPATH not set)
+$(error $$GOPATH not set)
 endif
 
+
+ARGS =
 
 CWD        := $(patsubst %/,%,$(dir $(abspath $(firstword $(MAKEFILE_LIST)))))
 CID        := $(patsubst %/,%,$(dir $(abspath $(lastword $(MAKEFILE_LIST)))))
@@ -10,10 +12,9 @@ GO_VERSION := $(shell go version | awk '{print $$3}' | tr -d 'go')
 
 GIT_REV    := $(shell git rev-parse --short HEAD)
 GO_PACKAGE := $(patsubst %/,%,$(subst $(GOPATH)/src/,,$(CWD)))
+PACKAGES   := go list ./... | grep -v vendor | grep -v ^_
 
-ARGS     =
-PACKAGES = go list ./... | grep -v vendor | grep -v ^_
-define BUILD_VARIATION = (
+define BUILD_VARIATION := (
     [android]   = [arm],
     [darwin]    = [386, amd64, arm, arm64],
     [dragonfly] = [amd64],

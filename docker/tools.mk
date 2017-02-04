@@ -1,10 +1,14 @@
-.PHONY: docker-in-tool
-docker-in-tool:
+.PHONY: docker-in-tools
+docker-in-tools:
 	docker run --rm -it \
 	           -v '${GOPATH}/src/${GO_PACKAGE}':'/go/src/${GO_PACKAGE}' \
 	           -w '/go/src/${GO_PACKAGE}' \
 	           kamilsk/go-tools:latest \
 	           /bin/sh
+
+.PHONY: docker-pull-tools
+docker-pull-tools:
+	docker pull kamilsk/go-tools:latest
 
 .PHONY: docker-tool-gometalinter
 docker-tool-gometalinter:
@@ -15,6 +19,11 @@ docker-tool-gometalinter:
 	           /bin/sh -c '$(PACKAGES) | xargs go test -i && \
 	                       gometalinter.v1 --vendor $(strip $(ARGS)) ./...'
 
-.PHONY: docker-pull-tools
-docker-pull-tools:
-	docker pull kamilsk/go-tools:latest
+.PHONY: docker-tool-glide
+docker-tool-glide:
+	docker run --rm \
+	           -v '${GOPATH}/src/${GO_PACKAGE}':'/go/src/${GO_PACKAGE}' \
+	           -w '/go/src/${GO_PACKAGE}' \
+	           kamilsk/go-tools:latest \
+	           /bin/sh -c 'glide install --strip-vendor $(strip $(ARGS)) && \
+	                       rm -rf /go/src/.glide'
