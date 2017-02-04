@@ -1,6 +1,22 @@
 MAKEPATH := $(abspath $(firstword $(MAKEFILE_LIST)))
 CWD      := $(patsubst %/,%,$(dir $(MAKEPATH)))
 
+
+
+.PHONY: pull-alpine
+pull-alpine:
+	docker pull golang:1.5-alpine
+	docker pull golang:1.6-alpine
+	docker pull golang:1.7-alpine
+	docker pull golang:1.8-alpine
+	docker pull golang:alpine
+
+.PHONY: pull-latest
+pull-latest:
+	docker pull golang:latest
+
+
+
 .PHONY: build
 build: build-alpine-gcc build-tools
 
@@ -29,6 +45,52 @@ build-tools:
 	docker build -t kamilsk/go-tools:latest \
 	             -f $(CWD)/tools/Dockerfile \
 	             $(CWD)/tools
+
+
+
+.PHONY: in-alpine-gcc-1.5
+in-alpine-gcc-1.5:
+	docker run --rm -it \
+	           kamilsk/golang:1.5-alpine \
+	           /bin/sh
+
+.PHONY: in-alpine-gcc-1.6
+in-alpine-gcc-1.6:
+	docker run --rm -it \
+	           kamilsk/golang:1.6-alpine \
+	           /bin/sh
+
+.PHONY: in-alpine-gcc-1.7
+in-alpine-gcc-1.7:
+	docker run --rm -it \
+	           kamilsk/golang:1.7-alpine \
+	           /bin/sh
+
+.PHONY: in-alpine-gcc-1.8
+in-alpine-gcc-1.8:
+	docker run --rm -it \
+	           kamilsk/golang:1.8-alpine \
+	           /bin/sh
+
+.PHONY: in-tools
+in-tools:
+	docker run --rm -it \
+	           kamilsk/go-tools:latest \
+	           /bin/sh
+
+
+
+.PHONY: publish-alpine-gcc
+publish-alpine-gcc:
+	docker push kamilsk/golang:1.5-alpine
+	docker push kamilsk/golang:1.6-alpine
+	docker push kamilsk/golang:1.7-alpine
+	docker push kamilsk/golang:1.8-alpine
+	docker push kamilsk/golang:alpine
+
+.PHONY: publish-tools
+publish-tools:
+	docker push kamilsk/go-tools:latest
 
 
 
@@ -85,31 +147,3 @@ drop-tools:
 	| grep -v '^<none>\s\+' \
 	| awk '{print $$2}' \
 	| xargs docker rmi -f &>/dev/null || true
-
-
-
-.PHONY: pull-alpine
-pull-alpine:
-	docker pull golang:1.5-alpine
-	docker pull golang:1.6-alpine
-	docker pull golang:1.7-alpine
-	docker pull golang:1.8-alpine
-	docker pull golang:alpine
-
-.PHONY: pull-latest
-pull-latest:
-	docker pull golang:latest
-
-
-
-.PHONY: publish-alpine-gcc
-publish-alpine-gcc:
-	docker push kamilsk/golang:1.5-alpine
-	docker push kamilsk/golang:1.6-alpine
-	docker push kamilsk/golang:1.7-alpine
-	docker push kamilsk/golang:1.8-alpine
-	docker push kamilsk/golang:alpine
-
-.PHONY: publish-tools
-publish-tools:
-	docker push kamilsk/go-tools:latest
