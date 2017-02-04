@@ -18,7 +18,7 @@ pull-latest:
 
 
 .PHONY: build
-build: build-alpine-gcc build-tools
+build: build-alpine-gcc build-hugo build-tools
 
 .PHONY: build-alpine-gcc
 build-alpine-gcc: pull-alpine
@@ -37,6 +37,14 @@ build-alpine-gcc:
 	             -t kamilsk/golang:alpine \
 	             -f $(CWD)/alpine-gcc/1.8-alpine.Dockerfile \
 	             $(CWD)/alpine-gcc
+
+.PHONY: build-hugo
+build-hugo: drop-hugo clean-invalid-hugo
+build-hugo:
+	docker pull alpine:latest
+	docker build -t kamilsk/hugo:latest \
+	             -f $(CWD)/hugo/Dockerfile \
+	             $(CWD)/hugo
 
 .PHONY: build-tools
 build-tools: pull-latest
@@ -72,6 +80,12 @@ in-alpine-gcc-1.8:
 	           kamilsk/golang:1.8-alpine \
 	           /bin/sh
 
+.PHONY: in-hugo
+in-hugo:
+	docker run --rm -it \
+	           kamilsk/hugo:latest \
+	           /bin/sh
+
 .PHONY: in-tools
 in-tools:
 	docker run --rm -it \
@@ -87,6 +101,10 @@ publish-alpine-gcc:
 	docker push kamilsk/golang:1.7-alpine
 	docker push kamilsk/golang:1.8-alpine
 	docker push kamilsk/golang:alpine
+
+.PHONY: publish-hugo
+publish-hugo:
+	docker push kamilsk/hugo:latest
 
 .PHONY: publish-tools
 publish-tools:
@@ -119,6 +137,15 @@ clean-invalid-alpine-gcc:
 	| awk '{print $$2}' \
 	| xargs docker rmi -f &>/dev/null || true
 
+.PHONY: clean-invalid-hugo
+clean-invalid-hugo:
+	docker images --all \
+	| grep '^kamilsk\/hugo\s\+' \
+	| awk '{print $$2 "\t" $$3}' \
+	| grep '^<none>\s\+' \
+	| awk '{print $$2}' \
+	| xargs docker rmi -f &>/dev/null || true
+
 .PHONY: clean-invalid-tools
 clean-invalid-tools:
 	docker images --all \
@@ -134,6 +161,15 @@ clean-invalid-tools:
 drop-alpine-gcc:
 	docker images --all \
 	| grep '^kamilsk\/golang\s\+' \
+	| awk '{print $$2 "\t" $$3}' \
+	| grep -v '^<none>\s\+' \
+	| awk '{print $$2}' \
+	| xargs docker rmi -f &>/dev/null || true
+
+.PHONY: drop-hugo
+drop-hugo:
+	docker images --all \
+	| grep '^kamilsk\/hugo\s\+' \
 	| awk '{print $$2 "\t" $$3}' \
 	| grep -v '^<none>\s\+' \
 	| awk '{print $$2}' \
