@@ -45,7 +45,7 @@ docker-test-with-coverage-$(1):
 	           -v '$${GOPATH}/src/$${GO_PACKAGE}':'/go/src/$${GO_PACKAGE}' \
 	           -w '/go/src/$${GO_PACKAGE}' \
 	           golang:$(1) \
-	           /bin/sh -c 'go list ./... | grep -v /vendor/ | xargs go get -d -t; \
+	           /bin/sh -c '$$(PACKAGES) | xargs go get -d -t; \
 	                       echo "mode: $${GO_TEST_COVERAGE_MODE}" > '$$@.out'; \
 	                       for package in $$$$($$(PACKAGES)); do \
 	                           go test -covermode '$${GO_TEST_COVERAGE_MODE}' \

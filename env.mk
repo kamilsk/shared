@@ -12,7 +12,7 @@ GIT_REV    := $(shell git rev-parse --short HEAD)
 GO_PACKAGE := $(patsubst %/,%,$(subst $(GOPATH)/src/,,$(CWD)))
 
 ARGS     =
-PACKAGES = go list ./... | grep -v /vendor/
+PACKAGES = go list ./... | grep -v vendor | grep -v ^_
 define BUILD_VARIATION = (
     [android]   = [arm],
     [darwin]    = [386, amd64, arm, arm64],
