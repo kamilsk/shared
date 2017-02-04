@@ -14,11 +14,14 @@
 
 ## Tools
 
+### [kamilsk/hugo:latest](hugo/Dockerfile)
+
+[hugo](https://gohugo.io) v0.18.1
+
 ### [kamilsk/go-tools:latest](tools/Dockerfile)
 
-#### What's inside
-
 [glide](https://github.com/Masterminds/glide) v0.12.3
+
 [gometalinter](https://github.com/alecthomas/gometalinter) v1.0.3 with
 - [structcheck](https://github.com/opennota/check)
 - [deadcode](https://github.com/tsenart/deadcode)
@@ -40,6 +43,21 @@
 - [aligncheck](https://github.com/opennota/check)
 - [dupl](https://github.com/mibk/dupl)
 - [goconst](https://github.com/jgautheron/goconst)
+
+[honnef.co/go/tools](https://github.com/dominikh/go-tools)
+- [gosimple](https://github.com/dominikh/go-tools/tree/master/cmd/gosimple)
+- [keyify](https://github.com/dominikh/go-tools/tree/master/cmd/keyify)
+- [rdeps](https://github.com/dominikh/go-tools/tree/master/cmd/rdeps)
+- [staticcheck](https://github.com/dominikh/go-tools/tree/master/cmd/staticcheck)
+- [structlayout](https://github.com/dominikh/go-tools/tree/master/cmd/structlayout)
+- [structlayout-optimize](https://github.com/dominikh/go-tools/tree/master/cmd/structlayout-optimize)
+- [structlayout-pretty](https://github.com/dominikh/go-tools/tree/master/cmd/structlayout-pretty)
+- [unused](https://github.com/dominikh/go-tools/tree/master/cmd/unused)
+
+```bash
+$ git rev-parse --short=7 HEAD
+6bc9a2a
+```
 
 ## Notes
 

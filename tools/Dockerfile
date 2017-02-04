@@ -8,3 +8,6 @@ RUN go get gopkg.in/alecthomas/gometalinter.v1 \
 
 RUN curl https://glide.sh/get | sh \
  && rm -rf /tmp/* /go/pkg/* /go/src/*
+
+RUN go get honnef.co/go/tools/... \
+ && rm -rf /tmp/* /go/pkg/* /go/src/*
