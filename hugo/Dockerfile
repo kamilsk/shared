@@ -12,6 +12,6 @@ RUN apk update --no-cache \
  && cp /tmp/hugo_${VERSION}_linux_amd64/hugo_${VERSION}_linux_amd64 /usr/local/bin/hugo \
  && rm -rf /tmp/*
 
-EXPOSE 8080
+EXPOSE 1313
 
 CMD ["hugo", "server"]
