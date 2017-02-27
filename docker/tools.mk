@@ -17,7 +17,7 @@ docker-tool-gometalinter:
 	           -w '/go/src/${GO_PACKAGE}' \
 	           kamilsk/go-tools:latest \
 	           /bin/sh -c '$(PACKAGES) | xargs go test -i && \
-	                       gometalinter.v1 --vendor $(strip $(ARGS)) ./...'
+	                       gometalinter --vendor $(strip $(ARGS)) ./...'
 
 .PHONY: docker-tool-glide
 docker-tool-glide:
