@@ -1,0 +1,3 @@
+packages:
+- package: Requests
+  src: https://github.com/kennethreitz/requests
