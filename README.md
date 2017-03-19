@@ -2,21 +2,11 @@
 >
 > My custom docker images for Go environment.
 
-## Common
-
-### [kamilsk/golang:1.5-alpine](alpine-gcc/1.5-alpine.Dockerfile)
-
-### [kamilsk/golang:1.6-alpine](alpine-gcc/1.6-alpine.Dockerfile)
-
-### [kamilsk/golang:1.7-alpine](alpine-gcc/1.7-alpine.Dockerfile)
-
-### [kamilsk/golang:1.8-alpine](alpine-gcc/1.8-alpine.Dockerfile)
-
 ## Tools
 
 ### [kamilsk/hugo:latest](hugo/Dockerfile)
 
-[hugo](https://gohugo.io) v0.18.1
+[hugo](https://gohugo.io) v0.19
 
 ### [kamilsk/go-tools:latest](tools/Dockerfile)
 
@@ -56,7 +46,7 @@
 
 ```bash
 $ git rev-parse --short=7 HEAD
-6bc9a2a
+d9b1af3
 ```
 
 ## Notes
@@ -64,5 +54,7 @@ $ git rev-parse --short=7 HEAD
 Discovering
 
 ```bash
+$ make in-tool # in-hugo
+# or
 $ docker run -it --rm kamilsk/go-tools:latest /bin/sh
 ```
