@@ -9,7 +9,6 @@ OPEN_BROWSER       ?= true
 SUPPORTED_VERSIONS ?= 1.5 1.6 1.7 1.8 latest
 
 include $(CID)/docker/alpine.mk
-include $(CID)/docker/alpine-gcc.mk
 include $(CID)/docker/base.mk
 
 include $(CID)/docker/clean.mk
