@@ -3,20 +3,6 @@ CWD      := $(patsubst %/,%,$(dir $(MAKEPATH)))
 
 
 
-.PHONY: pull-alpine
-pull-alpine:
-	docker pull golang:1.5-alpine
-	docker pull golang:1.6-alpine
-	docker pull golang:1.7-alpine
-	docker pull golang:1.8-alpine
-	docker pull golang:alpine
-
-.PHONY: pull-latest
-pull-latest:
-	docker pull golang:latest
-
-
-
 .PHONY: build
 build: build-hugo build-tools
 
@@ -29,9 +15,9 @@ build-hugo:
 	             $(CWD)/hugo
 
 .PHONY: build-tools
-build-tools: pull-latest
 build-tools: drop-tools clean-invalid-tools
 build-tools:
+	docker pull golang:latest
 	docker build -t kamilsk/go-tools:latest \
 	             -f $(CWD)/tools/Dockerfile \
 	             $(CWD)/tools
