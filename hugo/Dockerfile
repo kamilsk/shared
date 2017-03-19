@@ -2,7 +2,7 @@ FROM alpine:latest
 
 MAINTAINER Kamil Samigullin <kamil@samigullin.info>
 
-ENV VERSION 0.18.1
+ENV VERSION 0.19
 
 RUN apk update --no-cache \
  && apk add --no-cache ca-certificates wget \
