@@ -18,25 +18,7 @@ pull-latest:
 
 
 .PHONY: build
-build: build-alpine-gcc build-hugo build-tools
-
-.PHONY: build-alpine-gcc
-build-alpine-gcc: pull-alpine
-build-alpine-gcc: drop-alpine-gcc clean-invalid-alpine-gcc
-build-alpine-gcc:
-	docker build -t kamilsk/golang:1.5-alpine \
-	             -f $(CWD)/alpine-gcc/1.5-alpine.Dockerfile \
-	             $(CWD)/alpine-gcc
-	docker build -t kamilsk/golang:1.6-alpine \
-	             -f $(CWD)/alpine-gcc/1.6-alpine.Dockerfile \
-	             $(CWD)/alpine-gcc
-	docker build -t kamilsk/golang:1.7-alpine \
-	             -f $(CWD)/alpine-gcc/1.7-alpine.Dockerfile \
-	             $(CWD)/alpine-gcc
-	docker build -t kamilsk/golang:1.8-alpine \
-	             -t kamilsk/golang:alpine \
-	             -f $(CWD)/alpine-gcc/1.8-alpine.Dockerfile \
-	             $(CWD)/alpine-gcc
+build: build-hugo build-tools
 
 .PHONY: build-hugo
 build-hugo: drop-hugo clean-invalid-hugo
@@ -56,30 +38,6 @@ build-tools:
 
 
 
-.PHONY: in-alpine-gcc-1.5
-in-alpine-gcc-1.5:
-	docker run --rm -it \
-	           kamilsk/golang:1.5-alpine \
-	           /bin/sh
-
-.PHONY: in-alpine-gcc-1.6
-in-alpine-gcc-1.6:
-	docker run --rm -it \
-	           kamilsk/golang:1.6-alpine \
-	           /bin/sh
-
-.PHONY: in-alpine-gcc-1.7
-in-alpine-gcc-1.7:
-	docker run --rm -it \
-	           kamilsk/golang:1.7-alpine \
-	           /bin/sh
-
-.PHONY: in-alpine-gcc-1.8
-in-alpine-gcc-1.8:
-	docker run --rm -it \
-	           kamilsk/golang:1.8-alpine \
-	           /bin/sh
-
 .PHONY: in-hugo
 in-hugo:
 	docker run --rm -it \
@@ -93,14 +51,6 @@ in-tools:
 	           /bin/sh
 
 
-
-.PHONY: publish-alpine-gcc
-publish-alpine-gcc:
-	docker push kamilsk/golang:1.5-alpine
-	docker push kamilsk/golang:1.6-alpine
-	docker push kamilsk/golang:1.7-alpine
-	docker push kamilsk/golang:1.8-alpine
-	docker push kamilsk/golang:alpine
 
 .PHONY: publish-hugo
 publish-hugo:
@@ -128,15 +78,6 @@ clean-invalid-golang:
 	| awk '{print $$2}' \
 	| xargs docker rmi -f &>/dev/null || true
 
-.PHONY: clean-invalid-alpine-gcc
-clean-invalid-alpine-gcc:
-	docker images --all \
-	| grep '^kamilsk\/golang\s\+' \
-	| awk '{print $$2 "\t" $$3}' \
-	| grep '^<none>\s\+' \
-	| awk '{print $$2}' \
-	| xargs docker rmi -f &>/dev/null || true
-
 .PHONY: clean-invalid-hugo
 clean-invalid-hugo:
 	docker images --all \
@@ -156,15 +97,6 @@ clean-invalid-tools:
 	| xargs docker rmi -f &>/dev/null || true
 
 
-
-.PHONY: drop-alpine-gcc
-drop-alpine-gcc:
-	docker images --all \
-	| grep '^kamilsk\/golang\s\+' \
-	| awk '{print $$2 "\t" $$3}' \
-	| grep -v '^<none>\s\+' \
-	| awk '{print $$2}' \
-	| xargs docker rmi -f &>/dev/null || true
 
 .PHONY: drop-hugo
 drop-hugo:
