@@ -10,7 +10,8 @@ build: build-hugo build-tools
 build-hugo: drop-hugo clean-invalid-hugo
 build-hugo:
 	docker pull alpine:latest
-	docker build -t kamilsk/hugo:latest \
+	docker build --build-arg BASE=$$(docker images | grep '^alpine\s\+latest' | awk '{print $$3}') \
+	             -t kamilsk/hugo:latest \
 	             -f $(CWD)/hugo/Dockerfile \
 	             $(CWD)/hugo
 
@@ -18,7 +19,8 @@ build-hugo:
 build-tools: drop-tools clean-invalid-tools
 build-tools:
 	docker pull golang:latest
-	docker build -t kamilsk/go-tools:latest \
+	docker build --build-arg BASE=$$(docker images | grep '^golang\s\+latest' | awk '{print $$3}') \
+	             -t kamilsk/go-tools:latest \
 	             -f $(CWD)/tools/Dockerfile \
 	             $(CWD)/tools
 
