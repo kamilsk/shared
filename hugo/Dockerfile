@@ -3,12 +3,12 @@ FROM alpine:latest
 MAINTAINER Kamil Samigullin <kamil@samigullin.info>
 
 ARG BASE
-ENV VERSION 0.20.5
+ENV VERSION 0.20.7
 
 RUN apk update --no-cache \
  && apk add --no-cache ca-certificates wget \
  && update-ca-certificates &>/dev/null \
- && wget -q -O /tmp/hugo.tar.gz https://github.com/spf13/hugo/releases/download/v0.20.5/hugo_0.20.5_Linux-64bit.tar.gz \
+ && wget -q -O /tmp/hugo.tar.gz https://github.com/spf13/hugo/releases/download/v${VERSION}/hugo_${VERSION}_Linux-64bit.tar.gz \
  && tar xf /tmp/hugo.tar.gz -C /tmp \
  && cp /tmp/hugo /usr/local/bin/hugo \
  && rm -rf /tmp/* \
