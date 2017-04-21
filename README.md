@@ -2,7 +2,7 @@
 >
 > My snippets of GNU Make for Go environment.
 
-## Installation
+## Integration
 
 ```
 .PHONY: pull-makes
