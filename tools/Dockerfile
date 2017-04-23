@@ -32,5 +32,6 @@ METADATA:full' \
  && echo "- honnef.co/go/tools.(${GT_VERSION})" \
  && echo '\n\
 [Dockerfile](https://github.com/kamilsk/shared/blob/docker-go-v1/tools/Dockerfile).\n\
+[Useful Makefile](https://github.com/kamilsk/shared/blob/makefile-go-v1/docker/tools.mk).\n\
 \n\
 >>> END METADATA\n'

@@ -22,6 +22,7 @@ METADATA:full' \
  && echo "alpine:latest.(${BASE}) with wget and hugo.(${VERSION})" \
  && echo $'\n\
 [Dockerfile](https://github.com/kamilsk/shared/blob/docker-go-v1/hugo/Dockerfile).\n\
+[Useful Makefile](https://github.com/kamilsk/shared/blob/makefile-go-v1/docker/hugo.mk).\n\
 \n\
 >>> END METADATA\n'
 
