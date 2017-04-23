@@ -73,8 +73,8 @@ hugo-start:
 
 .PHONY: hugo-stop
 hugo-stop:
-	docker ps | grep "/bin/sh -c 'hugo" | awk '{print $$1}' | xargs docker stop $$1
+	docker ps | grep "/bin/sh -c 'hugo" | awk '{print $$1}' | xargs docker stop
 
 .PHONY: hugo-logs
 hugo-logs:
-	docker ps | grep "/bin/sh -c 'hugo" | awk '{print $$1}' | xargs docker logs -f $$1
+	docker ps | grep "/bin/sh -c 'hugo" | awk '{print $$1}' | xargs docker logs -f

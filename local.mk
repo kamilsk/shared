@@ -79,3 +79,14 @@ test-example:
 .PHONY: bench
 bench:
 	$(PACKAGES) | xargs go test -bench=. $(strip $(ARGS))
+
+.PHONY: docs
+docs: WAITING = 2
+docs:
+	godoc -play -http localhost:8080 &
+	sleep $(WAITING)
+	open http://localhost:8080/pkg/$(GO_PACKAGE)
+
+.PHONY: docs-stop
+docs-stop:
+	ps cax | grep godoc | awk '{print $$1}' | xargs kill
