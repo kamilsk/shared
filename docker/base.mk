@@ -54,8 +54,9 @@ docker-test-with-coverage-$(1):
 	                           sed '1d' "coverage_$$$${package##*/}.out" >> '$$@.out'; \
 	                           rm "coverage_$$$${package##*/}.out"; \
 	                       done'
-	if [ '$$(OPEN_BROWSER)' != '' ]; then go tool cover -html='$$@.out'; fi
+	if [ '$${OPEN_BROWSER}' != '' ]; then go tool cover -html='$$@.out'; fi
 
 endef
 
-$(foreach v,$(SUPPORTED_VERSIONS),$(eval $(call docker_base_tpl,$(v))))
+render_docker_base_tpl = $(eval $(call docker_base_tpl,$(version)))
+$(foreach version,$(SUPPORTED_VERSIONS),$(render_docker_base_tpl))
