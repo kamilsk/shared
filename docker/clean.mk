@@ -1,13 +1,13 @@
 PRUNE_AVAILABLE := $(shell echo "1.13.0\n$(DOCKER_VERSION)" | sort -ct. -k1,1n -k2,2n && echo true)
 
 .PHONY: docker-clean
-docker-clean: PRUNE = true
+docker-clean: PRUNE = --all --force
 docker-clean: docker-clean-invalid-common
 docker-clean: docker-clean-invalid-golang
 docker-clean: docker-clean-invalid-custom
 docker-clean: docker-clean-invalid-tools
 docker-clean:
-	if [ '${PRUNE}' = 'true' ] && [ '${PRUNE_AVAILABLE}' == 'true' ]; then docker system prune $(strip $(PRUNE)); fi
+	if [ '${PRUNE}' != '' ] && [ '${PRUNE_AVAILABLE}' == 'true' ]; then docker system prune $(strip $(PRUNE)); fi
 
 .PHONY: docker-clean-invalid-common
 docker-clean-invalid-common:
