@@ -4,7 +4,8 @@ CWD      := $(patsubst %/,%,$(dir $(MAKEPATH)))
 
 
 .PHONY: build
-build: build-hugo build-tools
+build: build-hugo
+build: build-tools
 
 .PHONY: build-hugo
 build-hugo: drop-hugo clean-invalid-hugo
@@ -39,6 +40,10 @@ in-tools:
 	           /bin/sh
 
 
+
+.PHONY: publish
+publish: publish-hugo
+publish: publish-tools
 
 .PHONY: publish-hugo
 publish-hugo:
