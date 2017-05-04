@@ -11,3 +11,5 @@ packages:
   related:
   - package: thumbor
     src: https://github.com/thumbor/thumbor
+- pacakge: xweb
+  src: https://github.com/gaojiuli/xweb
