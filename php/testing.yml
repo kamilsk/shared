@@ -17,3 +17,5 @@ packages:
   src: https://github.com/sebastianbergmann/phpcov
 - package: phpbench/phpbench
   src: https://github.com/phpbench/phpbench
+- package: peridot-php/peridot
+  src: https://github.com/peridot-php/peridot
