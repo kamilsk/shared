@@ -13,3 +13,11 @@ packages:
   src: https://github.com/mattn/goveralls
 - package: github.com/tebeka/go2xunit
   src: https://github.com/tebeka/go2xunit
+- package: github.com/stretchr/testify
+  src: https://github.com/stretchr/testify
+- package: github.com/onsi/ginkgo
+  src: https://github.com/onsi/ginkgo
+- package: github.com/onsi/gomega
+  src: https://github.com/onsi/gomega
+- package: labix.org/gocheck
+  src: http://labix.org/gocheck

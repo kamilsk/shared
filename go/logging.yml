@@ -11,3 +11,5 @@ packages:
   src: https://github.com/Sirupsen/logrus
 - package: github.com/uber-go/zap
   src: https://github.com/uber-go/zap
+- package: github.com/sirupsen/logrus
+  src: https://github.com/sirupsen/logrus
