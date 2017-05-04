@@ -21,3 +21,5 @@ packages:
   src: https://github.com/onsi/gomega
 - package: labix.org/gocheck
   src: http://labix.org/gocheck
+- package: github.com/workfit/tester
+  src: https://github.com/workfit/tester
