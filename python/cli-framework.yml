@@ -4,3 +4,5 @@ packages:
   helpful:
   - package: tqdm
     src: https://github.com/noamraph/tqdm
+- package: fire
+  src: https://github.com/google/python-fire
