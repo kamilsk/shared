@@ -28,6 +28,9 @@ packages:
     src: https://github.com/web-feet/coastercms
   - package: yab/quarx
     src: https://github.com/YABhq/Quarx
+  - package: atlantis-labs/atlantis3
+    src: https://bitbucket.org/aggressione/atlantis3-framework
+    site: http://www.atlantis-cms.com
 - package: laravel/lumen
   src: https://github.com/laravel/lumen
 - package: phalcon/cphalcon
