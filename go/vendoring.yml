@@ -26,3 +26,5 @@ packages:
   src: https://github.com/tools/godep
 - package: github.com/FiloSottile/gvt
   src: https://github.com/FiloSottile/gvt
+- package: github.com/skelterjohn/wgo
+  src: https://github.com/skelterjohn/wgo
