@@ -24,3 +24,5 @@ packages:
   src: https://github.com/sdboyer/gps
 - package: github.com/tools/godep
   src: https://github.com/tools/godep
+- package: github.com/FiloSottile/gvt
+  src: https://github.com/FiloSottile/gvt
