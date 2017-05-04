@@ -35,3 +35,5 @@ packages:
 - package: wimg/php-compatibility
   src: https://github.com/wimg/PHPCompatibility
 - src: https://github.com/exakat/exakat
+- package: povils/phpmnd
+  src: https://github.com/povils/phpmnd

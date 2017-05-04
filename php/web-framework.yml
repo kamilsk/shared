@@ -65,3 +65,5 @@ packages:
     src: https://github.com/liip/LiipFunctionalTestBundle
   - package: matthiasnoback/symfony-console-form
     src: https://github.com/matthiasnoback/symfony-console-form
+- package: spiral/framework
+  src: https://github.com/spiral/spiral
