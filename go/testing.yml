@@ -23,3 +23,5 @@ packages:
   src: http://labix.org/gocheck
 - package: github.com/workfit/tester
   src: https://github.com/workfit/tester
+- package: github.com/rakyll/gom
+  src: https://github.com/rakyll/gom
