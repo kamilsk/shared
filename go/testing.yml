@@ -25,3 +25,5 @@ packages:
   src: https://github.com/workfit/tester
 - package: github.com/rakyll/gom
   src: https://github.com/rakyll/gom
+- package: github.com/divan/gobenchui
+  src: https://github.com/divan/gobenchui
