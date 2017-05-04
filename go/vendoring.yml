@@ -28,3 +28,5 @@ packages:
   src: https://github.com/FiloSottile/gvt
 - package: github.com/skelterjohn/wgo
   src: https://github.com/skelterjohn/wgo
+- package: github.com/dpw/vendetta
+  src: https://github.com/dpw/vendetta
