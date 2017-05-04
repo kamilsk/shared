@@ -19,3 +19,5 @@ packages:
   src: https://github.com/phpbench/phpbench
 - package: peridot-php/peridot
   src: https://github.com/peridot-php/peridot
+- package: behat/behat
+  src: https://github.com/Behat/Behat
