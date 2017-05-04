@@ -4,7 +4,7 @@ MAINTAINER Kamil Samigullin <kamil@samigullin.info>
 
 ARG BASE
 ENV GLIDE_VERSION 0.12.3
-ENV GORELEASER_VERSION 0.14.0
+ENV GORELEASER_VERSION 0.17.1
 
 RUN wget -q -O /tmp/glide.tar.gz https://github.com/Masterminds/glide/releases/download/v${GLIDE_VERSION}/glide-v${GLIDE_VERSION}-linux-amd64.tar.gz \
  && tar xf /tmp/glide.tar.gz -C /tmp \
