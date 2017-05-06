@@ -2,19 +2,30 @@ MAKEPATH := $(abspath $(firstword $(MAKEFILE_LIST)))
 CWD      := $(patsubst %/,%,$(dir $(MAKEPATH)))
 
 
+HUGO = 0.20.7
+
 
 .PHONY: build
 build: build-hugo
 build: build-tools
 
 .PHONY: build-hugo
-build-hugo: drop-hugo clean-invalid-hugo
+build-hugo: drop-hugo
 build-hugo:
-	docker pull alpine:latest
-	docker build --build-arg BASE=$$(docker images | grep '^alpine\s\+latest' | awk '{print $$3}') \
-	             -t kamilsk/hugo:latest \
-	             -f $(CWD)/hugo/Dockerfile \
+	docker build -t build-hugo-image -f $(CWD)/hugo/build.Dockerfile \
+	             --force-rm --no-cache --pull --rm \
+	             --build-arg VERSION=$(HUGO) \
 	             $(CWD)/hugo
+	docker create --name build-hugo-container build-hugo-image
+	docker cp build-hugo-container:/tmp/hugo $(CWD)/hugo/artifacts/hugo
+	docker rmi -f build-hugo-image
+	docker rm -f build-hugo-container
+	docker build -t kamilsk/hugo -f $(CWD)/hugo/pack.Dockerfile \
+	             --force-rm --no-cache --pull --rm \
+	             --build-arg BASE=$$(docker images | grep '^alpine\s\+latest' | awk '{print $$3}') \
+	             --build-arg VERSION=$(HUGO) \
+	             $(CWD)/hugo
+	rm $(CWD)/hugo/artifacts/*
 
 .PHONY: build-tools
 build-tools: drop-tools clean-invalid-tools
@@ -92,6 +103,7 @@ clean-invalid-tools:
 
 
 .PHONY: drop-hugo
+drop-hugo: clean-invalid-hugo
 drop-hugo:
 	docker images --all \
 	| grep '^kamilsk\/hugo\s\+' \
