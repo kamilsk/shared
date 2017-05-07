@@ -36,3 +36,11 @@ docker-tool-goreleaser:
 	           -w '/go/src/${GO_PACKAGE}' \
 	           kamilsk/go-tools:latest \
 	           goreleaser $(strip $(ARGS))
+
+.PHONY: docker-tool-zb
+docker-tool-zb:
+	docker run --rm \
+	           -v '${GOPATH}/src/${GO_PACKAGE}':'/go/src/${GO_PACKAGE}' \
+	           -w '/go/src/${GO_PACKAGE}' \
+	           kamilsk/go-tools:latest \
+	           zb $(COMMAND) $(strip $(ARGS))
