@@ -15,3 +15,5 @@ packages:
   src: https://github.com/sirupsen/logrus
 - package: github.com/agnivade/funnel
   src: https://github.com/agnivade/funnel
+- package: github.com/ScottMansfield/nanolog
+  src: https://github.com/ScottMansfield/nanolog
