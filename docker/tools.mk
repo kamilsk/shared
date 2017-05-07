@@ -51,6 +51,14 @@ docker-tool-glide:
 	           kamilsk/go-tools:latest \
 	           glide $(COMMAND) $(strip $(ARGS))
 
+.PHONY: docker-tool-godepq
+docker-tool-godepq:
+	docker run --rm \
+	           -v '${GOPATH}/src/${GO_PACKAGE}':'/go/src/${GO_PACKAGE}' \
+	           -w '/go/src/${GO_PACKAGE}' \
+	           kamilsk/go-tools:latest \
+	           godepq $(strip $(ARGS))
+
 .PHONY: docker-tool-gometalinter
 docker-tool-gometalinter:
 	docker run --rm \
