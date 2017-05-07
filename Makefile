@@ -5,6 +5,7 @@ CWD      := $(patsubst %/,%,$(dir $(MAKEPATH)))
 HUGO     = 0.20.7
 GLIDE    = 0.12.3
 RELEASER = 0.17.1
+REPORTER = 1.5.0
 
 .PHONY: build
 build: build-hugo
@@ -45,6 +46,7 @@ build-tools:
 	             --build-arg BASE=$$(docker images | grep '^golang\s\+alpine' | awk '{print $$3}') \
 	             --build-arg GLIDE=$(GLIDE) \
 	             --build-arg RELEASER=$(RELEASER) \
+	             --build-arg REPORTER=$(REPORTER) \
 	             $(CWD)/tools
 	docker create --name build-go-tools-container build-go-tools-image
 	docker cp build-go-tools-container:/tmp/apicompat               $(CWD)/tools/artifacts/
@@ -54,6 +56,7 @@ build-tools:
 	docker cp build-go-tools-container:/tmp/godepq                  $(CWD)/tools/artifacts/
 	docker cp build-go-tools-container:/tmp/gometalinter            $(CWD)/tools/artifacts/gometalinter/
 	docker cp build-go-tools-container:/tmp/goreleaser/goreleaser   $(CWD)/tools/artifacts/
+	docker cp build-go-tools-container:/tmp/goreporter              $(CWD)/tools/artifacts/
 	docker cp build-go-tools-container:/tmp/honnef                  $(CWD)/tools/artifacts/honnef/
 	docker cp build-go-tools-container:/tmp/meta.data               $(CWD)/tools/artifacts/
 	#

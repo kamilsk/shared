@@ -5,6 +5,8 @@ MAINTAINER Kamil Samigullin <kamil@samigullin.info>
 ARG BASE
 ARG GLIDE
 ARG RELEASER
+# TODO use when egg will ready, update metadata (add prefix "version-")
+ARG REPORTER
 
 RUN apk update --no-cache \
  && apk add --no-cache ca-certificates git wget \
@@ -51,6 +53,12 @@ RUN apk update --no-cache \
     https://github.com/goreleaser/goreleaser/releases/download/v${RELEASER}/goreleaser_Linux_x86_64.tar.gz \
  && mkdir /tmp/goreleaser && tar xf /tmp/goreleaser.tar.gz -C /tmp/goreleaser \
 
+ && go get github.com/wgliang/goreporter \
+ && export REPORTER=$(cd /go/src/github.com/wgliang/goreporter \
+    && (git describe --tags 2> /dev/null || git rev-parse --short HEAD)) \
+ && mv /go/bin/goreporter /tmp/goreporter \
+ && rm -rf /go/bin/* /go/pkg/* /go/src/* \
+
  && go get honnef.co/go/tools/... \
  && export HGT=$(cd /go/src/honnef.co/go/tools \
     && (git describe --tags 2> /dev/null || git rev-parse --short HEAD)) \
@@ -88,6 +96,9 @@ METADATA:full' >> /tmp/meta.data \
 
  && echo "- [goreleaser](https://goreleaser.github.io).(v${RELEASER}," \
     "[diff](https://github.com/goreleaser/goreleaser/compare/v${RELEASER}...master))" >> /tmp/meta.data \
+
+ && echo "- [goreporter](https://github.com/wgliang/goreporter).(${REPORTER}," \
+    "[diff](https://github.com/wgliang/goreporter/${REPORTER}...master))" >> /tmp/meta.data \
 
  && echo "- [honnef.co/go/tools](https://github.com/dominikh/go-tools).(${HGT}," \
     "[diff](https://github.com/dominikh/go-tools/compare/${HGT}...master))" >> /tmp/meta.data \
