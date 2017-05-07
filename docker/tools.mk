@@ -35,6 +35,14 @@ docker-tool-benchcmp:
 	           kamilsk/go-tools:latest \
 	           benchcmp $(strip $(ARGS))
 
+.PHONY: docker-tool-easyjson
+docker-tool-easyjson:
+	docker run --rm \
+	           -v '${GOPATH}/src/${GO_PACKAGE}':'/go/src/${GO_PACKAGE}' \
+	           -w '/go/src/${GO_PACKAGE}' \
+	           kamilsk/go-tools:latest \
+	           easyjson $(strip $(ARGS))
+
 .PHONY: docker-tool-glide
 docker-tool-glide:
 	docker run --rm \
