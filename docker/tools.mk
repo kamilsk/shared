@@ -15,13 +15,13 @@ docker-pull-tools:
 
 .PHONY: docker-tool-glide
 docker-tool-glide: COMMAND = install
+docker-tool-glide: ARGS = --strip-vendor
 docker-tool-glide:
 	docker run --rm \
 	           -v '${GOPATH}/src/${GO_PACKAGE}':'/go/src/${GO_PACKAGE}' \
 	           -w '/go/src/${GO_PACKAGE}' \
 	           kamilsk/go-tools:latest \
-	           /bin/sh -c 'glide $(COMMAND) --strip-vendor $(strip $(ARGS)) && \
-	                       rm -rf /go/src/.glide'
+	           glide $(COMMAND) $(strip $(ARGS))
 
 .PHONY: docker-tool-gometalinter
 docker-tool-gometalinter:
