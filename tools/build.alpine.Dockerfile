@@ -10,6 +10,12 @@ RUN apk update --no-cache \
  && apk add --no-cache ca-certificates git wget \
  && update-ca-certificates &>/dev/null \
 
+ && go get github.com/mailru/easyjson/... \
+ && export EJ=$(cd /go/src/github.com/mailru/easyjson \
+    && (git describe --tags 2> /dev/null || git rev-parse --short HEAD)) \
+ && mv /go/bin/easyjson /tmp/easyjson \
+ && rm -rf /go/bin/* /go/pkg/* /go/src/* \
+
  && wget -q -O /tmp/glide.tar.gz \
     https://github.com/Masterminds/glide/releases/download/v${GLIDE}/glide-v${GLIDE}-linux-amd64.tar.gz \
  && mkdir /tmp/glide && tar xf /tmp/glide.tar.gz -C /tmp/glide \
@@ -38,10 +44,11 @@ RUN apk update --no-cache \
 <<< START METADATA\n\
 \n\
 METADATA:short \n\
-golang:alpine with git, mercurial, glide, gometalinter, goreleaser and honnef.co/go/tools \n\
+golang:alpine with git, mercurial, easyjson, glide, gometalinter, goreleaser and honnef.co/go/tools \n\
 \n\
 METADATA:full' >> /tmp/meta.data \
  && echo "golang:alpine.(${BASE}) with git and mercurial, and" >> /tmp/meta.data \
+ && echo "- easyjson.(${HGT})" >> /tmp/meta.data \
  && echo "- glide.(${GLIDE})" >> /tmp/meta.data \
  && echo "- gometalinter.(${GML})" >> /tmp/meta.data \
  && for bin in $GML_LIST; do echo "  - ${bin}" >> /tmp/meta.data; done \

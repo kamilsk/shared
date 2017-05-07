@@ -37,16 +37,6 @@ build-hugo:
 build-tools: drop-tools
 build-tools: clean-tools-artifacts
 build-tools:
-	docker pull golang:latest
-	docker build --build-arg BASE=$$(docker images | grep '^golang\s\+latest' | awk '{print $$3}') \
-	             -t kamilsk/go-tools:latest \
-	             -f $(CWD)/tools/Dockerfile \
-	             $(CWD)/tools
-
-.PHONY: build-tools-new
-build-tools-new: drop-tools
-build-tools-new: clean-tools-artifacts
-build-tools-new:
 	docker rmi -f build-go-tools-image     &>/dev/null || true
 	docker rm  -f build-go-tools-container &>/dev/null || true
 	#
@@ -57,6 +47,7 @@ build-tools-new:
 	             --build-arg RELEASER=$(RELEASER) \
 	             $(CWD)/tools
 	docker create --name build-go-tools-container build-go-tools-image
+	docker cp build-go-tools-container:/tmp/easyjson                $(CWD)/tools/artifacts/
 	docker cp build-go-tools-container:/tmp/glide/linux-amd64/glide $(CWD)/tools/artifacts/
 	docker cp build-go-tools-container:/tmp/gometalinter            $(CWD)/tools/artifacts/gometalinter/
 	docker cp build-go-tools-container:/tmp/goreleaser/goreleaser   $(CWD)/tools/artifacts/
