@@ -1,5 +1,3 @@
-GITHUB_TOKEN ?=
-
 .PHONY: docker-in-tools
 docker-in-tools:
 	docker run --rm -it \
@@ -14,8 +12,8 @@ docker-pull-tools:
 	docker pull kamilsk/go-tools:latest
 
 .PHONY: docker-tool-glide
-docker-tool-glide: COMMAND = install
-docker-tool-glide: ARGS = --strip-vendor
+docker-tool-glide: COMMAND ?= install
+docker-tool-glide: ARGS    ?= --strip-vendor
 docker-tool-glide:
 	docker run --rm \
 	           -v '${GOPATH}/src/${GO_PACKAGE}':'/go/src/${GO_PACKAGE}' \
