@@ -51,6 +51,7 @@ build-tools:
 	docker cp build-go-tools-container:/tmp/benchcmp                $(CWD)/tools/artifacts/
 	docker cp build-go-tools-container:/tmp/easyjson                $(CWD)/tools/artifacts/
 	docker cp build-go-tools-container:/tmp/glide/linux-amd64/glide $(CWD)/tools/artifacts/
+	docker cp build-go-tools-container:/tmp/godepq                  $(CWD)/tools/artifacts/
 	docker cp build-go-tools-container:/tmp/gometalinter            $(CWD)/tools/artifacts/gometalinter/
 	docker cp build-go-tools-container:/tmp/goreleaser/goreleaser   $(CWD)/tools/artifacts/
 	docker cp build-go-tools-container:/tmp/honnef                  $(CWD)/tools/artifacts/honnef/
