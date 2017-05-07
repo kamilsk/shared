@@ -3,6 +3,8 @@ CWD      := $(patsubst %/,%,$(dir $(MAKEPATH)))
 
 
 HUGO     = 0.20.7
+# TODO don't forget to take a look at build.alpine.Dockerfile
+DEPTH    = 1.1.1
 GLIDE    = 0.12.3
 RELEASER = 0.17.1
 REPORTER = 1.5.0
@@ -44,6 +46,7 @@ build-tools:
 	docker build -t build-go-tools-image -f $(CWD)/tools/build.alpine.Dockerfile \
 	             --force-rm --no-cache --pull --rm \
 	             --build-arg BASE=$$(docker images | grep '^golang\s\+alpine' | awk '{print $$3}') \
+	             --build-arg DEPTH=$(DEPTH) \
 	             --build-arg GLIDE=$(GLIDE) \
 	             --build-arg RELEASER=$(RELEASER) \
 	             --build-arg REPORTER=$(REPORTER) \
@@ -51,6 +54,7 @@ build-tools:
 	docker create --name build-go-tools-container build-go-tools-image
 	docker cp build-go-tools-container:/tmp/apicompat               $(CWD)/tools/artifacts/
 	docker cp build-go-tools-container:/tmp/benchcmp                $(CWD)/tools/artifacts/
+	docker cp build-go-tools-container:/tmp/depth                   $(CWD)/tools/artifacts/
 	docker cp build-go-tools-container:/tmp/easyjson                $(CWD)/tools/artifacts/
 	docker cp build-go-tools-container:/tmp/glide/linux-amd64/glide $(CWD)/tools/artifacts/
 	docker cp build-go-tools-container:/tmp/godepq                  $(CWD)/tools/artifacts/
