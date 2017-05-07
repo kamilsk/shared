@@ -10,6 +10,12 @@ RUN apk update --no-cache \
  && apk add --no-cache ca-certificates git wget \
  && update-ca-certificates &>/dev/null \
 
+ && go get github.com/bradleyfalzon/apicompat/... \
+ && export AC=$(cd /go/src/github.com/bradleyfalzon/apicompat \
+    && (git describe --tags 2> /dev/null || git rev-parse --short HEAD)) \
+ && mv /go/bin/apicompat /tmp/apicompat \
+ && rm -rf /go/bin/* /go/pkg/* /go/src/* \
+
  && go get github.com/mailru/easyjson/... \
  && export EJ=$(cd /go/src/github.com/mailru/easyjson \
     && (git describe --tags 2> /dev/null || git rev-parse --short HEAD)) \
@@ -48,6 +54,7 @@ golang:alpine with git, mercurial, easyjson, glide, gometalinter, goreleaser and
 \n\
 METADATA:full' >> /tmp/meta.data \
  && echo "golang:alpine.(${BASE}) with git and mercurial, and" >> /tmp/meta.data \
+ && echo "- apicompat.(${AC})" >> /tmp/meta.data \
  && echo "- easyjson.(${HGT})" >> /tmp/meta.data \
  && echo "- glide.(${GLIDE})" >> /tmp/meta.data \
  && echo "- gometalinter.(${GML})" >> /tmp/meta.data \
