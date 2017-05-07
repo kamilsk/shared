@@ -19,6 +19,14 @@ docker-tool-depth:
 	           kamilsk/go-tools:latest \
 	           depth $(strip $(ARGS))
 
+.PHONY: docker-tool-apicompat
+docker-tool-apicompat:
+	docker run --rm \
+	           -v '${GOPATH}/src/${GO_PACKAGE}':'/go/src/${GO_PACKAGE}' \
+	           -w '/go/src/${GO_PACKAGE}' \
+	           kamilsk/go-tools:latest \
+	           apicompat $(strip $(ARGS))
+
 .PHONY: docker-tool-glide
 docker-tool-glide:
 	docker run --rm \
