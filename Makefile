@@ -48,6 +48,7 @@ build-tools:
 	             $(CWD)/tools
 	docker create --name build-go-tools-container build-go-tools-image
 	docker cp build-go-tools-container:/tmp/apicompat               $(CWD)/tools/artifacts/
+	docker cp build-go-tools-container:/tmp/benchcmp                $(CWD)/tools/artifacts/
 	docker cp build-go-tools-container:/tmp/easyjson                $(CWD)/tools/artifacts/
 	docker cp build-go-tools-container:/tmp/glide/linux-amd64/glide $(CWD)/tools/artifacts/
 	docker cp build-go-tools-container:/tmp/gometalinter            $(CWD)/tools/artifacts/gometalinter/

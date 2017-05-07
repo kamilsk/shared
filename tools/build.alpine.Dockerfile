@@ -16,6 +16,12 @@ RUN apk update --no-cache \
  && mv /go/bin/apicompat /tmp/apicompat \
  && rm -rf /go/bin/* /go/pkg/* /go/src/* \
 
+ && go get golang.org/x/tools/cmd/benchcmp \
+ && export BC=$(cd /go/src/golang.org/x/tools/cmd/benchcmp \
+    && (git describe --tags 2> /dev/null || git rev-parse --short HEAD)) \
+ && mv /go/bin/benchcmp /tmp/benchcmp \
+ && rm -rf /go/bin/* /go/pkg/* /go/src/* \
+
  && go get github.com/mailru/easyjson/... \
  && export EJ=$(cd /go/src/github.com/mailru/easyjson \
     && (git describe --tags 2> /dev/null || git rev-parse --short HEAD)) \
@@ -50,17 +56,25 @@ RUN apk update --no-cache \
 <<< START METADATA\n\
 \n\
 METADATA:short \n\
-golang:alpine with git, mercurial, easyjson, glide, gometalinter, goreleaser and honnef.co/go/tools \n\
+golang:alpine with git, mercurial, glide, gometalinter, goreleaser and others (see full description) \n\
 \n\
 METADATA:full' >> /tmp/meta.data \
  && echo "golang:alpine.(${BASE}) with git and mercurial, and" >> /tmp/meta.data \
- && echo "- apicompat.(${AC})" >> /tmp/meta.data \
- && echo "- easyjson.(${HGT})" >> /tmp/meta.data \
- && echo "- glide.(${GLIDE})" >> /tmp/meta.data \
- && echo "- gometalinter.(${GML})" >> /tmp/meta.data \
+ && echo "- [apicompat](https://abicheck.bradleyf.id.au).(${AC}," \
+    "[diff](https://github.com/bradleyfalzon/apicompat/compare/${AC}...master))" >> /tmp/meta.data \
+ && echo "- [benchcmp](https://godoc.org/golang.org/x/tools/cmd/benchcmp).(${BC}," \
+    "[src](https://github.com/golang/tools/tree/master/cmd/benchcmp))" >> /tmp/meta.data \
+ && echo "- [easyjson](https://github.com/mailru/easyjson).(${EJ}," \
+    "[diff](https://github.com/mailru/easyjson/compare/${EJ}...master))" >> /tmp/meta.data \
+ && echo "- [glide](https://glide.sh).(v${GLIDE}," \
+    "[diff](https://github.com/Masterminds/glide/compare/v${GLIDE}...master))" >> /tmp/meta.data \
+ && echo "- [gometalinter](https://github.com/alecthomas/gometalinter).(${GML}," \
+    "[diff](https://github.com/alecthomas/gometalinter/compare/${GML}...master))" >> /tmp/meta.data \
  && for bin in $GML_LIST; do echo "  - ${bin}" >> /tmp/meta.data; done \
- && echo "- goreleaser.(${RELEASER})" >> /tmp/meta.data \
- && echo "- honnef.co/go/tools.(${HGT})" >> /tmp/meta.data \
+ && echo "- [goreleaser](https://goreleaser.github.io).(v${RELEASER}," \
+    "[diff](https://github.com/goreleaser/goreleaser/compare/v${RELEASER}...master))" >> /tmp/meta.data \
+ && echo "- [honnef.co/go/tools](https://github.com/dominikh/go-tools).(${HGT}," \
+    "[diff](https://github.com/dominikh/go-tools/compare/${HGT}...master))" >> /tmp/meta.data \
  && for bin in $HGT_LIST; do echo "  - ${bin}" >> /tmp/meta.data; done \
  && echo $'\n\
 [Dockerfile](https://github.com/kamilsk/shared/blob/docker-go-v1/tools) \n\
