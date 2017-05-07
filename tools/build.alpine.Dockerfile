@@ -66,6 +66,12 @@ RUN apk update --no-cache \
  && rm -rf /go/bin/* /go/pkg/* /go/src/* \
  && export HGT_LIST=$(ls /tmp/honnef/) \
 
+ && go get jrubin.io/zb \
+ && export ZB=$(cd /go/src/jrubin.io/zb \
+    && (git describe --tags 2> /dev/null || git rev-parse --short HEAD)) \
+ && mv /go/bin/zb /tmp/zb \
+ && rm -rf /go/bin/* /go/pkg/* /go/src/* \
+
  && echo $'\n\
 <<< START METADATA\n\
 \n\
@@ -103,6 +109,9 @@ METADATA:full' >> /tmp/meta.data \
  && echo "- [honnef.co/go/tools](https://github.com/dominikh/go-tools).(${HGT}," \
     "[diff](https://github.com/dominikh/go-tools/compare/${HGT}...master))" >> /tmp/meta.data \
  && for bin in $HGT_LIST; do echo "  - ${bin}" >> /tmp/meta.data; done \
+
+ && echo "- [zb](https://jrubin.io/zb).(${ZB}," \
+    "[diff](https://github.com/joshuarubin/zb/compare/${ZB}...master))" >> /tmp/meta.data \
 
  && echo $'\n\
 [Dockerfile](https://github.com/kamilsk/shared/blob/docker-go-v1/tools) \n\

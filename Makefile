@@ -58,6 +58,7 @@ build-tools:
 	docker cp build-go-tools-container:/tmp/goreleaser/goreleaser   $(CWD)/tools/artifacts/
 	docker cp build-go-tools-container:/tmp/goreporter              $(CWD)/tools/artifacts/
 	docker cp build-go-tools-container:/tmp/honnef                  $(CWD)/tools/artifacts/honnef/
+	docker cp build-go-tools-container:/tmp/zb                      $(CWD)/tools/artifacts/
 	docker cp build-go-tools-container:/tmp/meta.data               $(CWD)/tools/artifacts/
 	#
 	docker rmi -f build-go-tools-image

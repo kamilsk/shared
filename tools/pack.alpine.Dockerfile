@@ -16,3 +16,4 @@ COPY ./artifacts/gometalinter/* /go/bin/
 COPY ./artifacts/goreleaser     /go/bin/
 COPY ./artifacts/goreporter     /go/bin/
 COPY ./artifacts/honnef/*       /go/bin/
+COPY ./artifacts/zb             /go/bin/
