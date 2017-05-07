@@ -3,7 +3,6 @@ CWD      := $(patsubst %/,%,$(dir $(MAKEPATH)))
 
 
 HUGO     = 0.20.7
-# TODO don't forget to take a look at build.alpine.Dockerfile
 DEPTH    = 1.1.1
 GLIDE    = 0.12.3
 RELEASER = 0.17.1

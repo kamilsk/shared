@@ -3,7 +3,6 @@ FROM golang:alpine
 MAINTAINER Kamil Samigullin <kamil@samigullin.info>
 
 ARG BASE
-# TODO fix "v." in download path
 ARG DEPTH
 ARG GLIDE
 ARG RELEASER
@@ -27,7 +26,7 @@ RUN apk update --no-cache \
  && rm -rf /go/bin/* /go/pkg/* /go/src/* \
 
  && wget -q -O /tmp/depth \
-    https://github.com/KyleBanks/depth/releases/download/v.${DEPTH}/depth_${DEPTH}_linux_amd64 \
+    https://github.com/KyleBanks/depth/releases/download/v${DEPTH}/depth_${DEPTH}_linux_amd64 \
  && chmod +x /tmp/depth \
 
  && go get github.com/mailru/easyjson/... \
@@ -93,8 +92,8 @@ METADATA:full' >> /tmp/meta.data \
  && echo "- [benchcmp](https://godoc.org/golang.org/x/tools/cmd/benchcmp).(${BENCHCMP}," \
     "[src](https://github.com/golang/tools/tree/master/cmd/benchcmp))" >> /tmp/meta.data \
 
- && echo "- [depth](https://github.com/KyleBanks/depth).(${DEPTH}," \
-    "[diff](https://github.com/KyleBanks/depth/compare/v.${DEPTH}...master))" >> /tmp/meta.data \
+ && echo "- [depth](https://github.com/KyleBanks/depth).(v${DEPTH}," \
+    "[diff](https://github.com/KyleBanks/depth/compare/v${DEPTH}...master))" >> /tmp/meta.data \
 
  && echo "- [easyjson](https://github.com/mailru/easyjson).(${EASYJSON}," \
     "[diff](https://github.com/mailru/easyjson/compare/${EASYJSON}...master))" >> /tmp/meta.data \
@@ -102,7 +101,7 @@ METADATA:full' >> /tmp/meta.data \
  && echo "- [glide](https://glide.sh).(v${GLIDE}," \
     "[diff](https://github.com/Masterminds/glide/compare/v${GLIDE}...master))" >> /tmp/meta.data \
 
- && echo "- [godepq](https://github.com/google/godepq).(v${GODEPQ}," \
+ && echo "- [godepq](https://github.com/google/godepq).(${GODEPQ}," \
     "[diff](https://github.com/google/godepq/compare/${GODEPQ}...master))" >> /tmp/meta.data \
 
  && echo "- [gometalinter](https://github.com/alecthomas/gometalinter).(${GML}," \
