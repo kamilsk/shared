@@ -69,6 +69,15 @@ docker-tool-goreleaser:
 	           kamilsk/go-tools:latest \
 	           goreleaser $(strip $(ARGS))
 
+.PHONY: docker-tool-goreporter
+docker-tool-goreporter:
+	docker run --rm \
+	           -e GITHUB_TOKEN='${GITHUB_TOKEN}' \
+	           -v '${GOPATH}/src/${GO_PACKAGE}':'/go/src/${GO_PACKAGE}' \
+	           -w '/go/src/${GO_PACKAGE}' \
+	           kamilsk/go-tools:latest \
+	           goreporter $(strip $(ARGS))
+
 .PHONY: docker-tool-zb
 docker-tool-zb:
 	docker run --rm \
