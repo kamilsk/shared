@@ -1,39 +1,115 @@
 packages:
-- package: etsy/phan
-  src: https://github.com/etsy/phan
-- package: jmolivas/phpqa
-  src: https://github.com/jmolivas/phpqa
+- name: etsy/phan
+  src:  https://github.com/etsy/phan
+  tags: []
+  used:   false
+  viewed: false
+
+- name: jmolivas/phpqa
+  src:  https://github.com/jmolivas/phpqa
+  tags: []
+  used:   false
+  viewed: false
+
   include:
-  - package: friendsofphp/php-cs-fixer
-    src: https://github.com/friendsofphp/php-cs-fixer
-  - package: phploc/phploc
-    src: https://github.com/sebastianbergmann/phploc
-  - package: phpmd/phpmd
-    src: https://github.com/phpmd/phpmd
-  - package: sebastian/phpcpd
-    src: https://github.com/sebastianbergmann/phpcpd
-  - package: sebastian/phpdcd
-    src: https://github.com/sebastianbergmann/phpdcd
-- package: object-calisthenics/phpcs-calisthenics-rules
-  src: https://github.com/object-calisthenics/phpcs-calisthenics-rules
-- package: ovr/phpsa
-  src: https://github.com/ovr/phpsa
-- package: pdepend/pdepend
-  src: https://github.com/pdepend/pdepend
-- package: phpmetrics/phpmetrics
-  src: https://github.com/phpmetrics/PhpMetrics
-- package: phpstan/phpstan
-  src: https://github.com/phpstan/phpstan
-- package: psecio/iniscan
-  src: https://github.com/psecio/iniscan
-- package: squizlabs/php_codesniffer
-  src: https://github.com/squizlabs/PHP_CodeSniffer
-- package: sstalle/php7cc
-  src: https://github.com/sstalle/php7cc
-- package: vimeo/psalm
-  src: https://github.com/vimeo/psalm
-- package: wimg/php-compatibility
-  src: https://github.com/wimg/PHPCompatibility
-- src: https://github.com/exakat/exakat
-- package: povils/phpmnd
-  src: https://github.com/povils/phpmnd
+  - name: friendsofphp/php-cs-fixer
+    src:  https://github.com/friendsofphp/php-cs-fixer
+    tags: []
+    used:   false
+    viewed: false
+
+  - name: phploc/phploc
+    src:  https://github.com/sebastianbergmann/phploc
+    tags: []
+    used:   false
+    viewed: false
+
+  - name: phpmd/phpmd
+    src:  https://github.com/phpmd/phpmd
+    tags: []
+    used:   false
+    viewed: false
+
+  - name: sebastian/phpcpd
+    src:  https://github.com/sebastianbergmann/phpcpd
+    tags: []
+    used:   false
+    viewed: false
+
+  - name: sebastian/phpdcd
+    src:  https://github.com/sebastianbergmann/phpdcd
+    tags: []
+    used:   false
+    viewed: false
+
+- name: object-calisthenics/phpcs-calisthenics-rules
+  src:  https://github.com/object-calisthenics/phpcs-calisthenics-rules
+  tags: []
+  used:   false
+  viewed: false
+
+- name: ovr/phpsa
+  src:  https://github.com/ovr/phpsa
+  tags: []
+  used:   false
+  viewed: false
+
+- name: pdepend/pdepend
+  src:  https://github.com/pdepend/pdepend
+  tags: []
+  used:   false
+  viewed: false
+
+- name: phpmetrics/phpmetrics
+  src:  https://github.com/phpmetrics/PhpMetrics
+  tags: []
+  used:   false
+  viewed: false
+
+- name: phpstan/phpstan
+  src:  https://github.com/phpstan/phpstan
+  tags: []
+  used:   false
+  viewed: false
+
+- name: psecio/iniscan
+  src:  https://github.com/psecio/iniscan
+  tags: []
+  used:   false
+  viewed: false
+
+- name: squizlabs/php_codesniffer
+  src:  https://github.com/squizlabs/PHP_CodeSniffer
+  tags: []
+  used:   false
+  viewed: false
+
+- name: sstalle/php7cc
+  src:  https://github.com/sstalle/php7cc
+  tags: []
+  used:   false
+  viewed: false
+
+- name: vimeo/psalm
+  src:  https://github.com/vimeo/psalm
+  tags: []
+  used:   false
+  viewed: false
+
+- name: wimg/php-compatibility
+  src:  https://github.com/wimg/PHPCompatibility
+  tags: []
+  used:   false
+  viewed: false
+
+- name: ~
+  src:  https://github.com/exakat/exakat
+  tags: []
+  used:   false
+  viewed: false
+
+- name: povils/phpmnd
+  src:  https://github.com/povils/phpmnd
+  tags: []
+  used:   false
+  viewed: false

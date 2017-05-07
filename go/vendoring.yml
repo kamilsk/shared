@@ -1,34 +1,97 @@
 packages:
-- package: github.com/constabulary/gb/...
-  src: https://github.com/constabulary/gb
-- package: github.com/constabulary/kang
-  src: https://github.com/constabulary/kang
+- name: github.com/constabulary/gb/...
+  src:  https://github.com/constabulary/gb
+  tags: []
+  used:   true
+  viewed: false
+
+- name: github.com/constabulary/kang
+  src:  https://github.com/constabulary/kang
+  tags: []
+  used:   false
+  viewed: false
+
   related:
-  - package: github.com/constabulary/kodos
-    src: https://github.com/constabulary/kodos
-- package: github.com/golang/dep
-  src: https://github.com/golang/dep
-- package: github.com/govend/govend
-  src: https://github.com/govend/govend
-- package: github.com/kardianos/govendor
-  githug: https://github.com/kardianos/govendor
-- package: github.com/kovetskiy/manul
-  src: https://github.com/kovetskiy/manul
-- package: github.com/Masterminds/glide
-  src: https://github.com/Masterminds/glide
-- package: github.com/mdy/melody
-  src: https://github.com/mdy/melody
-- package: github.com/rancher/trash
-  src: https://github.com/rancher/trash
-- package: github.com/sdboyer/gps
-  src: https://github.com/sdboyer/gps
-- package: github.com/tools/godep
-  src: https://github.com/tools/godep
-- package: github.com/FiloSottile/gvt
-  src: https://github.com/FiloSottile/gvt
-- package: github.com/skelterjohn/wgo
-  src: https://github.com/skelterjohn/wgo
-- package: github.com/dpw/vendetta
-  src: https://github.com/dpw/vendetta
-- package: github.com/LK4D4/vndr
-  src: https://github.com/LK4D4/vndr
+  - name: github.com/constabulary/kodos
+    src:  https://github.com/constabulary/kodos
+    tags: []
+    used:   false
+    viewed: false
+
+- name: github.com/golang/dep
+  src:  https://github.com/golang/dep
+  tags: []
+  used:   false
+  viewed: false
+
+- name: github.com/govend/govend
+  src:  https://github.com/govend/govend
+  tags: []
+  used:   false
+  viewed: false
+
+- name: github.com/kardianos/govendor
+  src:  https://github.com/kardianos/govendor
+  tags: []
+  used:   false
+  viewed: false
+
+- name: github.com/kovetskiy/manul
+  src:  https://github.com/kovetskiy/manul
+  tags: []
+  used:   false
+  viewed: false
+
+- name: github.com/Masterminds/glide
+  src:  https://github.com/Masterminds/glide
+  tags: []
+  used:   true
+  viewed: false
+
+- name: github.com/mdy/melody
+  src:  https://github.com/mdy/melody
+  tags: []
+  used:   false
+  viewed: false
+
+- name: github.com/rancher/trash
+  src:  https://github.com/rancher/trash
+  tags: []
+  used:   false
+  viewed: false
+
+- name: github.com/sdboyer/gps
+  src:  https://github.com/sdboyer/gps
+  tags: []
+  used:   false
+  viewed: false
+
+- name: github.com/tools/godep
+  src:  https://github.com/tools/godep
+  tags: []
+  used:   true
+  viewed: false
+
+- name: github.com/FiloSottile/gvt
+  src:  https://github.com/FiloSottile/gvt
+  tags: []
+  used:   false
+  viewed: false
+
+- name: github.com/skelterjohn/wgo
+  src:  https://github.com/skelterjohn/wgo
+  tags: []
+  used:   false
+  viewed: false
+
+- name: github.com/dpw/vendetta
+  src:  https://github.com/dpw/vendetta
+  tags: []
+  used:   false
+  viewed: false
+
+- name: github.com/LK4D4/vndr
+  src:  https://github.com/LK4D4/vndr
+  tags: []
+  used:   false
+  viewed: false

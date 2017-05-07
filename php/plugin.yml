@@ -1,7 +1,18 @@
 packages:
-- package: hirak/prestissimo
-  src: https://github.com/hirak/prestissimo
-- package: sensiolabs/melody
-  src: https://github.com/sensiolabs/melody
-- package: davidrjonas/composer-lock-diff
-  src: https://github.com/davidrjonas/composer-lock-diff
+- name: hirak/prestissimo
+  src:  https://github.com/hirak/prestissimo
+  tags: []
+  used:   false
+  viewed: false
+
+- name: sensiolabs/melody
+  src:  https://github.com/sensiolabs/melody
+  tags: []
+  used:   false
+  viewed: false
+
+- name: davidrjonas/composer-lock-diff
+  src:  https://github.com/davidrjonas/composer-lock-diff
+  tags: []
+  used:   false
+  viewed: false

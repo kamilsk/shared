@@ -1,23 +1,66 @@
 packages:
-- package: phpunit/phpunit
-  src: https://github.com/sebastianbergmann/phpunit
-- package: fzaninotto/faker
-  src: https://github.com/fzaninotto/Faker
-- package: nelmio/alice
-  src: https://github.com/nelmio/alice
-- package: badoo/soft-mocks
-  src: https://github.com/badoo/soft-mocks
-- package: jwage/phpchunkit
-  src: https://github.com/jwage/phpchunkit
-- package: atoum/atoum
-  src: https://github.com/atoum/atoum
-- package: humbug/humbug
-  src: https://github.com/padraic/humbug
-- package: phpunit/phpcov
-  src: https://github.com/sebastianbergmann/phpcov
-- package: phpbench/phpbench
-  src: https://github.com/phpbench/phpbench
-- package: peridot-php/peridot
-  src: https://github.com/peridot-php/peridot
-- package: behat/behat
-  src: https://github.com/Behat/Behat
+- name: phpunit/phpunit
+  src:  https://github.com/sebastianbergmann/phpunit
+  tags: []
+  used:   false
+  viewed: false
+
+- name: fzaninotto/faker
+  src:  https://github.com/fzaninotto/Faker
+  tags: []
+  used:   false
+  viewed: false
+
+- name: nelmio/alice
+  src:  https://github.com/nelmio/alice
+  tags: []
+  used:   false
+  viewed: false
+
+- name: badoo/soft-mocks
+  src:  https://github.com/badoo/soft-mocks
+  tags: []
+  used:   false
+  viewed: false
+
+- name: jwage/phpchunkit
+  src:  https://github.com/jwage/phpchunkit
+  tags: []
+  used:   false
+  viewed: false
+
+- name: atoum/atoum
+  src:  https://github.com/atoum/atoum
+  tags: []
+  used:   false
+  viewed: false
+
+- name: humbug/humbug
+  src:  https://github.com/padraic/humbug
+  tags: []
+  used:   false
+  viewed: false
+
+- name: phpunit/phpcov
+  src:  https://github.com/sebastianbergmann/phpcov
+  tags: []
+  used:   false
+  viewed: false
+
+- name: phpbench/phpbench
+  src:  https://github.com/phpbench/phpbench
+  tags: []
+  used:   false
+  viewed: false
+
+- name: peridot-php/peridot
+  src:  https://github.com/peridot-php/peridot
+  tags: []
+  used:   false
+  viewed: false
+
+- name: behat/behat
+  src:  https://github.com/Behat/Behat
+  tags: []
+  used:   false
+  viewed: false

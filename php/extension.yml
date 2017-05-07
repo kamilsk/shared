@@ -1,6 +1,13 @@
 packages:
-- package: php-ds/extension
-  src: https://github.com/php-ds/extension
+- name: php-ds/extension
+  src:  https://github.com/php-ds/extension
+  tags: []
+  used:   false
+  viewed: false
+
   helpful:
-  - package: php-ds/php-ds
-    src: https://github.com/php-ds/polyfill
+  - name: php-ds/php-ds
+    src:  https://github.com/php-ds/polyfill
+    tags: []
+    used:   false
+    viewed: false

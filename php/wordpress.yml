@@ -1,5 +1,12 @@
 packages:
-- package: wordplate/wordplate
-  src: https://github.com/wordplate/wordplate
-- package: roots/bedrock
-  src: https://github.com/roots/bedrock
+- name: wordplate/wordplate
+  src:  https://github.com/wordplate/wordplate
+  tags: []
+  used:   false
+  viewed: false
+
+- name: roots/bedrock
+  src:  https://github.com/roots/bedrock
+  tags: []
+  used:   false
+  viewed: false

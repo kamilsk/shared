@@ -1,3 +1,6 @@
 packages:
-- package: Requests
-  src: https://github.com/kennethreitz/requests
+- name: Requests
+  src:  https://github.com/kennethreitz/requests
+  tags: []
+  used:   true
+  viewed: false

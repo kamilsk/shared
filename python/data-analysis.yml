@@ -1,3 +1,6 @@
 packages:
-- package: pandas
-  src: https://github.com/pandas-dev/pandas
+- name: pandas
+  src:  https://github.com/pandas-dev/pandas
+  tags: []
+  used:   false
+  viewed: false

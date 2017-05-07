@@ -1,8 +1,19 @@
 packages:
-- package: click
-  src: https://github.com/pallets/click
+- name: click
+  src:  https://github.com/pallets/click
+  tags: []
+  used:   true
+  viewed: false
+
   helpful:
-  - package: tqdm
-    src: https://github.com/noamraph/tqdm
-- package: fire
-  src: https://github.com/google/python-fire
+  - name: tqdm
+    src:  https://github.com/noamraph/tqdm
+    tags: []
+    used:   false
+    viewed: false
+
+- name: fire
+  src:  https://github.com/google/python-fire
+  tags: []
+  used:   false
+  viewed: false

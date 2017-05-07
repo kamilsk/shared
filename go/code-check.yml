@@ -1,53 +1,148 @@
 packages:
-- package: github.com/alecthomas/gometalinter
-  src: https://github.com/alecthomas/gometalinter
+- name: github.com/alecthomas/gometalinter
+  src:  https://github.com/alecthomas/gometalinter
+  tags: []
+  used:   true
+  viewed: false
+
   include:
-  - package: github.com/alecthomas/gocyclo
-    src: https://github.com/alecthomas/gocyclo
-  - package: github.com/client9/misspell
-    src: https://github.com/client9/misspell
-  - package: github.com/dominikh/go-simple
-    src: https://github.com/dominikh/go-simple
+  - name: github.com/alecthomas/gocyclo
+    src:  https://github.com/alecthomas/gocyclo
+    tags: []
+    used:   false
+    viewed: false
+
+  - name: github.com/client9/misspell
+    src:  https://github.com/client9/misspell
+    tags: []
+    used:   false
+    viewed: false
+
+  - name: github.com/dominikh/go-simple
+    src:  https://github.com/dominikh/go-simple
+    tags: []
+    used:   false
+    viewed: false
+
     new:
-      package: github.com/dominikh/go-tools/simple
-      src: https://github.com/dominikh/go-tools/tree/master/simple
-  - package: github.com/dominikh/go-staticcheck
-    src: https://github.com/dominikh/go-staticcheck
+      name: github.com/dominikh/go-tools/simple
+      src:  https://github.com/dominikh/go-tools/tree/master/simple
+      tags: []
+      used:   false
+      viewed: false
+
+  - name: github.com/dominikh/go-staticcheck
+    src:  https://github.com/dominikh/go-staticcheck
+    tags: []
+    used:   false
+    viewed: false
+
     new:
-      package: github.com/dominikh/go-tools/staticcheck
-      src: https://github.com/dominikh/go-tools/tree/master/staticcheck
-  - package: github.com/dominikh/go-unused
-    src: https://github.com/dominikh/go-unused
+      name: github.com/dominikh/go-tools/staticcheck
+      src:  https://github.com/dominikh/go-tools/tree/master/staticcheck
+      tags: []
+      used:   false
+      viewed: false
+
+  - name: github.com/dominikh/go-unused
+    src:  https://github.com/dominikh/go-unused
+    tags: []
+    used:   false
+    viewed: false
+
     new:
-      package: github.com/dominikh/go-tools/unused
-      src: https://github.com/dominikh/go-tools/tree/master/unused
-  - package: github.com/GoASTScanner/gas
-    src: https://github.com/GoASTScanner/gas
-  - package: github.com/golang/lint
-    src: https://github.com/golang/lint
-  - package: github.com/gordonklaus/ineffassign
-    src: https://github.com/gordonklaus/ineffassign
-  - package: github.com/jgautheron/goconst
-    src: https://github.com/jgautheron/goconst
-  - package: github.com/kisielk/errcheck
-    src: https://github.com/kisielk/errcheck
-  - package: github.com/mdempsky/unconvert
-    src: https://github.com/mdempsky/unconvert
-  - package: github.com/mibk/dupl
-    src: https://github.com/mibk/dupl
-  - package: github.com/mvdan/interfacer
-    src: https://github.com/mvdan/interfacer
-  - package: github.com/opennota/check
-    src: https://github.com/opennota/check
-  - package: github.com/tsenart/deadcode
-    src: https://github.com/tsenart/deadcode
-  - package: github.com/walle/lll
-    src: https://github.com/walle/lll
-  - package: golang.org/x/tools/cmd/goimports
-    src: https://github.com/golang/tools/tree/master/cmd/goimports
-  - package: golang.org/x/tools/cmd/gotype
-    src: https://github.com/golang/tools/tree/master/cmd/gotype
-- package: github.com/fortytw2/leaktest
-  src: https://github.com/fortytw2/leaktest
-- package: github.com/thraxil/cyclo
-  src: https://github.com/thraxil/cyclo
+      name: github.com/dominikh/go-tools/unused
+      src:  https://github.com/dominikh/go-tools/tree/master/unused
+      tags: []
+      used:   false
+      viewed: false
+
+  - name: github.com/GoASTScanner/gas
+    src:  https://github.com/GoASTScanner/gas
+    tags: []
+    used:   false
+    viewed: false
+
+  - name: github.com/golang/lint
+    src:  https://github.com/golang/lint
+    tags: []
+    used:   false
+    viewed: false
+
+  - name: github.com/gordonklaus/ineffassign
+    src:  https://github.com/gordonklaus/ineffassign
+    tags: []
+    used:   false
+    viewed: false
+
+  - name: github.com/jgautheron/goconst
+    src:  https://github.com/jgautheron/goconst
+    tags: []
+    used:   false
+    viewed: false
+
+  - name: github.com/kisielk/errcheck
+    src:  https://github.com/kisielk/errcheck
+    tags: []
+    used:   false
+    viewed: false
+
+  - name: github.com/mdempsky/unconvert
+    src:  https://github.com/mdempsky/unconvert
+    tags: []
+    used:   false
+    viewed: false
+
+  - name: github.com/mibk/dupl
+    src:  https://github.com/mibk/dupl
+    tags: []
+    used:   false
+    viewed: false
+
+  - name: github.com/mvdan/interfacer
+    src:  https://github.com/mvdan/interfacer
+    tags: []
+    used:   false
+    viewed: false
+
+  - name: github.com/opennota/check
+    src:  https://github.com/opennota/check
+    tags: []
+    used:   false
+    viewed: false
+
+  - name: github.com/tsenart/deadcode
+    src:  https://github.com/tsenart/deadcode
+    tags: []
+    used:   false
+    viewed: false
+
+  - name: github.com/walle/lll
+    src:  https://github.com/walle/lll
+    tags: []
+    used:   false
+    viewed: false
+
+  - name: golang.org/x/tools/cmd/goimports
+    src:  https://github.com/golang/tools/tree/master/cmd/goimports
+    tags: []
+    used:   false
+    viewed: false
+
+  - name: golang.org/x/tools/cmd/gotype
+    src:  https://github.com/golang/tools/tree/master/cmd/gotype
+    tags: []
+    used:   false
+    viewed: false
+
+- name: github.com/fortytw2/leaktest
+  src:  https://github.com/fortytw2/leaktest
+  tags: []
+  used:   false
+  viewed: false
+
+- name: github.com/thraxil/cyclo
+  src:  https://github.com/thraxil/cyclo
+  tags: []
+  used:   false
+  viewed: false

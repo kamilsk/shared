@@ -1,15 +1,38 @@
 packages:
-- package: Django
-  src: https://github.com/django/django
+- name: Django
+  src:  https://github.com/django/django
+  tags: []
+  used:   false
+  viewed: false
+
   related:
-  - package: wagtail
-    src: https://github.com/torchbox/wagtail
-- package: Flask
-  src: https://github.com/pallets/flask
-- package: tornado
-  src: https://github.com/tornadoweb/tornado
+  - name: wagtail
+    src:  https://github.com/torchbox/wagtail
+    tags: []
+    used:   false
+    viewed: false
+
+- name: Flask
+  src:  https://github.com/pallets/flask
+  tags: []
+  used:   true
+  viewed: false
+
+- name: tornado
+  src:  https://github.com/tornadoweb/tornado
+  tags: []
+  used:   false
+  viewed: false
+
   related:
-  - package: thumbor
-    src: https://github.com/thumbor/thumbor
-- pacakge: xweb
-  src: https://github.com/gaojiuli/xweb
+  - name: thumbor
+    src:  https://github.com/thumbor/thumbor
+    tags: []
+    used:   false
+    viewed: false
+
+- name: xweb
+  src:  https://github.com/gaojiuli/xweb
+  tags: []
+  used:   false
+  viewed: false

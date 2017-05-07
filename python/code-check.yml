@@ -1,3 +1,6 @@
 packages:
-- package: yapf
-  src: https://github.com/google/yapf
+- name: yapf
+  src:  https://github.com/google/yapf
+  tags: []
+  used:   false
+  viewed: false

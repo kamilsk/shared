@@ -1,3 +1,6 @@
-package:
-- package: github.com/juju/errors
-  src: https://github.com/juju/errors
+packages:
+- name: github.com/juju/errors
+  src:  https://github.com/juju/errors
+  tags: []
+  used:   false
+  viewed: false

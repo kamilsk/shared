@@ -1,3 +1,6 @@
 packages:
-- package: Jinja2
-  src: https://github.com/pallets/jinja
+- name: Jinja2
+  src:  https://github.com/pallets/jinja
+  tags: []
+  used:   true
+  viewed: false

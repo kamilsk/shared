@@ -1,7 +1,18 @@
 packages:
-- package: memio/memio
-  src: https://github.com/memio/memio
-- package: nikic/php-parser
-  src: https://github.com/nikic/PHP-Parser
-- package: sami/sami
-  src: https://github.com/FriendsOfPHP/Sami
+- name: memio/memio
+  src:  https://github.com/memio/memio
+  tags: []
+  used:   false
+  viewed: false
+
+- name: nikic/php-parser
+  src:  https://github.com/nikic/PHP-Parser
+  tags: []
+  used:   false
+  viewed: false
+
+- name: sami/sami
+  src:  https://github.com/FriendsOfPHP/Sami
+  tags: []
+  used:   false
+  viewed: false

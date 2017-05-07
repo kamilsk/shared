@@ -1,3 +1,6 @@
 packages:
-- package: github.com/go-yaml/yaml
-  src: https://github.com/go-yaml/yaml
+- name: github.com/go-yaml/yaml
+  src:  https://github.com/go-yaml/yaml
+  tags: []
+  used:   true
+  viewed: false
