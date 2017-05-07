@@ -1,4 +1,2 @@
 /**/artifacts/*
 !/**/artifacts/.gitkeep
-/**/**/artifacts/*
-!/**/**/artifacts/.gitkeep
