@@ -10,3 +10,9 @@ packages:
   tags: []
   used:   false
   viewed: false
+
+- name: elementor
+  src:  https://github.com/pojome/elementor
+  tags: []
+  used:   false
+  viewed: false
