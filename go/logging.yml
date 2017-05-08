@@ -52,3 +52,15 @@ packages:
   tags: []
   used:   false
   viewed: false
+
+- name: github.com/oklog/oklog
+  src:  https://github.com/oklog/oklog
+  tags: []
+  used:   false
+  viewed: false
+
+- name: github.com/happierall/l
+  src:  https://github.com/happierall/l
+  tags: []
+  used:   false
+  viewed: false

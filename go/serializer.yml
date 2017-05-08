@@ -4,3 +4,9 @@ packages:
   tags: []
   used:   true
   viewed: false
+
+- name: github.com/y0ssar1an/q
+  src:  https://github.com/y0ssar1an/q
+  tags: []
+  used:   false
+  viewed: false

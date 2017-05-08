@@ -26,6 +26,7 @@
 - https://github.com/dinedal/textql                     [Go]
 - https://github.com/facebook/osquery                   [C++]
 - https://github.com/stedolan/jq                        [C]
+- https://github.com/sqle/gitquery                      [Go]
 
 ## Git
 
