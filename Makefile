@@ -16,6 +16,7 @@ build: build-tools
 build-hugo: drop-hugo
 build-hugo: clean-hugo-artifacts
 build-hugo:
+	mkdir -p $(CWD)/hugo/artifacts
 	docker rmi -f build-hugo-image     &>/dev/null || true
 	docker rm -f  build-hugo-container &>/dev/null || true
 	#
@@ -39,6 +40,7 @@ build-hugo:
 build-tools: drop-tools
 build-tools: clean-tools-artifacts
 build-tools:
+	mkdir -p $(CWD)/tools/artifacts
 	docker rmi -f build-go-tools-image     &>/dev/null || true
 	docker rm  -f build-go-tools-container &>/dev/null || true
 	#
@@ -55,7 +57,7 @@ build-tools:
 	docker cp build-go-tools-container:/tmp/benchcmp                $(CWD)/tools/artifacts/
 	docker cp build-go-tools-container:/tmp/depth                   $(CWD)/tools/artifacts/
 	docker cp build-go-tools-container:/tmp/easyjson                $(CWD)/tools/artifacts/
-	docker cp build-go-tools-container:/tmp/glide/linux-amd64/glide $(CWD)/tools/artifacts/
+	docker cp build-go-tools-container:/tmp/glide/linux-386/glide   $(CWD)/tools/artifacts/
 	docker cp build-go-tools-container:/tmp/godepq                  $(CWD)/tools/artifacts/
 	docker cp build-go-tools-container:/tmp/gometalinter            $(CWD)/tools/artifacts/gometalinter/
 	docker cp build-go-tools-container:/tmp/goreleaser/goreleaser   $(CWD)/tools/artifacts/

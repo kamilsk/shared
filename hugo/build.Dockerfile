@@ -10,7 +10,7 @@ RUN apk update --no-cache \
  && update-ca-certificates &>/dev/null \
 
  && wget -q -O /tmp/hugo.tar.gz \
-    https://github.com/spf13/hugo/releases/download/v${VERSION}/hugo_${VERSION}_Linux-64bit.tar.gz \
+    https://github.com/spf13/hugo/releases/download/v${VERSION}/hugo_${VERSION}_Linux-32bit.tar.gz \
  && mkdir /tmp/hugo && tar xf /tmp/hugo.tar.gz -C /tmp/hugo \
 
  && echo $'\n\
