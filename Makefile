@@ -5,8 +5,8 @@ CWD      := $(patsubst %/,%,$(dir $(MAKEPATH)))
 HUGO     = 0.20.7
 DEPTH    = 1.1.1
 GLIDE    = 0.12.3
-RELEASER = 0.17.1
-REPORTER = 1.5.0
+RELEASER = 0.18.0
+REPORTER = 1.5.2
 
 .PHONY: build
 build: build-hugo
@@ -57,7 +57,7 @@ build-tools:
 	docker cp build-go-tools-container:/tmp/benchcmp                $(CWD)/tools/artifacts/
 	docker cp build-go-tools-container:/tmp/depth                   $(CWD)/tools/artifacts/
 	docker cp build-go-tools-container:/tmp/easyjson                $(CWD)/tools/artifacts/
-	docker cp build-go-tools-container:/tmp/glide/linux-386/glide   $(CWD)/tools/artifacts/
+	docker cp build-go-tools-container:/tmp/glide/linux-amd64/glide $(CWD)/tools/artifacts/
 	docker cp build-go-tools-container:/tmp/godepq                  $(CWD)/tools/artifacts/
 	docker cp build-go-tools-container:/tmp/gometalinter            $(CWD)/tools/artifacts/gometalinter/
 	docker cp build-go-tools-container:/tmp/goreleaser/goreleaser   $(CWD)/tools/artifacts/

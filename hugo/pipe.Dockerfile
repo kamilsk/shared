@@ -20,7 +20,9 @@ METADATA:short \n\
 alpine:latest with hugo \n\
 \n\
 METADATA:full' >> /tmp/meta.data \
- && echo "alpine:latest.(${BASE}) with hugo.(${VERSION})" >> /tmp/meta.data \
+ && echo "alpine:latest.(${BASE}) with [hugo](http://gohugo.io).(v${VERSION}," \
+    "[diff](https://github.com/spf13/hugo/compare/v${VERSION}...master))" \
+    >> /tmp/meta.data \
  && echo $'\n\
 [Dockerfile](https://github.com/kamilsk/shared/blob/docker-go-v1/hugo) \n\
 [Useful Makefile](https://github.com/kamilsk/shared/blob/makefile-go-v1/docker/hugo.mk) \n\

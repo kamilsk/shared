@@ -26,7 +26,7 @@ RUN apk update --no-cache \
  && rm -rf /go/bin/* /go/pkg/* /go/src/* \
 
  && wget -q -O /tmp/depth \
-    https://github.com/KyleBanks/depth/releases/download/v${DEPTH}/depth_${DEPTH}_linux_386 \
+    https://github.com/KyleBanks/depth/releases/download/v${DEPTH}/depth_${DEPTH}_linux_amd64 \
  && chmod +x /tmp/depth \
 
  && go get github.com/mailru/easyjson/... \
@@ -36,7 +36,7 @@ RUN apk update --no-cache \
  && rm -rf /go/bin/* /go/pkg/* /go/src/* \
 
  && wget -q -O /tmp/glide.tar.gz \
-    https://github.com/Masterminds/glide/releases/download/v${GLIDE}/glide-v${GLIDE}-linux-386.tar.gz \
+    https://github.com/Masterminds/glide/releases/download/v${GLIDE}/glide-v${GLIDE}-linux-amd64.tar.gz \
  && mkdir /tmp/glide && tar xf /tmp/glide.tar.gz -C /tmp/glide \
 
  && go get github.com/google/godepq \
@@ -55,7 +55,7 @@ RUN apk update --no-cache \
  && export GML_LIST=$(ls /tmp/gometalinter/) \
 
  && wget -q -O /tmp/goreleaser.tar.gz \
-    https://github.com/goreleaser/goreleaser/releases/download/v${RELEASER}/goreleaser_Linux_i386.tar.gz \
+    https://github.com/goreleaser/goreleaser/releases/download/v${RELEASER}/goreleaser_Linux_x86_64.tar.gz \
  && mkdir /tmp/goreleaser && tar xf /tmp/goreleaser.tar.gz -C /tmp/goreleaser \
 
  && go get github.com/wgliang/goreporter \
