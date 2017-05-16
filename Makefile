@@ -1,10 +1,15 @@
 .PHONY: build
+build: build-br
 build: build-go
 build: build-js
 build: build-jb
 build: build-php
 build: build-py
 build: build-term
+
+.PHONY: build-br
+build-br:
+	@echo "browser build not ready"
 
 .PHONY: build-go
 build-go:
