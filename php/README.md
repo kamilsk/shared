@@ -1,3 +1,3 @@
-> # shared:pmc-collection:php
+> # shared:php
 >
-> PHP packages.
+> My collection of useful PHP packages.

@@ -1,6 +1,6 @@
-> # shared:pmc-collection:go
+> # shared:go
 >
-> Go packages.
+> My collection of useful Go packages.
 
 ## Sorting
 

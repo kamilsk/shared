@@ -1,4 +1,6 @@
-# CLI
+> # shared:terminal
+>
+> My collection of useful CLI tools.
 
 ## Encoding
 

@@ -1,3 +1,3 @@
 > # shared:pmc-collection
 >
-> My collections of Go, PHP and Python packages.
+> My collection of useful things.

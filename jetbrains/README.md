@@ -1,4 +1,4 @@
-> # shared:pmc-collection:jetbrains
+> # shared:jetbrains
 >
 > Meta information related with Jetbrains' IDE.
 

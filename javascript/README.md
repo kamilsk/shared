@@ -1,6 +1,6 @@
-> # shared:pmc-collection:javascript
+> # shared:javascript
 >
-> JavaScript packages.
+> My collection of useful JavaScript packages.
 
 ## Sorting
 
@@ -76,7 +76,3 @@ https://github.com/henrygd/bigpicture
 https://github.com/ruyadorno/simple-slider
 
 https://github.com/gnab/remark
-
-~~~
-
-https://github.com/buunguyen/octotree
