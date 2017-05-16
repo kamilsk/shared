@@ -1,4 +1,5 @@
-packages:
+list:
+
 - name: phpunit/phpunit
   src:  https://github.com/sebastianbergmann/phpunit
   tags: []

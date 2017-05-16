@@ -1,4 +1,5 @@
-packages:
+list:
+
 - name: github.com/alecthomas/gometalinter
   src:  https://github.com/alecthomas/gometalinter
   tags: []

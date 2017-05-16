@@ -1,4 +1,5 @@
-packages:
+list:
+
 - name: memio/memio
   src:  https://github.com/memio/memio
   tags: []

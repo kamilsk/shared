@@ -1,4 +1,12 @@
-packages:
+list:
+
+- name: github.com/fsnotify/fsnotify
+  src:  https://github.com/fsnotify/fsnotify
+  site: https://fsnotify.org
+  tags: []
+  used:   false
+  viewed: false
+
 - name: github.com/juju/errors
   src:  https://github.com/juju/errors
   tags: []
@@ -23,3 +31,9 @@ packages:
     tags: []
     used:   false
     viewed: false
+
+- name: github.com/pkg/...
+  src:  https://github.com/pkg
+  tags: []
+  used:   false
+  viewed: false

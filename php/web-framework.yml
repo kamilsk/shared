@@ -1,4 +1,5 @@
-packages:
+list:
+
 - name: laravel/laravel
   src:  https://github.com/laravel/laravel
   tags: []

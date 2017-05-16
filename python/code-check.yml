@@ -1,4 +1,5 @@
-packages:
+list:
+
 - name: yapf
   src:  https://github.com/google/yapf
   tags: []

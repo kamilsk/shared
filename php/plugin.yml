@@ -1,4 +1,5 @@
-packages:
+list:
+
 - name: hirak/prestissimo
   src:  https://github.com/hirak/prestissimo
   tags: []

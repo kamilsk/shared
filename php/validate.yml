@@ -1,4 +1,5 @@
-packages:
+list:
+
 - name: egulias/email-validator
   src:  https://github.com/egulias/EmailValidator
   tags: []

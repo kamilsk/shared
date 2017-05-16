@@ -1,4 +1,5 @@
-packages:
+list:
+
 - name: wordplate/wordplate
   src:  https://github.com/wordplate/wordplate
   tags: []

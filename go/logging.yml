@@ -1,4 +1,5 @@
-packages:
+list:
+
 - name: github.com/apex/log
   src:  https://github.com/apex/log
   tags: []

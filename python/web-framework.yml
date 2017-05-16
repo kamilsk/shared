@@ -1,4 +1,5 @@
-packages:
+list:
+
 - name: Django
   src:  https://github.com/django/django
   tags: []

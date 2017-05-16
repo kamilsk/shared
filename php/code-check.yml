@@ -1,4 +1,5 @@
-packages:
+list:
+
 - name: etsy/phan
   src:  https://github.com/etsy/phan
   tags: []

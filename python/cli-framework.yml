@@ -1,4 +1,5 @@
-packages:
+list:
+
 - name: click
   src:  https://github.com/pallets/click
   tags: []

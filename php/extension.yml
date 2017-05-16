@@ -1,4 +1,5 @@
-packages:
+list:
+
 - name: php-ds/extension
   src:  https://github.com/php-ds/extension
   tags: []

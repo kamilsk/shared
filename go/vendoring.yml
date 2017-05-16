@@ -1,4 +1,5 @@
-packages:
+list:
+
 - name: github.com/constabulary/gb/...
   src:  https://github.com/constabulary/gb
   tags: []

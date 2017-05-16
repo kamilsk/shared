@@ -1,4 +1,5 @@
-packages:
+list:
+
 - name: Jinja2
   src:  https://github.com/pallets/jinja
   tags: []

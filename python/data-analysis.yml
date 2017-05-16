@@ -1,4 +1,5 @@
-packages:
+list:
+
 - name: pandas
   src:  https://github.com/pandas-dev/pandas
   tags: []

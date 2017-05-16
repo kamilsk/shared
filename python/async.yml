@@ -1,4 +1,5 @@
-packages:
+list:
+
 - name: Celery
   src:  https://github.com/celery/celery
   tags: []

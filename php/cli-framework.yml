@@ -1,4 +1,5 @@
-packages:
+list:
+
 - name: mnapoli/silly
   src:  https://github.com/mnapoli/silly
   tags: []

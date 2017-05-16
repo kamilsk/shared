@@ -1,4 +1,5 @@
-packages:
+list:
+
 - name: github.com/jmoiron/sqlx
   src:  https://github.com/jmoiron/sqlx
   tags: []
