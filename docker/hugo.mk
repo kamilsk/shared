@@ -65,7 +65,7 @@ hugo-start:
 	    -w /opt \
 	    -p 127.0.0.1:8080:8080 \
 	    kamilsk/hugo:latest \
-	    /bin/sh -c 'hugo server --config=config.yml --baseURL=http://localhost:8080 --bind="" --port=8080 --buildDrafts'
+	    /bin/sh -c 'hugo server --baseURL=http://localhost:8080 --bind="" --port=8080 --buildDrafts $(strip $(ARGS))'
 
 .PHONY: hugo-stop
 hugo-stop:
