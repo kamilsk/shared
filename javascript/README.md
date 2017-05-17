@@ -1,78 +1,201 @@
-> # shared:javascript
+> # shared:pmc-collection:javascript
 >
 > My collection of useful JavaScript packages.
 
-## Sorting
+## chart
 
-https://github.com/surveyjs/surveyjs
-https://github.com/palantir/blueprint
+- [britecharts](https://github.com/eventbrite/britecharts)
+  - [ ] used
+  - [ ] viewed
 
-https://github.com/enyo/dropzone
-https://github.com/basecamp/trix
+## x
 
-https://github.com/mburakerman/numscrubberjs
-https://github.com/BoxFactura/pulltorefresh.js
-https://github.com/LeadDyno/intercooler-js
-https://github.com/thednp/kute.js
-https://github.com/meandmax/lory
-https://github.com/iamdustan/smoothscroll
-https://github.com/uikit/uikit
-https://github.com/necolas/normalize.css
-
-https://github.com/bevacqua/dragula
-https://github.com/zenorocha/clipboard.js
-https://github.com/vuejs/vue
-https://github.com/Selz/plyr
-https://github.com/jashkenas/backbone
-https://github.com/goldfire/howler.js
-https://github.com/nosir/cleave.js
-https://github.com/juliangarnier/anime
-https://github.com/dangrossman/bootstrap-daterangepicker
-https://github.com/chartjs/Chart.js
-https://github.com/twbs/bootstrap
-https://github.com/facebook/relay
-https://github.com/facebook/react
-https://github.com/lodash/lodash
-https://github.com/jquery/jquery
-https://github.com/marionettejs/backbone.marionette
-https://github.com/Modernizr/Modernizr
-https://github.com/moment/moment
-https://github.com/janl/mustache.js
-https://github.com/wycats/handlebars.js
-https://github.com/jashkenas/underscore
-https://github.com/franciscop/cookies.js
-https://github.com/sarcadass/granim.js
-https://github.com/Nickersoft/push.js
-https://github.com/camwiegert/in-view
-https://github.com/recharts/recharts
-https://github.com/maxwellito/vivus
-https://github.com/gijsroge/tilt.js
-	https://github.com/micku7zu/vanilla-tilt.js
-https://github.com/legomushroom/mojs
-https://github.com/yabwe/medium-editor
-https://github.com/mathjax/MathJax
-https://github.com/Leaflet/Leaflet
-https://github.com/luisvinicius167/ityped
-https://github.com/hsnaydd/moveTo
-https://github.com/wingify/across-tabs
-https://github.com/shobhitsharma/embedo
-https://github.com/javierbyte/control-user-cursor
-https://github.com/susielu/d3-annotation
-
-https://github.com/FezVrasta/popper.js
-https://github.com/atomiks/tippyjs
-
-https://github.com/jasmine/jasmine
-https://github.com/karma-runner/karma
-
-https://github.com/lord/slate
-https://github.com/QingWei-Li/docsify
-
-https://github.com/Valve/fingerprintjs
-https://github.com/marcuswestin/store.js
-
-https://github.com/sachinchoolur/lightgallery.js
-https://github.com/henrygd/bigpicture
-https://github.com/ruyadorno/simple-slider
-
-https://github.com/gnab/remark
+- [...](https://github.com/surveyjs/surveyjs)
+  - [ ] used
+  - [ ] viewed
+- [...](https://github.com/palantir/blueprint)
+  - [ ] used
+  - [ ] viewed
+- [...](https://github.com/enyo/dropzone)
+  - [ ] used
+  - [ ] viewed
+- [...](https://github.com/basecamp/trix)
+  - [ ] used
+  - [ ] viewed
+- [...](https://github.com/mburakerman/numscrubberjs)
+  - [ ] used
+  - [ ] viewed
+- [...](https://github.com/BoxFactura/pulltorefresh.js)
+  - [ ] used
+  - [ ] viewed
+- [...](https://github.com/LeadDyno/intercooler-js)
+  - [ ] used
+  - [ ] viewed
+- [...](https://github.com/thednp/kute.js)
+  - [ ] used
+  - [ ] viewed
+- [...](https://github.com/meandmax/lory)
+  - [ ] used
+  - [ ] viewed
+- [...](https://github.com/iamdustan/smoothscroll)
+  - [ ] used
+  - [ ] viewed
+- [...](https://github.com/uikit/uikit)
+  - [ ] used
+  - [ ] viewed
+- [...](https://github.com/necolas/normalize.css)
+  - [ ] used
+  - [ ] viewed
+- [...](https://github.com/bevacqua/dragula)
+  - [ ] used
+  - [ ] viewed
+- [...](https://github.com/zenorocha/clipboard.js)
+  - [ ] used
+  - [ ] viewed
+- [...](https://github.com/vuejs/vue)
+  - [ ] used
+  - [ ] viewed
+- [...](https://github.com/Selz/plyr)
+  - [ ] used
+  - [ ] viewed
+- [...](https://github.com/jashkenas/backbone)
+  - [ ] used
+  - [ ] viewed
+- [...](https://github.com/goldfire/howler.js)
+  - [ ] used
+  - [ ] viewed
+- [...](https://github.com/nosir/cleave.js)
+  - [ ] used
+  - [ ] viewed
+- [...](https://github.com/juliangarnier/anime)
+  - [ ] used
+  - [ ] viewed
+- [...](https://github.com/dangrossman/bootstrap-daterangepicker)
+  - [ ] used
+  - [ ] viewed
+- [...](https://github.com/chartjs/Chart.js)
+  - [ ] used
+  - [ ] viewed
+- [...](https://github.com/twbs/bootstrap)
+  - [ ] used
+  - [ ] viewed
+- [...](https://github.com/facebook/relay)
+  - [ ] used
+  - [ ] viewed
+- [...](https://github.com/facebook/react)
+  - [ ] used
+  - [ ] viewed
+- [...](https://github.com/lodash/lodash)
+  - [ ] used
+  - [ ] viewed
+- [...](https://github.com/jquery/jquery)
+  - [ ] used
+  - [ ] viewed
+- [...](https://github.com/marionettejs/backbone.marionette)
+  - [ ] used
+  - [ ] viewed
+- [...](https://github.com/Modernizr/Modernizr)
+  - [ ] used
+  - [ ] viewed
+- [...](https://github.com/moment/moment)
+  - [ ] used
+  - [ ] viewed
+- [...](https://github.com/janl/mustache.js)
+  - [ ] used
+  - [ ] viewed
+- [...](https://github.com/wycats/handlebars.js)
+  - [ ] used
+  - [ ] viewed
+- [...](https://github.com/jashkenas/underscore)
+  - [ ] used
+  - [ ] viewed
+- [...](https://github.com/franciscop/cookies.js)
+  - [ ] used
+  - [ ] viewed
+- [...](https://github.com/sarcadass/granim.js)
+  - [ ] used
+  - [ ] viewed
+- [...](https://github.com/Nickersoft/push.js)
+  - [ ] used
+  - [ ] viewed
+- [...](https://github.com/camwiegert/in-view)
+  - [ ] used
+  - [ ] viewed
+- [...](https://github.com/recharts/recharts)
+  - [ ] used
+  - [ ] viewed
+- [...](https://github.com/maxwellito/vivus)
+  - [ ] used
+  - [ ] viewed
+- [...](https://github.com/gijsroge/tilt.js)
+  - [ ] used
+  - [ ] viewed
+- [...](https://github.com/micku7zu/vanilla-tilt.js)
+  - [ ] used
+  - [ ] viewed
+- [...](https://github.com/legomushroom/mojs)
+  - [ ] used
+  - [ ] viewed
+- [...](https://github.com/yabwe/medium-editor)
+  - [ ] used
+  - [ ] viewed
+- [...](https://github.com/mathjax/MathJax)
+  - [ ] used
+  - [ ] viewed
+- [...](https://github.com/Leaflet/Leaflet)
+  - [ ] used
+  - [ ] viewed
+- [...](https://github.com/luisvinicius167/ityped)
+  - [ ] used
+  - [ ] viewed
+- [...](https://github.com/hsnaydd/moveTo)
+  - [ ] used
+  - [ ] viewed
+- [...](https://github.com/wingify/across-tabs)
+  - [ ] used
+  - [ ] viewed
+- [...](https://github.com/shobhitsharma/embedo)
+  - [ ] used
+  - [ ] viewed
+- [...](https://github.com/javierbyte/control-user-cursor)
+  - [ ] used
+  - [ ] viewed
+- [...](https://github.com/susielu/d3-annotation)
+  - [ ] used
+  - [ ] viewed
+- [...](https://github.com/FezVrasta/popper.js)
+  - [ ] used
+  - [ ] viewed
+- [...](https://github.com/atomiks/tippyjs)
+  - [ ] used
+  - [ ] viewed
+- [...](https://github.com/jasmine/jasmine)
+  - [ ] used
+  - [ ] viewed
+- [...](https://github.com/karma-runner/karma)
+  - [ ] used
+  - [ ] viewed
+- [...](https://github.com/lord/slate)
+  - [ ] used
+  - [ ] viewed
+- [...](https://github.com/QingWei-Li/docsify)
+  - [ ] used
+  - [ ] viewed
+- [...](https://github.com/Valve/fingerprintjs)
+  - [ ] used
+  - [ ] viewed
+- [...](https://github.com/marcuswestin/store.js)
+  - [ ] used
+  - [ ] viewed
+- [...](https://github.com/sachinchoolur/lightgallery.js)
+  - [ ] used
+  - [ ] viewed
+- [...](https://github.com/henrygd/bigpicture)
+  - [ ] used
+  - [ ] viewed
+- [...](https://github.com/ruyadorno/simple-slider)
+  - [ ] used
+  - [ ] viewed
+- [...](https://github.com/gnab/remark)
+  - [ ] used
+  - [ ] viewed

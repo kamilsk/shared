@@ -1,12 +1,19 @@
 package main
 
 import (
+	"bytes"
 	"flag"
 	"fmt"
+	"io"
+	"io/ioutil"
 	"os"
+	"path"
 	"path/filepath"
 	"sort"
+	"strings"
 	"text/template"
+
+	"gopkg.in/yaml.v2"
 )
 
 type Section struct {
@@ -28,21 +35,17 @@ type Package struct {
 	Viewed bool
 }
 
-const tpl = `
-> # shared:pmc-collection:{{ .ID }}
+const tpl = `> # shared:pmc-collection:{{ .ID }}
 >
 > My collection of useful {{ .Name }} packages.
-
 {{ range .Collections }}
 ## {{ .Name }}
-
 {{ range .List }}
 - [{{ .Name }}]({{ .Src }})
   - [{{ if .Used }}x{{ else }} {{ end }}] used
   - [{{ if .Viewed }}x{{ else }} {{ end }}] viewed
-{{ end }}
-{{ end }}
-`
+{{- end }}
+{{ end }}`
 
 var available = [...]string{"go", "javascript", "php", "python"}
 
@@ -54,7 +57,52 @@ func main() {
 			fmt.Println("success")
 		}
 	}()
-	render(handle(parse()))
+	buf := bytes.NewBuffer(make([]byte, 0, 5*1024))
+	flush(buf, render(buf, handle(parse())))
+}
+
+func flush(r io.Reader, s *Section) *Section {
+	file, err := os.OpenFile("./"+s.ID+"/README.md", os.O_WRONLY|os.O_CREATE, os.FileMode(0644))
+	if err != nil {
+		panic(err)
+	}
+
+	data, err := ioutil.ReadAll(r)
+	if err != nil {
+		panic(err)
+	}
+
+	file.Write(data)
+
+	return s
+}
+
+func handle(s *Section) *Section {
+	m, err := filepath.Glob("./" + s.ID + "/*.yml")
+	if err != nil {
+		panic(err)
+	}
+
+	s.Collections = make([]Collection, 0, len(m))
+	for _, file := range m {
+		f, err := os.OpenFile(file, os.O_RDONLY, 0)
+		if err != nil {
+			panic(err)
+		}
+		c, err := ioutil.ReadAll(f)
+		f.Close()
+		if err != nil {
+			panic(err)
+		}
+		var collection Collection
+		if err := yaml.Unmarshal(c, &collection); err != nil {
+			panic(err)
+		}
+		collection.Name = strings.TrimSuffix(path.Base(f.Name()), path.Ext(f.Name()))
+		s.Collections = append(s.Collections, collection)
+	}
+
+	return s
 }
 
 func parse() *Section {
@@ -77,17 +125,8 @@ func parse() *Section {
 	}
 }
 
-func handle(s *Section) *Section {
-	m, err := filepath.Glob("./" + s.ID + "/*.yml")
-	if err != nil {
-		panic(err)
-	}
-	fmt.Println(m)
+func render(w io.Writer, s *Section) *Section {
+	template.Must(template.New("readme").Parse(tpl)).Execute(w, s)
 
-	return s
-}
-
-func render(s *Section) *Section {
-	template.Must(template.New("readme").Parse(tpl)).Execute(os.Stdout, s)
 	return s
 }

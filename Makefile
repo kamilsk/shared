@@ -17,7 +17,7 @@ build-go:
 
 .PHONY: build-js
 build-js:
-	@echo "javascript build not ready"
+	go run cmd/build.go -s javascript -n JavaScript
 
 .PHONY: build-jb
 build-jb:
@@ -25,11 +25,11 @@ build-jb:
 
 .PHONY: build-php
 build-php:
-	@echo "php build not ready"
+	go run cmd/build.go -s php -n PHP
 
 .PHONY: build-py
 build-py:
-	@echo "python build not ready"
+	go run cmd/build.go -s python -n Python
 
 .PHONY: build-term
 build-term:
