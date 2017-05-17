@@ -13,7 +13,7 @@ build-br:
 
 .PHONY: build-go
 build-go:
-	@echo "go build not ready"
+	go run cmd/build.go -s go -n Go
 
 .PHONY: build-js
 build-js:
