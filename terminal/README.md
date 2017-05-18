@@ -29,6 +29,7 @@
 - https://github.com/facebook/osquery                   [C++]
 - https://github.com/stedolan/jq                        [C]
 - https://github.com/sqle/gitquery                      [Go]
+- https://github.com/kshvmdn/fsql                       [Go]
 
 ## Git
 

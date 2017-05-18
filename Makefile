@@ -1,5 +1,6 @@
 .PHONY: build
 build: build-br
+build: build-css
 build: build-go
 build: build-js
 build: build-jb
@@ -10,6 +11,10 @@ build: build-term
 .PHONY: build-br
 build-br:
 	@echo "browser build not ready"
+
+.PHONY: build-css
+build-css:
+	go run cmd/build.go -s css -n CSS
 
 .PHONY: build-go
 build-go:

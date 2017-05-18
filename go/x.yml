@@ -77,3 +77,15 @@ list:
   tags: []
   used:   false
   viewed: false
+
+- name: github.com/yourbasic/...
+  src:  https://github.com/yourbasic
+  tags: []
+  used:   false
+  viewed: false
+
+- name: github.com/pkg/...
+  src:  https://github.com/pkg
+  tags: []
+  used:   false
+  viewed: false
