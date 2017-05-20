@@ -1,4 +1,4 @@
-> # shared:pmc-collection:css
+> # shared:collection:css
 >
 > My collection of useful CSS packages.
 
@@ -7,4 +7,3 @@
 - [microtip](https://github.com/ghosh/microtip), [site](https://ghosh.github.io/microtip/)
   - [ ] used
   - [ ] viewed
-

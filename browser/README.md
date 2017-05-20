@@ -1,4 +1,4 @@
-> # shared:browser
+> # shared:collection:browser
 >
 > My collection of useful browser extensions.
 

@@ -1,4 +1,4 @@
-> # shared:jetbrains
+> # shared:collection:jetbrains
 >
 > Meta information related with Jetbrains' IDE.
 

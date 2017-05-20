@@ -1,4 +1,4 @@
-> # shared:macos
+> # shared:collection:macos
 >
 > My collection of useful tools for Mac OS.
 

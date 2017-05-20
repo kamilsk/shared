@@ -1,4 +1,4 @@
-> # shared:pmc-collection:python
+> # shared:collection:python
 >
 > My collection of useful Python packages.
 

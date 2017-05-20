@@ -1,4 +1,4 @@
-> # shared:pmc-collection:javascript
+> # shared:collection:javascript
 >
 > My collection of useful JavaScript packages.
 

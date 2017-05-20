@@ -1,4 +1,4 @@
-> # shared:pmc-collection:go
+> # shared:collection:go
 >
 > My collection of useful Go packages.
 

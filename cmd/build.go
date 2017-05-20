@@ -86,7 +86,7 @@ const tpl = `
 {{- end }}
 {{- end -}}
 
-> # shared:pmc-collection:{{ .ID }}
+> # shared:collection:{{ .ID }}
 >
 > My collection of useful {{ .Name }} packages.
 {{ range .Collections }}

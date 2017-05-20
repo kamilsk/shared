@@ -1,3 +1,3 @@
-> # shared:pmc-collection
+> # shared:collection
 >
 > My collection of useful things.

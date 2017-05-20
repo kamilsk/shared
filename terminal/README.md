@@ -1,4 +1,4 @@
-> # shared:terminal
+> # shared:collection:terminal
 >
 > My collection of useful CLI tools.
 
