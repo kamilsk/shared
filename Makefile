@@ -5,8 +5,8 @@ CWD      := $(patsubst %/,%,$(dir $(MAKEPATH)))
 HUGO     = 0.20.7
 DEPTH    = 1.1.1
 GLIDE    = 0.12.3
-RELEASER = 0.18.0
-REPORTER = 1.5.2
+RELEASER = 0.19.0
+REPORTER = 2.1.0
 
 .PHONY: build
 build: build-hugo
