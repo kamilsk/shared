@@ -2,6 +2,7 @@ list:
 
 - name: Jinja2
   src:  https://github.com/pallets/jinja
+  site: http://jinja.pocoo.org
   tags: []
   used:   true
   viewed: false

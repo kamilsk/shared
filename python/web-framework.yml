@@ -2,38 +2,41 @@ list:
 
 - name: Django
   src:  https://github.com/django/django
+  site: https://www.djangoproject.com
   tags: []
   used:   false
   viewed: false
 
   related:
+
   - name: wagtail
     src:  https://github.com/torchbox/wagtail
-    tags: []
+    site: https://wagtail.io
+    tags: [box]
     used:   false
     viewed: false
 
+
 - name: Flask
   src:  https://github.com/pallets/flask
+  site: http://flask.pocoo.org
   tags: []
   used:   true
   viewed: false
 
+
 - name: tornado
   src:  https://github.com/tornadoweb/tornado
+  site: http://www.tornadoweb.org
   tags: []
   used:   false
   viewed: false
 
   related:
+
   - name: thumbor
     src:  https://github.com/thumbor/thumbor
-    tags: []
+    site: http://thumbor.org
+    tags: [box]
     used:   false
     viewed: false
-
-- name: xweb
-  src:  https://github.com/gaojiuli/xweb
-  tags: []
-  used:   false
-  viewed: false

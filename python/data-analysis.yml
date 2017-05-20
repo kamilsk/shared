@@ -2,6 +2,7 @@ list:
 
 - name: pandas
   src:  https://github.com/pandas-dev/pandas
+  site: http://pandas.pydata.org
   tags: []
   used:   false
   viewed: false

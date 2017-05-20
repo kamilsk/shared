@@ -2,6 +2,7 @@ list:
 
 - name: Celery
   src:  https://github.com/celery/celery
+  site: http://www.celeryproject.org
   tags: []
   used:   false
   viewed: false

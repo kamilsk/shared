@@ -1,7 +1,8 @@
 list:
 
-- name: Requests
+- name: requests
   src:  https://github.com/kennethreitz/requests
+  site: http://python-requests.org
   tags: []
   used:   true
   viewed: false

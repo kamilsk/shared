@@ -28,24 +28,45 @@ type Collection struct {
 }
 
 type Package struct {
-	Name   string
-	Src    string
-	Tags   []string
+	Name        string
+	Src         string
+	Site        string
+	Description string
+
+	Tags []string
+
 	Used   bool
 	Viewed bool
+
+	Related []Package
+	Useful  []Package
 }
 
-const tpl = `> # shared:pmc-collection:{{ .ID }}
+const tpl = `
+{{- define "PACKAGE" }}
+- [{{ .Name }}]({{ .Src }}) {{- if .Site }}, [site]({{ .Site }}){{ end }}
+  - [{{ if .Used   }}x{{ else }} {{ end }}] used
+  - [{{ if .Viewed }}x{{ else }} {{ end }}] viewed
+{{ if .Related }}{{ template "RELATED" . }}{{ end }}
+{{- end -}}
+
+{{- define "RELATED" }}
+  - Related:
+{{ range .Related }}
+    - [{{ .Name }}]({{ .Src }}) {{- if .Site }}, [site]({{ .Site }}){{ end }}
+      - [{{ if .Used   }}x{{ else }} {{ end }}] used
+      - [{{ if .Viewed }}x{{ else }} {{ end }}] viewed
+{{ end }}
+{{- end -}}
+
+> # shared:pmc-collection:{{ .ID }}
 >
 > My collection of useful {{ .Name }} packages.
-{{ range .Collections }}
+
+{{ range .Collections -}}
 ## {{ .Name }}
-{{ range .List }}
-- [{{ .Name }}]({{ .Src }})
-  - [{{ if .Used }}x{{ else }} {{ end }}] used
-  - [{{ if .Viewed }}x{{ else }} {{ end }}] viewed
-{{- end }}
-{{ end }}`
+{{ range .List }}{{ template "PACKAGE" . }}{{ end }}
+{{ end -}}`
 
 var available = [...]string{"go", "javascript", "php", "python"}
 
@@ -62,7 +83,7 @@ func main() {
 }
 
 func flush(r io.Reader, s *Section) *Section {
-	file, err := os.OpenFile("./"+s.ID+"/README.md", os.O_WRONLY|os.O_CREATE, os.FileMode(0644))
+	file, err := os.OpenFile("./"+s.ID+"/README.md", os.O_WRONLY|os.O_CREATE|os.O_TRUNC, os.FileMode(0644))
 	if err != nil {
 		panic(err)
 	}

@@ -1,17 +1,12 @@
 list:
 
-- name: click
+- name: Click
   src:  https://github.com/pallets/click
+  site: http://click.pocoo.org
   tags: []
   used:   true
   viewed: false
 
-  helpful:
-  - name: tqdm
-    src:  https://github.com/noamraph/tqdm
-    tags: []
-    used:   false
-    viewed: false
 
 - name: fire
   src:  https://github.com/google/python-fire
