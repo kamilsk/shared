@@ -8,18 +8,19 @@ list:
 
 - name: github.com/jinzhu/gorm
   src:  https://github.com/jinzhu/gorm
-  tags: []
+  site: http://jinzhu.me/gorm/
+  tags: [orm]
   used:   false
   viewed: false
 
 - name: github.com/samonzeweb/godb
   src:  https://github.com/samonzeweb/godb
-  tags: []
+  tags: [builder]
   used:   false
   viewed: false
 
 - name: github.com/github/gh-ost
   src:  https://github.com/github/gh-ost
-  tags: []
+  tags: [migration, tools]
   used:   false
   viewed: false

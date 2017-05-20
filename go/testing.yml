@@ -1,44 +1,14 @@
 list:
 
-- name: github.com/cweill/gotests
-  src:  https://github.com/cweill/gotests
-  tags: []
-  used:   false
-  viewed: false
-
-- name: github.com/golang/mock
-  src:  https://github.com/golang/mock
-  tags: []
-  used:   false
-  viewed: false
-
 - name: github.com/jarcoal/httpmock
   src:  https://github.com/jarcoal/httpmock
-  tags: []
+  tags: [mock, http]
   used:   false
   viewed: false
 
 - name: github.com/jmartin82/mmock
   src:  https://github.com/jmartin82/mmock
-  tags: []
-  used:   false
-  viewed: false
-
-- name: github.com/kyoh86/richgo
-  src:  https://github.com/kyoh86/richgo
-  tags: []
-  used:   false
-  viewed: false
-
-- name: github.com/mattn/goveralls
-  src:  https://github.com/mattn/goveralls
-  tags: []
-  used:   false
-  viewed: false
-
-- name: github.com/tebeka/go2xunit
-  src:  https://github.com/tebeka/go2xunit
-  tags: []
+  tags: [mock, http]
   used:   false
   viewed: false
 
@@ -48,38 +18,15 @@ list:
   used:   false
   viewed: false
 
-- name: github.com/onsi/ginkgo
-  src:  https://github.com/onsi/ginkgo
-  tags: []
-  used:   false
-  viewed: false
-
-- name: github.com/onsi/gomega
-  src:  https://github.com/onsi/gomega
-  tags: []
-  used:   false
-  viewed: false
-
-- name: labix.org/gocheck
-  src:  http://labix.org/gocheck
+- name: gopkg.in/check.v1
+  src:  https://github.com/go-check/check
+  site: http://labix.org/gocheck
   tags: []
   used:   false
   viewed: false
 
 - name: github.com/workfit/tester
   src:  https://github.com/workfit/tester
-  tags: []
-  used:   false
-  viewed: false
-
-- name: github.com/rakyll/gom
-  src:  https://github.com/rakyll/gom
-  tags: []
-  used:   false
-  viewed: false
-
-- name: github.com/divan/gobenchui
-  src:  https://github.com/divan/gobenchui
   tags: []
   used:   false
   viewed: false

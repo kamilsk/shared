@@ -1,13 +1,8 @@
 list:
 
-- name: mnapoli/silly
-  src:  https://github.com/mnapoli/silly
-  tags: []
-  used:   false
-  viewed: false
-
 - name: cilex/cilex
   src:  https://github.com/Cilex/Cilex
+  site: http://cilex.github.io
   tags: []
-  used:   false
+  used:   true
   viewed: false

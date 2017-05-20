@@ -18,18 +18,6 @@ list:
   used:   false
   viewed: false
 
-- name: github.com/opentracing/opentracing-go
-  src:  https://github.com/opentracing/opentracing-go
-  tags: []
-  used:   false
-  viewed: false
-
-- name: github.com/Sirupsen/logrus
-  src:  https://github.com/Sirupsen/logrus
-  tags: []
-  used:   false
-  viewed: false
-
 - name: github.com/uber-go/zap
   src:  https://github.com/uber-go/zap
   tags: []
@@ -38,24 +26,6 @@ list:
 
 - name: github.com/sirupsen/logrus
   src:  https://github.com/sirupsen/logrus
-  tags: []
-  used:   false
-  viewed: false
-
-- name: github.com/agnivade/funnel
-  src:  https://github.com/agnivade/funnel
-  tags: []
-  used:   false
-  viewed: false
-
-- name: github.com/ScottMansfield/nanolog
-  src:  https://github.com/ScottMansfield/nanolog
-  tags: []
-  used:   false
-  viewed: false
-
-- name: github.com/oklog/oklog
-  src:  https://github.com/oklog/oklog
   tags: []
   used:   false
   viewed: false

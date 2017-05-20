@@ -2,6 +2,7 @@ list:
 
 - name: phpunit/phpunit
   src:  https://github.com/sebastianbergmann/phpunit
+  site: https://phpunit.de
   tags: []
   used:   false
   viewed: false
@@ -12,38 +13,16 @@ list:
   used:   false
   viewed: false
 
-- name: nelmio/alice
-  src:  https://github.com/nelmio/alice
-  tags: []
-  used:   false
-  viewed: false
+  related:
+
+  - name: nelmio/alice
+    src:  https://github.com/nelmio/alice
+    tags: []
+    used:   false
+    viewed: false
 
 - name: badoo/soft-mocks
   src:  https://github.com/badoo/soft-mocks
-  tags: []
-  used:   false
-  viewed: false
-
-- name: jwage/phpchunkit
-  src:  https://github.com/jwage/phpchunkit
-  tags: []
-  used:   false
-  viewed: false
-
-- name: atoum/atoum
-  src:  https://github.com/atoum/atoum
-  tags: []
-  used:   false
-  viewed: false
-
-- name: humbug/humbug
-  src:  https://github.com/padraic/humbug
-  tags: []
-  used:   false
-  viewed: false
-
-- name: phpunit/phpcov
-  src:  https://github.com/sebastianbergmann/phpcov
   tags: []
   used:   false
   viewed: false
@@ -54,14 +33,18 @@ list:
   used:   false
   viewed: false
 
-- name: peridot-php/peridot
-  src:  https://github.com/peridot-php/peridot
+- name: behat/behat
+  src:  https://github.com/Behat/Behat
+  site: http://behat.org
   tags: []
   used:   false
   viewed: false
 
-- name: behat/behat
-  src:  https://github.com/Behat/Behat
-  tags: []
-  used:   false
-  viewed: false
+  alternative:
+
+  - name: codeception/codeception
+    src:  https://github.com/Codeception/Codeception
+    site: http://codeception.com
+    tags: []
+    used:   false
+    viewed: false

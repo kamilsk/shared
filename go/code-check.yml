@@ -1,149 +1,27 @@
 list:
 
-- name: github.com/alecthomas/gometalinter
-  src:  https://github.com/alecthomas/gometalinter
-  tags: []
-  used:   true
-  viewed: false
-
-  include:
-  - name: github.com/alecthomas/gocyclo
-    src:  https://github.com/alecthomas/gocyclo
-    tags: []
-    used:   false
-    viewed: false
-
-  - name: github.com/client9/misspell
-    src:  https://github.com/client9/misspell
-    tags: []
-    used:   false
-    viewed: false
-
-  - name: github.com/dominikh/go-simple
-    src:  https://github.com/dominikh/go-simple
-    tags: []
-    used:   false
-    viewed: false
-
-    new:
-      name: github.com/dominikh/go-tools/simple
-      src:  https://github.com/dominikh/go-tools/tree/master/simple
-      tags: []
-      used:   false
-      viewed: false
-
-  - name: github.com/dominikh/go-staticcheck
-    src:  https://github.com/dominikh/go-staticcheck
-    tags: []
-    used:   false
-    viewed: false
-
-    new:
-      name: github.com/dominikh/go-tools/staticcheck
-      src:  https://github.com/dominikh/go-tools/tree/master/staticcheck
-      tags: []
-      used:   false
-      viewed: false
-
-  - name: github.com/dominikh/go-unused
-    src:  https://github.com/dominikh/go-unused
-    tags: []
-    used:   false
-    viewed: false
-
-    new:
-      name: github.com/dominikh/go-tools/unused
-      src:  https://github.com/dominikh/go-tools/tree/master/unused
-      tags: []
-      used:   false
-      viewed: false
-
-  - name: github.com/GoASTScanner/gas
-    src:  https://github.com/GoASTScanner/gas
-    tags: []
-    used:   false
-    viewed: false
-
-  - name: github.com/golang/lint
-    src:  https://github.com/golang/lint
-    tags: []
-    used:   false
-    viewed: false
-
-  - name: github.com/gordonklaus/ineffassign
-    src:  https://github.com/gordonklaus/ineffassign
-    tags: []
-    used:   false
-    viewed: false
-
-  - name: github.com/jgautheron/goconst
-    src:  https://github.com/jgautheron/goconst
-    tags: []
-    used:   false
-    viewed: false
-
-  - name: github.com/kisielk/errcheck
-    src:  https://github.com/kisielk/errcheck
-    tags: []
-    used:   false
-    viewed: false
-
-  - name: github.com/mdempsky/unconvert
-    src:  https://github.com/mdempsky/unconvert
-    tags: []
-    used:   false
-    viewed: false
-
-  - name: github.com/mibk/dupl
-    src:  https://github.com/mibk/dupl
-    tags: []
-    used:   false
-    viewed: false
-
-  - name: github.com/mvdan/interfacer
-    src:  https://github.com/mvdan/interfacer
-    tags: []
-    used:   false
-    viewed: false
-
-  - name: github.com/opennota/check
-    src:  https://github.com/opennota/check
-    tags: []
-    used:   false
-    viewed: false
-
-  - name: github.com/tsenart/deadcode
-    src:  https://github.com/tsenart/deadcode
-    tags: []
-    used:   false
-    viewed: false
-
-  - name: github.com/walle/lll
-    src:  https://github.com/walle/lll
-    tags: []
-    used:   false
-    viewed: false
-
-  - name: golang.org/x/tools/cmd/goimports
-    src:  https://github.com/golang/tools/tree/master/cmd/goimports
-    tags: []
-    used:   false
-    viewed: false
-
-  - name: golang.org/x/tools/cmd/gotype
-    src:  https://github.com/golang/tools/tree/master/cmd/gotype
-    tags: []
-    used:   false
-    viewed: false
-
 - name: github.com/fortytw2/leaktest
   src:  https://github.com/fortytw2/leaktest
-  tags: []
+  tags: [leak]
   used:   false
   viewed: false
 
-- name: github.com/thraxil/cyclo
-  src:  https://github.com/thraxil/cyclo
-  tags: []
+- name: github.com/derekparker/delve
+  src:  https://github.com/derekparker/delve
+  tags: [debug]
+  used:   false
+  viewed: false
+
+  alternative:
+
+  - name: github.com/y0ssar1an/q
+    src:  https://github.com/y0ssar1an/q
+    tags: [debug]
+    used:   false
+    viewed: false
+
+- name: github.com/rakyll/gom
+  src:  https://github.com/rakyll/gom
+  tags: [profiling]
   used:   false
   viewed: false

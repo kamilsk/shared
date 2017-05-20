@@ -2,6 +2,7 @@ list:
 
 - name: britecharts
   src:  https://github.com/eventbrite/britecharts
-  tags: []
+  site: http://eventbrite.github.io/britecharts/
+  tags: [chart]
   used:   false
   viewed: false

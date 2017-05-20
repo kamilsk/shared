@@ -63,6 +63,7 @@
 - https://github.com/gobwas/gws                         [Go]
 - https://github.com/jkbrzt/httpie                      [Python]
 - https://github.com/robphoenix/trawl                   [Go]
+- https://github.com/gravitational/teleconsole          [Go]
 
 ## Security
 

@@ -2,58 +2,31 @@ list:
 
 - name: laravel/laravel
   src:  https://github.com/laravel/laravel
+  site: https://laravel.com
   tags: []
   used:   false
   viewed: false
 
-  bundle:
-  - name: consoletvs/charts
-    src:  https://github.com/ConsoleTVs/Charts
-    tags: []
-    used:   false
-    viewed: false
-
-  helpful:
-  - name: ~
-    src:  https://github.com/beckenrode/mysql-workbench-export-laravel-5-migrations
-    tags: []
-    used:   false
-    viewed: false
-
-  - name: ~
-    src:  https://github.com/cviebrock/sequel-pro-laravel-export
-    tags: []
-    used:   false
-    viewed: false
-
   related:
+
   - name: asgardcms/platform
     src:  https://github.com/AsgardCms/Platform
-    tags: []
-    used:   false
-    viewed: false
-
-  - name: bottelet/flarepoint
-    src:  https://github.com/Bottelet/Flarepoint-crm
-    tags: []
-    used:   false
-    viewed: false
-
-  - name: hillelcoren/invoice-ninja
-    src:  https://github.com/invoiceninja/invoiceninja
-    tags: []
+    site: https://asgardcms.com
+    tags: [cms]
     used:   false
     viewed: false
 
   - name: october/october
     src:  https://github.com/octobercms/october
-    tags: []
+    site: http://octobercms.com
+    tags: [cms]
     used:   false
     viewed: false
 
   - name: pyrocms/pyrocms
     src:  https://github.com/pyrocms/pyrocms
-    tags: []
+    site: https://pyrocms.com
+    tags: [cms]
     used:   false
     viewed: false
 
@@ -65,138 +38,42 @@ list:
 
   - name: tcg/voyager
     src:  https://github.com/the-control-group/voyager
-    tags: []
-    used:   false
-    viewed: false
-
-  - name: typicms/base
-    src:  https://github.com/typicms/base
-    tags: []
+    site: https://laravelvoyager.com
+    tags: [admin]
     used:   false
     viewed: false
 
   - name: web-feet/coastercms
     src:  https://github.com/web-feet/coastercms
+    site: https://www.coastercms.org
     tags: []
     used:   false
     viewed: false
 
   - name: yab/quarx
     src:  https://github.com/YABhq/Quarx
+    site: https://quarxcms.com
     tags: []
     used:   false
     viewed: false
-
-  - name: atlantis-labs/atlantis3
-    src:  https://bitbucket.org/aggressione/atlantis3-framework
-    site: http://www.atlantis-cms.com
-    tags: []
-    used:   false
-    viewed: false
-
-- name: laravel/lumen
-  src:  https://github.com/laravel/lumen
-  tags: []
-  used:   false
-  viewed: false
 
 - name: phalcon/cphalcon
   src:  https://github.com/phalcon/cphalcon
+  site: https://phalconphp.com/en/
   tags: []
   used:   false
   viewed: false
 
-  helpful:
+  useful:
+
   - name: phalcon/devtools
     src:  https://github.com/phalcon/phalcon-devtools
     tags: []
     used:   false
     viewed: false
 
-  related:
-  - name: oleksandr-torosh/yona-cms
-    src:  https://github.com/oleksandr-torosh/yona-cms
-    tags: []
-    used:   false
-    viewed: false
-
-- name: silex/silex
-  src:  https://github.com/silexphp/Silex
-  tags: []
-  used:   false
-  viewed: false
-
-  related:
-  - name: bolt/bolt
-    src:  https://github.com/bolt/bolt
-    tags: []
-    used:   false
-    viewed: false
-
-- name: slim/slim
-  src:  https://github.com/slimphp/Slim
-  tags: []
-  used:   false
-  viewed: false
-
 - name: symfony/symfony
   src:  https://github.com/symfony/symfony
-  tags: []
-  used:   false
-  viewed: false
-
-  helpful:
-  - name: bamarni/symfony-console-autocomplete
-    src:  https://github.com/bamarni/symfony-console-autocomplete
-    tags: []
-    used:   false
-    viewed: false
-
-  - name: stecman/symfony-console-completion
-    src:  https://github.com/stecman/symfony-console-completion
-    tags: []
-    used:   false
-    viewed: false
-
-  - name: symfony/symfony-installer
-    src:  https://github.com/symfony/symfony-installer
-    tags: []
-    used:   false
-    viewed: false
-
-  bundle:
-  - name: friendsofsymfony/rest-bundle
-    src:  https://github.com/FriendsOfSymfony/FOSRestBundle
-    tags: []
-    used:   false
-    viewed: false
-
-  - name: hautelook/alice-bundle
-    src:  https://github.com/hautelook/AliceBundle
-    tags: []
-    used:   false
-    viewed: false
-
-  - name: jms/serializer-bundle
-    src:  https://github.com/schmittjoh/JMSSerializerBundle
-    tags: []
-    used:   false
-    viewed: false
-
-  - name: liip/functional-test-bundle
-    src:  https://github.com/liip/LiipFunctionalTestBundle
-    tags: []
-    used:   false
-    viewed: false
-
-  - name: matthiasnoback/symfony-console-form
-    src:  https://github.com/matthiasnoback/symfony-console-form
-    tags: []
-    used:   false
-    viewed: false
-
-- name: spiral/framework
-  src:  https://github.com/spiral/spiral
   tags: []
   used:   false
   viewed: false

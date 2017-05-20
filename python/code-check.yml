@@ -1,7 +1,0 @@
-list:
-
-- name: yapf
-  src:  https://github.com/google/yapf
-  tags: []
-  used:   false
-  viewed: false

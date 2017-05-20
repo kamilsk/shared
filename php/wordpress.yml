@@ -2,18 +2,21 @@ list:
 
 - name: wordplate/wordplate
   src:  https://github.com/wordplate/wordplate
+  site: https://wordplate.github.io
   tags: []
   used:   false
   viewed: false
 
 - name: roots/bedrock
   src:  https://github.com/roots/bedrock
+  site: https://roots.io/bedrock/
   tags: []
   used:   false
   viewed: false
 
 - name: elementor
   src:  https://github.com/pojome/elementor
+  site: https://elementor.com
   tags: []
   used:   false
   viewed: false

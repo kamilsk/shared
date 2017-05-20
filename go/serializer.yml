@@ -1,13 +1,7 @@
 list:
 
-- name: github.com/go-yaml/yaml
+- name: gopkg.in/yaml.v2
   src:  https://github.com/go-yaml/yaml
-  tags: []
+  tags: [yaml]
   used:   true
-  viewed: false
-
-- name: github.com/y0ssar1an/q
-  src:  https://github.com/y0ssar1an/q
-  tags: []
-  used:   false
   viewed: false

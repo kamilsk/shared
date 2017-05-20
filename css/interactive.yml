@@ -2,6 +2,7 @@ list:
 
 - name: microtip
   src:  https://github.com/ghosh/microtip
-  tags: []
+  site: https://ghosh.github.io/microtip/
+  tags: [tooltip]
   used:   false
   viewed: false

@@ -38,34 +38,60 @@ type Package struct {
 	Used   bool
 	Viewed bool
 
-	Related []Package
-	Useful  []Package
+	Alternative []Package
+	Related     []Package
+	Useful      []Package
 }
 
 const tpl = `
 {{- define "PACKAGE" }}
+
 - [{{ .Name }}]({{ .Src }}) {{- if .Site }}, [site]({{ .Site }}){{ end }}
   - [{{ if .Used   }}x{{ else }} {{ end }}] used
   - [{{ if .Viewed }}x{{ else }} {{ end }}] viewed
-{{ if .Related }}{{ template "RELATED" . }}{{ end }}
+
+{{- if .Alternative }}{{ template "ALTERNATIVE" . }}{{ end }}
+{{- if .Related     }}{{ template "RELATED" . }}{{ end }}
+{{- if .Useful      }}{{ template "USEFUL" . }}{{ end }}
+
+{{- end -}}
+
+{{- define "ALTERNATIVE" }}
+
+  - Alternatives:
+{{ range .Alternative }}
+    - [{{ .Name }}]({{ .Src }}) {{- if .Site }}, [site]({{ .Site }}){{ end }}
+      - [{{ if .Used   }}x{{ else }} {{ end }}] used
+      - [{{ if .Viewed }}x{{ else }} {{ end }}] viewed
+{{- end }}
 {{- end -}}
 
 {{- define "RELATED" }}
+
   - Related:
 {{ range .Related }}
     - [{{ .Name }}]({{ .Src }}) {{- if .Site }}, [site]({{ .Site }}){{ end }}
       - [{{ if .Used   }}x{{ else }} {{ end }}] used
       - [{{ if .Viewed }}x{{ else }} {{ end }}] viewed
-{{ end }}
+{{- end }}
+{{- end -}}
+
+{{- define "USEFUL" }}
+
+  - Useful:
+{{ range .Useful }}
+    - [{{ .Name }}]({{ .Src }}) {{- if .Site }}, [site]({{ .Site }}){{ end }}
+      - [{{ if .Used   }}x{{ else }} {{ end }}] used
+      - [{{ if .Viewed }}x{{ else }} {{ end }}] viewed
+{{- end }}
 {{- end -}}
 
 > # shared:pmc-collection:{{ .ID }}
 >
 > My collection of useful {{ .Name }} packages.
-
-{{ range .Collections -}}
+{{ range .Collections }}
 ## {{ .Name }}
-{{ range .List }}{{ template "PACKAGE" . }}{{ end }}
+{{- range .List }}{{ template "PACKAGE" . }}{{ end }}
 {{ end -}}`
 
 var available = [...]string{"go", "javascript", "php", "python"}

@@ -18,12 +18,6 @@
   - [ ] used
   - [ ] viewed
 
-## code-check
-
-- [yapf](https://github.com/google/yapf)
-  - [ ] used
-  - [ ] viewed
-
 ## data-analysis
 
 - [pandas](https://github.com/pandas-dev/pandas), [site](http://pandas.pydata.org)
@@ -67,16 +61,3 @@
     - [thumbor](https://github.com/thumbor/thumbor), [site](http://thumbor.org)
       - [ ] used
       - [ ] viewed
-
-    - [thumbor](https://github.com/thumbor/thumbor), [site](http://thumbor.org)
-      - [ ] used
-      - [ ] viewed
-
-    - [thumbor](https://github.com/thumbor/thumbor), [site](http://thumbor.org)
-      - [ ] used
-      - [ ] viewed
-
-    - [thumbor](https://github.com/thumbor/thumbor), [site](http://thumbor.org)
-      - [ ] used
-      - [ ] viewed
-

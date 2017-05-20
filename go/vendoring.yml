@@ -2,6 +2,7 @@ list:
 
 - name: github.com/constabulary/gb/...
   src:  https://github.com/constabulary/gb
+  site: https://getgb.io
   tags: []
   used:   true
   viewed: false
@@ -12,12 +13,11 @@ list:
   used:   false
   viewed: false
 
-  related:
-  - name: github.com/constabulary/kodos
-    src:  https://github.com/constabulary/kodos
-    tags: []
-    used:   false
-    viewed: false
+- name: github.com/constabulary/kodos
+  src:  https://github.com/constabulary/kodos
+  tags: []
+  used:   false
+  viewed: false
 
 - name: github.com/golang/dep
   src:  https://github.com/golang/dep
@@ -45,12 +45,14 @@ list:
 
 - name: github.com/Masterminds/glide
   src:  https://github.com/Masterminds/glide
+  site: https://glide.sh
   tags: []
   used:   true
   viewed: false
 
 - name: github.com/mdy/melody
   src:  https://github.com/mdy/melody
+  site: https://melody.sh
   tags: []
   used:   false
   viewed: false
@@ -75,12 +77,6 @@ list:
 
 - name: github.com/FiloSottile/gvt
   src:  https://github.com/FiloSottile/gvt
-  tags: []
-  used:   false
-  viewed: false
-
-- name: github.com/skelterjohn/wgo
-  src:  https://github.com/skelterjohn/wgo
   tags: []
   used:   false
   viewed: false
