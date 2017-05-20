@@ -1,6 +1,6 @@
 > # shared
 >
-> Some shared files via git submodule mechanism.
+> Some shared things.
 
 ## Docker
 
