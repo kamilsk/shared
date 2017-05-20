@@ -17,5 +17,5 @@
 
 ## Useful
 
+- [collection](../../tree/collection) - my collection of useful things
 - [dotfiles](../../tree/dotfiles) - dotfiles to share through environments
-- [pmc-collection](../../tree/pmc-collection) - collections of Go, PHP and Python packages
