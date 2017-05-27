@@ -1,4 +1,4 @@
-FROM alpine:latest AS build
+FROM alpine:latest build
 
 MAINTAINER Kamil Samigullin <kamil@samigullin.info>
 
@@ -31,6 +31,8 @@ METADATA:full' >> meta.data \
 \n\
 >>> END METADATA' >> meta.data
 
+CMD /bin/sh
+
 
 
 FROM alpine:latest
@@ -38,6 +40,8 @@ FROM alpine:latest
 MAINTAINER Kamil Samigullin <kamil@samigullin.info>
 
 COPY --from=build /tmp/hugo/hugo /usr/local/bin/
+
+WORKDIR /usr/share/site
 
 ENV BIND     '0.0.0.0'
 ENV PORT     '1313'
