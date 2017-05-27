@@ -4,6 +4,11 @@ MAINTAINER Kamil Samigullin <kamil@samigullin.info>
 
 COPY ./artifacts/hugo /usr/local/bin/
 
-EXPOSE 1313
+ENV BIND     '0.0.0.0'
+ENV PORT     '1313'
+ENV BASE_URL 'http://localhost:8080'
+ENV ARGS     ''
 
-CMD ["hugo", "server"]
+EXPOSE ${PORT}
+
+CMD hugo server --bind=${BIND} --port=${PORT} --baseURL=${BASE_URL} ${ARGS}

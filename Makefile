@@ -2,7 +2,7 @@ MAKEPATH := $(abspath $(firstword $(MAKEFILE_LIST)))
 CWD      := $(patsubst %/,%,$(dir $(MAKEPATH)))
 
 
-HUGO     = 0.20.7
+HUGO     = 0.21
 DEPTH    = 1.1.1
 GLIDE    = 0.12.3
 RELEASER = 0.19.0
@@ -18,9 +18,10 @@ build-hugo: clean-hugo-artifacts
 build-hugo:
 	mkdir -p $(CWD)/hugo/artifacts
 	docker rmi -f build-hugo-image     &>/dev/null || true
-	docker rm -f  build-hugo-container &>/dev/null || true
+	docker rm  -f build-hugo-container &>/dev/null || true
 	#
-	docker build -t build-hugo-image -f $(CWD)/hugo/build.Dockerfile \
+	docker build -f $(CWD)/hugo/build.Dockerfile \
+	             -t build-hugo-image \
 	             --force-rm --no-cache --pull --rm \
 	             --build-arg BASE=$$(docker images | grep '^alpine\s\+latest' | awk '{print $$3}') \
 	             --build-arg VERSION=$(HUGO) \
@@ -32,7 +33,8 @@ build-hugo:
 	docker rmi -f build-hugo-image
 	docker rm -f  build-hugo-container
 	#
-	docker build -t kamilsk/hugo -f $(CWD)/hugo/pack.Dockerfile \
+	docker build -f $(CWD)/hugo/pack.Dockerfile \
+	             -t kamilsk/hugo \
 	             --force-rm --no-cache --pull --rm \
 	             $(CWD)/hugo
 
@@ -44,7 +46,8 @@ build-tools:
 	docker rmi -f build-go-tools-image     &>/dev/null || true
 	docker rm  -f build-go-tools-container &>/dev/null || true
 	#
-	docker build -t build-go-tools-image -f $(CWD)/tools/build.alpine.Dockerfile \
+	docker build -f $(CWD)/tools/build.alpine.Dockerfile \
+	             -t build-go-tools-image \
 	             --force-rm --no-cache --pull --rm \
 	             --build-arg BASE=$$(docker images | grep '^golang\s\+alpine' | awk '{print $$3}') \
 	             --build-arg DEPTH=$(DEPTH) \
@@ -69,7 +72,8 @@ build-tools:
 	docker rmi -f build-go-tools-image
 	docker rm  -f build-go-tools-container
 	#
-	docker build -t kamilsk/go-tools:latest -f $(CWD)/tools/pack.alpine.Dockerfile \
+	docker build -f $(CWD)/tools/pack.alpine.Dockerfile \
+	             -t kamilsk/go-tools:latest \
 	             --force-rm --no-cache --pull --rm \
 	             $(CWD)/tools
 
