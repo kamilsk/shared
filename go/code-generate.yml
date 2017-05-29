@@ -1,0 +1,13 @@
+list:
+
+- name: github.com/dpolansky/go-poet
+  src:  https://github.com/dpolansky/go-poet
+  tags: []
+  used:   false
+  viewed: false
+
+- name: github.com/dave/jennifer
+  src:  https://github.com/dave/jennifer
+  tags: []
+  used:   false
+  viewed: false

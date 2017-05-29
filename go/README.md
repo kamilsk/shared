@@ -22,6 +22,16 @@
   - [ ] used
   - [ ] viewed
 
+## code-generate
+
+- [github.com/dpolansky/go-poet](https://github.com/dpolansky/go-poet)
+  - [ ] used
+  - [ ] viewed
+
+- [github.com/dave/jennifer](https://github.com/dave/jennifer)
+  - [ ] used
+  - [ ] viewed
+
 ## database
 
 - [github.com/jmoiron/sqlx](https://github.com/jmoiron/sqlx)
