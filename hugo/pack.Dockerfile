@@ -8,7 +8,7 @@ WORKDIR /usr/share/site
 
 ENV BIND     '0.0.0.0'
 ENV PORT     '1313'
-ENV BASE_URL 'http://localhost:8080'
+ENV BASE_URL 'http://127.0.0.1:${PORT}'
 ENV ARGS     ''
 
 EXPOSE ${PORT}
