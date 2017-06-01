@@ -8,6 +8,14 @@
   - [ ] used
   - [ ] viewed
 
+- [t-scroll](https://github.com/crazychicken/t-scroll), [site](http://t-scroll.com)
+  - [ ] used
+  - [ ] viewed
+
+- [animate-components](https://github.com/nitin42/animate-components), [site](http://animate-components.surge.sh)
+  - [ ] used
+  - [ ] viewed
+
 ## x
 
 - [...](https://github.com/surveyjs/surveyjs)

@@ -6,3 +6,17 @@ list:
   tags: [chart]
   used:   false
   viewed: false
+
+- name: t-scroll
+  src:  https://github.com/crazychicken/t-scroll
+  site: http://t-scroll.com
+  tags: [scroll, animation]
+  used:   false
+  viewed: false
+
+- name: animate-components
+  src:  https://github.com/nitin42/animate-components
+  site: http://animate-components.surge.sh
+  tags: [react, animation]
+  used:   false
+  viewed: false

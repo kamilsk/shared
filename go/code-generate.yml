@@ -11,3 +11,15 @@ list:
   tags: []
   used:   false
   viewed: false
+
+- name: github.com/alvaroloes/enumer
+  src:  https://github.com/alvaroloes/enumer
+  tags: []
+  used:   false
+  viewed: false
+
+- name: github.com/cheekybits/genny
+  src:  https://github.com/cheekybits/genny
+  tags: []
+  used:   false
+  viewed: false

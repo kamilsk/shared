@@ -32,6 +32,14 @@
   - [ ] used
   - [ ] viewed
 
+- [github.com/alvaroloes/enumer](https://github.com/alvaroloes/enumer)
+  - [ ] used
+  - [ ] viewed
+
+- [github.com/cheekybits/genny](https://github.com/cheekybits/genny)
+  - [ ] used
+  - [ ] viewed
+
 ## database
 
 - [github.com/jmoiron/sqlx](https://github.com/jmoiron/sqlx)
@@ -96,6 +104,10 @@
   - [x] used
   - [ ] viewed
 
+- [github.com/opennota/re2dfa](https://github.com/opennota/re2dfa)
+  - [ ] used
+  - [ ] viewed
+
 ## testing
 
 - [github.com/jarcoal/httpmock](https://github.com/jarcoal/httpmock)
@@ -115,6 +127,14 @@
   - [ ] viewed
 
 - [github.com/workfit/tester](https://github.com/workfit/tester)
+  - [ ] used
+  - [ ] viewed
+
+- [github.com/maxbrunsfeld/counterfeiter](https://github.com/maxbrunsfeld/counterfeiter)
+  - [ ] used
+  - [ ] viewed
+
+- [github.com/vektra/mockery](https://github.com/vektra/mockery)
   - [ ] used
   - [ ] viewed
 

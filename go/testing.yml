@@ -30,3 +30,15 @@ list:
   tags: []
   used:   false
   viewed: false
+
+- name: github.com/maxbrunsfeld/counterfeiter
+  src:  https://github.com/maxbrunsfeld/counterfeiter
+  tags: []
+  used:   false
+  viewed: false
+
+- name: github.com/vektra/mockery
+  src:  https://github.com/vektra/mockery
+  tags: []
+  used:   false
+  viewed: false
