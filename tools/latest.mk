@@ -53,18 +53,18 @@ drop-tools:
 .PHONY: get-tools-artifacts
 get-tools-artifacts: clean-tools-artifacts
 get-tools-artifacts:
-	docker rm -f build-tools-container &>/dev/null || true
+	docker rm -f build-go-tools-container &>/dev/null || true
 	mkdir -p $(CWD)/tools/artifacts
-	docker create --name build-tools-container build-go-tools-image
-	docker cp build-tools-container:/tmp/easyjson     $(CWD)/tools/artifacts/
-	docker cp build-tools-container:/tmp/glide        $(CWD)/tools/artifacts/
-	docker cp build-tools-container:/tmp/gometalinter $(CWD)/tools/artifacts/
-	docker cp build-tools-container:/tmp/goreleaser   $(CWD)/tools/artifacts/
-	docker cp build-tools-container:/tmp/retry        $(CWD)/tools/artifacts/
-	docker cp build-tools-container:/tmp/meta.data    $(CWD)/tools/artifacts/
-	cat $(CWD)/tools/artifacts/meta.data | sed '/START METADATA/d' | sed '/END METADATA/d' | sed '/^$$/d' \
+	docker create --name build-go-tools-container build-go-tools-image
+	docker cp build-go-tools-container:/tmp/easyjson     $(CWD)/tools/artifacts/
+	docker cp build-go-tools-container:/tmp/glide        $(CWD)/tools/artifacts/
+	docker cp build-go-tools-container:/tmp/gometalinter $(CWD)/tools/artifacts/
+	docker cp build-go-tools-container:/tmp/goreleaser   $(CWD)/tools/artifacts/
+	docker cp build-go-tools-container:/tmp/retry        $(CWD)/tools/artifacts/
+	docker cp build-go-tools-container:/tmp/meta.data    $(CWD)/tools/artifacts/
+	cat $(CWD)/tools/artifacts/meta.data | sed '/START METADATA/d' | sed '/END METADATA/d' | sed '/^$$/d' | sed 's/[ ]*$$//' \
 	  > $(CWD)/tools/latest.log
-	docker rm -f build-tools-container
+	docker rm -f build-go-tools-container
 
 .PHONY: in-tools
 in-tools:

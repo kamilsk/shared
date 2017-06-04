@@ -1,0 +1,23 @@
+METADATA:short
+golang:alpine with experimental golang tools
+METADATA:full
+golang:alpine.(e7baf3b1a3a5) with
+- [apicompat](https://abicheck.bradleyf.id.au).(5f916b1, [diff](https://github.com/bradleyfalzon/apicompat/compare/5f916b1...master))
+- [benchcmp](https://godoc.org/golang.org/x/tools/cmd/benchcmp).(2a5864fc, [src](https://github.com/golang/tools/tree/master/cmd/benchcmp))
+- [depth](https://github.com/KyleBanks/depth).(v1.1.1, [diff](https://github.com/KyleBanks/depth/compare/v1.1.1...master))
+- [godepq](https://github.com/google/godepq).(2ff5377, [diff](https://github.com/google/godepq/compare/2ff5377...master))
+- [goreporter](https://github.com/wgliang/goreporter).(version2.1.0-3-g898702f, [diff](https://github.com/wgliang/goreporter/compare/version2.1.0-3-g898702f...master))
+- [honnef.co/go/tools](https://github.com/dominikh/go-tools).(e94d1c1, [diff](https://github.com/dominikh/go-tools/compare/e94d1c1...master))
+  - errcheck-ng
+  - gosimple
+  - keyify
+  - megacheck
+  - rdeps
+  - staticcheck
+  - structlayout
+  - structlayout-optimize
+  - structlayout-pretty
+  - unused
+- [zb](https://jrubin.io/zb).(3e1d3a1, [diff](https://github.com/joshuarubin/zb/compare/3e1d3a1...master))
+[Dockerfile](https://github.com/kamilsk/shared/blob/docker-go-v1/tools)
+[Useful Makefile](https://github.com/kamilsk/shared/blob/makefile-go-v1/docker/tools.mk)
