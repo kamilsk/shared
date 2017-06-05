@@ -7,13 +7,13 @@ ARG VERSION
 
 WORKDIR /tmp
 
-RUN apk update --no-cache \
- && apk add --no-cache ca-certificates wget \
+RUN apk add --update --no-cache ca-certificates wget \
  && update-ca-certificates &>/dev/null \
 
  && wget -q -O hugo.tar.gz \
     https://github.com/spf13/hugo/releases/download/v${VERSION}/hugo_${VERSION}_Linux-64bit.tar.gz \
- && mkdir hugo && tar xf hugo.tar.gz -C hugo \
+ && tar xf hugo.tar.gz \
+ && rm hugo.tar.gz \
 
  && echo $'\n\
 <<< START METADATA\n\

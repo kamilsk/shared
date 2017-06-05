@@ -7,13 +7,13 @@ ARG VERSION
 
 WORKDIR /tmp
 
-RUN apk update --no-cache \
- && apk add --no-cache ca-certificates wget \
+RUN apk add --update --no-cache ca-certificates wget \
  && update-ca-certificates &>/dev/null \
 
  && wget -q -O hugo.tar.gz \
     https://github.com/spf13/hugo/releases/download/v${VERSION}/hugo_${VERSION}_Linux-64bit.tar.gz \
- && mkdir hugo && tar xf hugo.tar.gz -C hugo \
+ && tar xf hugo.tar.gz \
+ && rm hugo.tar.gz \
 
  && echo $'\n\
 <<< START METADATA\n\
@@ -38,15 +38,17 @@ FROM alpine:latest
 
 MAINTAINER Kamil Samigullin <kamil@samigullin.info>
 
-COPY --from=build /tmp/hugo/hugo /usr/local/bin/
-
-WORKDIR /usr/share/site
+COPY --from=build /tmp/hugo /usr/local/bin/
 
 ENV BIND     '0.0.0.0'
 ENV PORT     '1313'
-ENV BASE_URL 'http://localhost:8080'
+ENV BASE_URL 'http://127.0.0.1:${PORT}'
 ENV ARGS     ''
+
+WORKDIR /usr/share/site
+
+CMD hugo server --bind=${BIND} --port=${PORT} --baseURL=${BASE_URL} ${ARGS}
 
 EXPOSE ${PORT}
 
-CMD hugo server --bind=${BIND} --port=${PORT} --baseURL=${BASE_URL} ${ARGS}
+ONBUILD RUN hugo -d /usr/share/public
