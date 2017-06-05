@@ -1,7 +1,6 @@
 DEPTH    = 1.1.1
 REPORTER = 2.1.0
 
-
 .PHONY: build-experimental-tools
 build-experimental-tools: build-experimental-tools-image
 build-experimental-tools: get-experimental-tools-artifacts
@@ -49,7 +48,7 @@ get-experimental-tools-artifacts:
 	docker cp build-experimental-go-tools-container:/tmp/honnef     $(CWD)/tools/artifacts/
 	docker cp build-experimental-go-tools-container:/tmp/zb         $(CWD)/tools/artifacts/
 	docker cp build-experimental-go-tools-container:/tmp/meta.data  $(CWD)/tools/artifacts/
-	cat $(CWD)/tools/artifacts/meta.data | sed '/START METADATA/d' | sed '/END METADATA/d' | sed '/^$$/d' | sed 's/[ ]*$$//' \
+	cat $(CWD)/tools/artifacts/meta.data | sed '/START METADATA/d' | sed '/END METADATA/d' | sed 's/[ ]*$$//' \
 	  > $(CWD)/tools/experimental.log
 	docker rm -f build-experimental-go-tools-container
 

@@ -1,5 +1,8 @@
+
+
 METADATA:short
 golang:alpine with git, mercurial, glide, gometalinter, goreleaser and others (see full description)
+
 METADATA:full
 golang:alpine.(e7baf3b1a3a5) with git and mercurial, and
 - [easyjson](https://github.com/mailru/easyjson).(44c0351, [diff](https://github.com/mailru/easyjson/compare/44c0351...master))
@@ -29,5 +32,7 @@ golang:alpine.(e7baf3b1a3a5) with git and mercurial, and
   - varcheck
 - [goreleaser](https://goreleaser.github.io).(v0.20.2, [diff](https://github.com/goreleaser/goreleaser/compare/v0.20.2...master))
 - [retry](https://github.com/kamilsk/retry).(2.1.2, [diff](https://github.com/kamilsk/retry/compare/2.1.2...master))
+
 [Dockerfile](https://github.com/kamilsk/shared/blob/docker-go-v1/tools)
 [Useful Makefile](https://github.com/kamilsk/shared/blob/makefile-go-v1/docker/tools.mk)
+

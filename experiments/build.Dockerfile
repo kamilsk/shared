@@ -48,6 +48,8 @@ METADATA:full' >> /tmp/meta.data \
     "[diff](https://github.com/gogo/protobuf/compare/${GGPB}...master))" >> /tmp/meta.data \
 
  && echo $'\n\
+[Dockerfile](https://github.com/kamilsk/shared/blob/docker-go-v1/experiments) \n\
+\n\
 >>> END METADATA' >> /tmp/meta.data
 
 CMD /bin/sh

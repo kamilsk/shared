@@ -2,7 +2,6 @@ GLIDE    = 0.12.3
 RELEASER = 0.20.2
 RETRY    = 2.1.2
 
-
 .PHONY: build-tools
 build-tools: build-tools-image
 build-tools: get-tools-artifacts
@@ -62,7 +61,7 @@ get-tools-artifacts:
 	docker cp build-go-tools-container:/tmp/goreleaser   $(CWD)/tools/artifacts/
 	docker cp build-go-tools-container:/tmp/retry        $(CWD)/tools/artifacts/
 	docker cp build-go-tools-container:/tmp/meta.data    $(CWD)/tools/artifacts/
-	cat $(CWD)/tools/artifacts/meta.data | sed '/START METADATA/d' | sed '/END METADATA/d' | sed '/^$$/d' | sed 's/[ ]*$$//' \
+	cat $(CWD)/tools/artifacts/meta.data | sed '/START METADATA/d' | sed '/END METADATA/d' | sed 's/[ ]*$$//' \
 	  > $(CWD)/tools/latest.log
 	docker rm -f build-go-tools-container
 

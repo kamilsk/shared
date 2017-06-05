@@ -2,7 +2,7 @@
 >
 > My custom docker images for Go environment.
 
-## Tools
+## Images
 
 ### [kamilsk/hugo](https://hub.docker.com/r/kamilsk/hugo/)
 
@@ -13,7 +13,7 @@
 Discovering
 
 ```bash
-$ make in-tool # or in-hugo
+$ make in-tools # or in-hugo
 # or
-$ docker run -it --rm kamilsk/go-tools:latest /bin/sh
+$ docker run --rm -it kamilsk/go-tools
 ```

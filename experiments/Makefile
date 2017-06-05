@@ -55,7 +55,7 @@ get-experiments-artifacts:
 	docker cp build-go-experiments-container:/tmp/go-protobuf      $(CWD)/experiments/artifacts/
 	docker cp build-go-experiments-container:/tmp/gogo-protobuf    $(CWD)/experiments/artifacts/
 	docker cp build-go-experiments-container:/tmp/meta.data        $(CWD)/experiments/artifacts/
-	cat $(CWD)/experiments/artifacts/meta.data | sed '/START METADATA/d' | sed '/END METADATA/d' | sed '/^$$/d' | sed 's/[ ]*$$//' \
+	cat $(CWD)/experiments/artifacts/meta.data | sed '/START METADATA/d' | sed '/END METADATA/d' | sed 's/[ ]*$$//' \
 	  > $(CWD)/experiments/latest.log
 	docker rm -f build-go-experiments-container
 

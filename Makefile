@@ -1,13 +1,19 @@
 MAKEPATH := $(abspath $(firstword $(MAKEFILE_LIST)))
 CWD      := $(patsubst %/,%,$(dir $(MAKEPATH)))
 
+include experiments/Makefile
 include hugo/Makefile
 include tools/Makefile
+
 
 .PHONY: build
 build: build-hugo
 build: build-tools
-build: build-experimental-tools
+
+.PHONY: publish
+publish: publish-hugo
+publish: publish-tools
+
 
 .PHONY: clean-invalid
 clean-invalid:
@@ -24,8 +30,3 @@ clean-invalid-golang:
 	| grep '^<none>\s\+' \
 	| awk '{print $$2}' \
 	| xargs docker rmi -f &>/dev/null || true
-
-.PHONY: publish
-publish: publish-hugo
-publish: publish-tools
-publish: publish-experimental-tools

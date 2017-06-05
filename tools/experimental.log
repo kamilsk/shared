@@ -1,5 +1,8 @@
+
+
 METADATA:short
 golang:alpine with experimental golang tools
+
 METADATA:full
 golang:alpine.(e7baf3b1a3a5) with
 - [apicompat](https://abicheck.bradleyf.id.au).(5f916b1, [diff](https://github.com/bradleyfalzon/apicompat/compare/5f916b1...master))
@@ -19,5 +22,7 @@ golang:alpine.(e7baf3b1a3a5) with
   - structlayout-pretty
   - unused
 - [zb](https://jrubin.io/zb).(3e1d3a1, [diff](https://github.com/joshuarubin/zb/compare/3e1d3a1...master))
+
 [Dockerfile](https://github.com/kamilsk/shared/blob/docker-go-v1/tools)
 [Useful Makefile](https://github.com/kamilsk/shared/blob/makefile-go-v1/docker/tools.mk)
+
