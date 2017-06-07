@@ -48,7 +48,8 @@ METADATA:full' >> /tmp/meta.data \
     "[diff](https://github.com/gogo/protobuf/compare/${GGPB}...master))" >> /tmp/meta.data \
 
  && echo $'\n\
-[Dockerfile](https://github.com/kamilsk/shared/blob/docker-go-v1/experiments) \n\
+[Dockerfile](https://github.com/kamilsk/shared/blob/docker-go-v1/protobuf) \n\
+[Useful Makefile](https://github.com/kamilsk/shared/blob/makefile-go-v1/docker/protobuf.mk) \n\
 \n\
 >>> END METADATA' >> /tmp/meta.data
 

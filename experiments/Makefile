@@ -1,4 +1,3 @@
-include $(CWD)/experiments/proto.mk
 include $(CWD)/experiments/ponzu.mk
 include $(CWD)/experiments/goreporter.mk
 

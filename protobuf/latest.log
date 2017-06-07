@@ -1,0 +1,14 @@
+
+
+METADATA:short
+golang:alpine with gcc, g++, protoc and go protobuf plugins
+
+METADATA:full
+golang:alpine.(a41a7446062d) with gcc and g++, and
+- [protobuf](https://github.com/google/protobuf).(v3.3.1, [diff](https://github.com/google/protobuf/compare/v3.3.1...master))
+- [golang/protobuf](https://github.com/golang/protobuf).(5a0f697, [diff](https://github.com/golang/protobuf/compare/5a0f697...master))
+- [gogo/protobuf](https://github.com/gogo/protobuf).(v0.4-17-gefccd33a, [diff](https://github.com/gogo/protobuf/compare/v0.4-17-gefccd33a...master))
+
+[Dockerfile](https://github.com/kamilsk/shared/blob/docker-go-v1/protobuf)
+[Useful Makefile](https://github.com/kamilsk/shared/blob/makefile-go-v1/docker/protobuf.mk)
+

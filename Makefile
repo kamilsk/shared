@@ -3,16 +3,21 @@ CWD      := $(patsubst %/,%,$(dir $(MAKEPATH)))
 
 include experiments/Makefile
 include hugo/Makefile
+include protobuf/Makefile
 include tools/Makefile
 
 
 .PHONY: build
 build: build-hugo
+build: build-protobuf
 build: build-tools
+build: build-experimental-tools
 
 .PHONY: publish
 publish: publish-hugo
+publish: publish-protobuf
 publish: publish-tools
+publish: publish-experimental-tools
 
 
 .PHONY: clean-invalid

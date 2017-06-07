@@ -10,4 +10,6 @@ RUN apk add --no-cache gcc g++
 
 ENV PROTO_ARGS ''
 
+WORKDIR /usr/share/pkg
+
 CMD protoc ${PROTO_ARGS}
