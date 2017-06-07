@@ -5,7 +5,7 @@ build-proto-experiments: build-proto-experiments-image
 build-proto-experiments: get-proto-experiments-artifacts
 build-proto-experiments: pack-proto-experiments
 build-proto-experiments:
-	make clean-proto-experiments-artifacts
+	make clean-experiments-artifacts
 	make clean-proto-experiments-image
 
 .PHONY: build-proto-experiments-image
