@@ -7,7 +7,7 @@ ARG VERSION
 
 WORKDIR /tmp
 
-RUN apk add --update --no-cache ca-certificates wget \
+RUN apk add --no-cache ca-certificates wget \
  && update-ca-certificates &>/dev/null \
 
  && wget -q -O hugo.tar.gz \
