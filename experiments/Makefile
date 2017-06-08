@@ -5,6 +5,7 @@ include $(CWD)/experiments/make/godepq.mk
 include $(CWD)/experiments/make/goreporter.mk
 include $(CWD)/experiments/make/honnef.mk
 include $(CWD)/experiments/make/maintainer.mk
+include $(CWD)/experiments/make/mmake.mk
 include $(CWD)/experiments/make/ponzu.mk
 include $(CWD)/experiments/make/zb.mk
 
