@@ -1,0 +1,9 @@
+
+
+METADATA:short
+golang:alpine with apicompat
+
+METADATA:full
+golang:alpine.(e7baf3b1a3a5) with
+- [apicompat](https://abicheck.bradleyf.id.au).(5f916b1, [diff](https://github.com/bradleyfalzon/apicompat/compare/5f916b1...master))
+

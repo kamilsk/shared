@@ -1,0 +1,9 @@
+
+
+METADATA:short
+golang:alpine with zb
+
+METADATA:full
+golang:alpine.(e7baf3b1a3a5) with
+- [zb](https://jrubin.io/zb).(3e1d3a1, [diff](https://github.com/joshuarubin/zb/compare/3e1d3a1...master))
+

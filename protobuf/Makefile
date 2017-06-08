@@ -6,13 +6,13 @@ build-protobuf: get-protobuf-artifacts
 build-protobuf: pack-protobuf
 build-protobuf:
 	make clean-protobuf-artifacts
-	make clean-protobuf-image
+	make clean-protobuf-build-image
 
 .PHONY: build-protobuf-image
-build-protobuf-image: clean-protobuf-image
+build-protobuf-image: clean-protobuf-build-image
 build-protobuf-image:
 	docker build -f $(CWD)/protobuf/build.Dockerfile \
-	             -t build-go-protobuf-image \
+	             -t go-protobuf-build-image \
 	             --force-rm --no-cache --pull --rm \
 	             --build-arg BASE=$$(docker images | grep '^alpine\s\+latest' | awk '{print $$3}') \
 	             --build-arg VERSION=$(PROTOC) \
@@ -31,9 +31,9 @@ clean-invalid-protobuf:
 clean-protobuf-artifacts:
 	rm -rf $(CWD)/protobuf/artifacts &>/dev/null || true
 
-.PHONY: clean-protobuf-image
-clean-protobuf-image:
-	docker rmi -f build-go-protobuf-image &>/dev/null || true
+.PHONY: clean-protobuf-build-image
+clean-protobuf-build-image:
+	docker rmi -f go-protobuf-build-image &>/dev/null || true
 
 .PHONY: drop-protobuf
 drop-protobuf: clean-invalid-protobuf
@@ -48,33 +48,37 @@ drop-protobuf:
 .PHONY: get-protobuf-artifacts
 get-protobuf-artifacts: clean-protobuf-artifacts
 get-protobuf-artifacts:
-	docker rm -f build-go-protobuf-container &>/dev/null || true
+	docker rm -f go-protobuf-container &>/dev/null || true
 	mkdir -p $(CWD)/protobuf/artifacts
-	docker create --name build-go-protobuf-container build-go-protobuf-image
-	docker cp build-go-protobuf-container:/usr/local/bin/protoc $(CWD)/protobuf/artifacts/
-	docker cp build-go-protobuf-container:/tmp/go-protobuf      $(CWD)/protobuf/artifacts/
-	docker cp build-go-protobuf-container:/tmp/gogo-protobuf    $(CWD)/protobuf/artifacts/
-	docker cp build-go-protobuf-container:/tmp/meta.data        $(CWD)/protobuf/artifacts/
+	docker create --name go-protobuf-container go-protobuf-build-image
+	docker cp go-protobuf-container:/usr/local/bin/protoc $(CWD)/protobuf/artifacts/
+	docker cp go-protobuf-container:/tmp/go-protobuf      $(CWD)/protobuf/artifacts/
+	docker cp go-protobuf-container:/tmp/gogo-protobuf    $(CWD)/protobuf/artifacts/
+	docker cp go-protobuf-container:/tmp/meta.data        $(CWD)/protobuf/artifacts/
 	cat $(CWD)/protobuf/artifacts/meta.data | sed '/START METADATA/d' | sed '/END METADATA/d' | sed 's/[ ]*$$//' \
 	  > $(CWD)/protobuf/latest.log
-	docker rm -f build-go-protobuf-container
+	docker rm -f go-protobuf-container
 
 .PHONY: in-protobuf
 in-protobuf:
-	docker run --rm -it kamilsk/go-protobuf:latest /bin/sh
+	docker run --rm -it kamilsk/go-protobuf /bin/sh
 
-.PHONY: in-protobuf-image
-in-protobuf-image:
-	docker run --rm -it build-go-protobuf-image
+.PHONY: in-protobuf-build-image
+in-protobuf-build-image:
+	docker run --rm -it go-protobuf-build-image
 
 .PHONY: pack-protobuf
 pack-protobuf: drop-protobuf
 pack-protobuf:
 	docker build -f $(CWD)/protobuf/pack.Dockerfile \
-	             -t kamilsk/go-protobuf:latest \
+	             -t kamilsk/go-protobuf \
 	             --force-rm --no-cache --pull --rm \
 	             $(CWD)/protobuf
 
 .PHONY: publish-protobuf
 publish-protobuf:
-	docker push kamilsk/go-protobuf:latest
+	docker push kamilsk/go-protobuf
+
+.PHONY: pull-protobuf
+pull-protobuf:
+	docker pull kamilsk/go-protobuf

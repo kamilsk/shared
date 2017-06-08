@@ -1,0 +1,9 @@
+
+
+METADATA:short
+golang:alpine with depth
+
+METADATA:full
+golang:alpine.(e7baf3b1a3a5) with
+- [depth](https://github.com/KyleBanks/depth).(v1.1.1, [diff](https://github.com/KyleBanks/depth/compare/v1.1.1...master))
+

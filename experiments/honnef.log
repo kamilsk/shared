@@ -1,0 +1,19 @@
+
+
+METADATA:short
+golang:alpine with honnef golang tools
+
+METADATA:full
+golang:alpine.(e7baf3b1a3a5) with
+- [honnef.co/go/tools](https://github.com/dominikh/go-tools).(e94d1c1, [diff](https://github.com/dominikh/go-tools/compare/e94d1c1...master))
+  - errcheck-ng
+  - gosimple
+  - keyify
+  - megacheck
+  - rdeps
+  - staticcheck
+  - structlayout
+  - structlayout-optimize
+  - structlayout-pretty
+  - unused
+

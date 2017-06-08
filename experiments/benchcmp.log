@@ -1,0 +1,9 @@
+
+
+METADATA:short
+golang:alpine with benchcmp
+
+METADATA:full
+golang:alpine.(e7baf3b1a3a5) with
+- [benchcmp](https://godoc.org/golang.org/x/tools/cmd/benchcmp).(2a3bccfb, [src](https://github.com/golang/tools/tree/master/cmd/benchcmp))
+

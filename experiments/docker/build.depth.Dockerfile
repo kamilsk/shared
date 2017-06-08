@@ -10,9 +10,9 @@ WORKDIR /tmp
 RUN apk add --no-cache ca-certificates wget \
  && update-ca-certificates &>/dev/null \
 
- && wget -q -O depth \
+ && wget -q -O depth.bin \
     https://github.com/KyleBanks/depth/releases/download/v${DEPTH}/depth_${DEPTH}_linux_amd64 \
- && chmod +x depth \
+ && mkdir depth && chmod +x depth.bin && mv depth.bin depth/depth \
 
  && touch meta.data \
  && echo $'\n\

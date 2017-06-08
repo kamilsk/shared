@@ -1,0 +1,9 @@
+
+
+METADATA:short
+golang:alpine with godepq
+
+METADATA:full
+golang:alpine.(e7baf3b1a3a5) with
+- [godepq](https://github.com/google/godepq).(2ff5377, [diff](https://github.com/google/godepq/compare/2ff5377...master))
+
