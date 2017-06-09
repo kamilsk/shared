@@ -29,6 +29,8 @@ drop-experiments: drop-depth
 drop-experiments: drop-godepq
 drop-experiments: drop-goreporter
 drop-experiments: drop-honnef
+drop-experiments: drop-maintainer
+drop-experiments: drop-mmake
 drop-experiments: drop-ponzu
 drop-experiments: drop-zb
 
@@ -39,6 +41,8 @@ publish-experiments: publish-depth
 publish-experiments: publish-godepq
 publish-experiments: publish-goreporter
 publish-experiments: publish-honnef
+publish-experiments: publish-maintainer
+publish-experiments: publish-mmake
 publish-experiments: publish-ponzu
 publish-experiments: publish-zb
 
@@ -49,5 +53,7 @@ pull-experiments: pull-depth
 pull-experiments: pull-godepq
 pull-experiments: pull-goreporter
 pull-experiments: pull-honnef
+pull-experiments: pull-maintainer
+pull-experiments: pull-mmake
 pull-experiments: pull-ponzu
 pull-experiments: pull-zb

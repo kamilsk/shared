@@ -3,16 +3,16 @@ FROM golang:alpine
 MAINTAINER Kamil Samigullin <kamil@samigullin.info>
 
 ARG BASE
-ARG MAINTAINER
+ARG MMAKE
 
 WORKDIR /tmp
 
 RUN apk add --no-cache ca-certificates git \
  && update-ca-certificates &>/dev/null \
 
- && go get -d github.com/gaocegege/maintainer \
- && (cd /go/src/github.com/gaocegege/maintainer && git checkout v${MAINTAINER} && rm -rf .git && go install ./...) \
- && mkdir maintainer && mv /go/bin/* maintainer/ \
+ && go get -d github.com/tj/mmake/cmd/mmake \
+ && (cd /go/src/github.com/tj/mmake && git checkout v${MMAKE} && rm -rf .git && go install ./...) \
+ && mkdir mmake && mv /go/bin/* mmake/ \
  && rm -rf /go/bin/* /go/pkg/* /go/src/* \
 
  && touch meta.data \
@@ -20,13 +20,13 @@ RUN apk add --no-cache ca-certificates git \
 <<< START METADATA\n\
 \n\
 METADATA:short \n\
-golang:alpine with maintainer \n\
+golang:alpine with mmake \n\
 \n\
 METADATA:full' >> meta.data \
  && echo "golang:alpine.(${BASE}) with " >> meta.data \
 
- && echo "- [maintainer](https://github.com/gaocegege/maintainer).(v${MAINTAINER}," \
-    "[diff](https://github.com/gaocegege/maintainer/compare/v${MAINTAINER}...master))" >> meta.data \
+ && echo "- [maintainer](https://github.com/tj/mmake).(v${MMAKE}," \
+    "[diff](https://github.com/gaocegege/maintainer/compare/v${MMAKE}...master))" >> meta.data \
 
  && echo $'\n\
 >>> END METADATA' >> meta.data

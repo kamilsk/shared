@@ -1,0 +1,9 @@
+
+
+METADATA:short
+golang:alpine with mmake
+
+METADATA:full
+golang:alpine.(e7baf3b1a3a5) with
+- [maintainer](https://github.com/tj/mmake).(v1.2.0, [diff](https://github.com/gaocegege/maintainer/compare/v1.2.0...master))
+
