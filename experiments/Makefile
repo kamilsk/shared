@@ -9,6 +9,10 @@ include $(CWD)/experiments/make/mmake.mk
 include $(CWD)/experiments/make/ponzu.mk
 include $(CWD)/experiments/make/zb.mk
 
+.PHONY: clean-experiments-artifacts
+clean-experiments-artifacts:
+	rm -rf $(CWD)/experiments/artifacts &>/dev/null || true
+
 .PHONY: clean-invalid-experiments
 clean-invalid-experiments:
 	docker images --all \
@@ -17,10 +21,6 @@ clean-invalid-experiments:
 	| grep '^<none>\s\+' \
 	| awk '{print $$2}' \
 	| xargs docker rmi -f &>/dev/null || true
-
-.PHONY: clean-experiments-artifacts
-clean-experiments-artifacts:
-	rm -rf $(CWD)/experiments/artifacts &>/dev/null || true
 
 .PHONY: drop-experiments
 drop-experiments: drop-apicompat

@@ -6,6 +6,12 @@ include hugo/Makefile
 include protobuf/Makefile
 include tools/Makefile
 
+.PHONY: clean
+clean: clean-experiments-artifacts clean-invalid-experiments
+clean: clean-hugo-artifacts clean-invalid-hugo
+clean: clean-invalid-protobuf clean-protobuf-artifacts
+clean: clean-invalid-tools clean-tools-artifacts
+
 .PHONY: build
 build: build-hugo
 build: build-protobuf

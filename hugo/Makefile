@@ -18,6 +18,14 @@ build-hugo-image:
 	             --build-arg VERSION=$(HUGO) \
 	             $(CWD)/hugo
 
+.PHONY: clean-hugo-artifacts
+clean-hugo-artifacts:
+	rm -rf $(CWD)/hugo/artifacts &>/dev/null || true
+
+.PHONY: clean-hugo-build-image
+clean-hugo-build-image:
+	docker rmi -f hugo-build-image &>/dev/null || true
+
 .PHONY: clean-invalid-hugo
 clean-invalid-hugo:
 	docker images --all \
@@ -26,14 +34,6 @@ clean-invalid-hugo:
 	| grep '^<none>\s\+' \
 	| awk '{print $$2}' \
 	| xargs docker rmi -f &>/dev/null || true
-
-.PHONY: clean-hugo-artifacts
-clean-hugo-artifacts:
-	rm -rf $(CWD)/hugo/artifacts &>/dev/null || true
-
-.PHONY: clean-hugo-build-image
-clean-hugo-build-image:
-	docker rmi -f hugo-build-image &>/dev/null || true
 
 .PHONY: drop-hugo
 drop-hugo: clean-invalid-hugo

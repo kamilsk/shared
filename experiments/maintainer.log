@@ -1,0 +1,9 @@
+
+
+METADATA:short
+golang:alpine with maintainer
+
+METADATA:full
+golang:alpine.(e7baf3b1a3a5) with
+- [maintainer](https://github.com/gaocegege/maintainer).(1.0.4, [diff](https://github.com/gaocegege/maintainer/compare/1.0.4...master))
+
