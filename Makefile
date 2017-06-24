@@ -14,6 +14,10 @@ clean: clean-invalid-tools clean-tools-artifacts
 build: build-hugo
 build: build-tools
 
+.PHONY: process
+process: process-hugo
+process: process-tools
+
 .PHONY: publish
 publish: publish-hugo
 publish: publish-tools

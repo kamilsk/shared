@@ -86,6 +86,9 @@ pack-tools:
 	  >> $(CWD)/tools/latest.log
 	echo '' >> $(CWD)/tools/latest.log
 
+.PHONY: process-tools
+process-tools: drop-tools build-tools publish-tools
+
 .PHONY: publish-tools
 publish-tools:
 	docker push kamilsk/go-tools
@@ -93,6 +96,3 @@ publish-tools:
 .PHONY: pull-tools
 pull-tools:
 	docker pull kamilsk/go-tools
-
-.PHONY: process-tools
-process-tools: drop-tools build-tools publish-tools

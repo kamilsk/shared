@@ -81,6 +81,9 @@ pack-hugo:
 	             --force-rm --no-cache --pull --rm \
 	             $(CWD)/hugo
 
+.PHONY: process-hugo
+process-hugo: drop-hugo build-hugo publish-hugo
+
 .PHONY: publish-hugo
 publish-hugo:
 	docker push kamilsk/hugo
@@ -88,6 +91,3 @@ publish-hugo:
 .PHONY: pull-hugo
 pull-hugo:
 	docker pull kamilsk/hugo
-
-.PHONY: process-hugo
-process-hugo: drop-hugo build-hugo publish-hugo
