@@ -13,7 +13,7 @@ build-hugo:
 build-hugo-image: clean-hugo-build-image
 build-hugo-image:
 	docker build -f $(CWD)/hugo/build.Dockerfile \
-	             -t hugo-build-image \
+	             -t hugo_build-image \
 	             --force-rm --no-cache --pull --rm \
 	             --build-arg BASE=$(ALPINE_LATEST) \
 	             --build-arg VERSION=$(HUGO) \
@@ -25,7 +25,7 @@ clean-hugo-artifacts:
 
 .PHONY: clean-hugo-build-image
 clean-hugo-build-image:
-	docker rmi -f hugo-build-image &>/dev/null || true
+	docker rmi -f hugo_build-image &>/dev/null || true
 
 .PHONY: clean-invalid-hugo
 clean-invalid-hugo:
@@ -49,17 +49,17 @@ drop-hugo:
 .PHONY: get-hugo-artifacts
 get-hugo-artifacts: clean-hugo-artifacts
 get-hugo-artifacts:
-	docker rm -f hugo-container &>/dev/null || true
+	docker rm -f hugo_build-container &>/dev/null || true
 	mkdir -p $(CWD)/hugo/artifacts
-	docker create --name hugo-container hugo-build-image
-	docker cp hugo-container:/tmp/hugo      $(CWD)/hugo/artifacts/
-	docker cp hugo-container:/tmp/meta.data $(CWD)/hugo/artifacts/
+	docker create --name hugo_build-container hugo_build-image
+	docker cp hugo_build-container:/tmp/hugo      $(CWD)/hugo/artifacts/
+	docker cp hugo_build-container:/tmp/meta.data $(CWD)/hugo/artifacts/
 	cat $(CWD)/hugo/artifacts/meta.data \
 	  | sed '/START METADATA/d' \
 	  | sed '/END METADATA/d' \
 	  | sed 's/[ ]*$$//' \
 	  > $(CWD)/hugo/latest.log
-	docker rm -f hugo-container
+	docker rm -f hugo_build-container
 
 .PHONY: in-hugo
 in-hugo:
@@ -67,7 +67,11 @@ in-hugo:
 
 .PHONY: in-hugo-build-image
 in-hugo-build-image:
-	docker run --rm -it hugo-build-image
+	if docker images --all | grep hugo_build-image; then \
+		docker run --rm -it hugo_build-image; \
+	else \
+		echo Build image not found; \
+	fi
 
 .PHONY: pack-hugo
 pack-hugo: drop-hugo

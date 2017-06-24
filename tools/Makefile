@@ -1,26 +1,27 @@
-GLIDE    = 0.12.3
-RELEASER = 0.20.2
-RETRY    = 2.1.2
+GLIDE         = 0.12.3
+PROTOC        = 3.3.2
+RELEASER      = 0.21.2
+RETRY         = 2.1.2
+GOLANG_ALPINE = $(shell docker images | grep '^golang\s\+alpine' | awk '{print $$3}')
+
+include $(CWD)/tools/make/easyjson.mk
+include $(CWD)/tools/make/glide.mk
+include $(CWD)/tools/make/gometalinter.mk
+include $(CWD)/tools/make/goreleaser.mk
+include $(CWD)/tools/make/protobuf.mk
+include $(CWD)/tools/make/retry.mk
 
 .PHONY: build-tools
-build-tools: build-tools-image
-build-tools: get-tools-artifacts
+build-tools: build-easyjson
+build-tools: build-glide
+build-tools: build-gometalinter
+build-tools: build-goreleaser
+build-tools: build-protobuf
+build-tools: build-retry
 build-tools: pack-tools
+build-tools: clean-tools-artifacts
 build-tools:
-	make clean-tools-artifacts
 	make clean-tools-build-image
-
-.PHONY: build-tools-image
-build-tools-image: clean-tools-build-image
-build-tools-image:
-	docker build -f $(CWD)/tools/build.Dockerfile \
-	             -t go-tools-build-image \
-	             --force-rm --no-cache --pull --rm \
-	             --build-arg BASE=$$(docker images | grep '^golang\s\+alpine' | awk '{print $$3}') \
-	             --build-arg GLIDE=$(GLIDE) \
-	             --build-arg RELEASER=$(RELEASER) \
-	             --build-arg RETRY=$(RETRY) \
-	             $(CWD)/tools
 
 .PHONY: clean-invalid-tools
 clean-invalid-tools:
@@ -36,8 +37,12 @@ clean-tools-artifacts:
 	rm -rf $(CWD)/tools/artifacts &>/dev/null || true
 
 .PHONY: clean-tools-build-image
-clean-tools-build-image:
-	docker rmi -f go-tools-build-image &>/dev/null || true
+clean-tools-build-image: clean-easyjson-build-image
+clean-tools-build-image: clean-glide-build-image
+clean-tools-build-image: clean-gometalinter-build-image
+clean-tools-build-image: clean-goreleaser-build-image
+clean-tools-build-image: clean-protobuf-build-image
+clean-tools-build-image: clean-retry-build-image
 
 .PHONY: drop-tools
 drop-tools: clean-invalid-tools
@@ -49,37 +54,37 @@ drop-tools:
 	| awk '{print $$2}' \
 	| xargs docker rmi -f &>/dev/null || true
 
-.PHONY: get-tools-artifacts
-get-tools-artifacts: clean-tools-artifacts
-get-tools-artifacts:
-	docker rm -f go-tools-container &>/dev/null || true
-	mkdir -p $(CWD)/tools/artifacts
-	docker create --name go-tools-container go-tools-build-image
-	docker cp go-tools-container:/tmp/easyjson     $(CWD)/tools/artifacts/
-	docker cp go-tools-container:/tmp/glide        $(CWD)/tools/artifacts/
-	docker cp go-tools-container:/tmp/gometalinter $(CWD)/tools/artifacts/
-	docker cp go-tools-container:/tmp/goreleaser   $(CWD)/tools/artifacts/
-	docker cp go-tools-container:/tmp/retry        $(CWD)/tools/artifacts/
-	docker cp go-tools-container:/tmp/meta.data    $(CWD)/tools/artifacts/
-	cat $(CWD)/tools/artifacts/meta.data | sed '/START METADATA/d' | sed '/END METADATA/d' | sed 's/[ ]*$$//' \
-	  > $(CWD)/tools/latest.log
-	docker rm -f go-tools-container
-
 .PHONY: in-tools
 in-tools:
 	docker run --rm -it kamilsk/go-tools
 
-.PHONY: in-tools-build-image
-in-tools-build-image:
-	docker run --rm -it go-tools-build-image
-
 .PHONY: pack-tools
 pack-tools: drop-tools
 pack-tools:
-	docker build -f $(CWD)/tools/pack.Dockerfile \
+	docker build -f $(CWD)/tools/docker/pack.Dockerfile \
 	             -t kamilsk/go-tools \
 	             --force-rm --no-cache --pull --rm \
 	             $(CWD)/tools
+	echo '' >  $(CWD)/tools/latest.log
+	echo '' >> $(CWD)/tools/latest.log
+	echo 'METADATA:short' \
+	  >> $(CWD)/tools/latest.log
+	echo 'Alpine Linux with Go and most useful Go tools' \
+	  >> $(CWD)/tools/latest.log
+	echo '' >> $(CWD)/tools/latest.log
+	echo 'METADATA:full' \
+	  >> $(CWD)/tools/latest.log
+	echo 'Alpine Linux with Go ([golang](https://hub.docker.com/_/golang/):alpine.$(GOLANG_ALPINE)), g++, gcc, git, libc-dev, mercurial and' \
+	  >> $(CWD)/tools/latest.log
+	for metadata in $(shell ls $(CWD)/tools/artifacts/*.metadata); do \
+		cat $$metadata >> $(CWD)/tools/latest.log; \
+	done
+	echo '' >> $(CWD)/tools/latest.log
+	echo '[Dockerfile](https://github.com/kamilsk/shared/blob/docker-go-v1/tools)' \
+	  >> $(CWD)/tools/latest.log
+	echo '[Useful Makefile](https://github.com/kamilsk/shared/blob/makefile-go-v1/docker/tools.mk)' \
+	  >> $(CWD)/tools/latest.log
+	echo '' >> $(CWD)/tools/latest.log
 
 .PHONY: publish-tools
 publish-tools:
@@ -88,3 +93,6 @@ publish-tools:
 .PHONY: pull-tools
 pull-tools:
 	docker pull kamilsk/go-tools
+
+.PHONY: process-tools
+process-tools: drop-tools build-tools publish-tools

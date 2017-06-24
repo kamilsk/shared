@@ -2,7 +2,6 @@ FROM golang:alpine
 
 MAINTAINER Kamil Samigullin <kamil@samigullin.info>
 
-ARG BASE
 ARG VERSION
 
 WORKDIR /tmp
@@ -15,6 +14,7 @@ RUN apk add --no-cache ca-certificates git wget \
     https://github.com/google/protobuf/archive/v${VERSION}.tar.gz \
  && tar xf protoc.tar.gz \
  && (cd protobuf-${VERSION} && ./autogen.sh -s && ./configure --disable-shared && make && make install) \
+ && mkdir protoc && mv /usr/local/bin/protoc protoc/ \
  && rm protoc.tar.gz \
 
  && go get github.com/golang/protobuf/protoc-gen-go \
@@ -29,28 +29,14 @@ RUN apk add --no-cache ca-certificates git wget \
  && mkdir gogo-protobuf && mv /go/bin/* gogo-protobuf/ \
  && rm -rf /go/bin/* /go/pkg/* /go/src/* \
 
- && echo $'\n\
-<<< START METADATA\n\
-\n\
-METADATA:short \n\
-golang:alpine with gcc, g++, protoc and go protobuf plugins \n\
-\n\
-METADATA:full' >> /tmp/meta.data \
- && echo "golang:alpine.(${BASE}) with gcc and g++, and" >> /tmp/meta.data \
-
- && echo "- [protobuf](https://github.com/google/protobuf).(v${VERSION}," \
+ && touch meta.data \
+ && echo "- [protobuf](https://developers.google.com/protocol-buffers/).(v${VERSION}," \
     "[diff](https://github.com/google/protobuf/compare/v${VERSION}...master))" >> /tmp/meta.data \
 
  && echo "- [golang/protobuf](https://github.com/golang/protobuf).(${GPB}," \
     "[diff](https://github.com/golang/protobuf/compare/${GPB}...master))" >> /tmp/meta.data \
 
  && echo "- [gogo/protobuf](https://github.com/gogo/protobuf).(${GGPB}," \
-    "[diff](https://github.com/gogo/protobuf/compare/${GGPB}...master))" >> /tmp/meta.data \
-
- && echo $'\n\
-[Dockerfile](https://github.com/kamilsk/shared/blob/docker-go-v1/protobuf) \n\
-[Useful Makefile](https://github.com/kamilsk/shared/blob/makefile-go-v1/docker/protobuf.mk) \n\
-\n\
->>> END METADATA' >> /tmp/meta.data
+    "[diff](https://github.com/gogo/protobuf/compare/${GGPB}...master))" >> /tmp/meta.data
 
 CMD /bin/sh
