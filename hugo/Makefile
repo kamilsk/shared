@@ -1,4 +1,5 @@
-HUGO = 0.21
+HUGO          = 0.24.1
+ALPINE_LATEST = $(shell docker images | grep '^alpine\s\+latest' | awk '{print $$3}')
 
 .PHONY: build-hugo
 build-hugo: build-hugo-image
@@ -14,7 +15,7 @@ build-hugo-image:
 	docker build -f $(CWD)/hugo/build.Dockerfile \
 	             -t hugo-build-image \
 	             --force-rm --no-cache --pull --rm \
-	             --build-arg BASE=$$(docker images | grep '^alpine\s\+latest' | awk '{print $$3}') \
+	             --build-arg BASE=$(ALPINE_LATEST) \
 	             --build-arg VERSION=$(HUGO) \
 	             $(CWD)/hugo
 
@@ -53,7 +54,10 @@ get-hugo-artifacts:
 	docker create --name hugo-container hugo-build-image
 	docker cp hugo-container:/tmp/hugo      $(CWD)/hugo/artifacts/
 	docker cp hugo-container:/tmp/meta.data $(CWD)/hugo/artifacts/
-	cat $(CWD)/hugo/artifacts/meta.data | sed '/START METADATA/d' | sed '/END METADATA/d' | sed 's/[ ]*$$//' \
+	cat $(CWD)/hugo/artifacts/meta.data \
+	  | sed '/START METADATA/d' \
+	  | sed '/END METADATA/d' \
+	  | sed 's/[ ]*$$//' \
 	  > $(CWD)/hugo/latest.log
 	docker rm -f hugo-container
 
@@ -80,3 +84,6 @@ publish-hugo:
 .PHONY: pull-hugo
 pull-hugo:
 	docker pull kamilsk/hugo
+
+.PHONY: process-hugo
+process-hugo: drop-hugo build-hugo publish-hugo
