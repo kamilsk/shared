@@ -8,7 +8,7 @@ ARG VERSION
 WORKDIR /tmp
 
 RUN apk add --no-cache ca-certificates wget \
- && update-ca-certificates \
+ && update-ca-certificates &>/dev/null \
 
  && wget -q -O hugo.tar.gz \
     https://github.com/gohugoio/hugo/releases/download/v${VERSION}/hugo_${VERSION}_Linux-64bit.tar.gz \

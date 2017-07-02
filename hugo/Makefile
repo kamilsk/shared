@@ -1,6 +1,28 @@
 HUGO          = 0.24.1
 ALPINE_LATEST = $(shell docker images | grep '^alpine\s\+latest' | awk '{print $$3}')
 
+.PHONY: build-multi-stage-hugo
+build-multi-stage-hugo:
+	# --pull removed as a bug https://github.com/moby/moby/pull/33735
+	docker build -t kamilsk/hugo \
+	             --force-rm --no-cache --rm \
+	             --build-arg BASE=$(ALPINE_LATEST) \
+	             --build-arg VERSION=$(HUGO) \
+	             $(CWD)/hugo
+
+	docker rm -f hugo_build-container &>/dev/null || true
+	mkdir -p $(CWD)/hugo/artifacts
+	docker create --name hugo_build-container kamilsk/hugo
+	docker cp hugo_build-container:/usr/share/meta.data $(CWD)/hugo/artifacts/
+	cat $(CWD)/hugo/artifacts/meta.data \
+	  | sed '/START METADATA/d' \
+	  | sed '/END METADATA/d' \
+	  | sed 's/[ ]*$$//' \
+	  > $(CWD)/hugo/latest.log
+	docker rm -f hugo_build-container
+
+	make clean-hugo-artifacts
+
 .PHONY: build-hugo
 build-hugo: build-hugo-image
 build-hugo: get-hugo-artifacts
@@ -82,7 +104,7 @@ pack-hugo:
 	             $(CWD)/hugo
 
 .PHONY: process-hugo
-process-hugo: drop-hugo build-hugo publish-hugo
+process-hugo: drop-hugo build-multi-stage-hugo publish-hugo
 
 .PHONY: publish-hugo
 publish-hugo:

@@ -1,4 +1,4 @@
-FROM alpine:latest build
+FROM alpine:latest AS build
 
 MAINTAINER Kamil Samigullin <kamil@samigullin.info>
 
@@ -8,7 +8,7 @@ ARG VERSION
 WORKDIR /tmp
 
 RUN apk add --no-cache ca-certificates wget \
- && update-ca-certificates \
+ && update-ca-certificates &>/dev/null \
 
  && wget -q -O hugo.tar.gz \
     https://github.com/gohugoio/hugo/releases/download/v${VERSION}/hugo_${VERSION}_Linux-64bit.tar.gz \
@@ -28,8 +28,6 @@ METADATA:full' >> meta.data \
 [Useful Makefile](https://github.com/kamilsk/shared/blob/makefile-go-v1/docker/hugo.mk) \n\
 >>> END METADATA' >> meta.data
 
-CMD /bin/sh
-
 
 
 FROM alpine:latest
@@ -37,6 +35,7 @@ FROM alpine:latest
 MAINTAINER Kamil Samigullin <kamil@samigullin.info>
 
 COPY --from=build /tmp/hugo /usr/local/bin/
+COPY --from=build /tmp/meta.data /usr/share/
 
 ENV BIND     '0.0.0.0'
 ENV PORT     '1313'
@@ -49,4 +48,6 @@ CMD hugo server --bind=${BIND} --port=${PORT} --baseURL=${BASE_URL} ${ARGS}
 
 EXPOSE ${PORT}
 
+ONBUILD COPY . /usr/share/site
 ONBUILD RUN hugo -d /usr/share/public
+ONBUILD VOLUME /usr/share/public
