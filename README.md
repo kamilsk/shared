@@ -6,8 +6,6 @@
 
 ### [kamilsk/hugo](https://hub.docker.com/r/kamilsk/hugo/)
 
-### [kamilsk/go-protobuf](https://hub.docker.com/r/kamilsk/go-protobuf/)
-
 ### [kamilsk/go-tools](https://hub.docker.com/r/kamilsk/go-tools/)
 
 ## Notes
@@ -15,7 +13,6 @@
 Discovering
 
 ```bash
-$ make in-tools # or in-hugo
-# or
+$ make in-hugo
 $ docker run --rm -it kamilsk/go-tools
 ```
