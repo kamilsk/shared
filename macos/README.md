@@ -43,7 +43,7 @@
       - [x] active used
 
 - [Visual Studio Code](https://code.visualstudio.com)
-  - [ ] active used
+  - [x] active used
 
 ### GitHub
 
@@ -51,7 +51,7 @@
   - [ ] active used
 
 - [Ship](https://www.realartists.com)
-  - [ ] active used
+  - [x] active used
 
 ## Editor
 
@@ -85,16 +85,13 @@
 - [Todoist: To Do List | Task List](https://itunes.apple.com/app/todoist-to-do-list-task-list/id585829637)
   - [ ] active used
 
-- [todometer](https://cassidoo.github.io/todometer/)
-  - [ ] active used
-
 - [Wunderlist: To-Do List & Tasks](https://itunes.apple.com/app/wunderlist-to-do-list-tasks/id410628904)
   - [x] active used
 
 ## Security
 
 - [1Password - Password Manager and Secure Wallet](https://itunes.apple.com/app/1password-password-manager/id568903335)
-  - [ ] active used
+  - [x] active used
 
 - [LastPass: Password Manager and Secure Vault](https://itunes.apple.com/app/lastpass-password-manager/id926036361)
   - [x] active used

@@ -2,13 +2,13 @@
 >
 > My collection of useful PHP packages.
 
-## cli-framework
+## cli-framework (not reviewed yet)
 
 - [cilex/cilex](https://github.com/Cilex/Cilex), [site](http://cilex.github.io)
   - [x] used
   - [ ] viewed
 
-## testing
+## testing (not reviewed yet)
 
 - [phpunit/phpunit](https://github.com/sebastianbergmann/phpunit), [site](https://phpunit.de)
   - [ ] used
@@ -42,7 +42,7 @@
       - [ ] used
       - [ ] viewed
 
-## web-framework
+## web-framework (not reviewed yet)
 
 - [laravel/laravel](https://github.com/laravel/laravel), [site](https://laravel.com)
   - [ ] used
@@ -86,7 +86,7 @@
   - [ ] used
   - [ ] viewed
 
-## wordpress
+## wordpress (not reviewed yet)
 
 - [wordplate/wordplate](https://github.com/wordplate/wordplate), [site](https://wordplate.github.io)
   - [ ] used

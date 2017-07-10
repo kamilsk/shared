@@ -29,8 +29,9 @@ type Package struct {
 }
 
 type PackageCollection struct {
-	Name string
-	List []Package
+	Name     string
+	Reviewed string
+	List     []Package
 }
 
 type PackageSection struct {
@@ -96,7 +97,7 @@ const tplPkg = `
 >
 > {{ .Description }}.
 {{ range .Collections }}
-## {{ .Name }}
+## {{ .Name }} {{ if eq .Reviewed "" }}(not reviewed yet){{ else }}(reviewed at {{ .Reviewed }}){{ end }}
 {{- range .List }}{{ template "PACKAGE" . }}{{ end }}
 {{ end -}}`
 

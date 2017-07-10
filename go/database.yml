@@ -1,26 +1,34 @@
+reviewed: 2017-07-10
+
 list:
 
 - name: github.com/jmoiron/sqlx
   src:  https://github.com/jmoiron/sqlx
-  tags: []
+  tags: [sql]
   used:   false
   viewed: false
 
 - name: github.com/jinzhu/gorm
   src:  https://github.com/jinzhu/gorm
   site: http://jinzhu.me/gorm/
-  tags: [orm]
+  tags: [sql, orm]
   used:   false
   viewed: false
 
 - name: github.com/samonzeweb/godb
   src:  https://github.com/samonzeweb/godb
-  tags: [builder]
+  tags: [sql, builder]
   used:   false
   viewed: false
 
 - name: github.com/github/gh-ost
   src:  https://github.com/github/gh-ost
-  tags: [migration, tools]
+  tags: [migration, tools, mysql]
+  used:   false
+  viewed: false
+
+- name: github.com/src-d/go-kallax
+  src:  https://github.com/src-d/go-kallax
+  tags: [orm, postgresql]
   used:   false
   viewed: false

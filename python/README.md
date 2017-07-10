@@ -2,13 +2,13 @@
 >
 > My collection of useful Python packages.
 
-## async
+## async (not reviewed yet)
 
 - [Celery](https://github.com/celery/celery), [site](http://www.celeryproject.org)
   - [ ] used
   - [ ] viewed
 
-## cli-framework
+## cli-framework (not reviewed yet)
 
 - [Click](https://github.com/pallets/click), [site](http://click.pocoo.org)
   - [x] used
@@ -18,25 +18,25 @@
   - [ ] used
   - [ ] viewed
 
-## data-analysis
+## data-analysis (not reviewed yet)
 
 - [pandas](https://github.com/pandas-dev/pandas), [site](http://pandas.pydata.org)
   - [ ] used
   - [ ] viewed
 
-## template
+## template (not reviewed yet)
 
 - [Jinja2](https://github.com/pallets/jinja), [site](http://jinja.pocoo.org)
   - [x] used
   - [ ] viewed
 
-## tool
+## tool (not reviewed yet)
 
 - [requests](https://github.com/kennethreitz/requests), [site](http://python-requests.org)
   - [x] used
   - [ ] viewed
 
-## web-framework
+## web-framework (not reviewed yet)
 
 - [Django](https://github.com/django/django), [site](https://www.djangoproject.com)
   - [ ] used

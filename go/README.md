@@ -2,7 +2,7 @@
 >
 > My collection of useful Go packages.
 
-## code-check
+## code-check (not reviewed yet)
 
 - [github.com/fortytw2/leaktest](https://github.com/fortytw2/leaktest)
   - [ ] used
@@ -22,7 +22,7 @@
   - [ ] used
   - [ ] viewed
 
-## code-generate
+## code-generate (not reviewed yet)
 
 - [github.com/dpolansky/go-poet](https://github.com/dpolansky/go-poet)
   - [ ] used
@@ -40,7 +40,7 @@
   - [ ] used
   - [ ] viewed
 
-## database
+## database (reviewed at 2017-07-10)
 
 - [github.com/jmoiron/sqlx](https://github.com/jmoiron/sqlx)
   - [ ] used
@@ -58,7 +58,11 @@
   - [ ] used
   - [ ] viewed
 
-## logging
+- [github.com/src-d/go-kallax](https://github.com/src-d/go-kallax)
+  - [ ] used
+  - [ ] viewed
+
+## logging (not reviewed yet)
 
 - [github.com/apex/log](https://github.com/apex/log)
   - [ ] used
@@ -84,7 +88,7 @@
   - [ ] used
   - [ ] viewed
 
-## misc
+## misc (not reviewed yet)
 
 - [github.com/fsnotify/fsnotify](https://github.com/fsnotify/fsnotify), [site](https://fsnotify.org)
   - [ ] used
@@ -98,7 +102,7 @@
   - [ ] used
   - [ ] viewed
 
-## serializer
+## serializer (not reviewed yet)
 
 - [gopkg.in/yaml.v2](https://github.com/go-yaml/yaml)
   - [x] used
@@ -108,7 +112,7 @@
   - [ ] used
   - [ ] viewed
 
-## testing
+## testing (not reviewed yet)
 
 - [github.com/jarcoal/httpmock](https://github.com/jarcoal/httpmock)
   - [ ] used
@@ -138,7 +142,7 @@
   - [ ] used
   - [ ] viewed
 
-## vendoring
+## vendoring (not reviewed yet)
 
 - [github.com/constabulary/gb/...](https://github.com/constabulary/gb), [site](https://getgb.io)
   - [x] used
@@ -200,12 +204,16 @@
   - [ ] used
   - [ ] viewed
 
-## x
+## x (not reviewed yet)
 
 - [github.com/yourbasic/...](https://github.com/yourbasic)
   - [ ] used
   - [ ] viewed
 
 - [github.com/pkg/...](https://github.com/pkg)
+  - [ ] used
+  - [ ] viewed
+
+- [github.com/go-playground/...](https://github.com/go-playground)
   - [ ] used
   - [ ] viewed

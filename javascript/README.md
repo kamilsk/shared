@@ -2,7 +2,7 @@
 >
 > My collection of useful JavaScript packages.
 
-## interface
+## interface (reviewed at 2017-07-10)
 
 - [britecharts](https://github.com/eventbrite/britecharts), [site](http://eventbrite.github.io/britecharts/)
   - [ ] used
@@ -16,7 +16,7 @@
   - [ ] used
   - [ ] viewed
 
-## x
+## x (not reviewed yet)
 
 - [...](https://github.com/surveyjs/surveyjs)
   - [ ] used

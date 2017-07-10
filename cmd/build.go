@@ -10,7 +10,7 @@ import (
 	"pkg"
 )
 
-type Renderer interface {
+type renderer interface {
 	Render(io.Writer) error
 }
 
@@ -30,7 +30,7 @@ func main() {
 	flush("./"+id+"/README.md", buf)
 }
 
-func parse() (string, Renderer) {
+func parse() (string, renderer) {
 	var section, description string
 
 	fs := flag.NewFlagSet("build", flag.PanicOnError)

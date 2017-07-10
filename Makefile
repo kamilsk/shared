@@ -1,3 +1,5 @@
+.DEFAULT_GOAL = build
+
 .PHONY: build
 build: build-awsm
 build: build-br
