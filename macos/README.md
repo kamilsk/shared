@@ -103,14 +103,3 @@
 
 - [Magnet](https://itunes.apple.com/app/magnet/id441258766)
   - [x] active used
-
-  - Alternatives:
-
-    - [Amethyst](http://ianyh.com/amethyst/)
-      - [ ] active used
-
-    - [Moom](https://itunes.apple.com/ru/app/moom/id419330170)
-      - [ ] active used
-
-    - [Spectacle](https://www.spectacleapp.com)
-      - [ ] active used

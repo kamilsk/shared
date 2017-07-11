@@ -1,4 +1,4 @@
-reviewed: ~
+reviewed: 2017-07-11
 
 list:
 
@@ -6,10 +6,4 @@ list:
   src:  https://github.com/go-yaml/yaml
   tags: [yaml]
   used:   true
-  viewed: false
-
-- name: github.com/opennota/re2dfa
-  src:  https://github.com/opennota/re2dfa
-  tags: [regex]
-  used:   false
   viewed: false
