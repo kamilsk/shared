@@ -103,3 +103,6 @@
 
 - [Magnet](https://itunes.apple.com/app/magnet/id441258766)
   - [x] active used
+
+- [Flycut](https://itunes.apple.com/app/flycut-clipboard-manager/id442160987)
+  - [ ] active used
