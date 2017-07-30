@@ -5,5 +5,5 @@ golang:alpine with goreporter
 
 METADATA:full
 golang:alpine.(e7baf3b1a3a5) with
-- [goreporter](https://github.com/wgliang/goreporter).(version2.1.0-5-gefdc241, [diff](https://github.com/wgliang/goreporter/compare/version2.1.0-5-gefdc241...master))
+- [goreporter](https://github.com/360EntSecGroup-Skylar/goreporter).(version2.1.0-5-gefdc241, [diff](https://github.com/360EntSecGroup-Skylar/goreporter/compare/version2.1.0-5-gefdc241...master))
 
