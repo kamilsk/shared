@@ -1,6 +1,6 @@
 GLIDE         = 0.12.3
 PROTOC        = 3.3.2
-RELEASER      = 0.21.2
+RELEASER      = 0.27.5
 RETRY         = 2.1.2
 GOLANG_ALPINE = $(shell docker images | grep '^golang\s\+alpine' | awk '{print $$3}')
 
