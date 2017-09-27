@@ -12,3 +12,8 @@
 
 - [ZenHub](https://www.zenhub.com)
   - [ ] active used
+
+## Workspace
+
+- [Freezetab](https://freezetab.com)
+  - [ ] active used
