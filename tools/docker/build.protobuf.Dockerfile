@@ -1,6 +1,6 @@
 FROM golang:alpine
 
-MAINTAINER Kamil Samigullin <kamil@samigullin.info>
+LABEL maintainer="Kamil Samigullin <kamil@samigullin.info>"
 
 ARG VERSION
 

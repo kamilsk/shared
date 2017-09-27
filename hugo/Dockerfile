@@ -1,6 +1,6 @@
 FROM alpine:latest AS build
 
-MAINTAINER Kamil Samigullin <kamil@samigullin.info>
+LABEL maintainer="Kamil Samigullin <kamil@samigullin.info>"
 
 ARG BASE
 ARG VERSION
@@ -32,7 +32,7 @@ METADATA:full' >> meta.data \
 
 FROM alpine:latest
 
-MAINTAINER Kamil Samigullin <kamil@samigullin.info>
+LABEL maintainer="Kamil Samigullin <kamil@samigullin.info>"
 
 COPY --from=build /tmp/hugo /usr/local/bin/
 COPY --from=build /tmp/meta.data /usr/share/

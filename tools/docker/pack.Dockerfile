@@ -1,6 +1,6 @@
 FROM golang:alpine
 
-MAINTAINER Kamil Samigullin <kamil@samigullin.info>
+LABEL maintainer="Kamil Samigullin <kamil@samigullin.info>"
 
 COPY artifacts/easyjson/* \
      artifacts/glide/linux-amd64/glide \
@@ -9,6 +9,7 @@ COPY artifacts/easyjson/* \
      artifacts/protobuf/go-protobuf/* \
      artifacts/protobuf/gogo-protobuf/* \
      artifacts/retry/retry \
+     artifacts/semaphore/semaphore \
      /go/bin/
 COPY artifacts/protobuf/protoc/* /usr/local/bin/
 

@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-MAINTAINER Kamil Samigullin <kamil@samigullin.info>
+LABEL maintainer="Kamil Samigullin <kamil@samigullin.info>"
 
 COPY artifacts/hugo /usr/local/bin/
 COPY artifacts/meta.data /usr/share/

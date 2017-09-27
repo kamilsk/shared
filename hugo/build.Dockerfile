@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-MAINTAINER Kamil Samigullin <kamil@samigullin.info>
+LABEL maintainer="Kamil Samigullin <kamil@samigullin.info>"
 
 ARG BASE
 ARG VERSION

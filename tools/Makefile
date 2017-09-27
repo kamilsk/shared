@@ -1,7 +1,8 @@
 GLIDE         = 0.12.3
-PROTOC        = 3.3.2
-RELEASER      = 0.27.5
+PROTOC        = 3.4.1
+RELEASER      = 0.33.0
 RETRY         = 2.1.2
+SEMAPHORE     = 4.1.0
 GOLANG_ALPINE = $(shell docker images | grep '^golang\s\+alpine' | awk '{print $$3}')
 
 include $(CWD)/tools/make/easyjson.mk
@@ -10,6 +11,7 @@ include $(CWD)/tools/make/gometalinter.mk
 include $(CWD)/tools/make/goreleaser.mk
 include $(CWD)/tools/make/protobuf.mk
 include $(CWD)/tools/make/retry.mk
+include $(CWD)/tools/make/semaphore.mk
 
 .PHONY: build-tools
 build-tools: build-easyjson
@@ -18,6 +20,7 @@ build-tools: build-gometalinter
 build-tools: build-goreleaser
 build-tools: build-protobuf
 build-tools: build-retry
+build-tools: build-semaphore
 build-tools: pack-tools
 build-tools: clean-tools-artifacts
 build-tools:
@@ -43,6 +46,7 @@ clean-tools-build-image: clean-gometalinter-build-image
 clean-tools-build-image: clean-goreleaser-build-image
 clean-tools-build-image: clean-protobuf-build-image
 clean-tools-build-image: clean-retry-build-image
+clean-tools-build-image: clean-semaphore-build-image
 
 .PHONY: drop-tools
 drop-tools: clean-invalid-tools
