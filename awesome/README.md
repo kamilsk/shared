@@ -32,6 +32,8 @@
 
 ### [Awesome Laravel](https://github.com/TimothyDJones/awesome-laravel)
 
+### [Awesome Linux Software](https://github.com/LewisVo/Awesome-Linux-Software)
+
 ### [Awesome Mac](https://github.com/jaywcjlove/awesome-mac)
 
 ### [Awesome Microservices](https://github.com/mfornos/awesome-microservices)

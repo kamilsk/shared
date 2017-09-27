@@ -145,3 +145,7 @@ list:
 - name: Awesome Vue.js
   src:  https://github.com/vuejs/awesome-vue
   tags: []
+
+- name: Awesome Linux Software
+  src:  https://github.com/LewisVo/Awesome-Linux-Software
+  tags: []
