@@ -54,6 +54,8 @@
 
 ### [Awesome Sysadmin](https://github.com/kahun/awesome-sysadmin)
 
+### [Awesome Vue.js](https://github.com/vuejs/awesome-vue)
+
 ### [awesome-graphql](https://github.com/chentsulin/awesome-graphql)
 
 ### [awesome-zsh-plugins](https://github.com/unixorn/awesome-zsh-plugins)

@@ -141,3 +141,7 @@ list:
 - name: React Components & Libraries
   src:  https://github.com/brillout/awesome-react-components
   tags: []
+
+- name: Awesome Vue.js
+  src:  https://github.com/vuejs/awesome-vue
+  tags: []
