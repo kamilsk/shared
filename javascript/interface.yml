@@ -29,3 +29,17 @@ list:
   tags: [scroll, animation]
   used:   false
   viewed: false
+
+- name: Vue.js
+  src:  https://github.com/vuejs/vue
+  site: https://vuejs.org
+  tags: [framework]
+  used:   false
+  viewed: false
+
+- name: Vuetify.js
+  src:  https://github.com/vuetifyjs/vuetify
+  site: https://vuetifyjs.com
+  tags: [vue.js, components]
+  used:   false
+  viewed: false
