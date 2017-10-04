@@ -21,3 +21,11 @@
 ### [Python packages](python)
 
 ### [CLI tools](terminal)
+
+## Very useful
+
+### Awesomes from Nikita Voloboev
+
+#### [My wonderful world of macOS](https://github.com/nikitavoloboev/my-mac-os)
+
+#### [My configuration files for macOS](https://github.com/nikitavoloboev/dotfiles)
