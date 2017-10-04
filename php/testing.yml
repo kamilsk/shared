@@ -50,3 +50,10 @@ list:
     tags: []
     used:   false
     viewed: false
+
+- name: phpstan/phpstan
+  src:  https://github.com/phpstan/phpstan
+  site: https://phpstan.org
+  tags: [static analysis]
+  used:   false
+  viewed: false

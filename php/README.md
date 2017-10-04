@@ -42,6 +42,10 @@
       - [ ] used
       - [ ] viewed
 
+- [phpstan/phpstan](https://github.com/phpstan/phpstan)
+  - [ ] used
+  - [ ] viewed
+
 ## web-framework (reviewed at 2017-07-11)
 
 - [laravel/laravel](https://github.com/laravel/laravel), [site](https://laravel.com)
