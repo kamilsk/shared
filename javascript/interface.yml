@@ -2,6 +2,13 @@ reviewed: 2017-07-10
 
 list:
 
+- name: animate-components
+  src:  https://github.com/nitin42/animate-components
+  site: http://animate-components.surge.sh
+  tags: [react, animation]
+  used:   false
+  viewed: false
+
 - name: britecharts
   src:  https://github.com/eventbrite/britecharts
   site: http://eventbrite.github.io/britecharts/
@@ -9,16 +16,16 @@ list:
   used:   false
   viewed: false
 
+- name: Draggable
+  src:  https://github.com/Shopify/draggable
+  site: https://shopify.github.io/draggable/
+  tags: [drag&drop]
+  used:   false
+  viewed: false
+
 - name: t-scroll
   src:  https://github.com/crazychicken/t-scroll
   site: http://t-scroll.com
   tags: [scroll, animation]
-  used:   false
-  viewed: false
-
-- name: animate-components
-  src:  https://github.com/nitin42/animate-components
-  site: http://animate-components.surge.sh
-  tags: [react, animation]
   used:   false
   viewed: false
