@@ -12,6 +12,7 @@ the project team at feedback@octolab.org.
 
 ## Docker
 
+- [docker-common](../../tree/docker-common) - custom docker images for common usage
 - [docker-go-v1](../../tree/docker-go-v1) - custom docker images for Go environment
 - [docker-php-v1](../../tree/docker-php-v1) - custom docker images for PHP environment
 - docker-py-v1 - custom docker images for Python environment (soon)
