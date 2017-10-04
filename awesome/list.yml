@@ -149,3 +149,7 @@ list:
 - name: Awesome Linux Software
   src:  https://github.com/LewisVo/Awesome-Linux-Software
   tags: []
+
+- name: Awesome Crypto Currency Tools & Algorithms
+  src:  https://github.com/kennethreitz/awesome-coins
+  tags: []

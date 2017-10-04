@@ -18,6 +18,8 @@
 
 ### [Awesome Creative Coding](https://github.com/terkelg/awesome-creative-coding)
 
+### [Awesome Crypto Currency Tools & Algorithms](https://github.com/kennethreitz/awesome-coins)
+
 ### [Awesome Docker](https://github.com/veggiemonk/awesome-docker)
 
 ### [Awesome Functional Programming](https://github.com/xgrommx/awesome-functional-programming)
