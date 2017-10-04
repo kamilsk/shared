@@ -29,3 +29,13 @@
 - [gopkg.in/yaml.v2](https://github.com/go-yaml/yaml)
   - [x] used
   - [ ] viewed
+
+## testing (reviewed at 2017-10-04)
+
+- [github.com/onsi/ginkgo](https://github.com/onsi/ginkgo)
+  - [ ] used
+  - [ ] viewed
+
+- [github.com/onsi/gomega](https://github.com/onsi/gomega)
+  - [ ] used
+  - [ ] viewed

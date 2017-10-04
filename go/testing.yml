@@ -1,0 +1,15 @@
+reviewed: 2017-10-04
+
+list:
+
+- name: github.com/onsi/ginkgo
+  src:  https://github.com/onsi/ginkgo
+  tags: [bdd]
+  used:   false
+  viewed: false
+
+- name: github.com/onsi/gomega
+  src:  https://github.com/onsi/gomega
+  tags: [ginkgo]
+  used:   false
+  viewed: false
