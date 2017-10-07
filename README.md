@@ -10,4 +10,5 @@ pull-github-tpl:
 	rm -rf .github
 	(git clone git@github.com:kamilsk/shared.git .github && cd .github && git checkout github-tpl-go-v1 \
 	  && echo 'github templates at revision' $$(git rev-parse HEAD) && rm -rf .git)
+	rm .github/README.md
 ```
