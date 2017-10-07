@@ -9,6 +9,7 @@ docker-in-$(1):
 	docker run --rm -it \
 	           -v '$${GOPATH}/src/$${GO_PACKAGE}':'/go/src/$${GO_PACKAGE}' \
 	           -w '/go/src/$${GO_PACKAGE}' \
+	           -e GO15VENDOREXPERIMENT=1 \
 	           golang:$(1) \
 	           /bin/sh
 
@@ -18,6 +19,7 @@ docker-bench-$(1):
 	docker run --rm \
 	           -v '$${GOPATH}/src/$${GO_PACKAGE}':'/go/src/$${GO_PACKAGE}' \
 	           -w '/go/src/$${GO_PACKAGE}' \
+	           -e GO15VENDOREXPERIMENT=1 \
 	           golang:$(1) \
 	           /bin/sh -c '$$(PACKAGES) | xargs go get -d -t && \
 	                       $$(PACKAGES) | xargs go test -bench=. $$(strip $$(ARGS))'
@@ -28,6 +30,7 @@ docker-test-$(1):
 	docker run --rm \
 	           -v '$${GOPATH}/src/$${GO_PACKAGE}':'/go/src/$${GO_PACKAGE}' \
 	           -w '/go/src/$${GO_PACKAGE}' \
+	           -e GO15VENDOREXPERIMENT=1 \
 	           golang:$(1) \
 	           /bin/sh -c '$$(PACKAGES) | xargs go get -d -t && \
 	                       $$(PACKAGES) | xargs go test -race $$(strip $$(ARGS))'
@@ -37,6 +40,7 @@ docker-test-check-$(1):
 	docker run --rm \
 	           -v '$${GOPATH}/src/$${GO_PACKAGE}':'/go/src/$${GO_PACKAGE}' \
 	           -w '/go/src/$${GO_PACKAGE}' \
+	           -e GO15VENDOREXPERIMENT=1 \
 	           golang:$(1) \
 	           /bin/sh -c '$$(PACKAGES) | xargs go get -d -t && \
 	                       $$(PACKAGES) | xargs go test -run=^hack $$(strip $$(ARGS))'
@@ -46,6 +50,7 @@ docker-test-with-coverage-$(1):
 	docker run --rm \
 	           -v '$${GOPATH}/src/$${GO_PACKAGE}':'/go/src/$${GO_PACKAGE}' \
 	           -w '/go/src/$${GO_PACKAGE}' \
+	           -e GO15VENDOREXPERIMENT=1 \
 	           golang:$(1) \
 	           /bin/sh -c '$$(PACKAGES) | xargs go get -d -t; \
 	                       echo "mode: $${GO_TEST_COVERAGE_MODE}" > '$$@.out'; \
@@ -67,6 +72,7 @@ docker-docs-$(1):
 	           -v '$${GOPATH}/src/$${GO_PACKAGE}':'/go/src/$${GO_PACKAGE}' \
 	           -w '/go/src/$${GO_PACKAGE}' \
 	           -p 127.0.0.1:8080:8080 \
+	           -e GO15VENDOREXPERIMENT=1 \
 	           golang:$(1) \
 	           godoc -play -http :8080
 	sleep 2
