@@ -144,6 +144,6 @@ parallel-tests-with-coverage: ARGS = $(PARALLEL_TESTS_WITH_COVERAGE_ARGS)
 parallel-tests-with-coverage:
 	semaphore create
 	for v in $(SUPPORTED_VERSIONS); do \
-	    semaphore add -- docker-test-with-coverage-$$v ARGS=$(ARGS); \
+	    semaphore add -- make docker-test-with-coverage-$$v ARGS=$(ARGS); \
 	done
 	semaphore wait
