@@ -9,12 +9,12 @@ clean:
 	@echo "not implemented yet"
 
 .PHONY: build
-build:
-	@echo "not implemented yet"
+build: build-awx
+build: build-nginx
 
 .PHONY: process
-process:
-	@echo "not implemented yet"
+process: process-awx
+process: process-nginx
 
 .PHONY: publish
 publish:

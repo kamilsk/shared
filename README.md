@@ -6,6 +6,8 @@
 
 ### kamilsk/awx
 
-### kamilsk/nginx
+### [kamilsk/nginx](https://hub.docker.com/r/kamilsk/nginx/)
+
+Inpired by [umputun/nginx-le](https://hub.docker.com/r/umputun/nginx-le/).
 
 ## Notes
