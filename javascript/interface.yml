@@ -1,10 +1,10 @@
-reviewed: 2017-07-10
+reviewed: 2017-10-16
 
 list:
 
 - name: animate-components
   src:  https://github.com/nitin42/animate-components
-  site: http://animate-components.surge.sh
+  site: http://animate-components.surge.sh/
   tags: [react, animation]
   used:   false
   viewed: false
@@ -12,6 +12,13 @@ list:
 - name: britecharts
   src:  https://github.com/eventbrite/britecharts
   site: http://eventbrite.github.io/britecharts/
+  tags: [chart]
+  used:   false
+  viewed: false
+
+- name: Taucharts
+  src:  https://github.com/TargetProcess/tauCharts
+  site: https://www.taucharts.com/
   tags: [chart]
   used:   false
   viewed: false
@@ -25,21 +32,49 @@ list:
 
 - name: t-scroll
   src:  https://github.com/crazychicken/t-scroll
-  site: http://t-scroll.com
+  site: http://t-scroll.com/
   tags: [scroll, animation]
   used:   false
   viewed: false
 
 - name: Vue.js
   src:  https://github.com/vuejs/vue
-  site: https://vuejs.org
+  site: https://vuejs.org/
   tags: [framework]
   used:   false
   viewed: false
 
 - name: Vuetify.js
   src:  https://github.com/vuetifyjs/vuetify
-  site: https://vuetifyjs.com
+  site: https://vuetifyjs.com/
   tags: [vue.js, components]
+  used:   false
+  viewed: false
+
+- name: React.js
+  src:  https://github.com/facebook/react
+  site: https://reactjs.org/
+  tags: [framework]
+  used:   false
+  viewed: false
+
+- name: Ring UI
+  src:  https://github.com/JetBrains/ring-ui
+  site: https://jetbrains.org/ring-ui/index.html
+  tags: [react.js, components]
+  used:   false
+  viewed: false
+
+- name: prosemirror
+  src:  https://github.com/ProseMirror/prosemirror
+  site: http://prosemirror.net/
+  tags: [wysiwyg]
+  used:   false
+  viewed: false
+
+- name: Trix
+  src:  https://github.com/basecamp/trix
+  site: https://trix-editor.org/
+  tags: [wysiwyg]
   used:   false
   viewed: false

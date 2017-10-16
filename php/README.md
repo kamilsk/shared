@@ -42,7 +42,7 @@
       - [ ] used
       - [ ] viewed
 
-- [phpstan/phpstan](https://github.com/phpstan/phpstan)
+- [phpstan/phpstan](https://github.com/phpstan/phpstan), [site](https://phpstan.org)
   - [ ] used
   - [ ] viewed
 
