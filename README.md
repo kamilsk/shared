@@ -8,7 +8,12 @@
 .PHONY: pull-github-tpl
 pull-github-tpl:
 	rm -rf .github
-	(git clone git@github.com:kamilsk/shared.git .github && cd .github && git checkout github-tpl-go-v1 \
-	  && echo 'github templates at revision' $$(git rev-parse HEAD) && rm -rf .git)
-	rm .github/README.md
+	git clone git@github.com:kamilsk/shared.git .github
+	( \
+	  cd .github && \
+	  git checkout github-tpl-go-v1 && \
+	  git branch -d master && \
+	  echo '- ' $$(cat README.md | head -n1 | awk '{print $$3}') 'at revision' $$(git rev-parse HEAD) \
+	)
+	rm -rf .github/.git .github/README.md
 ```
