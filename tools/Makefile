@@ -1,8 +1,8 @@
-GLIDE         = 0.12.3
+GLIDE         = 0.13.0
 PROTOC        = 3.4.1
-RELEASER      = 0.33.0
+RELEASER      = 0.35.5
 RETRY         = 2.1.2
-SEMAPHORE     = 4.1.0
+SEMAPHORE     = 4.2.0
 GOLANG_ALPINE = $(shell docker images | grep '^golang\s\+alpine' | awk '{print $$3}')
 
 include $(CWD)/tools/make/easyjson.mk

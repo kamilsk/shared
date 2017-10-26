@@ -1,4 +1,4 @@
-HUGO          = 0.29
+HUGO          = 0.30.2
 ALPINE_LATEST = $(shell docker images | grep '^alpine\s\+latest' | awk '{print $$3}')
 
 .PHONY: build-multi-stage-hugo

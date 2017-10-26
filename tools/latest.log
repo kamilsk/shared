@@ -4,9 +4,9 @@ METADATA:short
 Alpine Linux with Go and most useful Go tools
 
 METADATA:full
-Alpine Linux with Go ([golang](https://hub.docker.com/_/golang/):alpine.ed119d8f7db5), g++, gcc, git, libc-dev, mercurial and
-- [easyjson](https://github.com/mailru/easyjson).(2a92e67, [diff](https://github.com/mailru/easyjson/compare/2a92e67...master))
-- [glide](https://glide.sh).(v0.12.3, [diff](https://github.com/Masterminds/glide/compare/v0.12.3...master))
+Alpine Linux with Go ([golang](https://hub.docker.com/_/golang/):alpine.38f767662b86), g++, gcc, git, libc-dev, mercurial and
+- [easyjson](https://github.com/mailru/easyjson).(4d347d7, [diff](https://github.com/mailru/easyjson/compare/4d347d7...master))
+- [glide](https://glide.sh).(v0.13.0, [diff](https://github.com/Masterminds/glide/compare/v0.13.0...master))
 - [gometalinter](https://github.com/alecthomas/gometalinter).(v1.2.1, [diff](https://github.com/alecthomas/gometalinter/compare/v1.2.1...master))
   - aligncheck
   - deadcode
@@ -30,12 +30,12 @@ Alpine Linux with Go ([golang](https://hub.docker.com/_/golang/):alpine.ed119d8f
   - unparam
   - unused
   - varcheck
-- [goreleaser](https://goreleaser.github.io).(v0.33.0, [diff](https://github.com/goreleaser/goreleaser/compare/v0.33.0...master))
+- [goreleaser](https://goreleaser.github.io).(v0.35.5, [diff](https://github.com/goreleaser/goreleaser/compare/v0.35.5...master))
 - [protobuf](https://developers.google.com/protocol-buffers/).(v3.4.1, [diff](https://github.com/google/protobuf/compare/v3.4.1...master))
-- [golang/protobuf](https://github.com/golang/protobuf).(130e6b0, [diff](https://github.com/golang/protobuf/compare/130e6b0...master))
-- [gogo/protobuf](https://github.com/gogo/protobuf).(v0.4-56-g2adc21fd, [diff](https://github.com/gogo/protobuf/compare/v0.4-56-g2adc21fd...master))
+- [golang/protobuf](https://github.com/golang/protobuf).(1643683, [diff](https://github.com/golang/protobuf/compare/1643683...master))
+- [gogo/protobuf](https://github.com/gogo/protobuf).(v0.5-9-g117892bf, [diff](https://github.com/gogo/protobuf/compare/v0.5-9-g117892bf...master))
 - [retry](https://github.com/kamilsk/retry).(2.1.2, [diff](https://github.com/kamilsk/retry/compare/2.1.2...master))
-- [semaphore](https://github.com/kamilsk/semaphore).(4.1.0, [diff](https://github.com/kamilsk/semaphore/compare/4.1.0...master))
+- [semaphore](https://github.com/kamilsk/semaphore).(4.2.0, [diff](https://github.com/kamilsk/semaphore/compare/4.2.0...master))
 
 [Dockerfile](https://github.com/kamilsk/shared/blob/docker-go-v1/tools)
 [Useful Makefile](https://github.com/kamilsk/shared/blob/makefile-go-v1/docker/tools.mk)
