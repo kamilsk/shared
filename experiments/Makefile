@@ -1,5 +1,6 @@
 include $(CWD)/experiments/make/apicompat.mk
 include $(CWD)/experiments/make/benchcmp.mk
+include $(CWD)/experiments/make/buffalo.mk
 include $(CWD)/experiments/make/depth.mk
 include $(CWD)/experiments/make/godepq.mk
 include $(CWD)/experiments/make/goreporter.mk
@@ -25,6 +26,7 @@ clean-invalid-experiments:
 .PHONY: drop-experiments
 drop-experiments: drop-apicompat
 drop-experiments: drop-benchcmp
+drop-experiments: drop-buffalo
 drop-experiments: drop-depth
 drop-experiments: drop-godepq
 drop-experiments: drop-goreporter
@@ -37,6 +39,7 @@ drop-experiments: drop-zb
 .PHONY: publish-experiments
 publish-experiments: publish-apicompat
 publish-experiments: publish-benchcmp
+publish-experiments: publish-buffalo
 publish-experiments: publish-depth
 publish-experiments: publish-godepq
 publish-experiments: publish-goreporter
@@ -49,6 +52,7 @@ publish-experiments: publish-zb
 .PHONY: pull-experiments
 pull-experiments: pull-apicompat
 pull-experiments: pull-benchcmp
+pull-experiments: pull-buffalo
 pull-experiments: pull-depth
 pull-experiments: pull-godepq
 pull-experiments: pull-goreporter
