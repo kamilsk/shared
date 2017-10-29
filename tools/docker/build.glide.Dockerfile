@@ -7,7 +7,7 @@ ARG VERSION
 WORKDIR /tmp
 
 RUN apk add --no-cache ca-certificates wget \
- && update-ca-certificates \
+ && update-ca-certificates &>/dev/null \
  && wget -q -O glide.tar.gz \
     https://github.com/Masterminds/glide/releases/download/v${VERSION}/glide-v${VERSION}-linux-amd64.tar.gz \
  && mkdir glide && tar xf glide.tar.gz -C glide/ \

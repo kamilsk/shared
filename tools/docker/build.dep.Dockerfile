@@ -7,7 +7,7 @@ ARG VERSION
 WORKDIR /tmp
 
 RUN apk add --no-cache ca-certificates wget \
- && update-ca-certificates \
+ && update-ca-certificates &>/dev/null \
  && wget -q -O dep \
     https://github.com/golang/dep/releases/download/v${VERSION}/dep-linux-amd64 \
  && chmod +x dep \

@@ -7,7 +7,7 @@ ARG VERSION
 WORKDIR /tmp
 
 RUN apk add --no-cache ca-certificates wget \
- && update-ca-certificates \
+ && update-ca-certificates &>/dev/null \
  && wget -q -O retry.tar.gz \
     https://github.com/kamilsk/retry/releases/download/${VERSION}/retry_${VERSION}_Linux-64bit.tar.gz \
  && mkdir retry && tar xf retry.tar.gz -C retry/ \

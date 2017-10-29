@@ -7,7 +7,7 @@ ARG VERSION
 WORKDIR /tmp
 
 RUN apk add --no-cache ca-certificates wget \
- && update-ca-certificates \
+ && update-ca-certificates &>/dev/null \
  && wget -q -O semaphore.tar.gz \
     https://github.com/kamilsk/semaphore/releases/download/${VERSION}/semaphore_${VERSION}_Linux-64bit.tar.gz \
  && mkdir semaphore && tar xf semaphore.tar.gz -C semaphore/ \

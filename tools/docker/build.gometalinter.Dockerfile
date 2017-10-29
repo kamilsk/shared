@@ -5,7 +5,7 @@ LABEL maintainer="Kamil Samigullin <kamil@samigullin.info>"
 WORKDIR /tmp
 
 RUN apk add --no-cache ca-certificates git \
- && update-ca-certificates \
+ && update-ca-certificates &>/dev/null \
  && go get gopkg.in/alecthomas/gometalinter.v1 && mv /go/bin/gometalinter.v1 /go/bin/gometalinter \
  && export VERSION=$(cd /go/src/gopkg.in/alecthomas/gometalinter.v1 \
     && (git describe --tags 2> /dev/null || git rev-parse --short HEAD)) \

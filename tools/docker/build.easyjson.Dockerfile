@@ -5,7 +5,7 @@ LABEL maintainer="Kamil Samigullin <kamil@samigullin.info>"
 WORKDIR /tmp
 
 RUN apk add --no-cache ca-certificates git \
- && update-ca-certificates \
+ && update-ca-certificates &>/dev/null \
  && go get github.com/mailru/easyjson/... \
  && export VERSION=$(cd /go/src/github.com/mailru/easyjson \
     && (git describe --tags 2> /dev/null || git rev-parse --short HEAD)) \
