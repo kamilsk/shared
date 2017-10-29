@@ -4,7 +4,8 @@ METADATA:short
 Alpine Linux with Go and most useful Go tools
 
 METADATA:full
-Alpine Linux with Go ([golang](https://hub.docker.com/_/golang/):alpine.38f767662b86), g++, gcc, git, libc-dev, mercurial and
+Alpine Linux with Go ([golang](https://hub.docker.com/_/golang/):alpine.6e8378057093), g++, gcc, git, libc-dev, mercurial and
+- [dep](https://github.com/golang/dep).(v0.3.2, [diff](https://github.com/golang/dep/v0.3.2...master))
 - [easyjson](https://github.com/mailru/easyjson).(4d347d7, [diff](https://github.com/mailru/easyjson/compare/4d347d7...master))
 - [glide](https://glide.sh).(v0.13.0, [diff](https://github.com/Masterminds/glide/compare/v0.13.0...master))
 - [gometalinter](https://github.com/alecthomas/gometalinter).(v1.2.1, [diff](https://github.com/alecthomas/gometalinter/compare/v1.2.1...master))

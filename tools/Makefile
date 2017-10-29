@@ -1,3 +1,4 @@
+DEP           = 0.3.2
 GLIDE         = 0.13.0
 PROTOC        = 3.4.1
 RELEASER      = 0.35.5
@@ -5,6 +6,7 @@ RETRY         = 2.1.2
 SEMAPHORE     = 4.2.0
 GOLANG_ALPINE = $(shell docker images | grep '^golang\s\+alpine' | awk '{print $$3}')
 
+include $(CWD)/tools/make/dep.mk
 include $(CWD)/tools/make/easyjson.mk
 include $(CWD)/tools/make/glide.mk
 include $(CWD)/tools/make/gometalinter.mk
@@ -14,6 +16,7 @@ include $(CWD)/tools/make/retry.mk
 include $(CWD)/tools/make/semaphore.mk
 
 .PHONY: build-tools
+build-tools: build-dep
 build-tools: build-easyjson
 build-tools: build-glide
 build-tools: build-gometalinter
@@ -40,6 +43,7 @@ clean-tools-artifacts:
 	rm -rf $(CWD)/tools/artifacts &>/dev/null || true
 
 .PHONY: clean-tools-build-image
+clean-tools-build-image: clean-dep-build-image
 clean-tools-build-image: clean-easyjson-build-image
 clean-tools-build-image: clean-glide-build-image
 clean-tools-build-image: clean-gometalinter-build-image
