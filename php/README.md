@@ -2,12 +2,6 @@
 >
 > My collection of useful PHP packages.
 
-## cli-framework (reviewed at 2017-07-11)
-
-- [cilex/cilex](https://github.com/Cilex/Cilex), [site](http://cilex.github.io)
-  - [x] used
-  - [ ] viewed
-
 ## testing (reviewed at 2017-07-11)
 
 - [phpunit/phpunit](https://github.com/sebastianbergmann/phpunit), [site](https://phpunit.de)

@@ -2,41 +2,6 @@ reviewed: 2017-11-01
 
 list:
 
-- name: animate-components
-  src:  https://github.com/nitin42/animate-components
-  site: http://animate-components.surge.sh/
-  tags: [react, animation]
-  used:   false
-  viewed: false
-
-- name: britecharts
-  src:  https://github.com/eventbrite/britecharts
-  site: http://eventbrite.github.io/britecharts/
-  tags: [chart]
-  used:   false
-  viewed: false
-
-- name: Taucharts
-  src:  https://github.com/TargetProcess/tauCharts
-  site: https://www.taucharts.com/
-  tags: [chart]
-  used:   false
-  viewed: false
-
-- name: Draggable
-  src:  https://github.com/Shopify/draggable
-  site: https://shopify.github.io/draggable/
-  tags: [drag&drop]
-  used:   false
-  viewed: false
-
-- name: t-scroll
-  src:  https://github.com/crazychicken/t-scroll
-  site: http://t-scroll.com/
-  tags: [scroll, animation]
-  used:   false
-  viewed: false
-
 - name: Vue.js
   src:  https://github.com/vuejs/vue
   site: https://vuejs.org/
@@ -50,6 +15,15 @@ list:
   tags: [vue.js, components]
   used:   false
   viewed: false
+
+- name: Element
+  src:  https://github.com/ElemeFE/element
+  site: http://element-cn.eleme.io/
+  tags: [vue.js, components]
+  used:   false
+  viewed: false
+
+
 
 - name: React.js
   src:  https://github.com/facebook/react
@@ -65,6 +39,8 @@ list:
   used:   false
   viewed: false
 
+
+
 - name: prosemirror
   src:  https://github.com/ProseMirror/prosemirror
   site: http://prosemirror.net/
@@ -79,9 +55,27 @@ list:
   used:   false
   viewed: false
 
-- name: Element
-  src:  https://github.com/ElemeFE/element
-  site: http://element-cn.eleme.io/#/en-US
-  tags: [vue.jsm components]
+
+
+- name: britecharts
+  src:  https://github.com/eventbrite/britecharts
+  site: http://eventbrite.github.io/britecharts/
+  tags: [chart]
+  used:   false
+  viewed: false
+
+- name: Taucharts
+  src:  https://github.com/TargetProcess/tauCharts
+  site: https://www.taucharts.com/
+  tags: [chart]
+  used:   false
+  viewed: false
+
+
+
+- name: Draggable
+  src:  https://github.com/Shopify/draggable
+  site: https://shopify.github.io/draggable/
+  tags: [drag&drop]
   used:   false
   viewed: false

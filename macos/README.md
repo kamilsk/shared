@@ -4,11 +4,6 @@
 
 ## Development
 
-### Communication
-
-- [Twist](https://twistapp.com)
-  - [ ] active used
-
 ### Database
 
 - [Toad](https://itunes.apple.com/app/toad/id747961939)
@@ -32,15 +27,6 @@
     - [Skins at github](https://github.com/deathaxe/sublime-skins)
       - [x] active used
 
-    - [Sublime Text syntax highlighting and snippets at github](https://github.com/saltstack/sublime-text)
-      - [ ] active used
-
-    - [Sublime-vagrant at github](https://github.com/Stubbs/sublime-vagrant)
-      - [ ] active used
-
-    - [Syntax highlighting for Ansible files at github](https://github.com/clifford-github/sublime-ansible)
-      - [ ] active used
-
     - [The Sublime Text package manager](https://packagecontrol.io)
       - [x] active used
 
@@ -51,9 +37,6 @@
   - [x] active used
 
 ### GitHub
-
-- [Gitscout is a beautiful GitHub Issues experience for macOS](https://gitscout.com)
-  - [ ] active used
 
 - [Ship](https://www.realartists.com)
   - [x] active used
@@ -96,9 +79,6 @@
 ## Security
 
 - [1Password - Password Manager and Secure Wallet](https://itunes.apple.com/app/1password-password-manager/id568903335)
-  - [x] active used
-
-- [LastPass: Password Manager and Secure Vault](https://itunes.apple.com/app/lastpass-password-manager/id926036361)
   - [x] active used
 
 ## Workspace

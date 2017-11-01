@@ -1,4 +1,4 @@
-reviewed: 2017-10-04
+reviewed: 2017-11-01
 
 list:
 
@@ -8,8 +8,10 @@ list:
   used:   false
   viewed: false
 
-- name: github.com/onsi/gomega
-  src:  https://github.com/onsi/gomega
-  tags: [ginkgo]
-  used:   false
-  viewed: false
+  related:
+
+  - name: github.com/onsi/gomega
+    src:  https://github.com/onsi/gomega
+    tags: []
+    used:   false
+    viewed: false

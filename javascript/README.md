@@ -4,31 +4,15 @@
 
 ## interface (reviewed at 2017-11-01)
 
-- [animate-components](https://github.com/nitin42/animate-components), [site](http://animate-components.surge.sh/)
-  - [ ] used
-  - [ ] viewed
-
-- [britecharts](https://github.com/eventbrite/britecharts), [site](http://eventbrite.github.io/britecharts/)
-  - [ ] used
-  - [ ] viewed
-
-- [Taucharts](https://github.com/TargetProcess/tauCharts), [site](https://www.taucharts.com/)
-  - [ ] used
-  - [ ] viewed
-
-- [Draggable](https://github.com/Shopify/draggable), [site](https://shopify.github.io/draggable/)
-  - [ ] used
-  - [ ] viewed
-
-- [t-scroll](https://github.com/crazychicken/t-scroll), [site](http://t-scroll.com/)
-  - [ ] used
-  - [ ] viewed
-
 - [Vue.js](https://github.com/vuejs/vue), [site](https://vuejs.org/)
   - [ ] used
   - [ ] viewed
 
 - [Vuetify.js](https://github.com/vuetifyjs/vuetify), [site](https://vuetifyjs.com/)
+  - [ ] used
+  - [ ] viewed
+
+- [Element](https://github.com/ElemeFE/element), [site](http://element-cn.eleme.io/)
   - [ ] used
   - [ ] viewed
 
@@ -48,6 +32,14 @@
   - [ ] used
   - [ ] viewed
 
-- [Element](https://github.com/ElemeFE/element), [site](http://element-cn.eleme.io/#/en-US)
+- [britecharts](https://github.com/eventbrite/britecharts), [site](http://eventbrite.github.io/britecharts/)
+  - [ ] used
+  - [ ] viewed
+
+- [Taucharts](https://github.com/TargetProcess/tauCharts), [site](https://www.taucharts.com/)
+  - [ ] used
+  - [ ] viewed
+
+- [Draggable](https://github.com/Shopify/draggable), [site](https://shopify.github.io/draggable/)
   - [ ] used
   - [ ] viewed
