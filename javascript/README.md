@@ -2,7 +2,7 @@
 >
 > My collection of useful JavaScript packages.
 
-## interface (reviewed at 2017-10-16)
+## interface (reviewed at 2017-11-01)
 
 - [animate-components](https://github.com/nitin42/animate-components), [site](http://animate-components.surge.sh/)
   - [ ] used
@@ -45,5 +45,9 @@
   - [ ] viewed
 
 - [Trix](https://github.com/basecamp/trix), [site](https://trix-editor.org/)
+  - [ ] used
+  - [ ] viewed
+
+- [Element](https://github.com/ElemeFE/element), [site](http://element-cn.eleme.io/#/en-US)
   - [ ] used
   - [ ] viewed

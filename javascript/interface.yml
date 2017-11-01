@@ -1,4 +1,4 @@
-reviewed: 2017-10-16
+reviewed: 2017-11-01
 
 list:
 
@@ -76,5 +76,12 @@ list:
   src:  https://github.com/basecamp/trix
   site: https://trix-editor.org/
   tags: [wysiwyg]
+  used:   false
+  viewed: false
+
+- name: Element
+  src:  https://github.com/ElemeFE/element
+  site: http://element-cn.eleme.io/#/en-US
+  tags: [vue.jsm components]
   used:   false
   viewed: false
