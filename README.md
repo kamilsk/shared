@@ -16,3 +16,5 @@ Discovering
 $ make in-hugo
 $ docker run --rm -it kamilsk/go-tools
 ```
+
+[![Analytics](https://ga-beacon.appspot.com/UA-109817251-4/shared/docker-go-v1:readme)](https://github.com/igrigorik/ga-beacon)
