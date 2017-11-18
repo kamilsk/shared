@@ -33,3 +33,5 @@ the project team at feedback@octolab.org.
 
 - [collection](../../tree/collection) - my collection of useful things
 - [dotfiles](../../tree/dotfiles) - dotfiles to share through environments
+
+[![Analytics](https://ga-beacon.appspot.com/UA-109817251-4/shared/master:readme)](https://github.com/igrigorik/ga-beacon)
