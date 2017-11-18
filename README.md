@@ -21,3 +21,5 @@ pull-makes:
 ## Useful articles
 
 * [Go tooling essentials](https://rakyll.org/go-tool-flags/)
+
+[![Analytics](https://ga-beacon.appspot.com/UA-109817251-4/shared/makefile-go-v1:readme)](https://github.com/igrigorik/ga-beacon)
