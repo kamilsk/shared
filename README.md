@@ -17,3 +17,5 @@ pull-github-tpl:
 	)
 	rm -rf .github/.git .github/README.md
 ```
+
+[![Analytics](https://ga-beacon.appspot.com/UA-109817251-4/shared/github-tpl-go-v1:readme)](https://github.com/igrigorik/ga-beacon)
