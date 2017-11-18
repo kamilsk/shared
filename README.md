@@ -29,3 +29,5 @@
 #### [My wonderful world of macOS](https://github.com/nikitavoloboev/my-mac-os)
 
 #### [My configuration files for macOS](https://github.com/nikitavoloboev/dotfiles)
+
+[![Analytics](https://ga-beacon.appspot.com/UA-109817251-4/shared/collection:readme)](https://github.com/igrigorik/ga-beacon)
