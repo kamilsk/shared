@@ -2,6 +2,16 @@
 >
 > My collection of useful JavaScript packages.
 
+## editor (reviewed at 2017-11-25)
+
+- [prosemirror](https://github.com/ProseMirror/prosemirror), [site](http://prosemirror.net/)
+  - [ ] used
+  - [ ] viewed
+
+- [Trix](https://github.com/basecamp/trix), [site](https://trix-editor.org/)
+  - [ ] used
+  - [ ] viewed
+
 ## interface (reviewed at 2017-11-01)
 
 - [Vue.js](https://github.com/vuejs/vue), [site](https://vuejs.org/)
@@ -24,14 +34,6 @@
   - [ ] used
   - [ ] viewed
 
-- [prosemirror](https://github.com/ProseMirror/prosemirror), [site](http://prosemirror.net/)
-  - [ ] used
-  - [ ] viewed
-
-- [Trix](https://github.com/basecamp/trix), [site](https://trix-editor.org/)
-  - [ ] used
-  - [ ] viewed
-
 - [britecharts](https://github.com/eventbrite/britecharts), [site](http://eventbrite.github.io/britecharts/)
   - [ ] used
   - [ ] viewed
@@ -41,5 +43,11 @@
   - [ ] viewed
 
 - [Draggable](https://github.com/Shopify/draggable), [site](https://shopify.github.io/draggable/)
+  - [ ] used
+  - [ ] viewed
+
+## player (reviewed at 2017-11-25)
+
+- [Amplitude.js](https://github.com/521dimensions/amplitudejs), [site](https://521dimensions.com/open-source/amplitudejs)
   - [ ] used
   - [ ] viewed
