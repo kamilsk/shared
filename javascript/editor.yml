@@ -1,0 +1,17 @@
+reviewed: 2017-11-25
+
+list:
+
+- name: prosemirror
+  src:  https://github.com/ProseMirror/prosemirror
+  site: http://prosemirror.net/
+  tags: [wysiwyg]
+  used:   false
+  viewed: false
+
+- name: Trix
+  src:  https://github.com/basecamp/trix
+  site: https://trix-editor.org/
+  tags: [wysiwyg]
+  used:   false
+  viewed: false
