@@ -69,3 +69,15 @@ publish-nginx-alpine:
 .PHONY: publish-nginx-debian
 publish-nginx-debian:
 	docker push kamilsk/nginx:debian
+
+
+.PHONY: refresh-nginx
+refresh-nginx: drop-nginx refresh-nginx-alpine refresh-nginx-debian
+
+.PHONY: refresh-nginx-alpine
+refresh-nginx-alpine:
+	docker pull kamilsk/nginx:alpine
+
+.PHONY: refresh-nginx-debian
+refresh-nginx-debian:
+	docker pull kamilsk/nginx:debian

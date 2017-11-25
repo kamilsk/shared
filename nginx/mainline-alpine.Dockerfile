@@ -11,7 +11,7 @@ ENV LE_EMAIL   "kamil@samigullin.info"
 ADD conf/default.conf conf/nginx.conf script/entrypoint.sh metadata /
 
 RUN \
-    apk add --no-cache certbot openssl && \
+    apk add --no-cache certbot openssl tzdata && \
     mv /etc/nginx/nginx.conf /etc/nginx/nginx.origin && \
     mv /etc/nginx/conf.d/default.conf /etc/nginx/conf.d/default.origin && \
     mv /nginx.conf /etc/nginx/ && \
