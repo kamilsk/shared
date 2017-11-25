@@ -17,7 +17,7 @@
 
 ### [Meta information related with Jetbrains' IDE](jetbrains)
 
-### [Tools for Mac OS](macos)
+### [Tools for macOS and iOS](apple)
 
 ### [PHP packages](php)
 

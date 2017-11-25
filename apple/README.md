@@ -1,6 +1,6 @@
 > # shared:collection:macos
 >
-> My collection of useful tools for Mac OS.
+> My collection of useful tools for macOS and iOS.
 
 ## Development
 
@@ -66,6 +66,11 @@
 
 - [Notion](https://www.notion.so)
   - [ ] active used
+
+- [Spark](https://itunes.apple.com/app/spark-by-readdle/id997102246)
+  - [x] active used
+  - [x] iOS
+  - [x] macOS
 
 - [TickTick - your to-do list & task management](https://itunes.apple.com/app/ticktick-your-to-do-list-task/id966085870)
   - [ ] active used
