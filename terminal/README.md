@@ -39,6 +39,7 @@
 - https://github.com/nvie/gitflow                       [Shell]
 - https://github.com/magit/magit                        [Lisp]
 - https://github.com/sdg-mit/gitless                    [Python]
+- https://github.com/rgburke/grv                        [Go]
 
 ### GitHub
 
