@@ -22,13 +22,13 @@ cert() {
     aliases=$(echo $2 | sed -e 's/,/ /g')
 
     echo "run certbot for ${domain}..."
-    mkdir -p /usr/share/sites/$domain/.well-known/acme-challenge   || return $?
+    mkdir -p /usr/share/nginx/html/.well-known/acme-challenge      || return $?
     certbot certonly -t -n \
                      --agree-tos \
                      --renew-by-default \
                      --email "${LE_EMAIL}" \
                      --webroot \
-                     -w /usr/share/sites/$domain \
+                     -w /usr/share/nginx/html \
                      -d $domain                                    || return $?
     cp -fv /etc/letsencrypt/live/$domain/fullchain.pem ${SSL_CERT} || return $?
     cp -fv /etc/letsencrypt/live/$domain/privkey.pem   ${SSL_KEY}  || return $?
@@ -67,12 +67,11 @@ cert() {
 
             if $success; then
                 echo "setup ssl configuration for ${domain}..."
-                cat /etc/nginx/conf.d/$domain.conf | \
-                    sed "s|SSL_CERT|${SSL_CERT}|"  | \
-                    sed "s|SSL_KEY|${SSL_KEY}|"    | \
-                    sed 's/#:ssl //'               > /etc/nginx/conf.d/$domain.conf.buffer
-                cat /etc/nginx/conf.d/$domain.conf.buffer > /etc/nginx/conf.d/$domain.conf
-                rm /etc/nginx/conf.d/$domain.conf.buffer
+                envsubst '$$SSL_CERT $$SSL_KEY' \
+                    < /etc/nginx/conf.d/$domain.conf > /etc/nginx/conf.d/$domain.conf.tmp
+                sed -i 's/#:ssl //' /etc/nginx/conf.d/$domain.conf.tmp
+                cat /etc/nginx/conf.d/$domain.conf.tmp > /etc/nginx/conf.d/$domain.conf
+                rm /etc/nginx/conf.d/$domain.conf.tmp
                 echo "done"
             else
                 echo "setup ssl configuration for ${domain} is failed"

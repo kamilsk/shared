@@ -8,7 +8,7 @@ ENV TIME_ZONE  "UTC"
 ENV LE_ENABLED ""
 ENV LE_EMAIL   "kamil@samigullin.info"
 
-ADD conf/default.conf conf/nginx.conf script/entrypoint.sh metadata /
+ADD etc/default.conf etc/nginx.conf entrypoint.sh metadata /
 
 RUN \
     apk add --no-cache certbot openssl tzdata && \
