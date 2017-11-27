@@ -7,7 +7,7 @@
 
 ## Images
 
-### [kamilsk/php-tools](tools/Dockerfile)
+### [kamilsk/php-tools](https://hub.docker.com/r/kamilsk/php-tools/)
 
 ## Feedback
 
