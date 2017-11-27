@@ -58,7 +58,10 @@ const tplAwsm = `
 > # shared:collection:awesome
 >
 > Collection of collections for indexing.
-{{ range .List }}{{ template "ITEM" . }}{{ end -}}`
+{{ range .List }}{{ template "ITEM" . }}{{ end }}
+
+[![Analytics](https://ga-beacon.appspot.com/UA-109817251-4/shared/collection:awesome)](https://github.com/igrigorik/ga-beacon)
+`
 
 func (r *AwesomeSection) handle() error {
 	f, err := os.OpenFile("./awesome/list.yml", os.O_RDONLY, 0)

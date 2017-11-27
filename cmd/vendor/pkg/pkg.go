@@ -99,7 +99,10 @@ const tplPkg = `
 {{ range .Collections }}
 ## {{ .Name }} {{ if eq .Reviewed "" }}(not reviewed yet){{ else }}(reviewed at {{ .Reviewed }}){{ end }}
 {{- range .List }}{{ template "PACKAGE" . }}{{ end }}
-{{ end -}}`
+{{ end }}
+
+[![Analytics](https://ga-beacon.appspot.com/UA-109817251-4/shared/collection:{{ .ID }})](https://github.com/igrigorik/ga-beacon)
+`
 
 func (r *PackageSection) handle() error {
 	m, err := filepath.Glob("./" + r.ID + "/*.yml")

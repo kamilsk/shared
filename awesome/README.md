@@ -77,3 +77,5 @@
 ### [Public-APIs](https://github.com/abhishekbanthia/Public-APIs)
 
 ### [React Components & Libraries](https://github.com/brillout/awesome-react-components)
+
+[![Analytics](https://ga-beacon.appspot.com/UA-109817251-4/shared/collection:awesome)](https://github.com/igrigorik/ga-beacon)

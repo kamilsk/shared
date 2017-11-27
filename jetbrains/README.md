@@ -78,3 +78,5 @@
  - [ ] XPathView + XSLT Support
  - [ ] XSLT-Debugger
  - [x] YAML
+
+[![Analytics](https://ga-beacon.appspot.com/UA-109817251-4/shared/collection:jetbrains)](https://github.com/igrigorik/ga-beacon)

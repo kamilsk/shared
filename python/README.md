@@ -61,3 +61,5 @@
     - [thumbor](https://github.com/thumbor/thumbor), [site](http://thumbor.org)
       - [ ] used
       - [ ] viewed
+
+[![Analytics](https://ga-beacon.appspot.com/UA-109817251-4/shared/collection:python)](https://github.com/igrigorik/ga-beacon)

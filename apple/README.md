@@ -99,3 +99,5 @@
 
 - [Flycut](https://itunes.apple.com/app/flycut-clipboard-manager/id442160987)
   - [ ] active used
+
+[![Analytics](https://ga-beacon.appspot.com/UA-109817251-4/shared/collection:apple)](https://github.com/igrigorik/ga-beacon)

@@ -45,3 +45,5 @@
     - [github.com/onsi/gomega](https://github.com/onsi/gomega)
       - [ ] used
       - [ ] viewed
+
+[![Analytics](https://ga-beacon.appspot.com/UA-109817251-4/shared/collection:go)](https://github.com/igrigorik/ga-beacon)

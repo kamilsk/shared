@@ -70,3 +70,5 @@
 
 - https://github.com/future-architect/vuls              [Go]
 - https://github.com/uber/focuson                       [Python]
+
+[![Analytics](https://ga-beacon.appspot.com/UA-109817251-4/shared/collection:terminal)](https://github.com/igrigorik/ga-beacon)
