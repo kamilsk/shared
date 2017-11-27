@@ -23,7 +23,7 @@ Inspired by [umputun/nginx-le](https://hub.docker.com/r/umputun/nginx-le/).
 
 ## Feedback
 
-[![@kamilsk](https://img.shields.io/badge/author-%40ikamilsk-blue.svg)](https://twitter.com/ikamilsk)
+[![@kamilsk](https://img.shields.io/badge/author-%40kamilsk-blue.svg)](https://twitter.com/ikamilsk)
 [![@octolab](https://img.shields.io/badge/sponsor-%40octolab-blue.svg)](https://twitter.com/octolab_inc)
 
 ## Notes
