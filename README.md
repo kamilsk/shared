@@ -21,6 +21,11 @@ $ docker run --rm -d \
 
 Inspired by [umputun/nginx-le](https://hub.docker.com/r/umputun/nginx-le/).
 
+#### Useful
+
+- [ ] [Let's Encrypt documentation](https://letsencrypt.org/docs/)
+- [ ] [Certbot documentation](https://certbot.eff.org/docs/)
+
 ## Feedback
 
 [![@kamilsk](https://img.shields.io/badge/author-%40kamilsk-blue.svg)](https://twitter.com/ikamilsk)
