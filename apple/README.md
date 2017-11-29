@@ -2,6 +2,8 @@
 >
 > My collection of useful tools for macOS and iOS.
 
+[![Patreon](https://img.shields.io/badge/patreon-donate-orange.svg)](https://www.patreon.com/octolab)
+
 ## Development
 
 ### Database
@@ -99,5 +101,9 @@
 
 - [Flycut](https://itunes.apple.com/app/flycut-clipboard-manager/id442160987)
   - [ ] active used
+
+## Notes
+
+- made with ❤️ by [OctoLab](https://www.octolab.org/)
 
 [![Analytics](https://ga-beacon.appspot.com/UA-109817251-4/shared/collection:apple)](https://github.com/igrigorik/ga-beacon)

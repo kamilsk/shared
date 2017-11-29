@@ -2,6 +2,8 @@
 >
 > My collection of useful CLI tools.
 
+[![Patreon](https://img.shields.io/badge/patreon-donate-orange.svg)](https://www.patreon.com/octolab)
+
 ## Encoding
 
 ### Image
@@ -70,5 +72,9 @@
 
 - https://github.com/future-architect/vuls              [Go]
 - https://github.com/uber/focuson                       [Python]
+
+## Notes
+
+- made with ❤️ by [OctoLab](https://www.octolab.org/)
 
 [![Analytics](https://ga-beacon.appspot.com/UA-109817251-4/shared/collection:terminal)](https://github.com/igrigorik/ga-beacon)

@@ -58,7 +58,14 @@ const tplAwsm = `
 > # shared:collection:awesome
 >
 > Collection of collections for indexing.
+
+[![Patreon](https://img.shields.io/badge/patreon-donate-orange.svg)](https://www.patreon.com/octolab)
+
 {{ range .List }}{{ template "ITEM" . }}{{ end }}
+
+## Notes
+
+- made with ❤️ by [OctoLab](https://www.octolab.org/)
 
 [![Analytics](https://ga-beacon.appspot.com/UA-109817251-4/shared/collection:awesome)](https://github.com/igrigorik/ga-beacon)
 `

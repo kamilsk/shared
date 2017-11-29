@@ -2,6 +2,8 @@
 >
 > My collection of useful JavaScript packages.
 
+[![Patreon](https://img.shields.io/badge/patreon-donate-orange.svg)](https://www.patreon.com/octolab)
+
 ## editor (reviewed at 2017-11-25)
 
 - [prosemirror](https://github.com/ProseMirror/prosemirror), [site](http://prosemirror.net/)
@@ -51,5 +53,9 @@
 - [Amplitude.js](https://github.com/521dimensions/amplitudejs), [site](https://521dimensions.com/open-source/amplitudejs)
   - [ ] used
   - [ ] viewed
+
+## Notes
+
+- made with ❤️ by [OctoLab](https://www.octolab.org/)
 
 [![Analytics](https://ga-beacon.appspot.com/UA-109817251-4/shared/collection:javascript)](https://github.com/igrigorik/ga-beacon)

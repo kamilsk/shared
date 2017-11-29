@@ -2,6 +2,8 @@
 >
 > My collection of useful Go packages.
 
+[![Patreon](https://img.shields.io/badge/patreon-donate-orange.svg)](https://www.patreon.com/octolab)
+
 ## database (reviewed at 2017-11-01)
 
 - [github.com/jmoiron/sqlx](https://github.com/jmoiron/sqlx)
@@ -45,5 +47,9 @@
     - [github.com/onsi/gomega](https://github.com/onsi/gomega)
       - [ ] used
       - [ ] viewed
+
+## Notes
+
+- made with ❤️ by [OctoLab](https://www.octolab.org/)
 
 [![Analytics](https://ga-beacon.appspot.com/UA-109817251-4/shared/collection:go)](https://github.com/igrigorik/ga-beacon)

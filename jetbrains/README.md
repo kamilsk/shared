@@ -2,6 +2,8 @@
 >
 > Meta information related with Jetbrains' IDE.
 
+[![Patreon](https://img.shields.io/badge/patreon-donate-orange.svg)](https://www.patreon.com/octolab)
+
 ## PhpStorm
 
 ### Plugins
@@ -78,5 +80,9 @@
  - [ ] XPathView + XSLT Support
  - [ ] XSLT-Debugger
  - [x] YAML
+
+## Notes
+
+- made with ❤️ by [OctoLab](https://www.octolab.org/)
 
 [![Analytics](https://ga-beacon.appspot.com/UA-109817251-4/shared/collection:jetbrains)](https://github.com/igrigorik/ga-beacon)

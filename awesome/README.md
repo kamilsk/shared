@@ -2,6 +2,8 @@
 >
 > Collection of collections for indexing.
 
+[![Patreon](https://img.shields.io/badge/patreon-donate-orange.svg)](https://www.patreon.com/octolab)
+
 ### [A.W.E.S.O.M. O](https://github.com/lk-geimfari/awesomo)
 
 ### [Awesome](https://github.com/sindresorhus/awesome)
@@ -77,5 +79,9 @@
 ### [Public-APIs](https://github.com/abhishekbanthia/Public-APIs)
 
 ### [React Components & Libraries](https://github.com/brillout/awesome-react-components)
+
+## Notes
+
+- made with ❤️ by [OctoLab](https://www.octolab.org/)
 
 [![Analytics](https://ga-beacon.appspot.com/UA-109817251-4/shared/collection:awesome)](https://github.com/igrigorik/ga-beacon)

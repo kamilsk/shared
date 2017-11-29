@@ -2,6 +2,8 @@
 >
 > My collection of useful PHP packages.
 
+[![Patreon](https://img.shields.io/badge/patreon-donate-orange.svg)](https://www.patreon.com/octolab)
+
 ## testing (reviewed at 2017-07-11)
 
 - [phpunit/phpunit](https://github.com/sebastianbergmann/phpunit), [site](https://phpunit.de)
@@ -97,5 +99,9 @@
 - [elementor](https://github.com/pojome/elementor), [site](https://elementor.com)
   - [ ] used
   - [ ] viewed
+
+## Notes
+
+- made with ❤️ by [OctoLab](https://www.octolab.org/)
 
 [![Analytics](https://ga-beacon.appspot.com/UA-109817251-4/shared/collection:php)](https://github.com/igrigorik/ga-beacon)

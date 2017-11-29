@@ -2,6 +2,8 @@
 >
 > My collection of useful Python packages.
 
+[![Patreon](https://img.shields.io/badge/patreon-donate-orange.svg)](https://www.patreon.com/octolab)
+
 ## async (reviewed at 2017-07-11)
 
 - [Celery](https://github.com/celery/celery), [site](http://www.celeryproject.org)
@@ -61,5 +63,9 @@
     - [thumbor](https://github.com/thumbor/thumbor), [site](http://thumbor.org)
       - [ ] used
       - [ ] viewed
+
+## Notes
+
+- made with ❤️ by [OctoLab](https://www.octolab.org/)
 
 [![Analytics](https://ga-beacon.appspot.com/UA-109817251-4/shared/collection:python)](https://github.com/igrigorik/ga-beacon)

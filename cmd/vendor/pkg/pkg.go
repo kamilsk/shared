@@ -96,10 +96,17 @@ const tplPkg = `
 > # shared:collection:{{ .ID }}
 >
 > {{ .Description }}.
+
+[![Patreon](https://img.shields.io/badge/patreon-donate-orange.svg)](https://www.patreon.com/octolab)
+
 {{ range .Collections }}
 ## {{ .Name }} {{ if eq .Reviewed "" }}(not reviewed yet){{ else }}(reviewed at {{ .Reviewed }}){{ end }}
 {{- range .List }}{{ template "PACKAGE" . }}{{ end }}
 {{ end }}
+
+## Notes
+
+- made with ❤️ by [OctoLab](https://www.octolab.org/)
 
 [![Analytics](https://ga-beacon.appspot.com/UA-109817251-4/shared/collection:{{ .ID }})](https://github.com/igrigorik/ga-beacon)
 `
