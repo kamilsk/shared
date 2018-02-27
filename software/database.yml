@@ -1,0 +1,24 @@
+reviewed: 2018-02-27
+
+list:
+
+- name: RethinkDB
+  src:  https://github.com/rethinkdb/rethinkdb
+  site: https://www.rethinkdb.com/
+  tags: []
+  used:   false
+  viewed: false
+
+- name: ClickHouse
+  src:  https://github.com/yandex/ClickHouse
+  site: https://clickhouse.yandex/
+  tags: []
+  used:   false
+  viewed: false
+
+- name: PostgreSQL
+  src:  https://github.com/postgres/postgres
+  site: https://www.postgresql.org/
+  tags: []
+  used:   true
+  viewed: false

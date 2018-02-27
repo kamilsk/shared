@@ -39,7 +39,7 @@ func parse() (string, renderer) {
 	fs.Parse(os.Args[1:])
 
 	switch section {
-	case "css", "go", "javascript", "php", "python":
+	case "css", "go", "javascript", "php", "python", "software":
 		return section, &pkg.PackageSection{
 			ID:          section,
 			Description: description,

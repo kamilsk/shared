@@ -9,6 +9,7 @@ build: build-js
 build: build-jb
 build: build-php
 build: build-py
+build: build-sw
 build: build-term
 
 .PHONY: build-awsm
@@ -42,6 +43,10 @@ build-php:
 .PHONY: build-py
 build-py:
 	docker run --rm -it -v '$(PWD)':/go/src/py -w /go/src/py golang:latest go run cmd/build.go -s python -d 'My collection of useful Python packages'
+
+.PHONY: build-sw
+build-sw:
+	docker run --rm -it -v '$(PWD)':/go/src/sw -w /go/src/sw golang:latest go run cmd/build.go -s software -d 'My collection of useful software'
 
 .PHONY: build-term
 build-term:

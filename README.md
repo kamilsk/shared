@@ -9,6 +9,8 @@
 
 ### [Browser extensions](browser)
 
+### [CLI tools](terminal)
+
 ### [CSS packages](css)
 
 ### [Go packages](go)
@@ -17,13 +19,13 @@
 
 ### [Meta information related with Jetbrains' IDE](jetbrains)
 
-### [Tools for macOS and iOS](apple)
-
 ### [PHP packages](php)
 
 ### [Python packages](python)
 
-### [CLI tools](terminal)
+### [Software](software)
+
+### [Tools for macOS and iOS](apple)
 
 ## Very useful
 
