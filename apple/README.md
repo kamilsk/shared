@@ -47,6 +47,7 @@
 
 ## Productivity
 
+- [Alfred](https://www.alfredapp.com/)
 - [Be Focused Pro](https://itunes.apple.com/app/be-focused-pro-focus-timer/id961632517)
 - [Spark](https://sparkmailapp.com/)
 - [TickTick](https://ticktick.com/)
