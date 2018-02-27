@@ -1,9 +1,9 @@
 > # shared:collection
->
+> [![Analytics](https://ga-beacon.appspot.com/UA-109817251-4/shared/collection:readme?pixel)](https://github.com/kamilsk/shared/tree/collection)
 > My collection of useful things.
 
 [![Patreon](https://img.shields.io/badge/patreon-donate-orange.svg)](https://www.patreon.com/octolab)
-[![License](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](LICENSE)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 ### [Awesome lists](awesome)
 
@@ -38,8 +38,6 @@
 [![@kamilsk](https://img.shields.io/badge/author-%40kamilsk-blue.svg)](https://twitter.com/ikamilsk)
 [![@octolab](https://img.shields.io/badge/sponsor-%40octolab-blue.svg)](https://twitter.com/octolab_inc)
 
-## Notes
+---
 
-- made with ❤️ by [OctoLab](https://www.octolab.org/)
-
-[![Analytics](https://ga-beacon.appspot.com/UA-109817251-4/shared/collection:readme)](https://github.com/igrigorik/ga-beacon)
+made with ❤️ by [OctoLab](https://www.octolab.org/)

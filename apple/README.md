@@ -1,5 +1,5 @@
 > # shared:collection:macos
->
+> [![Analytics](https://ga-beacon.appspot.com/UA-109817251-4/shared/collection:apple?pixel)](https://github.com/kamilsk/shared/tree/collection)
 > My collection of useful tools for macOS and iOS.
 
 [![Patreon](https://img.shields.io/badge/patreon-donate-orange.svg)](https://www.patreon.com/octolab)
@@ -8,102 +8,61 @@
 
 ### Database
 
-- [Toad](https://itunes.apple.com/app/toad/id747961939)
-  - [ ] active used
-
-- [PopSQL](https://popsql.io)
-  - [ ] active used
+- [Sequel Pro](https://www.sequelpro.com/)
+  - Alternatives:
+    - [PopSQL](https://popsql.io/)
 
 ### Documentation
 
-- [Dash gives your Mac instant offline access to 150+ API documentation sets](https://kapeli.com/dash)
-  - [ ] active used
+- [Dash](https://kapeli.com/dash)
 
 ### Editor
 
-- [Sublime Text](https://www.sublimetext.com)
-  - [x] active used
-
+- [Sublime Text](https://www.sublimetext.com/)
   - Related:
-
     - [Skins at github](https://github.com/deathaxe/sublime-skins)
-      - [x] active used
-
-    - [The Sublime Text package manager](https://packagecontrol.io)
-      - [x] active used
-
+    - [The Sublime Text package manager](https://packagecontrol.io/)
     - [Theme ayu at github](https://github.com/dempfi/ayu)
-      - [x] active used
-
-- [Visual Studio Code](https://code.visualstudio.com)
-  - [x] active used
+- [Visual Studio Code](https://code.visualstudio.com/)
+  - Related:
+    - [Polacode](https://marketplace.visualstudio.com/items?itemName=pnp.polacode)
 
 ### GitHub
 
 - [Cacher](https://www.cacher.io/)
-  - [ ] active used
-
-- [Ship](https://www.realartists.com)
-  - [x] active used
+- [Ship](https://www.realartists.com/)
 
 ## Editor
 
-- [Grammarly](https://www.grammarly.com)
-  - [x] active used
+- [Grammarly](https://www.grammarly.com/)
 
 ## Health
 
-- [f.lux makes the color of your computer's display adapt to the time of day, warm at night and like sunlight during the day](https://justgetflux.com)
-  - [x] active used
+- [f.lux](https://justgetflux.com/)
 
 ## Maintenance
 
-- [Daisy Disk is tool for analyzing disk usage on the Mac](https://itunes.apple.com/ru/app/daisydisk/id411643860)
-  - [ ] active used
-
-- [Mac cleaning software](https://macpaw.com/ru/cleanmymac)
-  - [x] active used
+- [CleanMyMac](https://macpaw.com/cleanmymac)
+- [Daisy Disk](https://daisydiskapp.com/)
 
 ## Productivity
 
-- [Be Focused Pro - Focus Timer & Goal Tracker](https://itunes.apple.com/app/be-focused-pro-focus-timer/id961632517)
-  - [x] active used
-
-- [Notion](https://www.notion.so)
-  - [ ] active used
-
-- [Spark](https://itunes.apple.com/app/spark-by-readdle/id997102246)
-  - [x] active used
-  - [x] iOS
-  - [x] macOS
-
-- [TickTick - your to-do list & task management](https://itunes.apple.com/app/ticktick-your-to-do-list-task/id966085870)
-  - [ ] active used
-
-- [Todoist: To Do List | Task List](https://itunes.apple.com/app/todoist-to-do-list-task-list/id585829637)
-  - [ ] active used
-
-- [Wunderlist: To-Do List & Tasks](https://itunes.apple.com/app/wunderlist-to-do-list-tasks/id410628904)
-  - [x] active used
+- [Be Focused Pro](https://itunes.apple.com/app/be-focused-pro-focus-timer/id961632517)
+- [Spark](https://sparkmailapp.com/)
+- [TickTick](https://ticktick.com/)
+  - Alternatives:
+    - [Todoist](https://todoist.com/)
+- [Wunderlist](https://www.wunderlist.com/)
 
 ## Security
 
-- [1Password - Password Manager and Secure Wallet](https://itunes.apple.com/app/1password-password-manager/id568903335)
-  - [x] active used
+- [1Password](https://1password.com/)
 
 ## Workspace
 
-- [Bartender 2 | Mac Menu Bar Item Control](https://www.macbartender.com)
-  - [x] active used
+- [Bartender](https://www.macbartender.com/)
+- [Magnet](http://magnet.crowdcafe.com/)
 
-- [Magnet](https://itunes.apple.com/app/magnet/id441258766)
-  - [x] active used
+---
 
-- [Flycut](https://itunes.apple.com/app/flycut-clipboard-manager/id442160987)
-  - [ ] active used
-
-## Notes
-
-- made with ❤️ by [OctoLab](https://www.octolab.org/)
-
-[![Analytics](https://ga-beacon.appspot.com/UA-109817251-4/shared/collection:apple)](https://github.com/igrigorik/ga-beacon)
+made with ❤️ by [OctoLab](https://www.octolab.org/)
