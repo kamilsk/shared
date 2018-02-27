@@ -5,7 +5,7 @@
 [![Patreon](https://img.shields.io/badge/patreon-donate-orange.svg)](https://www.patreon.com/octolab)
 
 
-## ui-kit (reviewed at 2017-11-25)
+## ui-kit (reviewed at 2018-02-27)
 
 - [Bootstrap](https://github.com/twbs/bootstrap), [site](https://getbootstrap.com/)
   - [x] used

@@ -1,4 +1,4 @@
-reviewed: 2017-11-01
+reviewed: 2018-02-27
 
 list:
 
@@ -18,14 +18,14 @@ list:
 
 - name: Element
   src:  https://github.com/ElemeFE/element
-  site: http://element-cn.eleme.io/
+  site: http://element.eleme.io/
   tags: [vue.js, components]
   used:   false
   viewed: false
 
 
 
-- name: React.js
+- name: React
   src:  https://github.com/facebook/react
   site: https://reactjs.org/
   tags: [framework]
@@ -35,13 +35,20 @@ list:
 - name: Ring UI
   src:  https://github.com/JetBrains/ring-ui
   site: https://jetbrains.org/ring-ui/index.html
-  tags: [react.js, components]
+  tags: [react, components]
+  used:   false
+  viewed: false
+
+- name: Material-UI
+  src:  https://github.com/mui-org/material-ui
+  site: http://www.material-ui.com/
+  tags: [react, components]
   used:   false
   viewed: false
 
 
 
-- name: britecharts
+- name: Britecharts
   src:  https://github.com/eventbrite/britecharts
   site: http://eventbrite.github.io/britecharts/
   tags: [chart]
