@@ -73,6 +73,12 @@
 - https://github.com/future-architect/vuls              [Go]
 - https://github.com/uber/focuson                       [Python]
 
+## Zsh
+
+- https://github.com/zsh-users/zsh                      [C]
+- https://github.com/robbyrussell/oh-my-zsh             [Shell]
+- https://github.com/denysdovhan/spaceship-prompt       [Shell]
+
 ---
 
 [![@kamilsk](https://img.shields.io/badge/author-%40kamilsk-blue.svg)](https://twitter.com/ikamilsk)
