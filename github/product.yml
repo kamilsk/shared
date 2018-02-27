@@ -1,0 +1,23 @@
+reviewed: ~
+
+list:
+
+- name: CoreOS
+  url:  https://github.com/coreos
+  tags: []
+
+- name: Docker
+  url:  https://github.com/docker
+  tags: []
+
+- name: Kubernetes
+  url:  https://github.com/kubernetes
+  tags: []
+
+- name: Prometheus
+  url:  https://github.com/prometheus
+  tags: []
+
+- name: Symfony
+  url:  https://github.com/symfony
+  tags: []

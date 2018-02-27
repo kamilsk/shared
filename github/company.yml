@@ -1,0 +1,55 @@
+reviewed: ~
+
+list:
+
+- name: Badoo Tech
+  url:  https://github.com/badoo
+  tags: []
+
+- name: Facebook
+  url:  https://github.com/facebook
+  tags: []
+
+- name: Microsoft
+  url:  https://github.com/microsoft
+  tags: []
+
+- name: Google
+  url:  https://github.com/google
+  tags: []
+
+- name: Netflix, Inc.
+  url:  https://github.com/netflix
+  tags: []
+
+- name: Uber Open Source
+  url:  https://github.com/uber
+  tags: []
+
+- name: Yandex
+  url:  https://github.com/yandex
+  tags: []
+
+- name: GitHub
+  url:  https://github.com/github
+  tags: []
+
+- name: HashiCorp
+  url:  https://github.com/hashicorp
+  tags: []
+
+- name: Free and open source software developed at Mail.Ru
+  url:  https://github.com/mailru
+  tags: []
+
+- name: Mozilla
+  url:  https://github.com/mozilla
+  tags: []
+
+- name: Paragon Initiative Enterprises
+  url:  https://github.com/paragonie
+  tags: []
+
+- name: 2GIS
+  url:  https://github.com/2gis
+  tags: []
