@@ -70,3 +70,19 @@ list:
   tags: [drag&drop]
   used:   false
   viewed: false
+
+
+
+- name: Emergence.js
+  src:  https://github.com/xtianmiller/emergence.js
+  site: https://xtianmiller.github.io/emergence.js/
+  tags: [scroll]
+  used:   false
+  viewed: false
+
+- name: Scrollama
+  src:  https://github.com/russellgoldenberg/scrollama
+  site: https://russellgoldenberg.github.io/scrollama/basic/
+  tags: [scroll]
+  used:   false
+  viewed: false

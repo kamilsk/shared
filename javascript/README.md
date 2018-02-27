@@ -53,6 +53,14 @@
   - [ ] used
   - [ ] viewed
 
+- [Emergence.js](https://github.com/xtianmiller/emergence.js), [site](https://xtianmiller.github.io/emergence.js/)
+  - [ ] used
+  - [ ] viewed
+
+- [Scrollama](https://github.com/russellgoldenberg/scrollama), [site](https://russellgoldenberg.github.io/scrollama/basic/)
+  - [ ] used
+  - [ ] viewed
+
 ## player (reviewed at 2017-11-25)
 
 - [Amplitude.js](https://github.com/521dimensions/amplitudejs), [site](https://521dimensions.com/open-source/amplitudejs)
