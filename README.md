@@ -1,9 +1,9 @@
 > # shared
->
+> [![Analytics](https://ga-beacon.appspot.com/UA-109817251-4/shared/master:readme?pixel)](https://github.com/kamilsk/shared/tree/collection)
 > Some shared things.
 
 [![Patreon](https://img.shields.io/badge/patreon-donate-orange.svg)](https://www.patreon.com/octolab)
-[![License](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](LICENSE)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 ## Code of Conduct
 
@@ -16,34 +16,30 @@ the project team at feedback@octolab.org.
 ## Docker
 
 - [docker-common](../../tree/docker-common) - custom docker images for common usage
-- [docker-go-v1](../../tree/docker-go-v1) - custom docker images for Go environment
-- [docker-php-v1](../../tree/docker-php-v1) - custom docker images for PHP environment
-- docker-py-v1 - custom docker images for Python environment (soon)
+- [docker-go](../../tree/docker-go-v1) - custom docker images for Go environment
+- [docker-php](../../tree/docker-php-v1) - custom docker images for PHP environment
+- docker-py - custom docker images for Python environment (soon)
 
 ## GitHub
 
-- [github-tpl-go-v1](../../tree/github-tpl-go-v1) - templates for Go projects at GitHub
-- github-tpl-php-v1 - templates for PHP projects at GitHub (soon)
-- github-tpl-py-v1 - templates for Python projects at GitHub (soon)
+- [github-tpl-go](../../tree/github-tpl-go-v1) - templates for Go projects at GitHub
+- github-tpl-php - templates for PHP projects at GitHub (soon)
+- github-tpl-py - templates for Python projects at GitHub (soon)
 
 ## Makefile
 
-- [makefile-go-v1](../../tree/makefile-go-v1) - snippets of GNU Make for Go environment
-- makefile-php-v1 - snippets of GNU Make for PHP environment (soon)
-- makefile-py-v1 - snippets of GNU Make for Python environment (soon)
+- [makefile-go](../../tree/makefile-go-v1) - snippets of GNU Make for Go environment
+- makefile-php - snippets of GNU Make for PHP environment (soon)
+- makefile-py - snippets of GNU Make for Python environment (soon)
 
 ## Useful
 
 - [collection](../../tree/collection) - my collection of useful things
 - [dotfiles](../../tree/dotfiles) - dotfiles to share through environments
 
-## Feedback
+---
 
 [![@kamilsk](https://img.shields.io/badge/author-%40kamilsk-blue.svg)](https://twitter.com/ikamilsk)
 [![@octolab](https://img.shields.io/badge/sponsor-%40octolab-blue.svg)](https://twitter.com/octolab_inc)
 
-## Notes
-
-- made with ❤️ by [OctoLab](https://www.octolab.org/)
-
-[![Analytics](https://ga-beacon.appspot.com/UA-109817251-4/shared/master:readme)](https://github.com/igrigorik/ga-beacon)
+made with ❤️ by [OctoLab](https://www.octolab.org/)
