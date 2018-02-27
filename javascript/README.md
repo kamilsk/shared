@@ -5,13 +5,17 @@
 [![Patreon](https://img.shields.io/badge/patreon-donate-orange.svg)](https://www.patreon.com/octolab)
 
 
-## editor (reviewed at 2017-11-25)
+## editor (reviewed at 2018-02-27)
 
 - [prosemirror](https://github.com/ProseMirror/prosemirror), [site](http://prosemirror.net/)
   - [ ] used
   - [ ] viewed
 
 - [Trix](https://github.com/basecamp/trix), [site](https://trix-editor.org/)
+  - [ ] used
+  - [ ] viewed
+
+- [TOAST UI Editor](https://github.com/nhnent/tui.editor), [site](https://nhnent.github.io/tui.editor/)
   - [ ] used
   - [ ] viewed
 

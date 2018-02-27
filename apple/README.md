@@ -26,6 +26,7 @@
 - [Visual Studio Code](https://code.visualstudio.com/)
   - Related:
     - [Polacode](https://marketplace.visualstudio.com/items?itemName=pnp.polacode)
+    - [Rainglow Color Themes](https://rainglow.io/)
 
 ### GitHub
 
