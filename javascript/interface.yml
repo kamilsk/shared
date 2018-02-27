@@ -46,6 +46,13 @@ list:
   used:   false
   viewed: false
 
+- name: React Chartkick
+  src:  https://github.com/ankane/react-chartkick
+  site: https://www.chartkick.com/react
+  tags: [react, chart]
+  used:   false
+  viewed: false
+
 
 
 - name: Britecharts

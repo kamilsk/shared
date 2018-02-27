@@ -41,6 +41,10 @@
   - [ ] used
   - [ ] viewed
 
+- [React Chartkick](https://github.com/ankane/react-chartkick), [site](https://www.chartkick.com/react)
+  - [ ] used
+  - [ ] viewed
+
 - [Britecharts](https://github.com/eventbrite/britecharts), [site](http://eventbrite.github.io/britecharts/)
   - [ ] used
   - [ ] viewed
