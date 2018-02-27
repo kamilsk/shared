@@ -55,7 +55,6 @@
 - https://github.com/atsaki/termeter                    [Go]
 - https://github.com/bcicen/docker-replay               [Python]
 - https://github.com/jingweno/ccat                      [Go]
-
 - https://github.com/kpashka/easy                       [Go]
 - https://github.com/tj/mmake                           [Go]
 
@@ -72,12 +71,6 @@
 
 - https://github.com/future-architect/vuls              [Go]
 - https://github.com/uber/focuson                       [Python]
-
-## Zsh
-
-- https://github.com/zsh-users/zsh                      [C]
-- https://github.com/robbyrussell/oh-my-zsh             [Shell]
-- https://github.com/denysdovhan/spaceship-prompt       [Shell]
 
 ---
 
