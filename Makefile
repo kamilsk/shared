@@ -13,7 +13,7 @@ build: build-term
 
 .PHONY: build-awsm
 build-awsm:
-	go run cmd/build.go -s awesome
+	docker run --rm -it -v '$(PWD)':/go/src/awsm -w /go/src/awsm golang:latest go run cmd/build.go -s awesome
 
 .PHONY: build-br
 build-br:
@@ -21,15 +21,15 @@ build-br:
 
 .PHONY: build-css
 build-css:
-	go run cmd/build.go -s css -d 'My collection of useful CSS packages'
+	docker run --rm -it -v '$(PWD)':/go/src/css -w /go/src/css golang:latest go run cmd/build.go -s css -d 'My collection of useful CSS packages'
 
 .PHONY: build-go
 build-go:
-	go run cmd/build.go -s go -d 'My collection of useful Go packages'
+	docker run --rm -it -v '$(PWD)':/go/src/go -w /go/src/go golang:latest go run cmd/build.go -s go -d 'My collection of useful Go packages'
 
 .PHONY: build-js
 build-js:
-	go run cmd/build.go -s javascript -d 'My collection of useful JavaScript packages'
+	docker run --rm -it -v '$(PWD)':/go/src/js -w /go/src/js golang:latest go run cmd/build.go -s javascript -d 'My collection of useful JavaScript packages'
 
 .PHONY: build-jb
 build-jb:
@@ -37,11 +37,11 @@ build-jb:
 
 .PHONY: build-php
 build-php:
-	go run cmd/build.go -s php -d 'My collection of useful PHP packages'
+	docker run --rm -it -v '$(PWD)':/go/src/php -w /go/src/php golang:latest go run cmd/build.go -s php -d 'My collection of useful PHP packages'
 
 .PHONY: build-py
 build-py:
-	go run cmd/build.go -s python -d 'My collection of useful Python packages'
+	docker run --rm -it -v '$(PWD)':/go/src/py -w /go/src/py golang:latest go run cmd/build.go -s python -d 'My collection of useful Python packages'
 
 .PHONY: build-term
 build-term:

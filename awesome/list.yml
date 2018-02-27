@@ -98,7 +98,7 @@ list:
   src:  https://github.com/abhishekbanthia/Public-APIs
   tags: []
 
-- name: A.W.E.S.O.M. O
+- name: A.W.E.S.O.M.O
   src:  https://github.com/lk-geimfari/awesomo
   tags: []
 
@@ -152,4 +152,8 @@ list:
 
 - name: Awesome Crypto Currency Tools & Algorithms
   src:  https://github.com/kennethreitz/awesome-coins
+  tags: []
+
+- name: Awesome Static Analysis!
+  src:  https://github.com/mre/awesome-static-analysis
   tags: []

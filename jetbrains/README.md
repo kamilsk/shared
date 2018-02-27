@@ -1,5 +1,5 @@
 > # shared:collection:jetbrains
->
+> [![Analytics](https://ga-beacon.appspot.com/UA-109817251-4/shared/collection:jetbrains?pixel)](https://github.com/kamilsk/shared/tree/collection)
 > Meta information related with Jetbrains' IDE.
 
 [![Patreon](https://img.shields.io/badge/patreon-donate-orange.svg)](https://www.patreon.com/octolab)
@@ -13,7 +13,6 @@
 - .ignore
 - BashSupport
 - Docker integration
-- Go
 - Key promoter
 - PHP Advanced AutoComplete
 - PHP Annotations
@@ -81,8 +80,9 @@
  - [ ] XSLT-Debugger
  - [x] YAML
 
-## Notes
+---
 
-- made with ❤️ by [OctoLab](https://www.octolab.org/)
+[![@kamilsk](https://img.shields.io/badge/author-%40kamilsk-blue.svg)](https://twitter.com/ikamilsk)
+[![@octolab](https://img.shields.io/badge/sponsor-%40octolab-blue.svg)](https://twitter.com/octolab_inc)
 
-[![Analytics](https://ga-beacon.appspot.com/UA-109817251-4/shared/collection:jetbrains)](https://github.com/igrigorik/ga-beacon)
+made with ❤️ by [OctoLab](https://www.octolab.org/)

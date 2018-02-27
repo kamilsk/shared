@@ -1,10 +1,11 @@
 > # shared:collection:awesome
->
+> [![Analytics](https://ga-beacon.appspot.com/UA-109817251-4/shared/collection:awesome?pixel)](https://github.com/kamilsk/shared/tree/collection)
 > Collection of collections for indexing.
 
 [![Patreon](https://img.shields.io/badge/patreon-donate-orange.svg)](https://www.patreon.com/octolab)
 
-### [A.W.E.S.O.M. O](https://github.com/lk-geimfari/awesomo)
+
+### [A.W.E.S.O.M.O](https://github.com/lk-geimfari/awesomo)
 
 ### [Awesome](https://github.com/sindresorhus/awesome)
 
@@ -56,6 +57,8 @@
 
 ### [Awesome Shell](https://github.com/alebcay/awesome-shell)
 
+### [Awesome Static Analysis!](https://github.com/mre/awesome-static-analysis)
+
 ### [Awesome Stock Resources](https://github.com/neutraltone/awesome-stock-resources)
 
 ### [Awesome Sysadmin](https://github.com/kahun/awesome-sysadmin)
@@ -80,8 +83,10 @@
 
 ### [React Components & Libraries](https://github.com/brillout/awesome-react-components)
 
-## Notes
 
-- made with ❤️ by [OctoLab](https://www.octolab.org/)
+---
 
-[![Analytics](https://ga-beacon.appspot.com/UA-109817251-4/shared/collection:awesome)](https://github.com/igrigorik/ga-beacon)
+[![@kamilsk](https://img.shields.io/badge/author-%40kamilsk-blue.svg)](https://twitter.com/ikamilsk)
+[![@octolab](https://img.shields.io/badge/sponsor-%40octolab-blue.svg)](https://twitter.com/octolab_inc)
+
+made with ❤️ by [OctoLab](https://www.octolab.org/)

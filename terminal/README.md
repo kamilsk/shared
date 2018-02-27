@@ -1,5 +1,5 @@
 > # shared:collection:terminal
->
+> [![Analytics](https://ga-beacon.appspot.com/UA-109817251-4/shared/collection:terminal?pixel)](https://github.com/kamilsk/shared/tree/collection)
 > My collection of useful CLI tools.
 
 [![Patreon](https://img.shields.io/badge/patreon-donate-orange.svg)](https://www.patreon.com/octolab)
@@ -73,8 +73,9 @@
 - https://github.com/future-architect/vuls              [Go]
 - https://github.com/uber/focuson                       [Python]
 
-## Notes
+---
 
-- made with ❤️ by [OctoLab](https://www.octolab.org/)
+[![@kamilsk](https://img.shields.io/badge/author-%40kamilsk-blue.svg)](https://twitter.com/ikamilsk)
+[![@octolab](https://img.shields.io/badge/sponsor-%40octolab-blue.svg)](https://twitter.com/octolab_inc)
 
-[![Analytics](https://ga-beacon.appspot.com/UA-109817251-4/shared/collection:terminal)](https://github.com/igrigorik/ga-beacon)
+made with ❤️ by [OctoLab](https://www.octolab.org/)
