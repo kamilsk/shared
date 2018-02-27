@@ -79,6 +79,8 @@
 
 ### [Frontend Development](https://github.com/dypsilon/frontend-dev-bookmarks)
 
+### [Pretty Awesome Lists](https://www.prettyawesomelists.com/)
+
 ### [Public-APIs](https://github.com/abhishekbanthia/Public-APIs)
 
 ### [React Components & Libraries](https://github.com/brillout/awesome-react-components)

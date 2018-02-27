@@ -157,3 +157,7 @@ list:
 - name: Awesome Static Analysis!
   src:  https://github.com/mre/awesome-static-analysis
   tags: []
+
+- name: Pretty Awesome Lists
+  src:  https://www.prettyawesomelists.com/
+  tags: []
