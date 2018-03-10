@@ -161,3 +161,7 @@ list:
 - name: Pretty Awesome Lists
   src:  https://www.prettyawesomelists.com/
   tags: []
+
+- name: High Scalability, High Availability, and High Stability Design Patterns in Back-end Systems
+  src:  https://github.com/binhnguyennus/awesome-scalability
+  tags: []

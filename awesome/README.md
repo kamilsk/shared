@@ -79,6 +79,8 @@
 
 ### [Frontend Development](https://github.com/dypsilon/frontend-dev-bookmarks)
 
+### [High Scalability, High Availability, and High Stability Design Patterns in Back-end Systems](https://github.com/binhnguyennus/awesome-scalability)
+
 ### [Pretty Awesome Lists](https://www.prettyawesomelists.com/)
 
 ### [Public-APIs](https://github.com/abhishekbanthia/Public-APIs)
