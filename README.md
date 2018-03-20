@@ -1,17 +1,9 @@
 > # shared
-> [![Analytics](https://ga-beacon.appspot.com/UA-109817251-4/shared/master:readme?pixel)](https://github.com/kamilsk/shared/tree/collection)
+> [![Analytics](https://ga-beacon.appspot.com/UA-109817251-4/shared/master:readme?pixel)](https://github.com/kamilsk/shared)
 > Some shared things.
 
 [![Patreon](https://img.shields.io/badge/patreon-donate-orange.svg)](https://www.patreon.com/octolab)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-
-## Code of Conduct
-
-The project team follows [Contributor Covenant v1.4](http://contributor-covenant.org/version/1/4/).
-Instances of abusive, harassing or otherwise unacceptable behavior may be reported by contacting
-the project team at feedback@octolab.org.
-
----
 
 ## Docker
 
