@@ -16,19 +16,19 @@ the project team at feedback@octolab.org.
 ## Docker
 
 - [docker-common](../../tree/docker-common) - custom docker images for common usage
-- [docker-go](../../tree/docker-go-v1) - custom docker images for Go environment
-- [docker-php](../../tree/docker-php-v1) - custom docker images for PHP environment
+- [docker-go](../../tree/docker-go) - custom docker images for Go environment
+- [docker-php](../../tree/docker-php) - custom docker images for PHP environment
 - docker-py - custom docker images for Python environment (soon)
 
 ## GitHub
 
-- [github-tpl-go](../../tree/github-tpl-go-v1) - templates for Go projects at GitHub
+- [github-tpl-go](../../tree/github-tpl-go) - templates for Go projects at GitHub
 - github-tpl-php - templates for PHP projects at GitHub (soon)
 - github-tpl-py - templates for Python projects at GitHub (soon)
 
 ## Makefile
 
-- [makefile-go](../../tree/makefile-go-v1) - snippets of GNU Make for Go environment
+- [makefile-go](../../tree/makefile-go) - snippets of GNU Make for Go environment
 - makefile-php - snippets of GNU Make for PHP environment (soon)
 - makefile-py - snippets of GNU Make for Python environment (soon)
 
