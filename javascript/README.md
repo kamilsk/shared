@@ -65,11 +65,19 @@
   - [ ] used
   - [ ] viewed
 
+- [FilePond](https://github.com/pqina/filepond), [site](https://pqina.nl/filepond/)
+  - [ ] used
+  - [ ] viewed
+
 - [Emergence.js](https://github.com/xtianmiller/emergence.js), [site](https://xtianmiller.github.io/emergence.js/)
   - [ ] used
   - [ ] viewed
 
 - [Scrollama](https://github.com/russellgoldenberg/scrollama), [site](https://russellgoldenberg.github.io/scrollama/basic/)
+  - [ ] used
+  - [ ] viewed
+
+- [ScrollBooster](https://github.com/ilyashubin/scrollbooster), [site](https://ilyashubin.github.io/scrollbooster/)
   - [ ] used
   - [ ] viewed
 

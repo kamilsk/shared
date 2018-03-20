@@ -85,6 +85,13 @@ list:
   used:   false
   viewed: false
 
+- name: FilePond
+  src:  https://github.com/pqina/filepond
+  site: https://pqina.nl/filepond/
+  tags: [drag&drop, upload]
+  used:   false
+  viewed: false
+
 
 
 - name: Emergence.js
@@ -98,5 +105,12 @@ list:
   src:  https://github.com/russellgoldenberg/scrollama
   site: https://russellgoldenberg.github.io/scrollama/basic/
   tags: [scroll]
+  used:   false
+  viewed: false
+
+- name: ScrollBooster
+  src:  https://github.com/ilyashubin/scrollbooster
+  site: https://ilyashubin.github.io/scrollbooster/
+  tags: [scroll, horizontal]
   used:   false
   viewed: false
