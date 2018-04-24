@@ -27,7 +27,7 @@ pull-makes:                   #| Clones branch makefile-go of git@github.com:kam
 	  git checkout makefile-go && \
 	  echo '- ' $$(cat README.md | head -n1 | awk '{print $$3}') 'at revision' $$(git rev-parse HEAD) \
 	)
-	rm -rf makes/.git
+	rm -rf makes/.git makes/LICENSE makes/Makefile
 
 .PHONY: pull-github-tpl
 pull-github-tpl:              #| Clones branch github-tpl-go of git@github.com:kamilsk/shared.git into .github dir
@@ -39,4 +39,4 @@ pull-github-tpl:              #| Clones branch github-tpl-go of git@github.com:k
 	  git branch -d master && \
 	  echo '- ' $$(cat README.md | head -n1 | awk '{print $$3}') 'at revision' $$(git rev-parse HEAD) \
 	)
-	rm -rf .github/.git .github/README.md
+	rm -rf .github/.git .github/LICENSE .github/README.md
