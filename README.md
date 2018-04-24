@@ -1,5 +1,5 @@
-> # shared:github-tpl-go-v1
-> [![Analytics](https://ga-beacon.appspot.com/UA-109817251-4/shared/github-tpl-go-v1:readme?pixel)](https://github.com/kamilsk/shared/tree/github-tpl-go)
+> # shared:github-tpl-go
+> [![Analytics](https://ga-beacon.appspot.com/UA-109817251-4/shared/github-tpl-go:readme?pixel)](https://github.com/kamilsk/shared/tree/github-tpl-go)
 > My templates for Go projects at GitHub.
 
 [![Patreon](https://img.shields.io/badge/patreon-donate-orange.svg)](https://www.patreon.com/octolab)
