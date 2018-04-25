@@ -37,3 +37,4 @@
   - [ ] travis
   - [ ] scrutinizer
   - [ ] gitter
+  - [ ] goreleaser
