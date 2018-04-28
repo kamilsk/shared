@@ -21,20 +21,21 @@
   - **MIT**
 - readme
   - [ ] header with google analytics and short description
-  - [ ] patreon badge
-  - [ ] travis badge
-  - [ ] scrutinizer badge
-  - [ ] coveralls badge
-  - [ ] godoc badge
-  - [ ] license badge
-  - [ ] footer with feedback
+  - badges
+    - [ ] patreon
+    - [ ] travis
+    - [ ] scrutinizer badges
+    - [ ] godoc
+    - [ ] license
   - sections
     - [ ] quick start
     - [ ] installation
     - [ ] notes
+  - [ ] footer with feedback
 - integrations
-  - [ ] slack
-  - [ ] travis
-  - [ ] scrutinizer
+  - [ ] bitbucket
   - [ ] gitter
   - [ ] goreleaser
+  - [ ] scrutinizer
+  - [ ] slack
+  - [ ] travis
