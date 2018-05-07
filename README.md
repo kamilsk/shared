@@ -24,6 +24,12 @@
 - [makefile-php](../../tree/makefile-php) - snippets of GNU Make for PHP environment
 - [makefile-py](../../tree/makefile-py) - snippets of GNU Make for Python environment
 
+## Research
+
+- [research-go](../../tree/research-go) - my researches at Go
+- [research-php](../../tree/research-php) - my researches at PHP
+- [research-py](../../tree/research-py) - my researches at Python
+
 ## Useful
 
 - [collection](../../tree/collection) - my collection of useful things
