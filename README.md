@@ -1,5 +1,5 @@
 > # shared:research-go
-> [![Analytics](https://ga-beacon.appspot.com/UA-109817251-4/shared/research-go:readme?pixel)](https://github.com/kamilsk/shared/tree/dotfiles)
+> [![Analytics](https://ga-beacon.appspot.com/UA-109817251-4/shared/research-go:readme?pixel)](https://github.com/kamilsk/shared/tree/research-go)
 > My research work.
 
 [![Patreon](https://img.shields.io/badge/patreon-donate-orange.svg)](https://www.patreon.com/octolab)
