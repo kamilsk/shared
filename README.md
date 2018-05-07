@@ -5,6 +5,14 @@
 [![Patreon](https://img.shields.io/badge/patreon-donate-orange.svg)](https://www.patreon.com/octolab)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
+## Packages
+
+### Work with errors
+
+- [ ] [github.com/juju/errors](https://github.com/juju/errors)
+- [ ] [github.com/pkg/errors](https://github.com/pkg/errors)
+- [ ] [github.com/oxequa/grace](https://github.com/oxequa/grace)
+
 ---
 
 [![@kamilsk](https://img.shields.io/badge/author-%40kamilsk-blue.svg)](https://twitter.com/ikamilsk)

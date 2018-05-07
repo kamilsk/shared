@@ -1,0 +1,7 @@
+package pkgs
+
+import (
+	_ "github.com/juju/errors"
+	_ "github.com/pkg/errors"
+	_ "github.com/oxequa/grace"
+)
