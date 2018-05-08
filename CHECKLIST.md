@@ -24,7 +24,7 @@
   - badges
     - [ ] patreon
     - [ ] travis
-    - [ ] scrutinizer badges
+    - [ ] scrutinizer
     - [ ] godoc
     - [ ] license
   - sections
