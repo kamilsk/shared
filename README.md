@@ -1,6 +1,6 @@
 > # shared:github-tpl-py
 > [![Analytics](https://ga-beacon.appspot.com/UA-109817251-4/shared/github-tpl-py:readme?pixel)](https://github.com/kamilsk/shared/tree/github-tpl-py)
-> My templates for PHP projects at GitHub.
+> My templates for Python projects at GitHub.
 
 [![Patreon](https://img.shields.io/badge/patreon-donate-orange.svg)](https://www.patreon.com/octolab)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
