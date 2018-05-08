@@ -1,6 +1,6 @@
 > # shared:research-py
 > [![Analytics](https://ga-beacon.appspot.com/UA-109817251-4/shared/research-py:readme?pixel)](https://github.com/kamilsk/shared/tree/research-py)
-> My research work.
+> My research work in Python.
 
 [![Patreon](https://img.shields.io/badge/patreon-donate-orange.svg)](https://www.patreon.com/octolab)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
