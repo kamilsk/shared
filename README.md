@@ -1,6 +1,6 @@
 > # shared:research-php
 > [![Analytics](https://ga-beacon.appspot.com/UA-109817251-4/shared/research-php:readme?pixel)](https://github.com/kamilsk/shared/tree/research-php)
-> My research work.
+> My research work in PHP.
 
 [![Patreon](https://img.shields.io/badge/patreon-donate-orange.svg)](https://www.patreon.com/octolab)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
