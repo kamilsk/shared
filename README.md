@@ -26,9 +26,9 @@
 
 ## Research
 
-- [research-go](../../tree/research-go) - my researches at Go
-- [research-php](../../tree/research-php) - my researches at PHP
-- [research-py](../../tree/research-py) - my researches at Python
+- [research-go](../../tree/research-go) - my researches in Go
+- [research-php](../../tree/research-php) - my researches in PHP
+- [research-py](../../tree/research-py) - my researches in Python
 
 ## Useful
 
