@@ -7,11 +7,16 @@
 
 ## Packages
 
+### Monitoring
+
+- [ ] [github.com/bcicen/grmon](https://github.com/bcicen/grmon)
+- [ ] [github.com/google/gops](https://github.com/google/gops)
+
 ### Work with errors
 
 - [ ] [github.com/juju/errors](https://github.com/juju/errors)
-- [ ] [github.com/pkg/errors](https://github.com/pkg/errors)
 - [ ] [github.com/oxequa/grace](https://github.com/oxequa/grace)
+- [ ] [github.com/pkg/errors](https://github.com/pkg/errors)
 
 ## Projects
 
