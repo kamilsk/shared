@@ -1,0 +1,7 @@
+[[constraint]]
+  name = "github.com/gohugoio/hugo"
+  branch = "master"
+
+[prune]
+  go-tests = true
+  unused-packages = true

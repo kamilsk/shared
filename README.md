@@ -13,6 +13,13 @@
 - [ ] [github.com/pkg/errors](https://github.com/pkg/errors)
 - [ ] [github.com/oxequa/grace](https://github.com/oxequa/grace)
 
+## Projects
+
+### Hugo
+
+- [ ] [github.com/gohugoio/hugo](https://github.com/gohugoio/hugo)
+- [ ] [documentation](https://gohugo.io/documentation/)
+
 ---
 
 [![@kamilsk](https://img.shields.io/badge/author-%40kamilsk-blue.svg)](https://twitter.com/ikamilsk)
