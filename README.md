@@ -15,6 +15,11 @@
 
 ## Projects
 
+### GoReleaser
+
+- [ ] [github.com/goreleaser/goreleaser](https://github.com/goreleaser/goreleaser)
+- [ ] [documentation](https://goreleaser.com/)
+
 ### Hugo
 
 - [ ] [github.com/gohugoio/hugo](https://github.com/gohugoio/hugo)
