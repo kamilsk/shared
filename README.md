@@ -30,6 +30,20 @@
 - [ ] [github.com/gohugoio/hugo](https://github.com/gohugoio/hugo)
 - [ ] [documentation](https://gohugo.io/documentation/)
 
+## Specific researches
+
+### [kamilsk/click](https://github.com/kamilsk/click/tree/research)
+
+### [kamilsk/check](https://github.com/kamilsk/check/tree/research)
+
+### [kamilsk/form-api](https://github.com/kamilsk/form-api/tree/research)
+
+### [kamilsk/passport](https://github.com/kamilsk/passport/tree/research)
+
+### [kamilsk/retry](https://github.com/kamilsk/retry/tree/research)
+
+### [kamilsk/semaphore](https://github.com/kamilsk/semaphore/tree/research)
+
 ---
 
 [![@kamilsk](https://img.shields.io/badge/author-%40kamilsk-blue.svg)](https://twitter.com/ikamilsk)
