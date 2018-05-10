@@ -7,10 +7,15 @@
 
 ## Packages
 
+### Database
+
+- [ ] [github.com/prometheus/tsdb](https://github.com/prometheus/tsdb)
+
 ### Monitoring
 
 - [ ] [github.com/bcicen/grmon](https://github.com/bcicen/grmon)
 - [ ] [github.com/google/gops](https://github.com/google/gops)
+- [ ] [github.com/prometheus/client_golang](https://github.com/prometheus/client_golang)
 
 ### Work with errors
 
@@ -29,6 +34,11 @@
 
 - [ ] [github.com/gohugoio/hugo](https://github.com/gohugoio/hugo)
 - [ ] [documentation](https://gohugo.io/documentation/)
+
+### Prometheus
+
+- [ ] [github.com/prometheus/prometheus](https://github.com/prometheus/prometheus)
+- [ ] [documentation](https://prometheus.io/docs/introduction/overview/)
 
 ## Specific researches
 
