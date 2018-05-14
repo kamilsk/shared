@@ -16,7 +16,7 @@
 ### umputun/nginx-le
 
 - [GitHub](https://github.com/umputun/nginx-le)
-  - [ ] rev. [d29a9c7](https://github.com/umputun/nginx-le/tree/d29a9c7)
+  - [x] rev. [d29a9c7](https://github.com/umputun/nginx-le/tree/d29a9c7)
 - [Docker Hub](https://hub.docker.com/r/umputun/nginx-le/)
 
 ## Nginx
@@ -24,7 +24,7 @@
 ### h5bp/server-configs-nginx
 
 - [GitHub](https://github.com/h5bp/server-configs-nginx)
-  - [ ] rev. [c5c6602](https://github.com/h5bp/server-configs-nginx/tree/c5c6602)
+  - [x] rev. [c5c6602](https://github.com/h5bp/server-configs-nginx/tree/c5c6602)
 
 ---
 
