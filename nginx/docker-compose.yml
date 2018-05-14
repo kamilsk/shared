@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  nginx:
+    image: nginx:mainline-alpine
+
+  proxy:
+    build:
+      context:    .
+      dockerfile: mainline-alpine.Dockerfile
+    depends_on:
+    - nginx
+    ports:
+    - 80:80
+    - 443:443
+    volumes:
+    - ./etc/conf.d/example.conf:/etc/nginx/conf.d/example.conf

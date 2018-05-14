@@ -7,7 +7,7 @@ echo "setup timezone..."
 )
 echo "done"
 
-if [ ! -f /etc/nginx/ssl/dhparams.pem ]; then
+if [ -z "${LE_ENABLED}" ] && [ ! -f /etc/nginx/ssl/dhparams.pem ]; then
     echo "make dhparams..."
     (
         cd /etc/nginx/ssl

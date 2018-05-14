@@ -1,5 +1,7 @@
-NGINX_ALPINE := $(shell docker images | grep '^nginx\s\+mainline-alpine\s\+' | awk '{print $$3}')
-NGINX_DEBIAN := $(shell docker images | grep '^nginx\s\+mainline\s\+' | awk '{print $$3}')
+NGINX_ALPINE  := $(shell docker images | grep '^nginx\s\+mainline-alpine\s\+' | awk '{print $$3}')
+NGINX_DEBIAN  := $(shell docker images | grep '^nginx\s\+mainline\s\+' | awk '{print $$3}')
+NGINX_COMPOSE := docker-compose -f nginx/docker-compose.yml -p experiments
+
 
 .PHONY: build-nginx-parallel
 build-nginx-parallel:
@@ -13,19 +15,19 @@ build-nginx: build-nginx-alpine build-nginx-debian
 
 .PHONY: build-nginx-alpine
 build-nginx-alpine:
-	docker build -f $(CWD)/nginx/mainline-alpine.Dockerfile \
+	docker build -f $(PWD)/nginx/mainline-alpine.Dockerfile \
 	             -t kamilsk/nginx:alpine \
 	             --force-rm --no-cache --pull --rm \
 	             --build-arg BASE=$(NGINX_ALPINE) \
-	             $(CWD)/nginx
+	             $(PWD)/nginx
 
 .PHONY: build-nginx-debian
 build-nginx-debian:
-	docker build -f $(CWD)/nginx/mainline-debian.Dockerfile \
+	docker build -f $(PWD)/nginx/mainline-debian.Dockerfile \
 	             -t kamilsk/nginx:debian \
 	             --force-rm --no-cache --pull --rm \
 	             --build-arg BASE=$(NGINX_DEBIAN) \
-	             $(CWD)/nginx
+	             $(PWD)/nginx
 
 
 .PHONY: clean-invalid-nginx
@@ -83,26 +85,26 @@ refresh-nginx-debian:
 	docker pull kamilsk/nginx:debian
 
 
-.PHONY: copy-nginx-mainline-alpine
-copy-nginx-mainline-alpine:
-	rm -rf ./nginx/etc/mainline-alpine/*
+.PHONY: nginx/mainline-alpine.conf
+nginx/mainline-alpine.conf:
+	rm -rf ./nginx/default/mainline-alpine/*
 	docker run --rm -d --name=nginx-mainline-alpine nginx:mainline-alpine
 	docker exec nginx-mainline-alpine rm -rf /etc/nginx/modules
-	docker cp nginx-mainline-alpine:/etc/nginx ./nginx/etc/mainline-alpine/
-	mv ./nginx/etc/mainline-alpine/nginx/* ./nginx/etc/mainline-alpine/
-	rm -rf ./nginx/etc/mainline-alpine/nginx
+	docker cp nginx-mainline-alpine:/etc/nginx ./nginx/default/mainline-alpine/
+	mv ./nginx/default/mainline-alpine/nginx/* ./nginx/default/mainline-alpine/
+	rm -rf ./nginx/default/mainline-alpine/nginx
 	docker stop nginx-mainline-alpine
-	echo 'nginx:mainline-alpine at revision' $(NGINX_ALPINE) > ./nginx/etc/mainline-alpine/metadata
+	echo 'nginx:mainline-alpine at revision' $(NGINX_ALPINE) > ./nginx/default/mainline-alpine/metadata
 
-.PHONY: copy-nginx-mainline
-copy-nginx-mainline:
-	rm -rf ./nginx/etc/mainline/*
+.PHONY: nginx/mainline.conf
+nginx/mainline.conf:
+	rm -rf ./nginx/default/mainline/*
 	docker run --rm -d --name=nginx-mainline nginx:mainline
-	docker cp nginx-mainline:/etc/nginx ./nginx/etc/mainline/
-	mv ./nginx/etc/mainline/nginx/* ./nginx/etc/mainline/
-	rm -rf ./nginx/etc/mainline/nginx
+	docker cp nginx-mainline:/etc/nginx ./nginx/default/mainline/
+	mv ./nginx/default/mainline/nginx/* ./nginx/default/mainline/
+	rm -rf ./nginx/default/mainline/nginx
 	docker stop nginx-mainline
-	echo 'nginx:mainline at revision' $(NGINX_DEBIAN) > ./nginx/etc/mainline/metadata
+	echo 'nginx:mainline at revision' $(NGINX_DEBIAN) > ./nginx/default/mainline/metadata
 
 
 .PHONY: validate-nginx
