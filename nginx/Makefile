@@ -81,3 +81,20 @@ refresh-nginx-alpine:
 .PHONY: refresh-nginx-debian
 refresh-nginx-debian:
 	docker pull kamilsk/nginx:debian
+
+
+.PHONY: copy-nginx-mainline-alpine
+copy-nginx-mainline-alpine:
+	docker run --rm -d --name=nginx-mainline-alpine nginx:mainline-alpine
+	docker cp nginx-mainline-alpine:/etc/nginx ./nginx/etc/mainline-alpine/ || true
+	mv ./nginx/etc/mainline-alpine/nginx/* ./nginx/etc/mainline-alpine/
+	rm -rf ./nginx/etc/mainline-alpine/nginx
+	docker stop nginx-mainline-alpine
+
+.PHONY: copy-nginx-mainline
+copy-nginx-mainline:
+	docker run --rm -d --name=nginx-mainline nginx:mainline
+	docker cp nginx-mainline:/etc/nginx ./nginx/etc/mainline/ || true
+	mv ./nginx/etc/mainline/nginx/* ./nginx/etc/mainline/
+	rm -rf ./nginx/etc/mainline/nginx
+	docker stop nginx-mainline
