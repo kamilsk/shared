@@ -21,8 +21,26 @@ Inspired by [umputun/nginx-le](https://hub.docker.com/r/umputun/nginx-le/).
 
 #### Useful
 
-- [ ] [Let's Encrypt documentation](https://letsencrypt.org/docs/)
+##### Articles
+
+- [ ] [OCSP stapling](https://en.wikipedia.org/wiki/OCSP_stapling)
+- [ ] [Security/Server Side TLS](https://wiki.mozilla.org/Security/Server_Side_TLS)
+- [ ] [Strong SSL Security on nginx](https://raymii.org/s/tutorials/Strong_SSL_Security_On_nginx.html)
+
+##### Docs
+
 - [ ] [Certbot documentation](https://certbot.eff.org/docs/)
+- [ ] [Let's Encrypt documentation](https://letsencrypt.org/docs/)
+- [ ] [nginx documentation](http://nginx.org/en/docs/)
+
+##### Lessons
+
+- [ ] [Integrating SSL Certificates](https://serversforhackers.com/s/integrating-ssl-certificates)
+
+##### Sources
+
+- [ ] [github.com/h5bp/server-configs-nginx](https://github.com/h5bp/server-configs-nginx)
+- [ ] [github.com/umputun/nginx-le](https://github.com/umputun/nginx-le)
 
 ---
 
