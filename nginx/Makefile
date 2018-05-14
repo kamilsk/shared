@@ -85,16 +85,20 @@ refresh-nginx-debian:
 
 .PHONY: copy-nginx-mainline-alpine
 copy-nginx-mainline-alpine:
+	rm -rf ./nginx/etc/mainline-alpine/*
 	docker run --rm -d --name=nginx-mainline-alpine nginx:mainline-alpine
 	docker cp nginx-mainline-alpine:/etc/nginx ./nginx/etc/mainline-alpine/ || true
 	mv ./nginx/etc/mainline-alpine/nginx/* ./nginx/etc/mainline-alpine/
 	rm -rf ./nginx/etc/mainline-alpine/nginx
 	docker stop nginx-mainline-alpine
+	echo 'nginx:mainline-alpine at revision' $(NGINX_ALPINE) > ./nginx/etc/mainline-alpine/metadata
 
 .PHONY: copy-nginx-mainline
 copy-nginx-mainline:
+	rm -rf ./nginx/etc/mainline/*
 	docker run --rm -d --name=nginx-mainline nginx:mainline
 	docker cp nginx-mainline:/etc/nginx ./nginx/etc/mainline/ || true
 	mv ./nginx/etc/mainline/nginx/* ./nginx/etc/mainline/
 	rm -rf ./nginx/etc/mainline/nginx
 	docker stop nginx-mainline
+	echo 'nginx:mainline at revision' $(NGINX_DEBIAN) > ./nginx/etc/mainline/metadata
