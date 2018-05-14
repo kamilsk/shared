@@ -38,7 +38,8 @@ $ docker run --rm -d \
 
 ##### Lessons
 
-- [ ] [Integrating SSL Certificates](https://serversforhackers.com/s/integrating-ssl-certificates)
+- [x] [Integrating SSL Certificates](https://serversforhackers.com/s/integrating-ssl-certificates)
+- [ ] [Load Balancing with Nginx](https://serversforhackers.com/s/load-balancing-with-nginx)
 
 ---
 

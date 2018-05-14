@@ -103,3 +103,13 @@ copy-nginx-mainline:
 	rm -rf ./nginx/etc/mainline/nginx
 	docker stop nginx-mainline
 	echo 'nginx:mainline at revision' $(NGINX_DEBIAN) > ./nginx/etc/mainline/metadata
+
+
+.PHONY: validate-nginx
+validate-nginx:
+	docker run --rm -it \
+	           -v $(PWD)/nginx/etc/h5bp:/etc/nginx/h5bp \
+	           -v $(PWD)/nginx/etc/conf.d:/etc/nginx/conf.d \
+	           -v $(PWD)/nginx/etc/nginx.conf:/etc/nginx/nginx.conf \
+	           -w /etc/nginx \
+	           nginx:mainline-alpine nginx -t
