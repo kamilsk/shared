@@ -17,7 +17,10 @@ $ docker run --rm -d \
                                   www.octolab.org:octolab.org
 ```
 
-Inspired by [umputun/nginx-le](https://hub.docker.com/r/umputun/nginx-le/).
+#### Based on research
+
+- [umputun/nginx-le](https://github.com/kamilsk/shared/tree/research#umputunnginx-le)
+- [h5bp/server-configs-nginx](https://github.com/kamilsk/shared/tree/research#h5bpserver-configs-nginx)
 
 #### Useful
 
@@ -36,11 +39,6 @@ Inspired by [umputun/nginx-le](https://hub.docker.com/r/umputun/nginx-le/).
 ##### Lessons
 
 - [ ] [Integrating SSL Certificates](https://serversforhackers.com/s/integrating-ssl-certificates)
-
-##### Sources
-
-- [ ] [github.com/h5bp/server-configs-nginx](https://github.com/h5bp/server-configs-nginx)
-- [ ] [github.com/umputun/nginx-le](https://github.com/umputun/nginx-le)
 
 ---
 
