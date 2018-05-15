@@ -35,6 +35,11 @@
 - [ ] [github.com/gohugoio/hugo](https://github.com/gohugoio/hugo)
 - [ ] [documentation](https://gohugo.io/documentation/)
 
+### lego
+
+- [ ] [github.com/xenolf/lego](https://github.com/xenolf/lego)
+- [ ] [documentation](https://godoc.org/github.com/xenolf/lego/acme)
+
 ### Prometheus
 
 - [ ] [github.com/prometheus/prometheus](https://github.com/prometheus/prometheus)
