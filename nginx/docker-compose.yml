@@ -5,6 +5,7 @@ services:
     image: nginx:mainline-alpine
 
   proxy:
+    image: kamilsk/nginx:alpine
     build:
       context:    .
       dockerfile: mainline-alpine.Dockerfile

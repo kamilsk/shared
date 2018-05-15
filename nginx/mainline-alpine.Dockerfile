@@ -11,7 +11,6 @@ ENV LE_EMAIL   ""
 ADD etc entrypoint.sh metadata /tmp/
 
 RUN \
-    ls -la /tmp/ && \
     apk add --no-cache certbot openssl tzdata && \
     mv /etc/nginx/nginx.conf /etc/nginx/nginx.conf.default && \
     mv /etc/nginx/conf.d/default.conf /etc/nginx/conf.d/default.conf.default && \
@@ -23,8 +22,7 @@ RUN \
     sed -i "s/NGINX_BASE/${BASE}/" /metadata && \
     sed -i "s/NGINX_VERSION/$(nginx -v 2>&1 | awk '{print $3}' | cut -d'/' -f2)/" /metadata && \
     sed -i "s/CERTBOT_VERSION/$(certbot --version 2>&1 | awk '{print $2}')/" /metadata && \
-    rm -rf /tmp/* /var/cache/apk/* && \
-    echo "done"
+    rm -rf /tmp/* /var/cache/apk/*
 
 VOLUME [ "/etc/nginx/ssl" ]
 

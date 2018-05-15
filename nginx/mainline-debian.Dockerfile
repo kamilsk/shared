@@ -6,21 +6,23 @@ ARG BASE
 
 ENV TIME_ZONE  "UTC"
 ENV LE_ENABLED ""
-ENV LE_EMAIL   "kamil@samigullin.info"
+ENV LE_EMAIL   ""
 
-ADD etc/default.conf etc/nginx.conf entrypoint.sh metadata /
+ADD etc entrypoint.sh metadata /tmp/
 
 RUN \
-    apt-get update && apt-get install certbot -y && apt-get clean -y && \
-    mv /etc/nginx/nginx.conf /etc/nginx/nginx.origin && \
-    mv /etc/nginx/conf.d/default.conf /etc/nginx/conf.d/default.origin && \
-    mv /nginx.conf /etc/nginx/ && \
-    mv /default.conf /etc/nginx/conf.d/ && \
-    chmod +x /entrypoint.sh && \
-    sed -i "s/NGINX_BASE/${BASE}/" metadata && \
-    sed -i "s/NGINX_VERSION/$(nginx -v 2>&1 | awk '{print $3}' | cut -d'/' -f2)/" metadata && \
-    sed -i "s/CERTBOT_VERSION/$(certbot --version 2>&1 | awk '{print $2}')/" metadata && \
-    echo "done"
+    apt-get update && apt-get install -y certbot && apt-get upgrade -y openssl tzdata && apt-get clean -y && \
+    mv /etc/nginx/nginx.conf /etc/nginx/nginx.conf.default && \
+    mv /etc/nginx/conf.d/default.conf /etc/nginx/conf.d/default.conf.default && \
+    mv /tmp/h5bp /etc/nginx/h5bp && \
+    mv /tmp/conf.d/default.conf /etc/nginx/conf.d/ && \
+    mv /tmp/nginx.conf /etc/nginx/ && \
+    mv /tmp/entrypoint.sh / && chmod +x /entrypoint.sh && \
+    mv /tmp/metadata / && \
+    sed -i "s/NGINX_BASE/${BASE}/" /metadata && \
+    sed -i "s/NGINX_VERSION/$(nginx -v 2>&1 | awk '{print $3}' | cut -d'/' -f2)/" /metadata && \
+    sed -i "s/CERTBOT_VERSION/$(certbot --version 2>&1 | awk '{print $2}')/" /metadata && \
+    rm -rf /tmp/* /var/lib/apt/lists/*
 
 VOLUME [ "/etc/nginx/ssl" ]
 

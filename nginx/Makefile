@@ -116,3 +116,16 @@ validate-nginx:
 	           -v $(PWD)/nginx/etc/nginx.conf:/etc/nginx/nginx.conf \
 	           -w /etc/nginx \
 	           nginx:mainline-alpine nginx -t
+
+
+.PHONY: nginx-up
+nginx-up:
+	$(NGINX_COMPOSE) up -d --build
+
+.PHONY: nginx-status
+nginx-status:
+	$(NGINX_COMPOSE) ps
+
+.PHONY: nginx-down
+nginx-down:
+	$(NGINX_COMPOSE) down --rmi all
