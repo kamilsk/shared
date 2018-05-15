@@ -4,9 +4,10 @@ LABEL maintainer="Kamil Samigullin <kamil@samigullin.info>"
 
 ARG BASE
 
-ENV TIME_ZONE  "UTC"
-ENV LE_ENABLED ""
-ENV LE_EMAIL   ""
+ENV TIME_ZONE   "UTC"
+ENV LE_ENABLED  ""
+ENV LE_EMAIL    ""
+ENV DEV_ENABLED ""
 
 ADD etc entrypoint.sh metadata /tmp/
 

@@ -11,6 +11,8 @@ services:
       dockerfile: mainline-alpine.Dockerfile
     depends_on:
     - nginx
+    environment:
+    - DEV_ENABLED=true
     ports:
     - 80:80
     - 443:443

@@ -57,7 +57,6 @@ $ curl -v http://127.0.0.1.xip.io/
 # < Cache-Control: no-transform
 # <
 $ make nginx-down
-$
 ```
 
 #### Useful

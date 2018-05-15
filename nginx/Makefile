@@ -126,6 +126,12 @@ nginx-up:
 nginx-status:
 	$(NGINX_COMPOSE) ps
 
+.PHONY: nginx-restart
+nginx-restart:
+	$(NGINX_COMPOSE) stop proxy
+	$(NGINX_COMPOSE) rm -f
+	$(NGINX_COMPOSE) up -d proxy
+
 .PHONY: nginx-down
 nginx-down:
 	$(NGINX_COMPOSE) down --rmi local
