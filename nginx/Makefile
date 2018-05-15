@@ -128,4 +128,4 @@ nginx-status:
 
 .PHONY: nginx-down
 nginx-down:
-	$(NGINX_COMPOSE) down --rmi all
+	$(NGINX_COMPOSE) down --rmi local
