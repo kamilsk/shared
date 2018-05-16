@@ -73,6 +73,10 @@ $ curl -v --insecure https://www.127.0.0.1.xip.io/
 $ make nginx-down
 ```
 
+#### Open questions
+
+- [ ] How to be with `ssl.no-default`? Which certificate should be chosen in production?
+
 #### Useful
 
 ##### Articles

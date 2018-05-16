@@ -73,6 +73,7 @@ dhparam() {
             openssl dhparam -out $DHPARAMS 2048
             if [ ! $? = 0 ]; then
                 echo "  [CRITICAL] cannot generate Diffie-Hellman parameters"
+                echo "done"
                 return 1
             fi
             chmod 600 $DHPARAMS
@@ -91,6 +92,7 @@ generate() {
             openssl req -out $DEV_CERT -new -newkey rsa -keyout $DEV_KEY -config local.conf -x509 -days 365
             if [ ! $? = 0 ]; then
                 echo "  [CRITICAL] cannot generate self-signed certificate"
+                echo "done"
                 return 1
             fi
             chmod 600 $DEV_CERT $DEV_KEY
@@ -131,22 +133,22 @@ enable_dev() {
 
 process() {
     if [ ! $HTTPS_ENABLED = 1 ]; then
-        echo "HTTPS is disabled"
+        echo "  HTTPS is disabled"
         return 0
     fi
     dhparam || return $?
     if [ ! $LE_ENABLED = 1 ]; then
-        echo "[WARNING] let's encrypt is disabled"
-        echo "[WARNING] environment will be configured for local development"
+        echo "  [WARNING] let's encrypt is disabled"
+        echo "  [WARNING] environment will be configured for local development"
         generate   || return $?
         enable_dev || return $?
     else
-        echo "TODO let's encrypt"
+        echo "  TODO let's encrypt"
     fi
     nginx -s reload
     result=$?
     if [ ! $result = 0 ]; then
-        echo "[CRITICAL] cannot reload nginx"
+        echo "  [CRITICAL] cannot reload nginx"
     fi
     return $result
 
@@ -190,10 +192,26 @@ process() {
     done
 }
 
+wrapped_process() {
+    echo "start process..."
+    process
+    result=$?
+    echo "done"
+    return $result
+}
+
 watch() {
     echo "TODO watching..."
 }
 
-(process && watch) &
-echo "start nginx..."
-nginx -g "daemon off;"
+case $1 in
+    process)
+        wrapped_process
+        return $?
+        ;;
+    *)
+        (wrapped_process && watch) &
+        echo "start nginx..."
+        nginx -g "daemon off;"
+        ;;
+esac
