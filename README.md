@@ -56,8 +56,20 @@ $ curl -v http://127.0.0.1.xip.io/
 # < X-XSS-Protection: 1; mode=block
 # < Cache-Control: no-transform
 # <
-$ curl -v https://www.127.0.0.1.xip.io/
-
+$ curl -v --insecure https://www.127.0.0.1.xip.io/
+# > GET / HTTP/2
+# > Host: www.127.0.0.1.xip.io
+# > User-Agent: curl/7.54.0
+# > Accept: */*
+# >
+# < HTTP/2 308
+# < server: nginx
+# < date: Wed, 16 May 2018 08:24:03 GMT
+# < content-type: text/html; charset=utf-8
+# < content-length: 180
+# < location: https://127.0.0.1.xip.io/
+# < strict-transport-security: max-age=86400
+# <
 $ make nginx-down
 ```
 

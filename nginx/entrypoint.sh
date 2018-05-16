@@ -129,9 +129,6 @@ enable_dev() {
     echo "done"
 }
 
-enable_le() {
-}
-
 process() {
     if [ ! $HTTPS_ENABLED = 1 ]; then
         echo "HTTPS is disabled"
