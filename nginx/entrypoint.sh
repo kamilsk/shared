@@ -1,5 +1,10 @@
 #!/bin/sh
 
+SSL_PATH=/etc/nginx/ssl
+DHPARAMS=dhparams.pem
+DEV_CERT=xip.io.crt
+DEV_KEY=xip.io.key
+
 echo "normalizing..."
     [ -n "${LE_ENABLED}" ]
     LE_ENABLED=$(($? == 0))
@@ -9,20 +14,23 @@ echo "normalizing..."
 
     HTTPS_ENABLED=$(($LE_ENABLED == 1 || $DEV_ENABLED == 1))
 
-    echo "environment:"
-    echo "  TIME_ZONE:    " $TIME_ZONE
-    echo "  LE_ENABLED:   " $LE_ENABLED
-    echo "  LE_EMAIL:     " $LE_EMAIL
-    echo "  DEV_ENABLED:  " $DEV_ENABLED
-    echo "  HTTPS_ENABLED:" $HTTPS_ENABLED
+    echo "  environment:"
+    echo "    TIME_ZONE:    " $TIME_ZONE
+    echo "    LE_ENABLED:   " $LE_ENABLED
+    echo "    LE_EMAIL:     " $LE_EMAIL
+    echo "    DEV_ENABLED:  " $DEV_ENABLED
+    echo "    HTTPS_ENABLED:" $HTTPS_ENABLED
+    echo ""
+    echo "    SSL_PATH:     " $SSL_PATH
+    echo "    DHPARAMS:     " ${SSL_PATH}/${DHPARAMS}
+    echo "    DEV_CERT:     " ${SSL_PATH}/${DEV_CERT}
+    echo "    DEV_KEY:      " ${SSL_PATH}/${DEV_KEY}
 echo "done"
 
 echo "setup timezone..."
     cp /usr/share/zoneinfo/"${TIME_ZONE}" /etc/localtime
     echo "${TIME_ZONE}" > /etc/timezone
 echo "done"
-
-
 
 
 
@@ -59,61 +67,61 @@ cert() {
 
 dhparam() {
     echo "make dhparams..."
-    if [ ! -f /etc/nginx/ssl/dhparams.pem ]; then
+    if [ ! -f ${SSL_PATH}/${DHPARAMS} ]; then
         (
-            cd /etc/nginx/ssl
-            openssl dhparam -out dhparams.pem 2048
+            cd $SSL_PATH
+            openssl dhparam -out $DHPARAMS 2048
             if [ ! $? = 0 ]; then
-                echo "[CRITICAL] cannot generate Diffie-Hellman parameters"
+                echo "  [CRITICAL] cannot generate Diffie-Hellman parameters"
                 return 1
             fi
-            chmod 600 dhparams.pem
+            chmod 600 $DHPARAMS
         )
     else
-        echo "skipped"
+        echo "  skipped"
     fi
     echo "done"
 }
 
 generate() {
     echo "generate self-signed certificate..."
-    if [ ! -f /etc/nginx/ssl/xip.io.crt -o ! -f /etc/nginx/ssl/xip.io.key ]; then
+    if [ ! -f ${SSL_PATH}/${DEV_CERT} -o ! -f ${SSL_PATH}/${DEV_KEY} ]; then
         (
-            cd /etc/nginx/ssl
-            openssl req -config local.conf -new -newkey rsa -x509 -days 365 -out xip.io.crt
+            cd $SSL_PATH
+            openssl req -out $DEV_CERT -new -newkey rsa -keyout $DEV_KEY -config local.conf -x509 -days 365
             if [ ! $? = 0 ]; then
-                echo "[CRITICAL] cannot generate self-signed certificate"
+                echo "  [CRITICAL] cannot generate self-signed certificate"
                 return 1
             fi
+            chmod 600 $DEV_CERT $DEV_KEY
         )
     else
-        echo "skipped"
+        echo "  skipped"
     fi
     echo "done"
 }
 
 enable_dev() {
-    echo "find all configurations with HTTPS comment"
+    echo "find all configurations with HTTPS comment..."
     (
-        export WWW_SSL_CERT=/etc/nginx/ssl/xip.io.crt
-        export WWW_SSL_KEY=/etc/nginx/ssl/xip.io.key
-        export SSL_CERT=/etc/nginx/ssl/xip.io.crt
-        export SSL_KEY=/etc/nginx/ssl/xip.io.key
+        export SSL_CERT=${SSL_PATH}/${DEV_CERT}
+        export SSL_KEY=${SSL_PATH}/${DEV_KEY}
+        CONFIG_PATH=/etc/nginx/conf.d
 
-        cd /etc/nginx/conf.d
-        for conf in $(grep -lw *.conf -e '#:https '); do
+        cd $CONFIG_PATH
+        for conf in $(grep -l *.conf -e '#:https '); do
             cp $conf ${conf}.backup
-            envsubst '${WWW_SSL_CERT} ${WWW_SSL_KEY} ${SSL_CERT} ${SSL_KEY}' < $conf > ${conf}.tmp
+            envsubst '${SSL_CERT} ${SSL_KEY}' < $conf > ${conf}.tmp
             sed -i "s|#:https ||g" ${conf}.tmp
-            sed -i "s|#:www ||g" ${conf}.tmp
+            sed -i "s|#:dev ||g" ${conf}.tmp
             cat ${conf}.tmp > $conf
             nginx -t
             if [ ! $? = 0 ]; then
                 cat ${conf}.backup > $conf
                 rm ${conf}.backup
-                echo "[CRITICAL] configuration /etc/nginx/conf.d/${conf} without HTTPS comments is invalid"
+                echo "  [CRITICAL] configuration ${CONFIG_PATH}/${conf} without HTTPS and DEV comments is invalid"
             else
-                echo "configuration /etc/nginx/conf.d/${conf} is updated"
+                echo "  configuration ${CONFIG_PATH}/${conf} is updated"
             fi
             rm ${conf}.tmp
         done
@@ -121,7 +129,10 @@ enable_dev() {
     echo "done"
 }
 
-watch() {
+enable_le() {
+}
+
+process() {
     if [ ! $HTTPS_ENABLED = 1 ]; then
         echo "HTTPS is disabled"
         return 0
@@ -135,8 +146,12 @@ watch() {
     else
         echo "TODO let's encrypt"
     fi
-
-    return 0
+    nginx -s reload
+    result=$?
+    if [ ! $result = 0 ]; then
+        echo "[CRITICAL] cannot reload nginx"
+    fi
+    return $result
 
     echo "ready to while"
     while :
@@ -178,15 +193,10 @@ watch() {
     done
 }
 
+watch() {
+    echo "TODO watching..."
+}
 
-
-
-
-
-
-
-
-
-watch &
+(process && watch) &
 echo "start nginx..."
 nginx -g "daemon off;"

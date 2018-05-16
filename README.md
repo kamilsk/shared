@@ -56,6 +56,8 @@ $ curl -v http://127.0.0.1.xip.io/
 # < X-XSS-Protection: 1; mode=block
 # < Cache-Control: no-transform
 # <
+$ curl -v https://www.127.0.0.1.xip.io/
+
 $ make nginx-down
 ```
 
@@ -78,7 +80,7 @@ $ make nginx-down
 ##### Lessons
 
 - [x] [Integrating SSL Certificates](https://serversforhackers.com/s/integrating-ssl-certificates)
-- [ ] [Load Balancing with Nginx](https://serversforhackers.com/s/load-balancing-with-nginx)
+- [x] [Load Balancing with Nginx](https://serversforhackers.com/s/load-balancing-with-nginx)
 
 ### Useful
 
