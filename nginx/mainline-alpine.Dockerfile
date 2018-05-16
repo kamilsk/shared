@@ -12,7 +12,7 @@ ENV DEV_ENABLED ""
 ADD etc entrypoint.sh metadata /tmp/
 
 RUN \
-    apk add --no-cache certbot openssl tzdata && \
+    apk add --no-cache bash certbot openssl tzdata && \
     mv /etc/nginx/nginx.conf /etc/nginx/nginx.conf.default && \
     mv /etc/nginx/conf.d/default.conf /etc/nginx/conf.d/default.conf.default && \
     mv /tmp/h5bp /etc/nginx/h5bp && \
