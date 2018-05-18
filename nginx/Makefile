@@ -23,6 +23,7 @@ build-nginx: build-nginx-alpine build-nginx-debian
 build-nginx-alpine:
 	docker build -f $(PWD)/nginx/mainline-alpine.Dockerfile \
 	             -t kamilsk/nginx:alpine \
+	             -t quay.io/kamilsk/nginx:alpine \
 	             --force-rm --no-cache --pull --rm \
 	             --build-arg BASE=$(NGINX_ALPINE) \
 	             $(PWD)/nginx
@@ -31,6 +32,7 @@ build-nginx-alpine:
 build-nginx-debian:
 	docker build -f $(PWD)/nginx/mainline-debian.Dockerfile \
 	             -t kamilsk/nginx:debian \
+	             -t quay.io/kamilsk/nginx:debian \
 	             --force-rm --no-cache --pull --rm \
 	             --build-arg BASE=$(NGINX_DEBIAN) \
 	             $(PWD)/nginx
@@ -73,10 +75,12 @@ publish-nginx: publish-nginx-alpine publish-nginx-debian
 .PHONY: publish-nginx-alpine
 publish-nginx-alpine:
 	docker push kamilsk/nginx:alpine
+	docker push quay.io/kamilsk/nginx:alpine
 
 .PHONY: publish-nginx-debian
 publish-nginx-debian:
 	docker push kamilsk/nginx:debian
+	docker push quay.io/kamilsk/nginx:debian
 
 
 .PHONY: refresh-nginx

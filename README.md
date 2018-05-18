@@ -7,7 +7,7 @@
 
 ## Images
 
-### [kamilsk/nginx](https://hub.docker.com/r/kamilsk/nginx/)
+### [kamilsk/nginx](https://hub.docker.com/r/kamilsk/nginx/), [mirror at quay.io](https://quay.io/repository/kamilsk/nginx)
 
 ```bash
 $ docker run --rm -d \
@@ -16,6 +16,13 @@ $ docker run --rm -d \
              kamilsk/nginx:alpine kamil.samigullin.info:samigullin.info,www.samigullin.info \
                                   www.octolab.org:octolab.org
 ```
+
+**Available images:**
+
+- `kamilsk/nginx:alpine`
+- `kamilsk/nginx:debian`
+- `quay.io/kamilsk/nginx:alpine`
+- `quay.io/kamilsk/nginx:debian`
 
 #### Based on research
 
