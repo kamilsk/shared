@@ -76,12 +76,21 @@ $ make nginx-down
 #### Open questions
 
 - [ ] How to be with `ssl.no-default`? Which certificate should be chosen in production?
+- [ ] How to test automatically?
+
+#### To-do list
+
+- [ ] Renew certificates automatically without any extra overhead
+- [ ] Force renew certificates
+- [ ] Check that extra volume to store Let's Encrypt's context add the result
 
 #### Useful
 
 ##### Articles
 
 - [x] [How To Set Up HTTPS Locally Without Getting Annoying Browser Privacy Errors](https://deliciousbrains.com/https-locally-without-browser-privacy-errors/)
+- [x] [Ubuntu: Creating a self-signed SAN certificate using OpenSSL](https://fabianlee.org/2018/02/17/ubuntu-creating-a-self-signed-san-certificate-using-openssl/)
+- [ ] [Ubuntu: Creating a trusted CA and SAN certificate using OpenSSL](https://fabianlee.org/2018/02/17/ubuntu-creating-a-trusted-ca-and-san-certificate-using-openssl-on-ubuntu/)
 - [ ] [OCSP stapling](https://en.wikipedia.org/wiki/OCSP_stapling)
 - [ ] [Security/Server Side TLS](https://wiki.mozilla.org/Security/Server_Side_TLS)
 - [ ] [Strong SSL Security on nginx](https://raymii.org/s/tutorials/Strong_SSL_Security_On_nginx.html)

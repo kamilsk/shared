@@ -3,6 +3,12 @@ NGINX_DEBIAN  := $(shell docker images | grep '^nginx\s\+mainline\s\+' | awk '{p
 NGINX_COMPOSE := docker-compose -f nginx/docker-compose.yml -p experiments
 
 
+.PHONY: pull-nginx-upstream
+pull-nginx-upstrea:
+	docker pull nginx:mainline-alpine
+	docker pull nginx:mainline
+
+
 .PHONY: build-nginx-parallel
 build-nginx-parallel:
 	semaphore create
@@ -134,4 +140,4 @@ nginx-restart:
 
 .PHONY: nginx-down
 nginx-down:
-	$(NGINX_COMPOSE) down --rmi local
+	$(NGINX_COMPOSE) down --rmi local --volumes --remove-orphans

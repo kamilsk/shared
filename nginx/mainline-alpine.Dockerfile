@@ -25,6 +25,6 @@ RUN \
     sed -i "s/CERTBOT_VERSION/$(certbot --version 2>&1 | awk '{print $2}')/" /metadata && \
     rm -rf /tmp/* /var/cache/apk/*
 
-VOLUME [ "/etc/nginx/ssl" ]
+VOLUME [ "/etc/nginx/ssl", "/etc/letsencrypt" ]
 
 ENTRYPOINT [ "/entrypoint.sh" ]
