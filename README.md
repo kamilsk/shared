@@ -84,6 +84,13 @@ $ make nginx-down
 - [ ] Force renew certificates
 - [ ] Check that extra volume to store Let's Encrypt's context add the result
 
+#### Where it is used
+
+- [octolab/hugs](https://github.com/octolab/hugs)
+- [kamilsk/click](https://github.com/kamilsk/click)
+- [kamilsk/forma](https://github.com/kamilsk/form-api)
+- [kamilsk/passport](https://github.com/kamilsk/passport)
+
 #### Useful
 
 ##### Articles
