@@ -4,7 +4,7 @@ NGINX_COMPOSE := docker-compose -f nginx/docker-compose.yml -p experiments
 
 
 .PHONY: pull-nginx-upstream
-pull-nginx-upstrea:
+pull-nginx-upstream:
 	docker pull nginx:mainline-alpine
 	docker pull nginx:mainline
 
@@ -26,7 +26,7 @@ build-nginx-alpine:
 	             -t quay.io/kamilsk/nginx:alpine \
 	             --force-rm --no-cache --pull --rm \
 	             --build-arg BASE=$(NGINX_ALPINE) \
-	             $(PWD)/nginx
+	             $(PWD)/nginx/context
 
 .PHONY: build-nginx-debian
 build-nginx-debian:
@@ -35,7 +35,7 @@ build-nginx-debian:
 	             -t quay.io/kamilsk/nginx:debian \
 	             --force-rm --no-cache --pull --rm \
 	             --build-arg BASE=$(NGINX_DEBIAN) \
-	             $(PWD)/nginx
+	             $(PWD)/nginx/context
 
 
 .PHONY: clean-invalid-nginx

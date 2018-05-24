@@ -8,8 +8,8 @@ services:
   proxy:
     image: kamilsk/nginx:alpine
     build:
-      context:    .
-      dockerfile: mainline-alpine.Dockerfile
+      context:    context
+      dockerfile: ../mainline-alpine.Dockerfile
     depends_on:
     - nginx
     environment:

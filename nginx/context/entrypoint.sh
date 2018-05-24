@@ -48,13 +48,17 @@ echo "done"
 
 echo "copy configurations..."
 (
-    cd $SITES_PATH
-    for site in $(ls); do
-        file=$(basename $site .conf)
-        conf=${CONFIG_PATH}/${file}.conf
-        cp $site $conf
-        echo "  ${SITES_PATH}/${site} copied to ${conf}"
-    done
+    if [ -d $SITES_PATH ]; then
+        cd $SITES_PATH
+        for site in $(ls); do
+            file=$(basename $site .conf)
+            conf=${CONFIG_PATH}/${file}.conf
+            cp $site $conf
+            echo "  ${SITES_PATH}/${site} copied to ${conf}"
+        done
+    else
+        echo "  skipped"
+    fi
 )
 echo "done"
 
