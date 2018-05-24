@@ -20,9 +20,17 @@ $ docker run --rm -d \
 **Available images:**
 
 - `kamilsk/nginx:alpine`
+  - `kamilsk/nginx:1.x-alpine`
+  - `kamilsk/nginx:1.x`
+  - `kamilsk/nginx:latest`
 - `kamilsk/nginx:debian`
+  - `kamilsk/nginx:1.x-debian`
 - `quay.io/kamilsk/nginx:alpine`
+  - `quay.io/kamilsk/nginx:1.x-alpine`
+  - `quay.io/kamilsk/nginx:1.x`
+  - `quay.io/kamilsk/nginx:latest`
 - `quay.io/kamilsk/nginx:debian`
+  - `quay.io/kamilsk/nginx:1.x-debian`
 
 #### Based on research
 
@@ -90,6 +98,15 @@ $ make nginx-down
 - [ ] Renew certificates automatically without any extra overhead
 - [ ] Force renew certificates
 - [ ] Check that extra volume to store Let's Encrypt's context add the result
+- [ ] 2.x
+```bash
+$ docker run --rm -d kamilsk/nginx [/entrypoint.sh] [run]                               # instead of `process`
+$ docker run --rm -d kamilsk/nginx [/entrypoint.sh] renew                               # runs `certbot renew --force-renewal`
+$ docker run --rm -d kamilsk/nginx [/entrypoint.sh] repeat                              # runs `with` again
+$ docker run --rm -d kamilsk/nginx [/entrypoint.sh] with domain1:alias1,alias2 domain2  # stores `repeat.log`
+$ docker run --rm -d kamilsk/nginx [/entrypoint.sh] bash                                # exec "$@" otherwise
+```
+- [ ] Should I rename `kamilsk/nginx` to `kamilsk/webserver` when version 2.x comes out?
 
 #### Where it is used
 
@@ -105,7 +122,7 @@ $ make nginx-down
 - [x] [How To Set Up HTTPS Locally Without Getting Annoying Browser Privacy Errors](https://deliciousbrains.com/https-locally-without-browser-privacy-errors/)
 - [x] [Ubuntu: Creating a self-signed SAN certificate using OpenSSL](https://fabianlee.org/2018/02/17/ubuntu-creating-a-self-signed-san-certificate-using-openssl/)
 - [ ] [Ubuntu: Creating a trusted CA and SAN certificate using OpenSSL](https://fabianlee.org/2018/02/17/ubuntu-creating-a-trusted-ca-and-san-certificate-using-openssl-on-ubuntu/)
-- [ ] [OCSP stapling](https://en.wikipedia.org/wiki/OCSP_stapling)
+- [x] [OCSP stapling](https://en.wikipedia.org/wiki/OCSP_stapling)
 - [ ] [Security/Server Side TLS](https://wiki.mozilla.org/Security/Server_Side_TLS)
 - [ ] [Strong SSL Security on nginx](https://raymii.org/s/tutorials/Strong_SSL_Security_On_nginx.html)
 
@@ -125,7 +142,7 @@ $ make nginx-down
 
 #### Articles
 
-- [ ] [Best practices for writing Dockerfiles](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/)
+- [x] [Best practices for writing Dockerfiles](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/)
 
 ---
 

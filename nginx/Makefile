@@ -23,7 +23,13 @@ build-nginx: build-nginx-alpine build-nginx-debian
 build-nginx-alpine:
 	docker build -f $(PWD)/nginx/mainline-alpine.Dockerfile \
 	             -t kamilsk/nginx:alpine \
+	             -t kamilsk/nginx:1.x-alpine \
+	             -t kamilsk/nginx:1.x \
+	             -t kamilsk/nginx:latest \
 	             -t quay.io/kamilsk/nginx:alpine \
+	             -t quay.io/kamilsk/nginx:1.x-alpine \
+	             -t quay.io/kamilsk/nginx:1.x \
+	             -t quay.io/kamilsk/nginx:latest \
 	             --force-rm --no-cache --pull --rm \
 	             --build-arg BASE=$(NGINX_ALPINE) \
 	             $(PWD)/nginx/context
@@ -32,7 +38,9 @@ build-nginx-alpine:
 build-nginx-debian:
 	docker build -f $(PWD)/nginx/mainline-debian.Dockerfile \
 	             -t kamilsk/nginx:debian \
+	             -t kamilsk/nginx:1.x-debian \
 	             -t quay.io/kamilsk/nginx:debian \
+	             -t quay.io/kamilsk/nginx:1.x-debian \
 	             --force-rm --no-cache --pull --rm \
 	             --build-arg BASE=$(NGINX_DEBIAN) \
 	             $(PWD)/nginx/context
@@ -75,12 +83,20 @@ publish-nginx: publish-nginx-alpine publish-nginx-debian
 .PHONY: publish-nginx-alpine
 publish-nginx-alpine:
 	docker push kamilsk/nginx:alpine
+	docker push kamilsk/nginx:1.x-alpine
+	docker push kamilsk/nginx:1.x
+	docker push kamilsk/nginx:latest
 	docker push quay.io/kamilsk/nginx:alpine
+	docker push quay.io/kamilsk/nginx:1.x-alpine
+	docker push quay.io/kamilsk/nginx:1.x
+	docker push quay.io/kamilsk/nginx:latest
 
 .PHONY: publish-nginx-debian
 publish-nginx-debian:
 	docker push kamilsk/nginx:debian
+	docker push kamilsk/nginx:1.x-debian
 	docker push quay.io/kamilsk/nginx:debian
+	docker push quay.io/kamilsk/nginx:1.x-debian
 
 
 .PHONY: refresh-nginx
@@ -121,9 +137,9 @@ nginx/mainline.conf:
 validate-nginx:
 	docker run --rm -it \
 	           -h nginx \
-	           -v $(PWD)/nginx/etc/h5bp:/etc/nginx/h5bp \
-	           -v $(PWD)/nginx/etc/conf.d:/etc/nginx/conf.d \
-	           -v $(PWD)/nginx/etc/nginx.conf:/etc/nginx/nginx.conf \
+	           -v $(PWD)/nginx/context/etc/h5bp:/etc/nginx/h5bp \
+	           -v $(PWD)/nginx/context/etc/conf.d:/etc/nginx/conf.d \
+	           -v $(PWD)/nginx/context/etc/nginx.conf:/etc/nginx/nginx.conf \
 	           -w /etc/nginx \
 	           nginx:mainline-alpine nginx -t
 
