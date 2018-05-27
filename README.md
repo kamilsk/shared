@@ -97,7 +97,14 @@ $ make nginx-down
 
 - [ ] Renew certificates automatically without any extra overhead
 - [ ] Force renew certificates
-- [ ] Check that extra volume to store Let's Encrypt's context add the result
+- [ ] Reduce Let's Encrypt API calls (rate limit)
+  - https://github.com/umputun/nginx-le/pull/14
+  - --renew-by-default
+- [ ] Security improvement
+  - Up test result to A+ instead of A (in SSL Server Test by Qualys SSL Labs)
+  - Review https://github.com/h5bp/server-configs-nginx/issues/180
+  - Review https://github.com/h5bp/server-configs-nginx/pull/183
+  - Review https://github.com/h5bp/server-configs-nginx/pull/190
 - [ ] 2.x
 ```bash
 $ docker run --rm -d kamilsk/nginx [/entrypoint.sh] [run]                               # instead of `process`
