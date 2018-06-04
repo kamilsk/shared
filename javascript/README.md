@@ -41,7 +41,7 @@
   - [ ] used
   - [ ] viewed
 
-- [Material-UI](https://github.com/mui-org/material-ui), [site](http://www.material-ui.com/)
+- [Material-UI](https://github.com/mui-org/material-ui), [site](https://material-ui.com/)
   - [ ] used
   - [ ] viewed
 
@@ -53,7 +53,11 @@
   - [ ] used
   - [ ] viewed
 
-- [Britecharts](https://github.com/eventbrite/britecharts), [site](http://eventbrite.github.io/britecharts/)
+- [Britecharts](https://github.com/eventbrite/britecharts), [site](https://eventbrite.github.io/britecharts/)
+  - [ ] used
+  - [ ] viewed
+
+- [Chart.js](https://github.com/chartjs/Chart.js), [site](https://www.chartjs.org/)
   - [ ] used
   - [ ] viewed
 

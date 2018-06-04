@@ -41,7 +41,7 @@ list:
 
 - name: Material-UI
   src:  https://github.com/mui-org/material-ui
-  site: http://www.material-ui.com/
+  site: https://material-ui.com/
   tags: [react, components]
   used:   false
   viewed: false
@@ -64,7 +64,14 @@ list:
 
 - name: Britecharts
   src:  https://github.com/eventbrite/britecharts
-  site: http://eventbrite.github.io/britecharts/
+  site: https://eventbrite.github.io/britecharts/
+  tags: [chart]
+  used:   false
+  viewed: false
+
+- name: Chart.js
+  src:  https://github.com/chartjs/Chart.js
+  site: https://www.chartjs.org/
   tags: [chart]
   used:   false
   viewed: false
