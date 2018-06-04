@@ -5,6 +5,16 @@
 [![Patreon](https://img.shields.io/badge/patreon-donate-orange.svg)](https://www.patreon.com/octolab)
 
 
+## font (reviewed at 2018-06-04)
+
+- [Bootstrap](https://github.com/FortAwesome/Font-Awesome), [site](https://fontawesome.com/)
+  - [x] used
+  - [ ] viewed
+
+- [Bootstrap](https://github.com/kenangundogan/fontisto), [site](https://www.fontisto.com/)
+  - [ ] used
+  - [ ] viewed
+
 ## ui-kit (reviewed at 2018-02-27)
 
 - [Bootstrap](https://github.com/twbs/bootstrap), [site](https://getbootstrap.com/)

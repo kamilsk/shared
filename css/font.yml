@@ -1,0 +1,17 @@
+reviewed: 2018-06-04
+
+list:
+
+- name: Bootstrap
+  src:  https://github.com/FortAwesome/Font-Awesome
+  site: https://fontawesome.com/
+  tags: [icon]
+  used:   true
+  viewed: false
+
+- name: Bootstrap
+  src:  https://github.com/kenangundogan/fontisto
+  site: https://www.fontisto.com/
+  tags: [icon]
+  used:   false
+  viewed: false
