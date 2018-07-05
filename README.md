@@ -5,8 +5,6 @@
 [![Patreon](https://img.shields.io/badge/patreon-donate-orange.svg)](https://www.patreon.com/octolab)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
-### [Awesome lists](awesome)
-
 ### [Browser extensions](browser)
 
 ### [CLI tools](terminal)

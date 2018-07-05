@@ -44,8 +44,6 @@ func parse() (string, renderer) {
 			ID:          section,
 			Description: description,
 		}
-	case "awesome":
-		return section, &pkg.AwesomeSection{}
 	default:
 		panic(fmt.Sprintf("section %q not supported", section))
 	}

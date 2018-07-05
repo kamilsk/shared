@@ -1,7 +1,6 @@
 .DEFAULT_GOAL = build
 
 .PHONY: build
-build: build-awsm
 build: build-br
 build: build-css
 build: build-go
@@ -11,10 +10,6 @@ build: build-php
 build: build-py
 build: build-sw
 build: build-term
-
-.PHONY: build-awsm
-build-awsm:
-	docker run --rm -it -v '$(PWD)':/go/src/awsm -w /go/src/awsm golang:latest go run cmd/build.go -s awesome
 
 .PHONY: build-br
 build-br:
