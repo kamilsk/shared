@@ -21,6 +21,10 @@ pull-github-tpl:
 	rm -rf .github/.git .github/README.md
 ```
 
+## Useful
+
+- [Multiple issue and pull request templates](https://blog.github.com/2018-01-25-multiple-issue-and-pull-request-templates/)
+
 ---
 
 [![@kamilsk](https://img.shields.io/badge/author-%40kamilsk-blue.svg)](https://twitter.com/ikamilsk)
