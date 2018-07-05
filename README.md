@@ -24,6 +24,7 @@ pull-github-tpl:
 ## Useful
 
 - [Multiple issue and pull request templates](https://blog.github.com/2018-01-25-multiple-issue-and-pull-request-templates/)
+- [About issue and pull request templates](https://help.github.com/articles/about-issue-and-pull-request-templates/)
 
 ---
 
