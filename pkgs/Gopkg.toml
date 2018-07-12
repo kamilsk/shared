@@ -7,17 +7,5 @@
   branch = "master"
 
 [[constraint]]
-  name = "github.com/juju/errors"
-  branch = "master"
-
-[[constraint]]
-  name = "github.com/oxequa/grace"
-  branch = "master"
-
-[[constraint]]
-  name = "github.com/pkg/errors"
-  branch = "master"
-
-[[constraint]]
   name = "github.com/prometheus/client_golang"
   branch = "master"
