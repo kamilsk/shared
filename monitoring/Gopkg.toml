@@ -1,0 +1,11 @@
+[[constraint]]
+  name = "github.com/bcicen/grmon"
+  branch = "master"
+
+[[constraint]]
+  name = "github.com/google/gops"
+  branch = "master"
+
+[[constraint]]
+  name = "github.com/prometheus/client_golang"
+  branch = "master"

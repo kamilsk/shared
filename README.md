@@ -7,42 +7,47 @@
 
 ## Packages
 
-### Database
-
-- [ ] [github.com/prometheus/tsdb](https://github.com/prometheus/tsdb)
-
 ### Monitoring
 
-- [ ] [github.com/bcicen/grmon](https://github.com/bcicen/grmon)
-- [ ] [github.com/google/gops](https://github.com/google/gops)
-- [ ] [github.com/prometheus/client_golang](https://github.com/prometheus/client_golang)
+- [ ] [github.com/bcicen/grmon](https://github.com/bcicen/grmon/)
+- [ ] [github.com/google/gops](https://github.com/google/gops/)
+- [ ] [github.com/prometheus/client_golang](https://github.com/prometheus/client_golang/)
 
-### Work with errors
+### UUID generation
 
-- [ ] [github.com/juju/errors](https://github.com/juju/errors)
-- [ ] [github.com/oxequa/grace](https://github.com/oxequa/grace)
-- [ ] [github.com/pkg/errors](https://github.com/pkg/errors)
+- [ ] [github.com/google/uuid](https://github.com/google/uuid/)
+- [ ] [github.com/hashicorp/go-uuid](https://github.com/hashicorp/go-uuid/)
+- [ ] [github.com/jakehl/goid](https://github.com/jakehl/goid/)
+- [ ] [github.com/kevinburke/go.uuid](https://github.com/kevinburke/go.uuid/)
+- [ ] [github.com/satori/go.uuid](https://github.com/satori/go.uuid/)
+  - [critical defect](https://github.com/satori/go.uuid/issues/73)
+
+### Working with errors
+
+- [ ] [github.com/juju/errors](https://github.com/juju/errors/)
+- [ ] [github.com/oxequa/grace](https://github.com/oxequa/grace/)
+- [ ] [github.com/pkg/errors](https://github.com/pkg/errors/)
 
 ## Projects
 
 ### GoReleaser
 
-- [ ] [github.com/goreleaser/goreleaser](https://github.com/goreleaser/goreleaser)
+- [ ] [github.com/goreleaser/goreleaser](https://github.com/goreleaser/goreleaser/)
 - [ ] [documentation](https://goreleaser.com/)
 
 ### Hugo
 
-- [ ] [github.com/gohugoio/hugo](https://github.com/gohugoio/hugo)
+- [ ] [github.com/gohugoio/hugo](https://github.com/gohugoio/hugo/)
 - [ ] [documentation](https://gohugo.io/documentation/)
 
 ### lego
 
-- [ ] [github.com/xenolf/lego](https://github.com/xenolf/lego)
+- [ ] [github.com/xenolf/lego](https://github.com/xenolf/lego/)
 - [ ] [documentation](https://godoc.org/github.com/xenolf/lego/acme)
 
 ### Prometheus
 
-- [ ] [github.com/prometheus/prometheus](https://github.com/prometheus/prometheus)
+- [ ] [github.com/prometheus/prometheus](https://github.com/prometheus/prometheus/)
 - [ ] [documentation](https://prometheus.io/docs/introduction/overview/)
 
 ## Specific researches
