@@ -1,0 +1,23 @@
+[[constraint]]
+  name = "github.com/google/uuid"
+  branch = "master"
+
+[[constraint]]
+  name = "github.com/hashicorp/go-uuid"
+  branch = "master"
+
+[[constraint]]
+  name = "github.com/jakehl/goid"
+  branch = "master"
+
+[[constraint]]
+  name = "github.com/kevinburke/go.uuid"
+  branch = "master"
+
+[[constraint]]
+  name = "github.com/satori/go.uuid"
+  branch = "master"
+
+[prune]
+  go-tests = true
+  unused-packages = true
