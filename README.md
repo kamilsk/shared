@@ -7,6 +7,15 @@
 
 ## Packages
 
+### Logging
+
+- [ ] [go.uber.org/zap](https://github.com/uber-go/zap/)
+- [ ] [github.com/sirupsen/logrus](https://github.com/Sirupsen/logrus/)
+- [ ] [github.com/rs/zerolog](https://github.com/rs/zerolog/)
+- [ ] [github.com/inconshreveable/log15](https://github.com/inconshreveable/log15/)
+- [ ] [github.com/francoispqt/onelog](https://github.com/francoispqt/onelog/)
+- [ ] [github.com/apex/log](https://github.com/apex/log/)
+
 ### Monitoring
 
 - [ ] [github.com/bcicen/grmon](https://github.com/bcicen/grmon/)
@@ -19,8 +28,12 @@
 - [ ] [github.com/hashicorp/go-uuid](https://github.com/hashicorp/go-uuid/)
 - [ ] [github.com/jakehl/goid](https://github.com/jakehl/goid/)
 - [ ] [github.com/kevinburke/go.uuid](https://github.com/kevinburke/go.uuid/)
+- [ ] [github.com/oklog/ulid](https://github.com/oklog/ulid/)
+- [ ] [github.com/pborman/uuid](https://github.com/segmentio/ksuid/)
 - [ ] [github.com/satori/go.uuid](https://github.com/satori/go.uuid/)
   - [critical defect](https://github.com/satori/go.uuid/issues/73)
+- [ ] [github.com/segmentio/ksuid](https://github.com/pborman/uuid/)
+- [ ] [gopkg.in/myesui/uuid.v1](https://github.com/myesui/uuid/)
 
 ### Working with errors
 
