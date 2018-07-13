@@ -15,8 +15,23 @@
   branch = "master"
 
 [[constraint]]
+  name = "github.com/oklog/ulid"
+  branch = "master"
+
+[[constraint]]
+  name = "github.com/pborman/uuid"
+  branch = "master"
+
+[[constraint]]
   name = "github.com/satori/go.uuid"
   branch = "master"
+
+[[constraint]]
+  name = "github.com/segmentio/ksuid"
+  branch = "master"
+
+[[constraint]]
+  name = "gopkg.in/myesui/uuid.v1"
 
 [prune]
   go-tests = true

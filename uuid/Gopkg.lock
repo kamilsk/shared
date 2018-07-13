@@ -27,13 +27,37 @@
 
 [[projects]]
   branch = "master"
+  name = "github.com/oklog/ulid"
+  packages = ["."]
+  revision = "e56d70d65dad25a8f489ec44c95782f599e28f3c"
+
+[[projects]]
+  branch = "master"
+  name = "github.com/pborman/uuid"
+  packages = ["."]
+  revision = "c65b2f87fee37d1c7854c9164a450713c28d50cd"
+
+[[projects]]
+  branch = "master"
   name = "github.com/satori/go.uuid"
   packages = ["."]
   revision = "36e9d2ebbde5e3f13ab2e25625fd453271d6522e"
 
+[[projects]]
+  branch = "master"
+  name = "github.com/segmentio/ksuid"
+  packages = ["."]
+  revision = "46a0ee1899b01e3dd9e64ca605e1339435c81838"
+
+[[projects]]
+  name = "gopkg.in/myesui/uuid.v1"
+  packages = ["."]
+  revision = "835a10bbd6bce40820349a68b1368a62c3c5617c"
+  version = "v1.0.0"
+
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "850ad360a4a56929b365c955c0ddb32de8694f386f1f090c4856a2eb5b079caf"
+  inputs-digest = "fed4da1807b86e24b6fec87b4655b22954607ba00556be3fb7b9afd39cf68f73"
   solver-name = "gps-cdcl"
   solver-version = 1
