@@ -1,6 +1,7 @@
 package uuid
 
 import (
+	_ "github.com/gofrs/uuid"
 	_ "github.com/google/uuid"
 	_ "github.com/hashicorp/go-uuid"
 	_ "github.com/jakehl/goid"

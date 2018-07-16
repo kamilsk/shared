@@ -3,6 +3,12 @@
 
 [[projects]]
   branch = "master"
+  name = "github.com/gofrs/uuid"
+  packages = ["."]
+  revision = "6b7a502867264ad0a5ef1d747f8d2c6a6cad595f"
+
+[[projects]]
+  branch = "master"
   name = "github.com/google/uuid"
   packages = ["."]
   revision = "dec09d789f3dba190787f8b4454c7d3c936fed9e"
@@ -58,6 +64,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "fed4da1807b86e24b6fec87b4655b22954607ba00556be3fb7b9afd39cf68f73"
+  inputs-digest = "5784ab9984dfe1bcad35dd68cfa09d571bad7c75ee5cb2f0245f5542fb8de24b"
   solver-name = "gps-cdcl"
   solver-version = 1

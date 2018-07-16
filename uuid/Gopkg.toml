@@ -1,4 +1,8 @@
 [[constraint]]
+  name = "github.com/gofrs/uuid"
+  branch = "master"
+
+[[constraint]]
   name = "github.com/google/uuid"
   branch = "master"
 
@@ -32,6 +36,7 @@
 
 [[constraint]]
   name = "gopkg.in/myesui/uuid.v1"
+  version = "v1"
 
 [prune]
   go-tests = true
