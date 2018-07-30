@@ -5,7 +5,7 @@
   branch = "master"
   name = "github.com/juju/errors"
   packages = ["."]
-  revision = "c7d06af17c68cd34c835053720b21f6549d9b0ee"
+  revision = "812b06ada1776ad4dd95d575e18ffffe3a9ac34a"
 
 [[projects]]
   branch = "master"
