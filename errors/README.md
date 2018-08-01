@@ -24,6 +24,8 @@
 | Combination      | ✅          | ✅           |
 | Underlying error | ✅          | ✅           |
 | License          | LGPLv3      | BSD-2-Clause |
+|                  |             |              |
+| Score            | ⭐️⭐️⭐️⭐️    | ⭐️⭐️⭐️⭐️     |
 
 ### Recommendation
 
@@ -44,8 +46,12 @@ but [github.com/pkg/errors](https://github.com/pkg/errors/) is my preferred choi
 | No external deps | ✅           |
 | Simplicity       | ✅           |
 | Underlying error | ❎           |
-| License          |              |
+| License          | GPLv3        |
+|                  |              |
+| Score            | ⭐️⭐️⭐️ ️     |
 
 ### Recommendation
 
-...
+[github.com/oxequa/grace](https://github.com/oxequa/grace/) has some disadvantages,
+for example, you cannot obtain the original error and by default the original error
+message is concatenated with stack trace without any new lines or spaces.

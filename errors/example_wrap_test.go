@@ -75,8 +75,8 @@ func Benchmark_New(b *testing.B) {
 }
 
 func Benchmark_Wrap(b *testing.B) {
-	message := "error"
-	origin := errors.New(message)
+	message := "with context and stack trace"
+	origin := errors.New("error")
 	b.Run("github.com/juju/errors", func(b *testing.B) {
 		b.ReportAllocs()
 		for i := 0; i < b.N; i++ {
