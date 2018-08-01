@@ -28,11 +28,7 @@
 - [ ] [github.com/segmentio/ksuid](https://github.com/pborman/uuid/)
 - [ ] [gopkg.in/myesui/uuid.v1](https://github.com/myesui/uuid/)
 
-### Working with errors
-
-- [ ] [github.com/juju/errors](https://github.com/juju/errors/)
-- [ ] [github.com/oxequa/grace](https://github.com/oxequa/grace/)
-- [ ] [github.com/pkg/errors](https://github.com/pkg/errors/)
+### [Working with errors](errors)
 
 ## Projects
 
