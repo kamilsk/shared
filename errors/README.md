@@ -24,7 +24,6 @@
 | Combination      | ✅          | ✅           |
 | Underlying error | ✅          | ✅           |
 | License          | LGPLv3      | BSD-2-Clause |
-|                  |             |              |
 | Score            | ⭐️⭐️⭐️⭐️    | ⭐️⭐️⭐️⭐️     |
 
 ### Recommendation
@@ -47,7 +46,6 @@ but [github.com/pkg/errors](https://github.com/pkg/errors/) is my preferred choi
 | Simplicity       | ✅           |
 | Underlying error | ❎           |
 | License          | GPLv3        |
-|                  |              |
 | Score            | ⭐️⭐️⭐️ ️     |
 
 ### Recommendation
