@@ -1,17 +1,17 @@
 MAKEPATH := $(abspath $(firstword $(MAKEFILE_LIST)))
 CWD      := $(patsubst %/,%,$(dir $(MAKEPATH)))
 
-include nginx/Makefile
-
 .PHONY: clean
 clean:
 	@echo "not implemented yet"
 
 .PHONY: build
-build: build-nginx
+build:
+	@echo "not implemented yet"
 
 .PHONY: process
-process: process-nginx
+process:
+	@echo "not implemented yet"
 
 .PHONY: publish
 publish:
