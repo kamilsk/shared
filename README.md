@@ -28,8 +28,6 @@
 - [ ] [github.com/segmentio/ksuid](https://github.com/pborman/uuid/)
 - [ ] [gopkg.in/myesui/uuid.v1](https://github.com/myesui/uuid/)
 
-### [Working with errors](errors)
-
 ## Projects
 
 ### GoReleaser
