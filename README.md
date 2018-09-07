@@ -7,8 +7,6 @@
 
 ## Packages
 
-### [Logging](logging)
-
 ### Monitoring
 
 - [ ] [github.com/bcicen/grmon](https://github.com/bcicen/grmon/)
