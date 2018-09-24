@@ -2,164 +2,76 @@
 
 
 [[projects]]
-  name = "github.com/StackExchange/wmi"
-  packages = ["."]
-  revision = "5d049714c4a64225c3c79a7cf7d02f7fb5b96338"
-  version = "1.0.0"
-
-[[projects]]
   branch = "master"
-  name = "github.com/bcicen/grmon"
-  packages = ["."]
-  revision = "9e5e49d99f7c39adadd6a1d1f75317e0491e88a3"
-
-[[projects]]
-  branch = "master"
-  name = "github.com/bcicen/termui"
-  packages = ["."]
-  revision = "4eb80249d3f5d00f91dbfb780dcfbf2215cad59b"
-
-[[projects]]
-  branch = "master"
+  digest = "1:c0bec5f9b98d0bc872ff5e834fac186b807b656683bd29cb82fb207a1513fabb"
   name = "github.com/beorn7/perks"
   packages = ["quantile"]
+  pruneopts = ""
   revision = "3a771d992973f24aa725d07868b467d1ddfceafb"
 
 [[projects]]
-  name = "github.com/go-ole/go-ole"
-  packages = [
-    ".",
-    "oleutil"
-  ]
-  revision = "a41e3c4b706f6ae8dfbff342b06e40fa4d2d0506"
-  version = "v1.2.1"
-
-[[projects]]
+  digest = "1:3dd078fda7500c341bc26cfbc6c6a34614f295a2457149fc1045cab767cbcf18"
   name = "github.com/golang/protobuf"
   packages = ["proto"]
-  revision = "b4deda0973fb4c70b50d226b1af49f3da59f5265"
-  version = "v1.1.0"
+  pruneopts = ""
+  revision = "aa810b61a9c79d51363740d207bb46cf8e620ed5"
+  version = "v1.2.0"
 
 [[projects]]
-  name = "github.com/google/gops"
-  packages = [
-    ".",
-    "goprocess",
-    "internal",
-    "signal"
-  ]
-  revision = "89672dbe3c4ba97d53af7e839e8097e1ccbb4977"
-  version = "v0.3.5"
-
-[[projects]]
-  branch = "master"
-  name = "github.com/keybase/go-ps"
-  packages = [
-    ".",
-    "darwincgo"
-  ]
-  revision = "668c8856d9992f97248b3177d45743d2cc1068db"
-
-[[projects]]
-  name = "github.com/mattn/go-runewidth"
-  packages = ["."]
-  revision = "9e777a8366cce605130a531d2cd6363d07ad7317"
-  version = "v0.0.2"
-
-[[projects]]
+  digest = "1:63722a4b1e1717be7b98fc686e0b30d5e7f734b9e93d7dee86293b6deab7ea28"
   name = "github.com/matttproud/golang_protobuf_extensions"
   packages = ["pbutil"]
+  pruneopts = ""
   revision = "c12348ce28de40eed0136aa2b644d0ee0650e56c"
   version = "v1.0.1"
 
 [[projects]]
   branch = "master"
-  name = "github.com/mitchellh/go-wordwrap"
-  packages = ["."]
-  revision = "ad45545899c7b13c020ea92b2072220eefad42b8"
-
-[[projects]]
-  branch = "master"
-  name = "github.com/nsf/termbox-go"
-  packages = ["."]
-  revision = "5c94acc5e6eb520f1bcd183974e01171cc4c23b3"
-
-[[projects]]
-  branch = "master"
+  digest = "1:7f4e395c8036aab1e13afc7bad18f4b4b741ba4a9cc641831072c241d148cdf7"
   name = "github.com/prometheus/client_golang"
-  packages = ["prometheus"]
-  revision = "ee1c9d7e23df7f011bdf6f12a5c9e7f0ae10a1fe"
+  packages = [
+    "prometheus",
+    "prometheus/internal",
+  ]
+  pruneopts = ""
+  revision = "f69c853d21c15596929fa9126ba211247e7dca95"
 
 [[projects]]
   branch = "master"
+  digest = "1:185cf55b1f44a1bf243558901c3f06efa5c64ba62cfdcbb1bf7bbe8c3fb68561"
   name = "github.com/prometheus/client_model"
   packages = ["go"]
+  pruneopts = ""
   revision = "5c3871d89910bfb32f5fcab2aa4b9ec68e65a99f"
 
 [[projects]]
   branch = "master"
+  digest = "1:f477ef7b65d94fb17574fc6548cef0c99a69c1634ea3b6da248b63a61ebe0498"
   name = "github.com/prometheus/common"
   packages = [
     "expfmt",
     "internal/bitbucket.org/ww/goautoneg",
-    "model"
+    "model",
   ]
-  revision = "7600349dcfe1abd18d72d3a1770870d9800a7801"
+  pruneopts = ""
+  revision = "c7de2306084e37d54b8be01f3541a8464345e9a5"
 
 [[projects]]
   branch = "master"
+  digest = "1:5a57ea878c9a40657ebe7916eca6bea7c76808f5acb68fd42ea5e204dd35f6f7"
   name = "github.com/prometheus/procfs"
   packages = [
     ".",
     "internal/util",
     "nfs",
-    "xfs"
+    "xfs",
   ]
-  revision = "ae68e2d4c00fed4943b5f6698d504a5fe083da8a"
-
-[[projects]]
-  name = "github.com/shirou/gopsutil"
-  packages = [
-    "cpu",
-    "host",
-    "internal/common",
-    "mem",
-    "net",
-    "process"
-  ]
-  revision = "4a180b209f5f494e5923cfce81ea30ba23915877"
-  version = "v2.18.06"
-
-[[projects]]
-  branch = "master"
-  name = "github.com/shirou/w32"
-  packages = ["."]
-  revision = "bb4de0191aa41b5507caa14b0650cdbddcd9280b"
-
-[[projects]]
-  branch = "master"
-  name = "github.com/xlab/treeprint"
-  packages = ["."]
-  revision = "d6fb6747feb6e7cfdc44682a024bddf87ef07ec2"
-
-[[projects]]
-  branch = "master"
-  name = "golang.org/x/sys"
-  packages = [
-    "unix",
-    "windows"
-  ]
-  revision = "1b2967e3c290b7c545b3db0deeda16e9be4f98a2"
-
-[[projects]]
-  name = "rsc.io/goversion"
-  packages = ["version"]
-  revision = "597212e462da05a7902d6cea0ec895a0d9b8b218"
-  version = "v1.2.0"
+  pruneopts = ""
+  revision = "418d78d0b9a7b7de3a6bbc8a23def624cc977bb2"
 
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "3516731e6addd82e767d46a9e41ed9a878fd87abeed3cda6e08116b88d80225c"
+  input-imports = ["github.com/prometheus/client_golang/prometheus"]
   solver-name = "gps-cdcl"
   solver-version = 1
