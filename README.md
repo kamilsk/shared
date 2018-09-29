@@ -23,8 +23,6 @@
 
 ### [Software](software)
 
-### [Tools for macOS and iOS](apple)
-
 ## Very useful
 
 ### Awesomes from Nikita Voloboev

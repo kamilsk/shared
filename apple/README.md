@@ -4,43 +4,6 @@
 
 [![Patreon](https://img.shields.io/badge/patreon-donate-orange.svg)](https://www.patreon.com/octolab)
 
-## Development
-
-### Database
-
-- [Sequel Pro](https://www.sequelpro.com/)
-  - Alternatives:
-    - [PopSQL](https://popsql.io/)
-
-### Documentation
-
-- [Dash](https://kapeli.com/dash)
-
-### Editor
-
-- [Sublime Text](https://www.sublimetext.com/)
-  - Related:
-    - [Skins at github](https://github.com/deathaxe/sublime-skins)
-    - [The Sublime Text package manager](https://packagecontrol.io/)
-    - [Theme ayu at github](https://github.com/dempfi/ayu)
-- [Visual Studio Code](https://code.visualstudio.com/)
-  - Related:
-    - [Polacode](https://marketplace.visualstudio.com/items?itemName=pnp.polacode)
-    - [Rainglow Color Themes](https://rainglow.io/)
-
-### GitHub
-
-- [Cacher](https://www.cacher.io/)
-- [Ship](https://www.realartists.com/)
-
-## Editor
-
-- [Grammarly](https://www.grammarly.com/)
-
-## Health
-
-- [f.lux](https://justgetflux.com/)
-
 ## Maintenance
 
 - [CleanMyMac](https://macpaw.com/cleanmymac)
@@ -49,12 +12,8 @@
 ## Productivity
 
 - [Alfred](https://www.alfredapp.com/)
-- [Be Focused Pro](https://itunes.apple.com/app/be-focused-pro-focus-timer/id961632517)
 - [Spark](https://sparkmailapp.com/)
 - [TickTick](https://ticktick.com/)
-  - Alternatives:
-    - [Todoist](https://todoist.com/)
-- [Wunderlist](https://www.wunderlist.com/)
 
 ## Screen Saver
 
