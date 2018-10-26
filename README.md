@@ -34,7 +34,6 @@
 ## Useful
 
 - [collection](../../tree/collection) - my collection of useful things
-- [dotfiles](../../tree/dotfiles) - dotfiles to share through environments
 
 ---
 
