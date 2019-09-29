@@ -3,7 +3,7 @@ METADATA:short
 Alpine Linux with Hugo
 
 METADATA:full
-Alpine Linux ([alpine](https://hub.docker.com/_/alpine/):latest.76da55c8019d) with [Hugo](http://gohugo.io).(v0.30.2, [diff](https://github.com/gohugoio/hugo/compare/v0.30.2...master))
+Alpine Linux ([alpine](https://hub.docker.com/_/alpine/):latest.055936d39205) with [Hugo](http://gohugo.io).(v0.58.3, [diff](https://github.com/gohugoio/hugo/compare/v0.58.3...master))
 
 [Dockerfile](https://github.com/kamilsk/shared/blob/docker-go-v1/hugo)
 [Useful Makefile](https://github.com/kamilsk/shared/blob/makefile-go-v1/docker/hugo.mk)
